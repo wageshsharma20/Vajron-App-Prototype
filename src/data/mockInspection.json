@@ -1,0 +1,403 @@
+[
+  {
+    "id": "plantation-green-cover",
+    "category": "Plantation & Green Cover",
+    "iconName": "Trees",
+    "issueCount": 3,
+    "status": "attention",
+    "items": [
+      {
+        "id": "tree-count",
+        "name": "Tree Count",
+        "status": "good",
+        "value": "1,247 trees mapped (32 new)",
+        "severity": "low"
+      },
+      {
+        "id": "canopy-cover",
+        "name": "Canopy Cover",
+        "status": "good",
+        "value": "68% coverage",
+        "severity": "low"
+      },
+      {
+        "id": "lawn-coverage",
+        "name": "Lawn Coverage",
+        "status": "attention",
+        "value": "72% healthy, bare patches in Zone C",
+        "severity": "medium"
+      },
+      {
+        "id": "weed-infestation",
+        "name": "Weed Infestation",
+        "status": "issue",
+        "value": "Moderate weed growth near pathways",
+        "severity": "medium"
+      },
+      {
+        "id": "shrub-coverage",
+        "name": "Shrub Coverage",
+        "status": "good",
+        "value": "Adequate",
+        "severity": "low"
+      },
+      {
+        "id": "pruning-quality",
+        "name": "Pruning Quality",
+        "status": "attention",
+        "value": "12 trees need pruning",
+        "severity": "medium"
+      },
+      {
+        "id": "hedge-trimming",
+        "name": "Hedge Trimming",
+        "status": "good",
+        "value": "Well maintained",
+        "severity": "low"
+      },
+      {
+        "id": "flower-beds",
+        "name": "Flower Beds",
+        "status": "attention",
+        "value": "3 beds need replanting",
+        "severity": "medium"
+      },
+      {
+        "id": "dead-vegetation",
+        "name": "Dead Vegetation",
+        "status": "good",
+        "value": "Minimal",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "plant-health",
+    "category": "Plant Health",
+    "iconName": "Leaf",
+    "issueCount": 2,
+    "status": "attention",
+    "items": [
+      {
+        "id": "health-index",
+        "name": "Health Index",
+        "status": "good",
+        "value": "76/100 — Mostly healthy",
+        "severity": "low"
+      },
+      {
+        "id": "leaf-discoloration",
+        "name": "Leaf Discoloration",
+        "status": "attention",
+        "value": "Yellowing on 8 trees near lake",
+        "severity": "medium"
+      },
+      {
+        "id": "pest-disease",
+        "name": "Pest/Disease",
+        "status": "issue",
+        "value": "Fungal spots on rose garden",
+        "severity": "high"
+      },
+      {
+        "id": "water-stress",
+        "name": "Water Stress",
+        "status": "good",
+        "value": "No stress detected",
+        "severity": "low"
+      },
+      {
+        "id": "nutrient-levels",
+        "name": "Nutrient Levels",
+        "status": "good",
+        "value": "Normal",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "irrigation",
+    "category": "Irrigation",
+    "iconName": "Droplets",
+    "issueCount": 2,
+    "status": "attention",
+    "items": [
+      {
+        "id": "dry-zones",
+        "name": "Dry Zones",
+        "status": "issue",
+        "value": "2 dry patches in east section",
+        "severity": "high"
+      },
+      {
+        "id": "waterlogging",
+        "name": "Waterlogging",
+        "status": "attention",
+        "value": "Minor pooling near gate 3",
+        "severity": "medium"
+      },
+      {
+        "id": "leak-detection",
+        "name": "Leak Detection",
+        "status": "good",
+        "value": "No leaks found",
+        "severity": "low"
+      },
+      {
+        "id": "moisture-levels",
+        "name": "Moisture Levels",
+        "status": "good",
+        "value": "Even distribution",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "cleanliness",
+    "category": "Cleanliness",
+    "iconName": "Sparkles",
+    "issueCount": 4,
+    "status": "critical",
+    "items": [
+      {
+        "id": "litter",
+        "name": "Litter",
+        "status": "issue",
+        "value": "28 litter items detected",
+        "severity": "high"
+      },
+      {
+        "id": "bin-status",
+        "name": "Bin Status",
+        "status": "attention",
+        "value": "3 bins overflowing (near food court)",
+        "severity": "medium"
+      },
+      {
+        "id": "debris",
+        "name": "Debris",
+        "status": "issue",
+        "value": "Construction debris near north wall",
+        "severity": "high"
+      },
+      {
+        "id": "green-waste",
+        "name": "Green Waste",
+        "status": "attention",
+        "value": "Leaf piles in 2 zones",
+        "severity": "medium"
+      },
+      {
+        "id": "water-stagnation",
+        "name": "Water Stagnation",
+        "status": "good",
+        "value": "None detected",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "category": "Infrastructure",
+    "iconName": "Wrench",
+    "issueCount": 3,
+    "status": "attention",
+    "items": [
+      {
+        "id": "pathways",
+        "name": "Pathways",
+        "status": "attention",
+        "value": "Cracked tiles on main walkway",
+        "severity": "medium"
+      },
+      {
+        "id": "gates",
+        "name": "Gates",
+        "status": "good",
+        "value": "All functional",
+        "severity": "low"
+      },
+      {
+        "id": "boundary-wall",
+        "name": "Boundary Wall",
+        "status": "issue",
+        "value": "Damaged section — 12m stretch, east side",
+        "severity": "high"
+      },
+      {
+        "id": "benches",
+        "name": "Benches",
+        "status": "attention",
+        "value": "4 benches need repair",
+        "severity": "medium"
+      },
+      {
+        "id": "play-equipment",
+        "name": "Play Equipment",
+        "status": "good",
+        "value": "All safe",
+        "severity": "low"
+      },
+      {
+        "id": "gym-equipment",
+        "name": "Gym Equipment",
+        "status": "good",
+        "value": "All functional",
+        "severity": "low"
+      },
+      {
+        "id": "signage",
+        "name": "Signage",
+        "status": "attention",
+        "value": "2 signs faded",
+        "severity": "low"
+      },
+      {
+        "id": "light-poles",
+        "name": "Light Poles",
+        "status": "good",
+        "value": "All working",
+        "severity": "low"
+      },
+      {
+        "id": "drinking-water",
+        "name": "Drinking Water",
+        "status": "good",
+        "value": "3 points operational",
+        "severity": "low"
+      },
+      {
+        "id": "toilets",
+        "name": "Toilets",
+        "status": "good",
+        "value": "Clean and functional",
+        "severity": "low"
+      },
+      {
+        "id": "parking",
+        "name": "Parking",
+        "status": "good",
+        "value": "Clear",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "safety-security",
+    "category": "Safety & Security",
+    "iconName": "ShieldCheck",
+    "issueCount": 2,
+    "status": "attention",
+    "items": [
+      {
+        "id": "encroachment",
+        "name": "Encroachment",
+        "status": "issue",
+        "value": "Temporary structure near south gate",
+        "severity": "high"
+      },
+      {
+        "id": "construction-activity",
+        "name": "Construction Activity",
+        "status": "good",
+        "value": "None detected",
+        "severity": "low"
+      },
+      {
+        "id": "vehicles-inside",
+        "name": "Vehicles Inside",
+        "status": "attention",
+        "value": "1 unauthorized vehicle (delivery van)",
+        "severity": "medium"
+      },
+      {
+        "id": "unsafe-trees",
+        "name": "Unsafe Trees",
+        "status": "good",
+        "value": "None identified",
+        "severity": "low"
+      },
+      {
+        "id": "blind-spots",
+        "name": "Blind Spots",
+        "status": "good",
+        "value": "All areas covered",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "water-bodies",
+    "category": "Water Bodies",
+    "iconName": "Waves",
+    "issueCount": 2,
+    "status": "attention",
+    "items": [
+      {
+        "id": "water-level",
+        "name": "Water Level",
+        "status": "good",
+        "value": "Normal",
+        "severity": "low"
+      },
+      {
+        "id": "algae-growth",
+        "name": "Algae Growth",
+        "status": "attention",
+        "value": "Moderate in east pond",
+        "severity": "medium"
+      },
+      {
+        "id": "floating-waste",
+        "name": "Floating Waste",
+        "status": "issue",
+        "value": "Plastic waste in lake — 6 items",
+        "severity": "high"
+      },
+      {
+        "id": "water-clarity",
+        "name": "Water Clarity",
+        "status": "good",
+        "value": "Clear",
+        "severity": "low"
+      },
+      {
+        "id": "bank-erosion",
+        "name": "Bank Erosion",
+        "status": "good",
+        "value": "Stable",
+        "severity": "low"
+      },
+      {
+        "id": "fountain",
+        "name": "Fountain",
+        "status": "good",
+        "value": "Operational",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "id": "landscape-quality",
+    "category": "Landscape Quality",
+    "iconName": "Palette",
+    "issueCount": 1,
+    "status": "attention",
+    "items": [
+      {
+        "id": "symmetry",
+        "name": "Symmetry",
+        "status": "good",
+        "value": "Well balanced",
+        "severity": "low"
+      },
+      {
+        "id": "colour-uniformity",
+        "name": "Colour Uniformity",
+        "status": "attention",
+        "value": "Uneven flower colours in central bed",
+        "severity": "medium"
+      }
+    ]
+  }
+]

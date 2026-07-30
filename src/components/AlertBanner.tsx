@@ -1,18 +1,18 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
+import { View, Text, StyleSheet, Animated } from 'react-native';
+import { Surface, TouchableRipple } from 'react-native-paper';
 import { TriangleAlert, ChevronRight } from 'lucide-react-native';
 import { useTheme } from '../theme/ThemeContext';
 import { typography } from '../theme/typography';
 
 interface AlertBannerProps {
   message: string;
-  onPress: () => void;
+  onPress?: () => void;
 }
 
 export const AlertBanner: React.FC<AlertBannerProps> = ({ message, onPress }) => {
   const { theme } = useTheme();
 
-  // Slide-in from top + fade animation
   const slideAnim = useRef(new Animated.Value(-20)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -33,15 +33,25 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({ message, onPress }) =>
 
   return (
     <Animated.View style={{ opacity: fadeAnim, transform: [{ translateY: slideAnim }] }}>
-      <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={[styles.container, { backgroundColor: theme.accentRed }]}>
-        <View style={styles.left}>
-          <View style={styles.iconWrap}>
-            <TriangleAlert size={14} color={theme.accentRed} />
-          </View>
-          <Text style={styles.message} numberOfLines={2}>{message}</Text>
-        </View>
-        <ChevronRight size={16} color="rgba(255,255,255,0.7)" />
-      </TouchableOpacity>
+      <Surface style={[styles.container, { backgroundColor: theme.surface, borderColor: theme.border + '40' }]} elevation={2 as any}>
+        <TouchableRipple onPress={onPress} style={{ flex: 1, flexDirection: 'row' }} rippleColor="rgba(255, 59, 48, .12)">
+          <>
+            <View style={styles.redStripe} />
+            <View style={styles.content}>
+              <View style={styles.left}>
+                <View style={[styles.iconWrap, { backgroundColor: theme.accentRed + '15' }]}>
+                  <TriangleAlert size={14} color={theme.accentRed} />
+                </View>
+                <Text style={[styles.message, { color: theme.textPrimary }]} numberOfLines={2}>{message}</Text>
+              </View>
+              <View style={[styles.viewBtn, { backgroundColor: theme.accentRed + '12' }]}>
+                <Text style={[styles.viewBtnText, { color: theme.accentRed }]}>View</Text>
+                <ChevronRight size={14} color={theme.accentRed} />
+              </View>
+            </View>
+          </>
+        </TouchableRipple>
+      </Surface>
     </Animated.View>
   );
 };
@@ -49,14 +59,25 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({ message, onPress }) =>
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    alignItems: 'stretch',
+    marginHorizontal: 12,
+    marginTop: 10,
+    borderRadius: 4,
+    borderWidth: StyleSheet.hairlineWidth,
+    overflow: 'hidden',
+  },
+  redStripe: {
+    width: 4,
+    backgroundColor: '#FF3B30',
+  },
+  content: {
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 12,
-    paddingVertical: 10,
-    marginHorizontal: 16,
-    marginTop: 12,
-    borderRadius: 10,
-    gap: 8,
+    paddingVertical: 12,
+    gap: 10,
   },
   left: {
     flexDirection: 'row',
@@ -65,18 +86,28 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   iconWrap: {
-    width: 26,
-    height: 26,
-    borderRadius: 13,
-    backgroundColor: 'rgba(255,255,255,0.9)',
+    width: 30,
+    height: 30,
+    borderRadius: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },
   message: {
     fontFamily: typography.fonts.semiBold,
     fontSize: typography.sizes.sm,
-    color: '#FFFFFF',
     flex: 1,
-    lineHeight: 17,
-  }
+    lineHeight: 18,
+  },
+  viewBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 4,
+    gap: 2,
+  },
+  viewBtnText: {
+    fontFamily: typography.fonts.semiBold,
+    fontSize: typography.sizes.xs,
+  },
 });

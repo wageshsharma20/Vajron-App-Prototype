@@ -1,18 +1,18 @@
 export const typography = {
   fonts: {
-    regular: 'Poppins_400Regular',
-    medium: 'Poppins_500Medium',
-    semiBold: 'Poppins_600SemiBold',
-    bold: 'Poppins_700Bold',
+    regular: 'IBMPlexSans_400Regular',
+    medium: 'IBMPlexSans_500Medium',
+    semiBold: 'IBMPlexSans_600SemiBold',
+    bold: 'IBMPlexSans_700Bold',
   },
-  tabularNums: ['tabular-nums'] as any,
+  tabularNums: ['tabular-nums'] as const,
   sizes: {
-    xs: 10,
-    sm: 12,
-    base: 14,
-    md: 16,
-    lg: 18,
-    xl: 24,
-    xxl: 32,
+    xs: 11,
+    sm: 13,
+    base: 15,
+    md: 17,
+    lg: 20,
+    xl: 26,
+    xxl: 34,
   }
-};
+} as any;

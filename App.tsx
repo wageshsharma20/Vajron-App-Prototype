@@ -1,87 +1,118 @@
 import React from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { useFonts, Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold } from '@expo-google-fonts/poppins';
+import { useFonts, IBMPlexSans_400Regular, IBMPlexSans_500Medium, IBMPlexSans_600SemiBold, IBMPlexSans_700Bold } from '@expo-google-fonts/ibm-plex-sans';
 import { ThemeProvider, useTheme } from './src/theme/ThemeContext';
 import { StatusStrip } from './src/components/StatusStrip';
-
 import { LiveDataFeedScreen } from './src/screens/LiveDataFeedScreen';
 import { LiveVideoFeedScreen } from './src/screens/LiveVideoFeedScreen';
 import { ConclusiveDataScreen } from './src/screens/ConclusiveDataScreen';
 import { typography } from './src/theme/typography';
+import { CustomTabBar } from './src/components/CustomTabBar';
+import { PaperProvider, MD3LightTheme, MD3DarkTheme, adaptNavigationTheme } from 'react-native-paper';
+import { DefaultTheme as NavigationDefaultTheme, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
 
-const Tab = createMaterialTopTabNavigator();
+const Tab = createBottomTabNavigator();
+
+const { LightTheme, DarkTheme } = adaptNavigationTheme({
+  reactNavigationLight: NavigationDefaultTheme,
+  reactNavigationDark: NavigationDarkTheme,
+}) as any;
 
 const AppNavigator = () => {
-  const { theme } = useTheme();
+  const { theme, isDark } = useTheme();
+
+  const paperTheme = isDark ? {
+    ...MD3DarkTheme,
+    colors: {
+      ...MD3DarkTheme.colors,
+      primary: theme.accentTeal,
+      background: theme.background,
+      surface: theme.surface,
+      error: theme.accentRed,
+      elevation: {
+        ...MD3DarkTheme.colors.elevation,
+        level1: theme.surfaceLight,
+      }
+    }
+  } : {
+    ...MD3LightTheme,
+    colors: {
+      ...MD3LightTheme.colors,
+      primary: theme.accentTeal,
+      background: theme.background,
+      surface: theme.surface,
+      error: theme.accentRed,
+      elevation: {
+        ...MD3LightTheme.colors.elevation,
+        level1: theme.surfaceLight,
+      }
+    }
+  } as any;
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <StatusStrip />
-      <Tab.Navigator
-        screenOptions={{
-          tabBarStyle: {
-            backgroundColor: theme.background,
-            elevation: 0,
-            shadowOpacity: 0,
-            borderBottomWidth: 0,
-            marginTop: 4,
-            marginBottom: 4,
-            marginHorizontal: 12,
-          },
-          tabBarIndicatorStyle: {
-            backgroundColor: theme.accentTeal,
-            height: 2.5,
-            borderRadius: 2,
-          },
-          tabBarLabelStyle: {
-            fontFamily: typography.fonts.semiBold,
-            fontSize: typography.sizes.sm,
-            textTransform: 'none',
-          },
-          tabBarActiveTintColor: theme.textPrimary,
-          tabBarInactiveTintColor: theme.textSecondary,
-        }}
-      >
-        <Tab.Screen name="Live Data Feed" component={LiveDataFeedScreen} />
-        <Tab.Screen name="Live Video Feed" component={LiveVideoFeedScreen} />
-        <Tab.Screen name="Conclusive Data" component={ConclusiveDataScreen} />
-      </Tab.Navigator>
-    </View>
+    <PaperProvider theme={paperTheme as any}>
+      <View style={[styles.container, { backgroundColor: theme.background }]}>
+        <StatusStrip />
+        <NavigationContainer theme={(isDark ? DarkTheme : LightTheme) as any}>
+          <Tab.Navigator
+            tabBar={(props) => <CustomTabBar {...props} />}
+            screenOptions={{
+              headerShown: false,
+              tabBarIconStyle: { display: 'none' }
+            }}
+          >
+            <Tab.Screen 
+              name="Dashboard" 
+              component={LiveDataFeedScreen} 
+            />
+            <Tab.Screen 
+              name="Camera" 
+              component={LiveVideoFeedScreen} 
+            />
+            <Tab.Screen 
+              name="Reports" 
+              component={ConclusiveDataScreen} 
+            />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </View>
+    </PaperProvider>
   );
 };
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_600SemiBold,
-    Poppins_700Bold,
+    IBMPlexSans_400Regular,
+    IBMPlexSans_500Medium,
+    IBMPlexSans_600SemiBold,
+    IBMPlexSans_700Bold,
   });
 
   const webShadow = Platform.OS === 'web' ? { boxShadow: '0 0 40px rgba(0,0,0,0.6)' } : {};
 
   if (!fontsLoaded) {
-    return null; // Return empty or a loading screen while fonts load
+    return null;
   }
 
   return (
-    <SafeAreaProvider>
-      <ThemeProvider>
-        <View style={Platform.OS === 'web' ? styles.webWrapper : styles.container}>
-          <View style={[
-            Platform.OS === 'web' ? styles.mobileFrame : styles.container, 
-            webShadow as any
-          ]}>
-            <NavigationContainer>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <ThemeProvider>
+          <View style={Platform.OS === 'web' ? styles.webWrapper : styles.container}>
+            <View style={[
+              Platform.OS === 'web' ? styles.mobileFrame : styles.container, 
+              webShadow as any
+            ]}>
               <AppNavigator />
-            </NavigationContainer>
+            </View>
           </View>
-        </View>
-      </ThemeProvider>
-    </SafeAreaProvider>
+        </ThemeProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
 
@@ -96,10 +127,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mobileFrame: {
-    width: 393, // iPhone 15 width
-    height: 852, // iPhone 15 height
+    width: 393,
+    height: 852,
     maxHeight: '100%',
-    backgroundColor: '#121212',
+    backgroundColor: '#0D0D0D',
     overflow: 'hidden',
     borderRadius: 40,
     borderWidth: 8,

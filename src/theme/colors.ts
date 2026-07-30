@@ -13,37 +13,33 @@ export type ColorTheme = {
 };
 
 export const darkTheme: ColorTheme = {
-  background: '#121212', // Deep charcoal / near-black
-  surface: '#2C2C2E',    // Slightly lighter charcoal cards
-  surfaceLight: '#3A3A3C',
-  textPrimary: '#FFFFFF', // High-contrast off-white
-  textSecondary: '#A0A0A5', // Soft gray
-  border: '#38383A',
-  overlay: 'rgba(0, 0, 0, 0.6)',
+  background: '#000000',    // Pure black
+  surface: '#1C1C1E',       // Apple dark mode card
+  surfaceLight: '#2C2C2E',  // Lighter gray
+  textPrimary: '#FAFAFA',   // Off white
+  textSecondary: '#8E8E93', // Apple dark mode secondary text
+  border: '#38383A',        // Apple dark mode border
+  overlay: 'rgba(0, 0, 0, 0.8)',
+
+  accentTeal: '#22C55E',    // Neon tactical green
+  accentAmber: '#FACC15',   // Crisp tactical yellow
+  accentRed: '#EF4444',     // Tactical red
   
-  // Category colors
-  accentTeal: '#0A84FF', // Neutral / Informational
-  accentAmber: '#FF9F0A', // Attention-worthy
-  accentRed: '#FF453A',   // Lethal / Critical
-  
-  // Other status
-  statusGreen: '#30D158',
+  statusGreen: '#22C55E',   // Neon green
 };
 
 export const lightTheme: ColorTheme = {
-  background: '#F8FAFC', // Crisp Slate-50 background
-  surface: '#FFFFFF', // White for cards
-  surfaceLight: '#E4E6EB', // More visible grey for tab pills and card headers
-  textPrimary: '#181110', // Dark Espresso Black from palette
-  textSecondary: '#6F777B', // Slate Grey from palette
-  border: '#E2E8F0', // Slate-200 (using standard light border so it's not too heavy)
-  overlay: 'rgba(248, 250, 252, 0.9)',
+  background: '#F8FAFC',    // Slate 50
+  surface: '#FFFFFF',       // Pure White
+  surfaceLight: '#F1F5F9',  // Slate 100
+  textPrimary: '#0F172A',   // Slate 900
+  textSecondary: '#64748B', // Slate 500
+  border: '#E2E8F0',        // Slate 200
+  overlay: 'rgba(248, 250, 252, 0.8)',
 
-  // Category colors
-  accentTeal: '#16A34A', // Cleaner, more vibrant UI Green (Green-600) instead of the muddy olive
-  accentAmber: '#6F777B', // Slate Grey from palette
-  accentRed: '#FE281A', // Vibrant Red from palette
+  accentTeal: '#16A34A',    // Green 600
+  accentAmber: '#EAB308',   // Solid yellow
+  accentRed: '#DC2626',     // Red 600
   
-  // Other status
-  statusGreen: '#16A34A', // Matching UI Green
+  statusGreen: '#16A34A',   // Green 600
 };

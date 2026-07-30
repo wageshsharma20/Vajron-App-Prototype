@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Wifi, BatteryMedium, MapPin, Sun, Moon } from 'lucide-react-native';
 import { useTheme } from '../theme/ThemeContext';
 import { typography } from '../theme/typography';
-import mockTelemetry from '../data/mockTelemetry.json';
+import mockParkInfo from '../data/mockParkInfo.json';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export const StatusStrip = () => {
@@ -20,24 +20,27 @@ export const StatusStrip = () => {
     return date.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
   };
 
+
+
   return (
-    <View style={[styles.container, { backgroundColor: theme.background, paddingTop: Math.max(insets.top, 10), borderBottomColor: theme.border }]}>
+    <View style={[styles.container, { backgroundColor: theme.background, paddingTop: Math.max(insets.top, 10), borderBottomColor: theme.border + '60' }]}>
       <View style={[styles.left, { flexShrink: 1 }]}>
+
         <View style={styles.item}>
-          <Wifi size={14} color={theme.statusGreen} />
+          <Wifi size={13} color={theme.statusGreen} />
         </View>
         <View style={styles.item}>
-          <BatteryMedium size={14} color={theme.statusGreen} />
-          <Text style={[styles.text, { color: theme.textSecondary }]}>{mockTelemetry.battery}%</Text>
+          <BatteryMedium size={13} color={theme.statusGreen} />
+          <Text style={[styles.text, { color: theme.textSecondary }]}>{mockParkInfo.battery}%</Text>
         </View>
         <View style={[styles.item, { flexShrink: 1 }]}>
-          <MapPin size={14} color={theme.textSecondary} />
+          <MapPin size={13} color={theme.textSecondary} />
           <Text 
             style={[styles.text, { color: theme.textSecondary, flexShrink: 1 }]}
             numberOfLines={1} 
             ellipsizeMode="tail"
           >
-            {mockTelemetry.siteName}
+            {mockParkInfo.parkName}
           </Text>
         </View>
       </View>
@@ -61,32 +64,31 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingBottom: 8,
+    paddingBottom: 6,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: 'transparent',
   },
   left: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 10,
   },
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4,
+    gap: 3,
   },
   text: {
     fontFamily: typography.fonts.medium,
-    fontSize: typography.sizes.sm,
+    fontSize: typography.sizes.xs,
   },
   right: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 10,
   },
   time: {
     fontFamily: typography.fonts.bold,
-    fontSize: typography.sizes.base,
+    fontSize: typography.sizes.sm,
     fontVariant: typography.tabularNums,
   },
   toggle: {

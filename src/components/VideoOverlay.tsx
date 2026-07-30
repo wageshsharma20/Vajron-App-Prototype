@@ -11,7 +11,7 @@ interface BoundingBoxProps {
   label: string;
   confidence: number;
   type: 'live' | 'ghost';
-  category: 'weapon' | 'human' | 'neutral';
+  category: 'issue' | 'neutral';
 }
 
 export const VideoOverlay: React.FC<{ boxes: BoundingBoxProps[] }> = ({ boxes }) => {
@@ -19,16 +19,16 @@ export const VideoOverlay: React.FC<{ boxes: BoundingBoxProps[] }> = ({ boxes })
 
   return (
     <View style={[StyleSheet.absoluteFill, { pointerEvents: 'none' }]}>
+      {/* Draw the boxes */}
       {boxes.map((box, index) => {
         let color = theme.accentTeal;
-        if (box.category === 'human') color = theme.accentAmber;
-        if (box.category === 'weapon') color = theme.accentRed;
+        if (box.category === 'issue') color = theme.accentRed;
 
         const isGhost = box.type === 'ghost';
         
         return (
           <View
-            key={index}
+            key={`box-${index}`}
             style={[
               styles.boundingBox,
               {
@@ -38,16 +38,38 @@ export const VideoOverlay: React.FC<{ boxes: BoundingBoxProps[] }> = ({ boxes })
                 height: `${box.height}%`,
                 borderColor: color,
                 borderStyle: isGhost ? 'dashed' : 'solid',
-                backgroundColor: isGhost ? 'transparent' : color + '15',
-                opacity: isGhost ? 0.7 : 1,
+                backgroundColor: isGhost ? 'transparent' : color + '12',
+                opacity: isGhost ? 0.6 : 1,
+              }
+            ]}
+          />
+        );
+      })}
+
+      {/* Draw the labels (outside boxes so they don't get constrained and wrap) */}
+      {boxes.map((box, index) => {
+        let color = theme.accentTeal;
+        if (box.category === 'issue') color = theme.accentRed;
+
+        const isGhost = box.type === 'ghost';
+        
+        return (
+          <View
+            key={`label-${index}`}
+            style={[
+              styles.labelContainer,
+              {
+                left: `${box.x}%`,
+                top: `${box.y}%`,
+                transform: [{ translateY: -24 }, { translateX: -2 }],
+                backgroundColor: 'rgba(0,0,0,0.65)'
               }
             ]}
           >
-            <View style={[styles.labelContainer, { backgroundColor: color }]}>
-              <Text style={styles.labelText}>
-                {isGhost ? 'GHOST TRACK — predicted' : `${box.label.toUpperCase()} ${box.confidence}%`}
-              </Text>
-            </View>
+            <View style={[styles.labelDot, { backgroundColor: color }]} />
+            <Text style={styles.labelText} numberOfLines={1}>
+              {isGhost ? 'PREDICTED' : `${box.label.toUpperCase()} ${box.confidence}%`}
+            </Text>
           </View>
         );
       })}
@@ -59,14 +81,21 @@ const styles = StyleSheet.create({
   boundingBox: {
     position: 'absolute',
     borderWidth: 2,
+    borderRadius: 4,
   },
   labelContainer: {
     position: 'absolute',
-    top: -22,
-    left: -2,
-    paddingHorizontal: 6,
-    paddingVertical: 2,
+    paddingHorizontal: 8,
+    paddingVertical: 3,
     flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 4,
+    gap: 5,
+  },
+  labelDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
   },
   labelText: {
     color: '#FFFFFF',

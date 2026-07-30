@@ -1,55 +1,137 @@
-import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import React, { useState, useCallback, useMemo } from 'react';
+import { View, StyleSheet, ScrollView, RefreshControl } from 'react-native';
 import { useTheme } from '../theme/ThemeContext';
-import { TelemetryTable } from '../components/TelemetryTable';
-import { PercentageCard } from '../components/PercentageCard';
+import { typography } from '../theme/typography';
+import { CircularScore } from '../components/CircularScore';
+import { ScoreCard } from '../components/ScoreCard';
+import { DroneInfoTable } from '../components/DroneInfoTable';
 import { AlertBanner } from '../components/AlertBanner';
-import mockTelemetry from '../data/mockTelemetry.json';
-import mockDetections from '../data/mockDetections.json';
+import mockParkInfo from '../data/mockParkInfo.json';
+import mockScores from '../data/mockScores.json';
+import mockInspection from '../data/mockInspection.json';
+import { CheckCircle, AlertTriangle, XCircle } from 'lucide-react-native';
+import { Card, Text } from 'react-native-paper';
+import { InspectionCategory, ScoreData } from '../types';
 
 export const LiveDataFeedScreen = ({ navigation }: any) => {
   const { theme } = useTheme();
+  const [refreshing, setRefreshing] = useState(false);
 
-  // Find if there is an active threat
-  const activeThreat = mockDetections.find((d: any) => ['Knife', 'Handgun'].includes(d.category) && d.value > 0);
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 1500);
+  }, []);
+
+  // Memoize heavy calculations for top issues
+  const topIssues = useMemo(() => {
+    return (mockInspection as InspectionCategory[])
+      .flatMap((section) =>
+        section.items
+          .filter((item) => item.status === 'issue')
+          .map((item) => ({ ...item, category: section.category }))
+      )
+      .slice(0, 5);
+  }, []);
+
+  const overallScore = (mockScores as ScoreData[])[0];
+  const gridScores = (mockScores as ScoreData[]).slice(1);
+
+  // System status and alerts
+  const { totalIssues, alertSection } = useMemo(() => {
+    const inspectionData = mockInspection as InspectionCategory[];
+    const critical = inspectionData.filter((s) => s.status === 'critical');
+    const high = inspectionData.filter((s) => s.issueCount >= 3);
+    return {
+      totalIssues: inspectionData.reduce((sum, s) => sum + s.issueCount, 0),
+      alertSection: critical.length > 0 ? critical[0] : (high.length > 0 ? high[0] : null)
+    };
+  }, []);
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      {activeThreat && (
+      {alertSection && (
         <AlertBanner 
-          message={`THREAT DETECTED — ${activeThreat.category} near Human — Zone A`}
-          onPress={() => navigation.navigate('Live Video Feed')}
+          message={`${alertSection.issueCount} issues found — ${alertSection.category}`}
         />
       )}
-      
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        {/* Telemetry Hero */}
-        <TelemetryTable 
-          title="Drone Telemetry"
-          data={[
-            { label: "Altitude", value: mockTelemetry.altitude },
-            { label: "Ground Speed", value: mockTelemetry.groundSpeed },
-            { label: "Heading", value: mockTelemetry.heading },
-            { label: "Battery", value: `${mockTelemetry.battery}%` },
-            { label: "Flight Time", value: mockTelemetry.flightTime },
-            { label: "GPS", value: mockTelemetry.gps },
-            { label: "Signal", value: `${mockTelemetry.signalStrength}%` }
-          ]} 
-        />
+      <ScrollView
+        contentContainerStyle={styles.scrollContent}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={theme.textSecondary} />
+        }
+      >
+        {/* Overall Park Health */}
+        <Card style={[styles.overallSection, { backgroundColor: theme.surface, borderColor: theme.border }] as any} mode="outlined" elevation={0 as any}>
+          <Card.Content style={styles.overallSectionContent}>
+            <CircularScore score={overallScore.score} label="Overall Park Health" size={160} />
+            <View style={styles.overallMeta}>
+              <Text variant="titleMedium" style={[styles.parkName, { color: theme.textPrimary }]}>{mockParkInfo.parkName}</Text>
+              <Text variant="bodyMedium" style={[styles.parkLocation, { color: theme.textSecondary }]}>{mockParkInfo.location}</Text>
+              <Text variant="bodySmall" style={[styles.surveyDate, { color: theme.textSecondary }]}>
+                Survey: {mockParkInfo.surveyDate} at {mockParkInfo.surveyTime}
+              </Text>
+              <Text variant="bodySmall" style={[styles.areaInfo, { color: theme.textSecondary }]}>
+                {mockParkInfo.areaCovered} of {mockParkInfo.totalArea} covered
+              </Text>
+            </View>
+          </Card.Content>
+        </Card>
 
-        {/* Detections Grid */}
-        <View style={styles.detectionsGrid}>
-          {mockDetections.map((item, index) => (
-            <PercentageCard 
-              key={item.id} 
-              category={item.category} 
-              value={item.value}
-              unit={item.unit}
-              iconName={item.iconName}
-              index={index}
+        {/* System Status */}
+        <View style={[styles.statusBar, { backgroundColor: totalIssues === 0 ? theme.statusGreen + '10' : theme.accentAmber + '10' }]}>
+          {totalIssues === 0 ? (
+            <CheckCircle size={14} color={theme.statusGreen} />
+          ) : (
+            <AlertTriangle size={14} color={theme.accentAmber} />
+          )}
+          <Text style={[styles.statusText, { color: totalIssues === 0 ? theme.statusGreen : theme.accentAmber }]}>
+            {totalIssues === 0 ? 'All systems normal' : `${totalIssues} issues need attention`}
+          </Text>
+        </View>
+
+        {/* Score Grid */}
+        <View style={styles.scoreGrid}>
+          {gridScores.map((score: any) => (
+            <ScoreCard
+              key={score.id}
+              label={score.label}
+              score={score.score}
+              iconName={score.icon}
+              trend={score.trend}
+              changePercent={score.changePercent}
             />
           ))}
         </View>
+
+        {/* Top Issues */}
+        {topIssues.length > 0 && (
+          <Card style={[styles.issuesSection, { backgroundColor: theme.surface, borderColor: theme.border }] as any} mode="outlined" elevation={0 as any}>
+            <Card.Title title="Priority Issues" titleStyle={[styles.sectionTitle, { color: theme.textPrimary }]} />
+            <Card.Content style={styles.issuesCardContent}>
+              {topIssues.map((issue: any, index: number) => (
+                <View 
+                  key={issue.id} 
+                  style={[
+                    styles.issueRow, 
+                    index < topIssues.length - 1 && { borderBottomWidth: 1, borderBottomColor: theme.border }
+                  ]}
+                >
+                  <XCircle size={14} color={theme.accentRed} />
+                  <View style={styles.issueContent}>
+                    <Text variant="bodyMedium" style={[styles.issueName, { color: theme.textPrimary }]}>{issue.name}</Text>
+                    <Text variant="bodySmall" style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{issue.value}</Text>
+                  </View>
+                  <Text variant="labelSmall" style={[styles.issueCategory, { color: theme.textSecondary }]}>{issue.category.split(' ')[0]}</Text>
+                </View>
+              ))}
+            </Card.Content>
+          </Card>
+        )}
+
+        {/* Drone Info */}
+        <DroneInfoTable />
       </ScrollView>
     </View>
   );
@@ -61,9 +143,79 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     padding: 12,
+    paddingBottom: 24,
+    gap: 12,
   },
-  detectionsGrid: {
+  overallSection: {
+    borderRadius: 8,
+  },
+  overallSectionContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 20,
+  },
+  overallMeta: {
+    flex: 1,
+    gap: 3,
+  },
+  parkName: {
+    fontFamily: typography.fonts.bold,
+  },
+  parkLocation: {
+    fontFamily: typography.fonts.regular,
+  },
+  surveyDate: {
+    fontFamily: typography.fonts.regular,
+    marginTop: 4,
+  },
+  areaInfo: {
+    fontFamily: typography.fonts.regular,
+  },
+  statusBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 4,
+  },
+  statusText: {
+    fontFamily: typography.fonts.medium,
+    fontSize: typography.sizes.sm,
+  },
+  scoreGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-  }
+    gap: 12,
+  },
+  issuesSection: {
+    borderRadius: 8,
+  },
+  issuesCardContent: {
+    paddingHorizontal: 0,
+    paddingBottom: 0,
+  },
+  sectionTitle: {
+    fontFamily: typography.fonts.semiBold,
+  },
+  issueRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+  },
+  issueContent: {
+    flex: 1,
+  },
+  issueName: {
+    fontFamily: typography.fonts.medium,
+  },
+  issueValue: {
+    fontFamily: typography.fonts.regular,
+    marginTop: 1,
+  },
+  issueCategory: {
+    fontFamily: typography.fonts.regular,
+  },
 });

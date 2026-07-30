@@ -16,7 +16,7 @@ const ThemeContext = createContext<ThemeContextType>({
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isDark, setIsDark] = useState(false); // Default to light theme
+  const [isDark, setIsDark] = useState(false); // Default to bright mode
 
   const theme = isDark ? darkTheme : lightTheme;
 
