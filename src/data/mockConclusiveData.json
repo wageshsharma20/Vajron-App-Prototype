@@ -1,0 +1,92 @@
+[
+  {
+    "id": "c1",
+    "timestamp": "2026-07-29T10:15:22Z",
+    "category": "Handgun",
+    "zone": "Sector Alpha - Park 4",
+    "confidence": 88,
+    "severity": "Critical",
+    "status": "Active"
+  },
+  {
+    "id": "c2",
+    "timestamp": "2026-07-29T10:14:58Z",
+    "category": "Human",
+    "zone": "Sector Alpha - Park 4",
+    "confidence": 95,
+    "severity": "Normal",
+    "status": "Active"
+  },
+  {
+    "id": "c3",
+    "timestamp": "2026-07-29T09:42:10Z",
+    "category": "Human",
+    "zone": "Sector Alpha - Park 4",
+    "confidence": 92,
+    "severity": "Normal",
+    "status": "Resolved"
+  },
+  {
+    "id": "c4",
+    "timestamp": "2026-07-29T08:30:05Z",
+    "category": "Vegetation",
+    "zone": "Sector Alpha - Park 4",
+    "confidence": 85,
+    "severity": "Normal",
+    "status": "Resolved"
+  },
+  {
+    "id": "c5",
+    "timestamp": "2026-07-28T17:45:30Z",
+    "category": "Human",
+    "zone": "Sector Beta - Trail 2",
+    "confidence": 78,
+    "severity": "Normal",
+    "status": "Resolved"
+  },
+  {
+    "id": "c6",
+    "timestamp": "2026-07-28T14:20:00Z",
+    "category": "Knife",
+    "zone": "Sector Beta - Trail 2",
+    "confidence": 45,
+    "severity": "Caution",
+    "status": "False Positive"
+  },
+  {
+    "id": "c7",
+    "timestamp": "2026-07-28T11:05:30Z",
+    "category": "Handgun",
+    "zone": "Sector Charlie - Playground",
+    "confidence": 92,
+    "severity": "Critical",
+    "status": "Resolved"
+  },
+  {
+    "id": "c8",
+    "timestamp": "2026-07-28T09:15:12Z",
+    "category": "Water Body",
+    "zone": "Sector Delta - Lake",
+    "confidence": 98,
+    "severity": "Normal",
+    "status": "Resolved"
+  },
+  {
+    "id": "c9",
+    "timestamp": "2026-07-27T16:32:44Z",
+    "category": "Swings",
+    "zone": "Sector Charlie - Playground",
+    "confidence": 90,
+    "severity": "Normal",
+    "status": "Resolved"
+  },
+  {
+    "id": "c10",
+    "timestamp": "2026-07-27T14:10:08Z",
+    "category": "Human",
+    "zone": "Sector Alpha - Park 4",
+    "confidence": 72,
+    "severity": "Normal",
+    "status": "Resolved"
+  }
+]

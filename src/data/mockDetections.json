@@ -1,0 +1,11 @@
+[
+  { "id": "1", "category": "Vegetation", "value": 8500, "unit": "m²", "type": "neutral", "iconName": "Trees" },
+  { "id": "2", "category": "Water Body", "value": 1200, "unit": "m²", "type": "neutral", "iconName": "Droplets" },
+  { "id": "3", "category": "Buildings", "value": 400, "unit": "m²", "type": "neutral", "iconName": "Building2" },
+  { "id": "4", "category": "Dry Area", "value": 0, "unit": "m²", "type": "neutral", "iconName": "Map" },
+  { "id": "5", "category": "Pathways", "value": 2400, "unit": "m²", "type": "neutral", "iconName": "Footprints" },
+  { "id": "6", "category": "Human", "value": 18, "unit": "", "type": "neutral", "iconName": "User" },
+  { "id": "7", "category": "Swings", "value": 0, "unit": "", "type": "neutral", "iconName": "Activity" },
+  { "id": "8", "category": "Knife", "value": 0, "unit": "", "type": "lethal", "iconName": "Sword" },
+  { "id": "9", "category": "Handgun", "value": 1, "unit": "", "type": "lethal", "iconName": "Crosshair" }
+]
