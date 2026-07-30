@@ -1,6 +1,6 @@
 # Vajron App Prototype
 
-A React Native prototype for the AeroGuard drone surveillance dashboard. Built with Expo, this interface provides an interactive, real-time command center experience for monitoring aerial telemetry and threat detection.
+A React Native prototype for the Vajron drone surveillance dashboard. Built with Expo, this interface provides an interactive, real-time command center experience for monitoring aerial telemetry and threat detection.
 
 ## Features
 
