@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated } from 'react-native';
-import { Surface, TouchableRipple } from 'react-native-paper';
+import { View, Text, StyleSheet, Animated, Pressable } from 'react-native';
 import { TriangleAlert, ChevronRight } from 'lucide-react-native';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
+import { useTheme, typography } from '../theme';
 
 interface AlertBannerProps {
   message: string;
@@ -33,25 +31,13 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({ message, onPress }) =>
 
   return (
     <Animated.View style={{ opacity: fadeAnim, transform: [{ translateY: slideAnim }] }}>
-      <Surface style={[styles.container, { backgroundColor: theme.surface, borderColor: theme.border + '40' }]} elevation={2 as any}>
-        <TouchableRipple onPress={onPress} style={{ flex: 1, flexDirection: 'row' }} rippleColor="rgba(255, 59, 48, .12)">
-          <>
-            <View style={styles.redStripe} />
-            <View style={styles.content}>
-              <View style={styles.left}>
-                <View style={[styles.iconWrap, { backgroundColor: theme.accentRed + '15' }]}>
-                  <TriangleAlert size={14} color={theme.accentRed} />
-                </View>
-                <Text style={[styles.message, { color: theme.textPrimary }]} numberOfLines={2}>{message}</Text>
-              </View>
-              <View style={[styles.viewBtn, { backgroundColor: theme.accentRed + '12' }]}>
-                <Text style={[styles.viewBtnText, { color: theme.accentRed }]}>View</Text>
-                <ChevronRight size={14} color={theme.accentRed} />
-              </View>
-            </View>
-          </>
-        </TouchableRipple>
-      </Surface>
+      <Pressable onPress={onPress} style={[styles.container, { borderBottomColor: theme.border }]}>
+        <View style={styles.left}>
+          <TriangleAlert size={14} color={theme.accentTeal} />
+          <Text style={[styles.message, { color: theme.textPrimary }]} numberOfLines={2}>{message}</Text>
+        </View>
+        <ChevronRight size={14} color={theme.textSecondary} />
+      </Pressable>
     </Animated.View>
   );
 };
@@ -59,55 +45,22 @@ export const AlertBanner: React.FC<AlertBannerProps> = ({ message, onPress }) =>
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: 'stretch',
-    marginHorizontal: 12,
-    marginTop: 10,
-    borderRadius: 4,
-    borderWidth: StyleSheet.hairlineWidth,
-    overflow: 'hidden',
-  },
-  redStripe: {
-    width: 4,
-    backgroundColor: '#FF3B30',
-  },
-  content: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-    gap: 10,
+    justifyContent: 'space-between',
+    paddingVertical: 16,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    marginHorizontal: 24,
   },
   left: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
+    gap: 12,
     flex: 1,
-  },
-  iconWrap: {
-    width: 30,
-    height: 30,
-    borderRadius: 4,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   message: {
-    fontFamily: typography.fonts.semiBold,
-    fontSize: typography.sizes.sm,
+    fontFamily: typography.fonts.medium,
+    fontSize: 15,
+    letterSpacing: 0.5,
     flex: 1,
-    lineHeight: 18,
-  },
-  viewBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-    borderRadius: 4,
-    gap: 2,
-  },
-  viewBtnText: {
-    fontFamily: typography.fonts.semiBold,
-    fontSize: typography.sizes.xs,
   },
 });

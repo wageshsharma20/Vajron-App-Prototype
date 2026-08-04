@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   LayoutAnimation,
   Platform,
   UIManager,
   Animated,
+  Pressable
 } from 'react-native';
-import { Surface, TouchableRipple } from 'react-native-paper';
 import {
   Trees,
   Leaf,
@@ -19,13 +18,11 @@ import {
   Waves,
   Palette,
   ChevronDown,
-  ChevronUp,
-  CheckCircle,
-  AlertTriangle,
-  XCircle,
+  Download,
+  MapPin,
 } from 'lucide-react-native';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
+import { Text } from 'react-native-paper';
+import { useTheme, typography } from '../theme';
 import { InspectionCategory } from '../types';
 
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -38,25 +35,21 @@ export interface InspectionAccordionProps {
 }
 
 const iconMap: Record<string, any> = {
-  Trees,
-  Leaf,
-  Droplets,
-  Sparkles,
-  Wrench,
-  ShieldCheck,
-  Waves,
-  Palette,
+  Trees, Leaf, Droplets, Sparkles, Wrench, ShieldCheck, Waves, Palette,
 };
 
 export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, index }) => {
   const { theme } = useTheme();
   const [expanded, setExpanded] = useState(false);
+  
+  // Minimal enter animation
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const rotateAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 300,
+      duration: 600,
       delay: index * 100,
       useNativeDriver: true,
     }).start();
@@ -65,181 +58,155 @@ export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, 
   const toggleExpand = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     setExpanded(!expanded);
+    Animated.timing(rotateAnim, {
+      toValue: expanded ? 0 : 1,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
   };
 
   const IconComponent = iconMap[data.iconName] || Wrench;
 
-  let badgeColor = theme.statusGreen;
-  let badgeText = 'All clear';
+  // Determine overall category status
+  let highestSeverity = 'good';
+  let issueCount = 0;
   
-  if (data.issueCount > 0) {
-    badgeColor = data.status === 'critical' ? theme.accentRed : theme.accentAmber;
-    badgeText = `${data.issueCount} issue${data.issueCount > 1 ? 's' : ''}`;
-  }
+  data.items.forEach(item => {
+    if ((item.status as string) === 'critical') highestSeverity = 'critical';
+    else if (item.status === 'issue' && highestSeverity !== 'critical') highestSeverity = 'issue';
+    else if ((item.status as string) === 'attention' && highestSeverity === 'good') highestSeverity = 'attention';
+    
+    if (item.status === 'issue' || (item.status as string) === 'critical' || (item.status as string) === 'attention') {
+      issueCount++;
+    }
+  });
+
+  const getStatusColor = (status: string) => {
+    if (status === 'critical') return theme.accentRed;
+    if (status === 'issue') return theme.accentRed;
+    if (status === 'attention') return theme.accentAmber;
+    return theme.statusGreen;
+  };
+
+  const statusColor = issueCount > 0 ? getStatusColor(highestSeverity) : theme.statusGreen;
+  const badgeText = issueCount > 0 ? `${issueCount} ISSUE${issueCount > 1 ? 'S' : ''}` : 'ALL CLEAR';
+
+  const spin = rotateAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '180deg']
+  });
 
   return (
-    <Animated.View style={{ opacity: fadeAnim }}>
-      <Surface
-        style={[
-          styles.container,
-          { 
-            backgroundColor: theme.surfaceLight,
-            borderColor: expanded ? badgeColor : theme.border,
-          }
-        ]}
-      >
-        <TouchableRipple
-          onPress={toggleExpand}
-          style={styles.header}
-          rippleColor="rgba(0, 0, 0, .32)"
-        >
-          <View style={styles.headerInner}>
-            <View style={styles.headerLeft}>
-              <View style={[styles.iconContainer, { backgroundColor: badgeColor + '15' }]}>
-                <IconComponent size={20} color={badgeColor} />
+    <Animated.View style={[styles.container, { opacity: fadeAnim, borderBottomColor: theme.border }]}>
+      <Pressable onPress={toggleExpand} style={styles.header}>
+        <View style={styles.headerLeft}>
+          <IconComponent size={16} color={theme.textPrimary} strokeWidth={1.5} />
+          <Text style={[styles.categoryName, { color: theme.textPrimary }]}>
+            {data.category}
+          </Text>
+        </View>
+        <View style={styles.headerRight}>
+          <Text style={[styles.badgeText, { color: statusColor }]}>
+            {badgeText}
+          </Text>
+          <Pressable onPress={(e) => { e.stopPropagation(); /* Implement download logic */ }}>
+            <Download size={18} color={theme.textSecondary} strokeWidth={1.5} />
+          </Pressable>
+          <Animated.View style={{ transform: [{ rotate: spin }] }}>
+            <ChevronDown size={16} color={theme.textSecondary} strokeWidth={1} />
+          </Animated.View>
+        </View>
+      </Pressable>
+
+      {expanded && (
+        <View style={styles.content}>
+          {data.items.map((item, idx) => {
+            const isItemIssue = item.status !== 'good';
+            const itemColor = getStatusColor(item.status);
+            return (
+              <View key={item.id} style={styles.itemRow}>
+                <View style={styles.itemLeft}>
+                  {/* Indicator dot */}
+                  {isItemIssue && <View style={[styles.issueDot, { backgroundColor: itemColor }]} />}
+                  <Text style={[styles.itemName, { color: theme.textPrimary }]}>
+                    {item.name}
+                  </Text>
+                </View>
+                <Text style={[styles.itemValue, { color: isItemIssue ? itemColor : theme.textSecondary }]} numberOfLines={2}>
+                  {item.value}
+                </Text>
               </View>
-              <Text style={[styles.categoryName, { color: theme.textPrimary, fontFamily: typography.fonts.semiBold }]}>
-                {data.category}
-              </Text>
-            </View>
-            <View style={styles.headerRight}>
-              {data.issueCount > 0 ? (
-                <View style={[styles.badge, { backgroundColor: badgeColor + '15', borderColor: badgeColor + '40', borderWidth: 1 }]}>
-                  <Text style={[styles.badgeText, { color: badgeColor }]}>
-                    {badgeText}
-                  </Text>
-                </View>
-              ) : (
-                <View style={[styles.badge, { backgroundColor: badgeColor + '10' }]}>
-                  <Text style={[styles.badgeText, { color: badgeColor }]}>
-                    {badgeText}
-                  </Text>
-                </View>
-              )}
-              {expanded ? (
-                <ChevronUp size={20} color={theme.textSecondary} style={{ marginLeft: 8 }} />
-              ) : (
-                <ChevronDown size={20} color={theme.textSecondary} style={{ marginLeft: 8 }} />
-              )}
-            </View>
-          </View>
-        </TouchableRipple>
-
-        {expanded && (
-          <View style={styles.content}>
-            {data.items.map((item, idx) => {
-              const isLast = idx === data.items.length - 1;
-              let StatusIcon = CheckCircle;
-              let statusColor = theme.statusGreen;
-              
-              if (item.status === 'attention') {
-                StatusIcon = AlertTriangle;
-                statusColor = theme.accentAmber;
-              } else if (item.status === 'issue') {
-                StatusIcon = XCircle;
-                statusColor = theme.accentRed;
-              }
-
-              return (
-                <View
-                  key={item.id}
-                  style={[
-                    styles.itemRow,
-                    !isLast && { borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: theme.border },
-                  ]}
-                >
-                  <View style={styles.itemLeft}>
-                    <StatusIcon size={16} color={statusColor} />
-                    <Text
-                      style={[
-                        styles.itemName,
-                        { color: theme.textPrimary, fontFamily: typography.fonts.medium },
-                      ]}
-                    >
-                      {item.name}
-                    </Text>
-                  </View>
-                  <Text
-                    style={[
-                      styles.itemValue,
-                      { color: theme.textSecondary, fontFamily: typography.fonts.regular },
-                    ]}
-                    numberOfLines={2}
-                  >
-                    {item.value}
-                  </Text>
-                </View>
-              );
-            })}
-          </View>
-        )}
-      </Surface>
+            );
+          })}
+        </View>
+      )}
     </Animated.View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 8,
-    overflow: 'hidden',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    paddingVertical: 12,
   },
   header: {
-    overflow: 'hidden',
-  },
-  headerInner: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 12,
-    paddingVertical: 14,
+    paddingVertical: 12,
   },
   headerLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 16,
+    flex: 1,
+    paddingRight: 16,
   },
   headerRight: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
-  },
-  iconContainer: {
-    padding: 6,
-    borderRadius: 8,
+    gap: 16,
   },
   categoryName: {
-    fontSize: typography.sizes.base,
-  },
-  badge: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 12,
+    fontFamily: typography.fonts.light, // Zen thin text
+    fontSize: 18,
+    letterSpacing: -0.5,
   },
   badgeText: {
-    fontSize: typography.sizes.xs,
+    fontFamily: typography.fonts.medium,
+    fontSize: 12,
+    letterSpacing: 1.2,
   },
   content: {
-    paddingHorizontal: 12,
-    paddingBottom: 8,
+    paddingBottom: 16,
+    paddingTop: 8,
+    gap: 8,
   },
   itemRow: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
-    paddingVertical: 10,
-    gap: 12,
+    paddingLeft: 32, // Indent content to align with text
   },
   itemLeft: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
     flex: 1,
   },
+  issueDot: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+    position: 'absolute',
+    left: -12,
+  },
   itemName: {
-    fontSize: typography.sizes.sm,
+    fontFamily: typography.fonts.regular,
+    fontSize: 14,
   },
   itemValue: {
-    fontSize: typography.sizes.sm,
+    fontFamily: typography.fonts.regular,
+    fontSize: 14,
     flex: 1,
     textAlign: 'right',
   },

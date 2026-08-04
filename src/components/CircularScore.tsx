@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Svg, { Path, Defs, LinearGradient, Stop } from 'react-native-svg';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
+import Svg, { Path } from 'react-native-svg';
+import Animated, { useSharedValue, useAnimatedProps, withTiming, Easing, withDelay } from 'react-native-reanimated';
+import { useTheme, typography } from '../theme';
+
+// Create animated SVG path
+const AnimatedPath = Animated.createAnimatedComponent(Path);
 
 type CircularScoreProps = {
   score: number;
@@ -11,59 +14,60 @@ type CircularScoreProps = {
   label?: string;
 };
 
-export const CircularScore = ({ score, size = 180, strokeWidth = 14, label }: CircularScoreProps) => {
+export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: CircularScoreProps) => {
   const { theme } = useTheme();
   
   const radius = (size - strokeWidth) / 2;
   const cx = size / 2;
-  const cy = size / 2; // We use center for Y, and draw the arc in the top half
+  const cy = size / 2; 
 
-  // Arc path: starts at left (cx - radius, cy), sweeps to right (cx + radius, cy)
   const arcPath = `M ${cx - radius} ${cy} A ${radius} ${radius} 0 0 1 ${cx + radius} ${cy}`;
   const arcLength = Math.PI * radius;
   
-  // Progress mapped to arc length
   const progressLength = (score / 100) * arcLength;
-  const dashoffset = arcLength - progressLength;
+  const targetDashoffset = arcLength - progressLength;
 
-  const getColor = (s: number) => {
-    if (s >= 75) return theme.statusGreen;
-    if (s >= 50) return theme.accentAmber;
-    return theme.accentRed;
-  };
-
-  const color = getColor(score);
+  // Zen: single accent color
+  const color = theme.accentTeal;
   
-  // A true gauge chart needs half the height, plus stroke width padding
   const height = size / 2 + strokeWidth;
+
+  const animatedOffset = useSharedValue(arcLength);
+
+  useEffect(() => {
+    animatedOffset.value = withDelay(300, withTiming(targetDashoffset, {
+      duration: 1200,
+      easing: Easing.bezier(0.25, 0.1, 0.25, 1),
+    }));
+  }, [targetDashoffset]);
+
+  const animatedProps = useAnimatedProps(() => {
+    return {
+      strokeDashoffset: animatedOffset.value,
+    };
+  });
 
   return (
     <View style={styles.container}>
       <View style={{ width: size, height: height, alignItems: 'center' }}>
         <Svg width={size} height={height}>
-          {/* Background Arc */}
           <Path
             d={arcPath}
             stroke={theme.border}
             strokeWidth={strokeWidth}
             fill="transparent"
-            strokeLinecap="round"
           />
-          {/* Foreground Progress Arc */}
-          <Path
+          <AnimatedPath
             d={arcPath}
             stroke={color}
             strokeWidth={strokeWidth}
             fill="transparent"
             strokeDasharray={`${arcLength}`}
-            strokeDashoffset={dashoffset}
-            strokeLinecap="round"
+            animatedProps={animatedProps}
           />
         </Svg>
-        {/* Score text positioned inside the arch */}
         <View style={styles.scoreOverlay}>
-          <Text style={[styles.scoreText, { color: theme.textPrimary, fontSize: size * 0.25 }]}>{score}</Text>
-          <Text style={[styles.outOf, { color: theme.textSecondary }]}>/100</Text>
+          <Text style={[styles.scoreText, { color: theme.textPrimary, fontSize: size * 0.4 }]}>{score}</Text>
         </View>
       </View>
       {label && (
@@ -79,24 +83,20 @@ const styles = StyleSheet.create({
   },
   scoreOverlay: {
     position: 'absolute',
-    bottom: 0,
+    bottom: -10, // Bring it down a bit so it sits on the baseline
     left: 0,
     right: 0,
     alignItems: 'center',
-    paddingBottom: 4,
   },
   scoreText: {
-    fontFamily: typography.fonts.bold,
-    fontVariant: ['tabular-nums'],
-  },
-  outOf: {
-    fontFamily: typography.fonts.regular,
-    fontSize: typography.sizes.xs,
-    marginTop: -2,
+    fontFamily: typography.fonts.light, // Zen signature
+    letterSpacing: -2,
   },
   label: {
     fontFamily: typography.fonts.medium,
-    fontSize: typography.sizes.sm,
-    marginTop: 8,
+    fontSize: 14,
+    letterSpacing: 1.5,
+    textTransform: 'uppercase',
+    marginTop: 32, // Large gap (Ma)
   },
 });

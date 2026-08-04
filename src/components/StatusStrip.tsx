@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Wifi, BatteryMedium, MapPin, Sun, Moon } from 'lucide-react-native';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
-import mockParkInfo from '../data/mockParkInfo.json';
+import { useTheme, typography } from '../theme';
+import { mockParkInfo } from '../data/mockData';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export const StatusStrip = () => {
-  const { theme, isDark, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const insets = useSafeAreaInsets();
   const [time, setTime] = useState(new Date());
 
@@ -46,13 +45,6 @@ export const StatusStrip = () => {
       </View>
       <View style={styles.right}>
         <Text style={[styles.time, { color: theme.textPrimary }]}>{formatTime(time)}</Text>
-        <TouchableOpacity onPress={toggleTheme} style={styles.toggle}>
-          {isDark ? (
-            <Sun size={16} color={theme.textSecondary} />
-          ) : (
-            <Moon size={16} color={theme.textSecondary} />
-          )}
-        </TouchableOpacity>
       </View>
     </View>
   );

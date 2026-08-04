@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, LayoutChangeEvent } from 'react-native';
 import Animated, { useAnimatedStyle, withSpring, useSharedValue, withTiming } from 'react-native-reanimated';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
+import { useTheme, typography } from '../theme';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
-  const { theme, isDark } = useTheme();
+  const { theme } = useTheme();
   const insets = useSafeAreaInsets();
   
   const [dimensions, setDimensions] = useState<{ x: number; width: number }[]>([]);
@@ -82,8 +81,8 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
 
           // Simulate mix-blend-difference by inverting text color when active
           const textColor = isFocused 
-            ? (isDark ? '#000000' : '#ffffff')
-            : (isDark ? '#ffffff' : '#000000');
+            ? theme.background 
+            : theme.textPrimary;
 
           return (
             <TouchableOpacity

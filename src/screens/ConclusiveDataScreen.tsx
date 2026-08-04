@@ -1,13 +1,11 @@
 import React, { useState, useMemo } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
-import { Download, TrendingUp, TrendingDown, Minus } from 'lucide-react-native';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
+import { View, ScrollView, StyleSheet, TextInput, Pressable, Image, TouchableOpacity } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import { Download } from 'lucide-react-native';
+import { useTheme, typography } from '../theme';
 import { InspectionAccordion } from '../components/InspectionAccordion';
-import { Divider } from '../components/Divider';
-import mockInspection from '../data/mockInspection.json';
-import mockChangeDetection from '../data/mockChangeDetection.json';
-import { Searchbar, Button, Surface, Text } from 'react-native-paper';
+import { mockInspection, mockChangeDetection } from '../data/mockData';
+import { Text } from 'react-native-paper';
 import { InspectionCategory } from '../types';
 
 const inspectionData = mockInspection as InspectionCategory[];
@@ -15,6 +13,20 @@ const inspectionData = mockInspection as InspectionCategory[];
 export const ConclusiveDataScreen = () => {
   const { theme } = useTheme();
   const [searchQuery, setSearchQuery] = useState('');
+  const [images, setImages] = useState<Record<string, string>>({});
+
+  const pickImage = async (key: string) => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setImages(prev => ({ ...prev, [key]: result.assets[0].uri }));
+    }
+  };
 
   const totalIssues = useMemo(() => inspectionData.reduce((sum, cat) => sum + cat.issueCount, 0), []);
   const totalCategories = inspectionData.length;
@@ -30,33 +42,27 @@ export const ConclusiveDataScreen = () => {
       {/* Header Bar */}
       <View style={styles.header}>
         <View>
-          <Text variant="titleMedium" style={[styles.title, { color: theme.textPrimary }]}>Inspection Report</Text>
-          <Text variant="bodySmall" style={[styles.subtitle, { color: theme.textSecondary }]}>
-            {totalIssues} issues across {totalCategories} categories
+          <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
+          <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
+            Review past drone flights and data
           </Text>
         </View>
-        <Button 
-          mode="elevated" 
-          icon={() => <Download size={16} color={theme.textPrimary} />}
-          onPress={() => {}}
-          textColor={theme.textPrimary}
-          style={{ backgroundColor: theme.surface }}
-        >
-          Download
-        </Button>
+        <Pressable style={styles.downloadBtn}>
+          <Download size={24} color={theme.textPrimary} strokeWidth={1} />
+        </Pressable>
       </View>
 
-      {/* Search Bar */}
-      <Searchbar
-        placeholder="Search categories..."
-        onChangeText={setSearchQuery}
-        value={searchQuery}
-        style={[styles.searchContainer, { backgroundColor: theme.surface }] as any}
-        inputStyle={{ color: theme.textPrimary, fontFamily: typography.fonts.regular, fontSize: typography.sizes.sm } as any}
-        iconColor={theme.textSecondary}
-        placeholderTextColor={theme.textSecondary}
-        elevation={0 as any}
-      />
+      {/* Zen Search Bar (Bottom border only) */}
+      <View style={[styles.searchContainer, { borderBottomColor: theme.border }]}>
+        <TextInput
+          placeholder="Search..."
+          placeholderTextColor={theme.textSecondary}
+          onChangeText={setSearchQuery}
+          value={searchQuery}
+          style={[styles.searchInput, { color: theme.textPrimary }]}
+          selectionColor={theme.accentTeal}
+        />
+      </View>
 
       {/* Inspection Accordions */}
       <View style={styles.accordionsContainer}>
@@ -66,33 +72,89 @@ export const ConclusiveDataScreen = () => {
       </View>
 
       {/* Monthly Changes Section */}
-      <View style={styles.changesSection}>
-        <Divider>Monthly Changes (vs Last Survey)</Divider>
+      <View style={styles.section}>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>CHANGES THIS MONTH</Text>
         
-        <View style={styles.changesGrid}>
+        <View style={[styles.changesGrid, { borderTopColor: theme.border }]}>
           {mockChangeDetection.map((change) => {
             const isImproved = change.trend === 'improved';
             const isDeclined = change.trend === 'declined';
-            const badgeColor = isImproved ? theme.statusGreen : isDeclined ? theme.accentRed : theme.textSecondary;
-            const Icon = isImproved ? TrendingUp : isDeclined ? TrendingDown : Minus;
+            const statusColor = isImproved ? theme.statusGreen : isDeclined ? theme.accentRed : theme.textSecondary;
+            const sign = change.change > 0 ? '+' : '';
 
             return (
-              <Surface key={change.id} style={[styles.changeCard, { backgroundColor: theme.surface, borderColor: theme.border }] as any} elevation={1 as any}>
-                <Text variant="labelLarge" style={[styles.changeMetric, { color: theme.textPrimary }]}>{change.metric}</Text>
+              <View key={change.id} style={[styles.changeRow, { borderBottomColor: theme.border }]}>
+                <Text style={[styles.changeMetric, { color: theme.textPrimary }]}>{change.metric}</Text>
                 <View style={styles.changeValuesRow}>
-                  <Text variant="bodyMedium" style={[styles.changeValues, { color: theme.textSecondary }]}>
+                  <Text style={[styles.changeValues, { color: theme.textSecondary }]}>
                     {change.previousValue} → {change.currentValue}
                   </Text>
-                  <View style={[styles.changeBadge, { backgroundColor: badgeColor + '20' }]}>
-                    <Icon size={12} color={badgeColor} style={styles.badgeIcon} />
-                    <Text style={[styles.badgeText, { color: badgeColor }]}>
-                      {Math.abs(change.change)}{change.unit === '%' ? '%' : ''}
-                    </Text>
-                  </View>
+                  <Text style={[styles.badgeText, { color: statusColor }]}>
+                    {sign}{change.change}{change.unit === '%' ? '%' : ''}
+                  </Text>
                 </View>
-              </Surface>
+              </View>
             );
           })}
+        </View>
+      </View>
+
+      {/* Before & After Comparison Section */}
+      <View style={styles.section}>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>VISUAL EVIDENCE (BEFORE & AFTER)</Text>
+        
+        {/* Item 1 */}
+        <View style={styles.comparisonCard}>
+          <Text style={[styles.comparisonSubtitle, { color: theme.textPrimary }]}>North Gate Pathway Crack Repair</Text>
+          <View style={styles.imagesRow}>
+            <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
+              <TouchableOpacity onPress={() => pickImage('repair_before')} style={styles.imagePlaceholder}>
+                {images['repair_before'] ? (
+                  <Image source={{ uri: images['repair_before'] }} style={styles.pickedImage} />
+                ) : (
+                  <Text style={[styles.placeholderText, { color: theme.textSecondary }]}>BEFORE</Text>
+                )}
+              </TouchableOpacity>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>July 15, 2025</Text>
+            </View>
+            <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
+              <TouchableOpacity onPress={() => pickImage('repair_after')} style={[styles.imagePlaceholder, { borderColor: theme.statusGreen, borderWidth: 1 }]}>
+                {images['repair_after'] ? (
+                  <Image source={{ uri: images['repair_after'] }} style={styles.pickedImage} />
+                ) : (
+                  <Text style={[styles.placeholderText, { color: theme.statusGreen }]}>AFTER</Text>
+                )}
+              </TouchableOpacity>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>Aug 04, 2025</Text>
+            </View>
+          </View>
+        </View>
+
+        {/* Item 2 */}
+        <View style={styles.comparisonCard}>
+          <Text style={[styles.comparisonSubtitle, { color: theme.textPrimary }]}>Lake Bank Vegetation Clearance</Text>
+          <View style={styles.imagesRow}>
+            <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
+              <TouchableOpacity onPress={() => pickImage('lake_before')} style={styles.imagePlaceholder}>
+                {images['lake_before'] ? (
+                  <Image source={{ uri: images['lake_before'] }} style={styles.pickedImage} />
+                ) : (
+                  <Text style={[styles.placeholderText, { color: theme.textSecondary }]}>BEFORE</Text>
+                )}
+              </TouchableOpacity>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>July 15, 2025</Text>
+            </View>
+            <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
+              <TouchableOpacity onPress={() => pickImage('lake_after')} style={[styles.imagePlaceholder, { borderColor: theme.statusGreen, borderWidth: 1 }]}>
+                {images['lake_after'] ? (
+                  <Image source={{ uri: images['lake_after'] }} style={styles.pickedImage} />
+                ) : (
+                  <Text style={[styles.placeholderText, { color: theme.statusGreen }]}>AFTER</Text>
+                )}
+              </TouchableOpacity>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>Aug 04, 2025</Text>
+            </View>
+          </View>
         </View>
       </View>
     </ScrollView>
@@ -105,71 +167,125 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 16,
+    paddingTop: 24,
     paddingBottom: 120,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     marginBottom: 24,
   },
   title: {
-    fontFamily: typography.fonts.semiBold,
-    fontSize: typography.sizes.md,
-    marginBottom: 4,
+    fontFamily: typography.fonts.light,
+    fontSize: 36,
+    lineHeight: 40,
+    letterSpacing: -1,
   },
   subtitle: {
-    fontFamily: typography.fonts.regular,
-    fontSize: typography.sizes.xs,
+    fontFamily: typography.fonts.medium,
+    fontSize: 14,
+    letterSpacing: 1.5,
+    marginTop: 8,
+  },
+  downloadBtn: {
+    padding: 8,
   },
   searchContainer: {
-    marginBottom: 16,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.1)',
+    marginBottom: 8,
+    borderBottomWidth: 1,
+    paddingBottom: 8,
+  },
+  searchInput: {
+    fontFamily: typography.fonts.regular,
+    fontSize: 16,
+    letterSpacing: 1,
   },
   accordionsContainer: {
-    gap: 12,
     marginBottom: 32,
   },
   changesSection: {
-    marginTop: 8,
+    marginTop: 16,
+  },
+  sectionTitle: {
+    fontFamily: typography.fonts.medium,
+    fontSize: 14,
+    letterSpacing: 1.2,
+    marginBottom: 24,
   },
   changesGrid: {
-    gap: 12,
+    borderTopWidth: StyleSheet.hairlineWidth,
   },
-  changeCard: {
-    padding: 16,
-    borderRadius: 4,
-    borderWidth: 1,
+  changeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 8,
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
   changeMetric: {
-    fontFamily: typography.fonts.medium,
-    fontSize: typography.sizes.sm,
-    marginBottom: 8,
+    fontFamily: typography.fonts.regular,
+    fontSize: 14,
+    flex: 1,
+    paddingRight: 16,
   },
   changeValuesRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    gap: 8,
   },
   changeValues: {
-    fontFamily: typography.fonts.regular,
-    fontSize: typography.sizes.sm,
-  },
-  changeBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 6,
-    paddingVertical: 4,
-    borderRadius: 4,
-    gap: 4,
-  },
-  badgeIcon: {
-    marginRight: 2,
+    fontFamily: typography.fonts.medium,
+    fontSize: 14,
   },
   badgeText: {
     fontFamily: typography.fonts.medium,
-    fontSize: typography.sizes.xs,
+    fontSize: 16,
+    minWidth: 40,
+    textAlign: 'right',
   },
+  section: {
+    marginBottom: 32,
+  },
+  comparisonCard: {
+    marginBottom: 24,
+  },
+  comparisonSubtitle: {
+    fontFamily: typography.fonts.regular,
+    fontSize: 14,
+    marginBottom: 8,
+  },
+  imagesRow: {
+    flexDirection: 'row',
+    gap: 12,
+  },
+  imageWrapper: {
+    flex: 1,
+    borderRadius: 8,
+    overflow: 'hidden',
+    padding: 8,
+  },
+  imagePlaceholder: {
+    height: 100,
+    backgroundColor: '#E5E7EB', // slightly darker grey for image box
+    borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  placeholderText: {
+    fontFamily: typography.fonts.bold,
+    fontSize: 12,
+    letterSpacing: 2,
+  },
+  imageLabel: {
+    fontFamily: typography.fonts.regular,
+    fontSize: 11,
+    textAlign: 'center',
+  },
+  pickedImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 4,
+  }
 });

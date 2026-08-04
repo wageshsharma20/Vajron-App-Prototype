@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { useTheme } from '../theme/ThemeContext';
-import { typography } from '../theme/typography';
+import { useTheme, typography } from '../theme';
 
 interface BoundingBoxProps {
   x: number;

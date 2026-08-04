@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { useFonts, IBMPlexSans_400Regular, IBMPlexSans_500Medium, IBMPlexSans_600SemiBold, IBMPlexSans_700Bold } from '@expo-google-fonts/ibm-plex-sans';
-import { ThemeProvider, useTheme } from './src/theme/ThemeContext';
+import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
+import { ThemeProvider, useTheme } from './src/theme';
 import { StatusStrip } from './src/components/StatusStrip';
 import { LiveDataFeedScreen } from './src/screens/LiveDataFeedScreen';
 import { LiveVideoFeedScreen } from './src/screens/LiveVideoFeedScreen';
 import { ConclusiveDataScreen } from './src/screens/ConclusiveDataScreen';
-import { typography } from './src/theme/typography';
+import { DDAVerificationScreen } from './src/screens/DDAVerificationScreen';
 import { CustomTabBar } from './src/components/CustomTabBar';
-import { PaperProvider, MD3LightTheme, MD3DarkTheme, adaptNavigationTheme } from 'react-native-paper';
+import { ZenLoader } from './src/components/ZenLoader';
+import { PaperProvider, MD3LightTheme, MD3DarkTheme, adaptNavigationTheme, configureFonts } from 'react-native-paper';
 import { DefaultTheme as NavigationDefaultTheme, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
+import Animated, { FadeOut, FadeIn } from 'react-native-reanimated';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,6 +26,15 @@ const { LightTheme, DarkTheme } = adaptNavigationTheme({
 
 const AppNavigator = () => {
   const { theme, isDark } = useTheme();
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    // Simulate complex initialization to show off the micro-interaction loader
+    const timer = setTimeout(() => {
+      setIsReady(true);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const paperTheme = isDark ? {
     ...MD3DarkTheme,
@@ -37,7 +48,8 @@ const AppNavigator = () => {
         ...MD3DarkTheme.colors.elevation,
         level1: theme.surfaceLight,
       }
-    }
+    },
+    fonts: configureFonts({ config: { fontFamily: 'Inter_400Regular' } })
   } : {
     ...MD3LightTheme,
     colors: {
@@ -50,46 +62,57 @@ const AppNavigator = () => {
         ...MD3LightTheme.colors.elevation,
         level1: theme.surfaceLight,
       }
-    }
+    },
+    fonts: configureFonts({ config: { fontFamily: 'Inter_400Regular' } })
   } as any;
 
+  if (!isReady) {
+    return <ZenLoader />;
+  }
+
   return (
-    <PaperProvider theme={paperTheme as any}>
-      <View style={[styles.container, { backgroundColor: theme.background }]}>
-        <StatusStrip />
-        <NavigationContainer theme={(isDark ? DarkTheme : LightTheme) as any}>
-          <Tab.Navigator
-            tabBar={(props) => <CustomTabBar {...props} />}
-            screenOptions={{
-              headerShown: false,
-              tabBarIconStyle: { display: 'none' }
-            }}
-          >
-            <Tab.Screen 
-              name="Dashboard" 
-              component={LiveDataFeedScreen} 
-            />
-            <Tab.Screen 
-              name="Camera" 
-              component={LiveVideoFeedScreen} 
-            />
-            <Tab.Screen 
-              name="Reports" 
-              component={ConclusiveDataScreen} 
-            />
-          </Tab.Navigator>
-        </NavigationContainer>
-      </View>
-    </PaperProvider>
+    <Animated.View entering={FadeIn.duration(800)} style={{ flex: 1 }}>
+      <PaperProvider theme={paperTheme as any}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
+          <StatusStrip />
+          <NavigationContainer theme={(isDark ? DarkTheme : LightTheme) as any}>
+            <Tab.Navigator
+              tabBar={(props) => <CustomTabBar {...props} />}
+              screenOptions={{
+                headerShown: false,
+                tabBarIconStyle: { display: 'none' }
+              }}
+            >
+              <Tab.Screen 
+                name="Dashboard" 
+                component={LiveDataFeedScreen} 
+              />
+              <Tab.Screen 
+                name="Camera" 
+                component={LiveVideoFeedScreen} 
+              />
+              <Tab.Screen 
+                name="Reports" 
+                component={ConclusiveDataScreen} 
+              />
+              <Tab.Screen 
+                name="DDA" 
+                component={DDAVerificationScreen} 
+              />
+            </Tab.Navigator>
+          </NavigationContainer>
+        </View>
+      </PaperProvider>
+    </Animated.View>
   );
 };
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    IBMPlexSans_400Regular,
-    IBMPlexSans_500Medium,
-    IBMPlexSans_600SemiBold,
-    IBMPlexSans_700Bold,
+  let [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_600SemiBold,
+    Inter_700Bold,
   });
 
   const webShadow = Platform.OS === 'web' ? { boxShadow: '0 0 40px rgba(0,0,0,0.6)' } : {};

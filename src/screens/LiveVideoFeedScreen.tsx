@@ -1,38 +1,29 @@
-import React, { useState, useRef, useMemo, useCallback } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text, Alert } from 'react-native';
-import BottomSheet, { BottomSheetView, BottomSheetBackdrop } from '@gorhom/bottom-sheet';
-import { useTheme } from '../theme/ThemeContext';
+import React, { useState } from 'react';
+import { View, StyleSheet, TouchableOpacity, Text, Alert, Pressable, Animated, Platform } from 'react-native';
+import { useTheme, typography } from '../theme';
 import { VideoOverlay } from '../components/VideoOverlay';
-import { typography } from '../theme/typography';
-import { Play, Pause, Camera, Eye, EyeOff, VideoOff, Settings2 } from 'lucide-react-native';
-import { FAB, IconButton } from 'react-native-paper';
+import { Play, Pause, Camera, Eye, EyeOff, VideoOff, Settings2, X } from 'lucide-react-native';
 
-// Local helper component for DRY controls
-const ControlButton = ({ icon, label, onPress, isFab = false }: { icon: React.ReactNode, label: string, onPress: () => void, isFab?: boolean }) => (
-  <View style={styles.controlBtn}>
-    {isFab ? (
-      <FAB 
-        icon={() => icon}
-        onPress={onPress}
-        style={styles.captureFab}
-        color="#000"
-      />
-    ) : (
-      <IconButton 
-        icon={() => icon}
-        onPress={onPress}
-        mode="outlined"
-        iconColor="#FFF"
-        size={24}
-      />
-    )}
-    <Text style={styles.controlLabel}>{label}</Text>
-  </View>
+let MapView: any;
+let Marker: any;
+if (Platform.OS !== 'web') {
+  const Maps = require('react-native-maps');
+  MapView = Maps.default;
+  Marker = Maps.Marker;
+}
+
+// Local helper component for DRY controls - Zen Style
+const ControlButton = ({ icon, onPress, isFab = false }: { icon: React.ReactNode, label?: string, onPress: () => void, isFab?: boolean }) => (
+  <Pressable onPress={onPress} style={styles.controlBtn}>
+    <View style={[styles.iconContainer, isFab && styles.captureFab]}>
+      {icon}
+    </View>
+  </Pressable>
 );
 
 const mockBoxes: any[] = [
-  { x: 15, y: 20, width: 25, height: 35, label: 'Litter', confidence: 92, type: 'live', category: 'issue' },
-  { x: 25, y: 35, width: 10, height: 12, label: 'Damaged Bench', confidence: 85, type: 'live', category: 'issue' },
+  { x: 15, y: 20, width: 25, height: 35, label: 'LITTER', confidence: 92, type: 'live', category: 'issue' },
+  { x: 25, y: 35, width: 10, height: 12, label: 'DAMAGED BENCH', confidence: 85, type: 'live', category: 'issue' },
   { x: 65, y: 25, width: 20, height: 35, label: '', confidence: 0, type: 'ghost', category: 'neutral' },
 ];
 
@@ -42,27 +33,13 @@ export const LiveVideoFeedScreen = () => {
   const [showOverlays, setShowOverlays] = useState(true);
   const [isMapMain, setIsMapMain] = useState(false);
   const [layout, setLayout] = useState({ width: 0, height: 0 });
-
-  const bottomSheetRef = useRef<BottomSheet>(null);
-  const snapPoints = useMemo(() => ['40%'], []);
-
-  const renderBackdrop = useCallback(
-    (props: any) => (
-      <BottomSheetBackdrop
-        {...props}
-        disappearsOnIndex={-1}
-        appearsOnIndex={0}
-        pressBehavior="close"
-      />
-    ),
-    []
-  );
+  const [showSettings, setShowSettings] = useState(false);
 
   // Content renderers for easy swapping
   const renderCameraFeed = () => (
     <View style={StyleSheet.absoluteFill}>
       <View style={styles.blankVideo}>
-        <VideoOff size={40} color={'#444'} />
+        <VideoOff size={32} color={'#333'} strokeWidth={1} />
         <Text style={styles.blankText}>AWAITING STREAM</Text>
       </View>
       {showOverlays && <VideoOverlay boxes={mockBoxes} />}
@@ -70,8 +47,11 @@ export const LiveVideoFeedScreen = () => {
   );
 
   const renderMapView = () => (
-    <View style={[StyleSheet.absoluteFill, { backgroundColor: '#0B1321', justifyContent: 'center', alignItems: 'center' }]}>
-      <Text style={{ color: '#666', fontFamily: typography.fonts.bold, fontSize: 24, letterSpacing: 4 }}>MINIMAP</Text>
+    <View style={[StyleSheet.absoluteFill, { backgroundColor: '#050505', justifyContent: 'center', alignItems: 'center' }]}>
+      <Text style={{ color: '#444', fontFamily: typography.fonts.light, fontSize: 16, letterSpacing: 4 }}>MINIMAP</Text>
+      <Text style={{ color: '#666', fontFamily: typography.fonts.regular, fontSize: 10, marginTop: 8, textAlign: 'center', paddingHorizontal: 10 }}>
+        Maps SDK disabled in prototype to prevent API Key crash.
+      </Text>
     </View>
   );
 
@@ -86,12 +66,10 @@ export const LiveVideoFeedScreen = () => {
       }}
     >
       {layout.width > 0 && (
-        <View style={{
-          width: layout.height + 2, // +2 to cover any subpixel rounding gaps
-          height: layout.width + 2, // +2 to cover any subpixel rounding gaps
-          transform: [{ rotate: '90deg' }],
-          backgroundColor: '#000',
-        }}>
+        <View style={[styles.rotatedContainer, {
+          width: layout.height + 2, 
+          height: layout.width + 2,
+        }]}>
           {/* Main Area */}
           <View style={styles.videoArea}>
             {isMapMain ? renderMapView() : renderCameraFeed()}
@@ -99,40 +77,47 @@ export const LiveVideoFeedScreen = () => {
             {/* Minimap (Interactive PIP) */}
             {showOverlays && (
               <TouchableOpacity 
-                activeOpacity={0.8}
+                activeOpacity={0.9}
                 style={[styles.minimapContainer, { borderColor: theme.border }]}
                 onPress={() => setIsMapMain(!isMapMain)}
               >
                 {isMapMain ? renderCameraFeed() : renderMapView()}
-                <View style={[styles.minimapBadge, { backgroundColor: 'rgba(0,0,0,0.6)' }]}>
-                  <Text style={styles.minimapLabel}>{isMapMain ? 'CAMERA' : 'MAP'}</Text>
+                <View style={styles.minimapBadge}>
+                  <Text style={styles.minimapLabel}>{isMapMain ? 'CAM' : 'MAP'}</Text>
                 </View>
               </TouchableOpacity>
             )}
 
-            {/* Drone HUD — Bottom-Right */}
+            {/* Drone HUD — Zen Minimalist */}
             {showOverlays && (
               <View style={styles.droneHUD}>
-                <Text style={styles.droneText}>ALT: 85.2m</Text>
-                <Text style={styles.droneText}>SPD: 28.4km/h</Text>
-                <Text style={styles.droneText}>BAT: 74%</Text>
+                <View style={styles.hudRow}>
+                  <Text style={styles.hudLabel}>HEIGHT</Text>
+                  <Text style={styles.hudValue}>85.2M</Text>
+                </View>
+                <View style={styles.hudRow}>
+                  <Text style={styles.hudLabel}>SPEED</Text>
+                  <Text style={styles.hudValue}>28.4KM/H</Text>
+                </View>
+                <View style={styles.hudRow}>
+                  <Text style={styles.hudLabel}>BATTERY</Text>
+                  <Text style={styles.hudValue}>74%</Text>
+                </View>
               </View>
             )}
           </View>
 
-          {/* Gimbal Slider Mock — DJI Left Edge removed per user request */}
-
-          {/* Controls — DJI Right Edge (Internal right edge) */}
+          {/* Controls — Minimal right edge */}
           <View style={styles.controlBar}>
             <ControlButton 
-              icon={isPlaying ? <Pause size={20} color="#FFF" /> : <Play size={20} color="#FFF" />} 
-              label={isPlaying ? 'Pause' : 'Live'} 
+              icon={isPlaying ? <Pause size={18} color="#FFF" strokeWidth={1} /> : <Play size={18} color="#FFF" strokeWidth={1} />} 
+              label={isPlaying ? 'PAUSE' : 'LIVE'} 
               onPress={() => setIsPlaying(!isPlaying)} 
             />
             
             <ControlButton 
-              icon={<Camera size={24} color="#000" />} 
-              label="Capture" 
+              icon={<Camera size={18} color="#000" strokeWidth={1.5} />} 
+              label="PHOTO" 
               onPress={() => {
                 Alert.alert('Capture Mode', 'Select capture mode', [
                   { text: 'Take Photo', onPress: () => console.log('Photo') },
@@ -144,43 +129,43 @@ export const LiveVideoFeedScreen = () => {
             />
 
             <ControlButton 
-              icon={showOverlays ? <Eye size={20} color="#FFF" /> : <EyeOff size={20} color="#FFF" />} 
-              label="Overlay" 
+              icon={showOverlays ? <Eye size={18} color="#FFF" strokeWidth={1} /> : <EyeOff size={18} color="#FFF" strokeWidth={1} />} 
+              label="SHOW DATA" 
               onPress={() => setShowOverlays(!showOverlays)} 
             />
 
             <ControlButton 
-              icon={<Settings2 size={20} color="#FFF" />} 
-              label="Settings" 
-              onPress={() => bottomSheetRef.current?.expand()} 
+              icon={<Settings2 size={18} color="#FFF" strokeWidth={1} />} 
+              label="SETTINGS" 
+              onPress={() => setShowSettings(true)} 
             />
           </View>
 
-          <BottomSheet
-            ref={bottomSheetRef}
-            index={-1}
-            snapPoints={snapPoints}
-            enablePanDownToClose={true}
-            backdropComponent={renderBackdrop}
-            backgroundStyle={{ backgroundColor: theme.surfaceLight }}
-            handleIndicatorStyle={{ backgroundColor: theme.textSecondary }}
-          >
-            <BottomSheetView style={styles.sheetContent}>
-              <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>Advanced Settings</Text>
-              <View style={styles.settingsRow}>
-                <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>Thermal Palette</Text>
-                <Text style={[styles.settingsValue, { color: theme.accentTeal }]}>Ironbow</Text>
-              </View>
-              <View style={styles.settingsRow}>
-                <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>Exposure</Text>
-                <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>Auto</Text>
-              </View>
-              <View style={styles.settingsRow}>
-                <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>Detection Sensitivity</Text>
-                <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>High</Text>
-              </View>
-            </BottomSheetView>
-          </BottomSheet>
+          {/* Absolute custom settings overlay inside rotated container */}
+          {showSettings && (
+            <Pressable style={styles.settingsOverlay} onPress={() => setShowSettings(false)}>
+              <Pressable style={[styles.sheetContent, { backgroundColor: theme.surfaceLight }]} onPress={(e) => e.stopPropagation()}>
+                <View style={styles.sheetHeader}>
+                  <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>ADVANCED SETTINGS</Text>
+                  <Pressable onPress={() => setShowSettings(false)}>
+                    <X size={24} color={theme.textPrimary} strokeWidth={1} />
+                  </Pressable>
+                </View>
+                <View style={[styles.settingsRow, { borderBottomColor: theme.border }]}>
+                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>THERMAL PALETTE</Text>
+                  <Text style={[styles.settingsValue, { color: theme.accentTeal }]}>IRONBOW</Text>
+                </View>
+                <View style={[styles.settingsRow, { borderBottomColor: theme.border }]}>
+                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>EXPOSURE</Text>
+                  <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>AUTO</Text>
+                </View>
+                <View style={[styles.settingsRow, { borderBottomColor: theme.border }]}>
+                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>DETECTION SENSITIVITY</Text>
+                  <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>HIGH</Text>
+                </View>
+              </Pressable>
+            </Pressable>
+          )}
 
         </View>
       )}
@@ -195,169 +180,159 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  rotatedContainer: {
+    transform: [{ rotate: '90deg' }],
+    backgroundColor: '#000',
+  },
   videoArea: {
     flex: 1,
-    backgroundColor: '#111',
+    backgroundColor: '#080808', // Slightly off black
   },
   blankVideo: {
     ...(StyleSheet.absoluteFill as any),
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 10,
+    gap: 16,
   },
   blankText: {
-    fontFamily: typography.fonts.medium,
-    fontSize: 11,
-    letterSpacing: 2,
-    color: '#444',
+    fontFamily: typography.fonts.light,
+    fontSize: 14,
+    letterSpacing: 4,
+    color: '#555',
   },
   minimapContainer: {
     position: 'absolute',
-    bottom: 16,
-    left: 16,
-    width: 140,
-    height: 100,
-    borderRadius: 4,
-    borderWidth: 2,
+    bottom: 32,
+    left: 32,
+    width: 100,
+    height: 70,
+    borderWidth: 1, // Zen 1px
     overflow: 'hidden',
     backgroundColor: '#000',
   },
   minimapBadge: {
     position: 'absolute',
-    bottom: 4,
-    left: 4,
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 4,
+    bottom: 0,
+    left: 0,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    borderTopRightRadius: 4,
   },
   minimapLabel: {
-    fontFamily: typography.fonts.bold,
+    fontFamily: typography.fonts.medium,
     fontSize: 9,
     color: '#FFF',
-    letterSpacing: 1,
-  },
-  mapGrid: {
-    ...(StyleSheet.absoluteFill as any),
-    opacity: 0.1,
-    borderWidth: 1,
-    borderColor: '#FFF',
-    borderStyle: 'dashed',
-    // Mocking a grid with dashed border for now
-  },
-  mapMarker: {
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 40,
-    height: 40,
-    marginLeft: -20,
-    marginTop: -20,
-  },
-  homeRadius: {
-    position: 'absolute',
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    backgroundColor: 'rgba(217, 119, 6, 0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(217, 119, 6, 0.3)',
-  },
-  homePoint: {
-    width: 20,
-    height: 20,
-    borderRadius: 4,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#FFF',
-  },
-  homeH: {
-    fontFamily: typography.fonts.bold,
-    fontSize: 10,
-    color: '#FFF',
-  },
-  droneRadius: {
-    position: 'absolute',
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    borderWidth: 1,
-    backgroundColor: 'rgba(34, 197, 94, 0.1)',
-  },
-  dronePath: {
-    position: 'absolute',
-    width: 2,
-    height: 100,
-    backgroundColor: 'rgba(255,255,255,0.3)',
-    bottom: 20, // Path trails behind the drone
-    transform: [{ rotate: '45deg' }],
+    letterSpacing: 2,
   },
   droneHUD: {
     position: 'absolute',
-    bottom: 16,
-    right: 80, // Shifted to avoid the control bar
-    backgroundColor: 'rgba(0,0,0,0.55)',
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 4,
-    gap: 4,
+    bottom: 32,
+    right: 100, // Shifted to avoid control bar
+    gap: 8,
   },
-  droneText: {
-    fontFamily: typography.fonts.bold,
+  hudRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: 90,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: 'rgba(255,255,255,0.1)',
+    paddingBottom: 4,
+  },
+  hudLabel: {
+    fontFamily: typography.fonts.regular,
+    fontSize: 8,
+    letterSpacing: 1,
+    color: '#888',
+  },
+  hudValue: {
+    fontFamily: typography.fonts.medium,
     fontSize: 10,
     letterSpacing: 1,
     color: '#FFF',
-    textShadowColor: 'rgba(0,0,0,0.8)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 2,
   },
   controlBar: {
     position: 'absolute',
     right: 0,
     top: 0,
     bottom: 0,
-    width: 64,
-    backgroundColor: 'rgba(0,0,0,0.65)',
+    width: 64, // much narrower
+    backgroundColor: 'rgba(0,0,0,0.8)',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 24,
+    gap: 24, // tighter gap
+    borderLeftWidth: 1,
+    borderLeftColor: 'rgba(255,255,255,0.1)',
   },
   controlBtn: {
     alignItems: 'center',
-    gap: 2,
+    gap: 8,
+  },
+  iconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'transparent',
   },
   captureFab: {
-    backgroundColor: '#FFF',
-    borderRadius: 30,
+    backgroundColor: '#fff',
+  },
+  mapPin: {
+    position: 'absolute',
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#DC2626', // red by default for critical
+    borderWidth: 1,
+    borderColor: '#000',
   },
   controlLabel: {
-    fontFamily: typography.fonts.medium,
-    fontSize: 9,
-    color: '#DDD',
+    fontFamily: typography.fonts.regular,
+    fontSize: 8, // smaller label
+    color: '#888',
+    letterSpacing: 1,
+  },
+  settingsOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'flex-end',
+    zIndex: 100,
   },
   sheetContent: {
-    flex: 1,
     padding: 24,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+  },
+  sheetHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 16,
   },
   sheetTitle: {
-    fontFamily: typography.fonts.bold,
-    fontSize: typography.sizes.lg,
-    marginBottom: 24,
+    fontFamily: typography.fonts.light,
+    fontSize: 20,
+    letterSpacing: 2,
   },
   settingsRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 16,
+    paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: 'rgba(255,255,255,0.1)',
   },
   settingsLabel: {
-    fontFamily: typography.fonts.medium,
-    fontSize: typography.sizes.base,
+    fontFamily: typography.fonts.regular,
+    fontSize: 11,
+    letterSpacing: 1,
   },
   settingsValue: {
-    fontFamily: typography.fonts.semiBold,
-    fontSize: typography.sizes.base,
+    fontFamily: typography.fonts.medium,
+    fontSize: 13,
+    letterSpacing: 1,
   },
 });

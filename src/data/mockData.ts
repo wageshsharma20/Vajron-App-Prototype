@@ -1,7 +1,147 @@
-[
+export const mockChangeDetection = [
+  {
+    "id": "green-cover",
+    "metric": "Green Cover",
+    "previousValue": "74%",
+    "currentValue": "78%",
+    "unit": "%",
+    "change": 4,
+    "trend": "improved"
+  },
+  {
+    "id": "new-plantation-survival",
+    "metric": "New Plantation Survival",
+    "previousValue": "85%",
+    "currentValue": "88%",
+    "unit": "%",
+    "change": 3,
+    "trend": "improved"
+  },
+  {
+    "id": "tree-canopy-growth",
+    "metric": "Tree Canopy Growth",
+    "previousValue": "65%",
+    "currentValue": "68%",
+    "unit": "%",
+    "change": 3,
+    "trend": "improved"
+  },
+  {
+    "id": "damaged-infrastructure",
+    "metric": "Damaged Infrastructure",
+    "previousValue": "8 items",
+    "currentValue": "5 items",
+    "unit": "items",
+    "change": -3,
+    "trend": "improved"
+  },
+  {
+    "id": "encroachment",
+    "metric": "Encroachment",
+    "previousValue": "0",
+    "currentValue": "1",
+    "unit": "incidents",
+    "change": 1,
+    "trend": "declined"
+  },
+  {
+    "id": "cleanliness-score",
+    "metric": "Cleanliness Score",
+    "previousValue": "65",
+    "currentValue": "58",
+    "unit": "/100",
+    "change": -7,
+    "trend": "declined"
+  },
+  {
+    "id": "work-completion",
+    "metric": "Work Completion",
+    "previousValue": "72%",
+    "currentValue": "84%",
+    "unit": "%",
+    "change": 12,
+    "trend": "improved"
+  },
+  {
+    "id": "lawn-health",
+    "metric": "Lawn Health",
+    "previousValue": "69%",
+    "currentValue": "65%",
+    "unit": "%",
+    "change": -4,
+    "trend": "declined"
+  }
+];
+
+export const mockInspection = [
+  {
+    "id": "asset-inventory",
+    "category": "Asset Inventory",
+    "iconName": "MapPin",
+    "issueCount": 0,
+    "status": "good",
+    "items": [
+      {
+        "id": "gps-location",
+        "name": "Asset GPS Locations",
+        "status": "good",
+        "value": "100% geo-tagged",
+        "severity": "low"
+      },
+      {
+        "id": "tree-geotagging",
+        "name": "Tree Geo-tagging",
+        "status": "good",
+        "value": "1,247 trees tagged",
+        "severity": "low"
+      },
+      {
+        "id": "bench-count",
+        "name": "Benches",
+        "status": "good",
+        "value": "84 units mapped",
+        "severity": "low"
+      },
+      {
+        "id": "dustbin-count",
+        "name": "Dustbins",
+        "status": "good",
+        "value": "42 units mapped",
+        "severity": "low"
+      },
+      {
+        "id": "light-pole-count",
+        "name": "Light Poles",
+        "status": "good",
+        "value": "120 units mapped",
+        "severity": "low"
+      },
+      {
+        "id": "play-equipment",
+        "name": "Play Equipment",
+        "status": "good",
+        "value": "15 units mapped",
+        "severity": "low"
+      },
+      {
+        "id": "irrigation-inventory",
+        "name": "Irrigation Infra",
+        "status": "good",
+        "value": "3 pump stations, 12 valves",
+        "severity": "low"
+      },
+      {
+        "id": "pathway-length",
+        "name": "Pathway Length",
+        "status": "good",
+        "value": "4.2 km total mapped",
+        "severity": "low"
+      }
+    ]
+  },
   {
     "id": "plantation-green-cover",
-    "category": "Plantation & Green Cover",
+    "category": "Plants & Trees",
     "iconName": "Trees",
     "issueCount": 3,
     "status": "attention",
@@ -12,6 +152,13 @@
         "status": "good",
         "value": "1,247 trees mapped (32 new)",
         "severity": "low"
+      },
+      {
+        "id": "tree-health",
+        "name": "Tree Health",
+        "status": "attention",
+        "value": "91% Healthy, 6% Stressed, 3% Diseased",
+        "severity": "medium"
       },
       {
         "id": "canopy-cover",
@@ -80,9 +227,9 @@
     "items": [
       {
         "id": "health-index",
-        "name": "Health Index",
+        "name": "Health Index (NDVI)",
         "status": "good",
-        "value": "76/100 — Mostly healthy",
+        "value": "0.76 (Healthy range)",
         "severity": "low"
       },
       {
@@ -112,12 +259,19 @@
         "status": "good",
         "value": "Normal",
         "severity": "low"
+      },
+      {
+        "id": "growth-progress",
+        "name": "Growth Progress",
+        "status": "good",
+        "value": "+4% canopy density vs last month",
+        "severity": "low"
       }
     ]
   },
   {
     "id": "irrigation",
-    "category": "Irrigation",
+    "category": "Irrigation Status",
     "iconName": "Droplets",
     "issueCount": 2,
     "status": "attention",
@@ -225,6 +379,13 @@
         "severity": "high"
       },
       {
+        "id": "railing",
+        "name": "Railing",
+        "status": "attention",
+        "value": "Rusted sections near lake edge",
+        "severity": "medium"
+      },
+      {
         "id": "benches",
         "name": "Benches",
         "status": "attention",
@@ -278,6 +439,27 @@
         "name": "Parking",
         "status": "good",
         "value": "Clear",
+        "severity": "low"
+      },
+      {
+        "id": "gazebo",
+        "name": "Gazebo/Pergola",
+        "status": "good",
+        "value": "Roof intact, clean",
+        "severity": "low"
+      },
+      {
+        "id": "excavations",
+        "name": "Excavations",
+        "status": "attention",
+        "value": "Open trench near north gate",
+        "severity": "medium"
+      },
+      {
+        "id": "utility-damage",
+        "name": "Utility Damage",
+        "status": "good",
+        "value": "None detected",
         "severity": "low"
       }
     ]
@@ -400,4 +582,127 @@
       }
     ]
   }
-]
+];
+
+export const mockParkInfo = {
+  "parkName": "Sanjay Van",
+  "location": "Vasant Kunj, New Delhi",
+  "surveyDate": "2025-07-30",
+  "surveyTime": "09:45 AM",
+  "altitude": "85.2 m",
+  "speed": "28.4 km/h",
+  "heading": "124° SE",
+  "battery": 74,
+  "flightTime": "18:35",
+  "gps": "28.5245° N, 77.1855° E",
+  "signalStrength": 92,
+  "areaCovered": "12.4 hectares",
+  "totalArea": "317 hectares"
+};
+
+export const mockScores = [
+  {
+    "id": "overall-health",
+    "label": "Overall Park Health",
+    "score": 72,
+    "icon": "Trees",
+    "trend": "up",
+    "changePercent": 3
+  },
+  {
+    "id": "tree-survival",
+    "label": "Tree Survival",
+    "score": 92,
+    "icon": "Leaf",
+    "trend": "up",
+    "changePercent": 1
+  },
+  {
+    "id": "green-cover",
+    "label": "Green Cover",
+    "score": 68,
+    "icon": "Leaf",
+    "trend": "down",
+    "changePercent": -2
+  },
+  {
+    "id": "lawn-health",
+    "label": "Grass Health",
+    "score": 65,
+    "icon": "Sprout",
+    "trend": "down",
+    "changePercent": -4
+  },
+  {
+    "id": "cleanliness",
+    "label": "Cleanliness",
+    "score": 58,
+    "icon": "Sparkles",
+    "trend": "down",
+    "changePercent": -7
+  },
+  {
+    "id": "infrastructure",
+    "label": "Infrastructure Condition",
+    "score": 71,
+    "icon": "Wrench",
+    "trend": "stable",
+    "changePercent": 0
+  },
+  {
+    "id": "irrigation",
+    "label": "Irrigation Efficiency",
+    "score": 63,
+    "icon": "Droplets",
+    "trend": "down",
+    "changePercent": -3
+  },
+  {
+    "id": "safety",
+    "label": "Safety",
+    "score": 82,
+    "icon": "Shield",
+    "trend": "up",
+    "changePercent": 5
+  },
+  {
+    "id": "plantation-health",
+    "label": "Plant Health",
+    "score": 76,
+    "icon": "TreePine",
+    "trend": "up",
+    "changePercent": 1
+  },
+  {
+    "id": "encroachment-risk",
+    "label": "Encroachment Risk",
+    "score": 12,
+    "icon": "AlertTriangle",
+    "trend": "stable",
+    "changePercent": 0
+  },
+  {
+    "id": "citizen-readiness",
+    "label": "Citizen Readiness",
+    "score": 88,
+    "icon": "Users",
+    "trend": "up",
+    "changePercent": 4
+  },
+  {
+    "id": "maintenance-priority",
+    "label": "Maintenance Priority",
+    "score": 94,
+    "icon": "Wrench",
+    "trend": "up",
+    "changePercent": 2
+  },
+  {
+    "id": "layout-compliance",
+    "label": "Layout Compliance",
+    "score": 100,
+    "icon": "Map",
+    "trend": "stable",
+    "changePercent": 0
+  }
+];

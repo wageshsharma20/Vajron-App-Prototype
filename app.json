@@ -16,13 +16,26 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.vajron.prototype"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-font"
-    ]
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to upload verification images.",
+          "cameraPermission": "The app needs access to your camera to take verification photos."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "cb6363a1-0787-4dfe-8c90-fabebc5c3f55"
+      }
+    }
   }
 }
