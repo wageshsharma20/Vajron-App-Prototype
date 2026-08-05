@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
   },
   score: {
     fontFamily: typography.fonts.light, // Ultra thin number
-    fontSize: 32,
-    lineHeight: 36,
+    fontSize: 26,
+    lineHeight: 30,
     letterSpacing: -1,
     marginBottom: 4,
   },
