@@ -19,7 +19,7 @@ export const ScoreCard = ({ label, score, trend, changePercent }: ScoreCardProps
   return (
     <View style={[styles.container, { borderBottomColor: theme.border }]}>
       <Text style={[styles.score, { color: theme.textPrimary }]}>
-        {score}
+        {score}%
       </Text>
       
       <View style={styles.metaContainer}>

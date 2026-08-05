@@ -67,7 +67,7 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
           />
         </Svg>
         <View style={styles.scoreOverlay}>
-          <Text style={[styles.scoreText, { color: theme.textPrimary, fontSize: size * 0.4 }]}>{score}</Text>
+          <Text style={[styles.scoreText, { color: theme.textPrimary, fontSize: size * 0.4 }]}>{score}%</Text>
         </View>
       </View>
       {label && (
