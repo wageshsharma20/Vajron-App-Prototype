@@ -27,7 +27,7 @@ export type Park = {
 export const PARKS: Park[] = [
   {
     id: 'sanjay-lake',
-    name: 'Sanjay Lake Park',
+    name: 'Sanjay Lake',
     locality: 'East Delhi',
     status: 'ready',
     surveyDate: '19 May 2026',
@@ -35,12 +35,12 @@ export const PARKS: Park[] = [
     zone: 'Play area · lake edge · open-gym & lawns · footbridge',
     durationSec: 180.45,
   },
-  { id: 'lala-hardyal', name: 'Lala Hardyal Park', locality: 'North Delhi', status: 'scheduled' },
-  { id: 'smriti-van', name: 'Smriti Van', locality: 'Vasant Kunj', status: 'scheduled' },
-  { id: 'sanjay-van', name: 'Sanjay Van', locality: 'Mehrauli', status: 'scheduled' },
-  { id: 'japanese-park', name: 'Japanese Park', locality: 'Rohini', status: 'scheduled' },
-  { id: 'jahanpanah', name: 'Jahanpanah City Forest', locality: 'Chirag Delhi', status: 'scheduled' },
-  { id: 'hauz-khas', name: 'Hauz Khas District Park', locality: 'Hauz Khas', status: 'scheduled' },
+  { id: 'lala-harydal', name: 'Lala Harydal Park', locality: 'North Delhi', status: 'scheduled' },
+  { id: 'smriti-van-mayur-vihar', name: 'Smriti Van Mayur Vihar', locality: 'Mayur Vihar', status: 'scheduled' },
+  { id: 'r-block-asaf-ali', name: 'R Block Asaf Ali Park', locality: 'Asaf Ali Road', status: 'scheduled' },
+  { id: 'vasant-udyan', name: 'Vasant Udyan', locality: 'Vasant Kunj', status: 'scheduled' },
+  { id: 'vasant-vatika', name: 'Vasant Vatika', locality: 'Vasant Kunj', status: 'scheduled' },
+  { id: 'rohini-dda', name: 'Rohini DDA Park', locality: 'Rohini', status: 'scheduled' },
 ];
 
 /** The park whose survey is loaded when the app opens. */
