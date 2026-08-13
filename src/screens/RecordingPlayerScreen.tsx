@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text, Pressable, Platform } from 'react-native';
 import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
-import { useReplay } from '../replay/ReplayProvider';
+import { useReplay, REPLAY_VIDEO_URL } from '../replay/ReplayProvider';
 import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft } from 'lucide-react-native';
 
 let MapView: any;
@@ -27,6 +27,45 @@ type Props = {
   onBack?: () => void;
 };
 
+/**
+ * On web, expo-video's VideoView cannot load GitHub Releases URLs due to
+ * redirect chains and Content-Disposition: attachment headers. This component
+ * renders a native HTML5 <video> element synced to the replay provider.
+ */
+const WebVideoFallback = ({ width, height }: { width: number; height: number }) => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const { isPlaying, time } = useReplay();
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    if (isPlaying) {
+      el.play().catch(() => {});
+    } else {
+      el.pause();
+    }
+  }, [isPlaying]);
+
+  // Sync seek — only jump if the replay clock drifted >1s from the video
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el || !isFinite(time)) return;
+    if (Math.abs(el.currentTime - time) > 1) {
+      el.currentTime = time;
+    }
+  }, [time]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={REPLAY_VIDEO_URL}
+      muted
+      playsInline
+      style={{ width, height, objectFit: 'contain', backgroundColor: '#000' }}
+    />
+  );
+};
+
 export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   const { theme } = useTheme();
   // Playback is the app-wide replay clock, so playing here also advances the
@@ -39,19 +78,22 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
 
   // The clip already carries the detector's burned-in annotation layer, so the
   // video is shown as-is (contain = whole frame, nothing cropped) inside the
-  // rotated landscape canvas. The VideoView is given explicit pixel dimensions:
-  // on web its underlying <video> ignores flex/absoluteFill sizing and would
-  // otherwise render at its intrinsic 1920x1080 and overflow the rotated frame.
+  // rotated landscape canvas. On web, expo-video cannot load GitHub Releases
+  // URLs, so we fall back to a native HTML5 <video> element.
   const renderCameraFeed = () => (
     <View style={[StyleSheet.absoluteFill, styles.feedBackdrop]}>
-      <VideoView
-        player={player}
-        style={{ width: layout.height, height: layout.width }}
-        contentFit="contain"
-        nativeControls={false}
-        playsInline
-        fullscreenOptions={{ enable: false }}
-      />
+      {Platform.OS === 'web' ? (
+        <WebVideoFallback width={layout.height} height={layout.width} />
+      ) : (
+        <VideoView
+          player={player}
+          style={{ width: layout.height, height: layout.width }}
+          contentFit="contain"
+          nativeControls={false}
+          playsInline
+          fullscreenOptions={{ enable: false }}
+        />
+      )}
     </View>
   );
 
