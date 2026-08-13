@@ -61,7 +61,7 @@ const WebVideoFallback = ({ width, height }: { width: number; height: number }) 
       src={REPLAY_VIDEO_URL}
       muted
       playsInline
-      style={{ width, height, objectFit: 'contain', backgroundColor: '#000' }}
+      style={{ width, height, objectFit: 'contain', backgroundColor: '#000', pointerEvents: 'none' }}
     />
   );
 };
