@@ -6,26 +6,28 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { ThemeProvider, useTheme } from './src/theme';
+import { ReplayProvider } from './src/replay/ReplayProvider';
+import { ReplayNotifications } from './src/replay/ReplayNotifications';
 import { StatusStrip } from './src/components/StatusStrip';
 import { LiveDataFeedScreen } from './src/screens/LiveDataFeedScreen';
-import { LiveVideoFeedScreen } from './src/screens/LiveVideoFeedScreen';
+import { RecordingsScreen } from './src/screens/RecordingsScreen';
 import { ConclusiveDataScreen } from './src/screens/ConclusiveDataScreen';
 import { DDAVerificationScreen } from './src/screens/DDAVerificationScreen';
 import { CustomTabBar } from './src/components/CustomTabBar';
 import { ZenLoader } from './src/components/ZenLoader';
-import { PaperProvider, MD3LightTheme, MD3DarkTheme, adaptNavigationTheme, configureFonts } from 'react-native-paper';
+import { PaperProvider, MD3LightTheme, adaptNavigationTheme, configureFonts } from 'react-native-paper';
 import { DefaultTheme as NavigationDefaultTheme, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
 import Animated, { FadeOut, FadeIn } from 'react-native-reanimated';
 
 const Tab = createBottomTabNavigator();
 
-const { LightTheme, DarkTheme } = adaptNavigationTheme({
+const { LightTheme } = adaptNavigationTheme({
   reactNavigationLight: NavigationDefaultTheme,
   reactNavigationDark: NavigationDarkTheme,
 }) as any;
 
 const AppNavigator = () => {
-  const { theme, isDark } = useTheme();
+  const { theme } = useTheme();
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -36,21 +38,7 @@ const AppNavigator = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const paperTheme = isDark ? {
-    ...MD3DarkTheme,
-    colors: {
-      ...MD3DarkTheme.colors,
-      primary: theme.accentTeal,
-      background: theme.background,
-      surface: theme.surface,
-      error: theme.accentRed,
-      elevation: {
-        ...MD3DarkTheme.colors.elevation,
-        level1: theme.surfaceLight,
-      }
-    },
-    fonts: configureFonts({ config: { fontFamily: 'Inter_400Regular' } })
-  } : {
+  const paperTheme = {
     ...MD3LightTheme,
     colors: {
       ...MD3LightTheme.colors,
@@ -75,7 +63,8 @@ const AppNavigator = () => {
       <PaperProvider theme={paperTheme as any}>
         <View style={[styles.container, { backgroundColor: theme.background }]}>
           <StatusStrip />
-          <NavigationContainer theme={(isDark ? DarkTheme : LightTheme) as any}>
+          <ReplayNotifications />
+          <NavigationContainer theme={LightTheme as any}>
             <Tab.Navigator
               tabBar={(props) => <CustomTabBar {...props} />}
               screenOptions={{
@@ -83,13 +72,13 @@ const AppNavigator = () => {
                 tabBarIconStyle: { display: 'none' }
               }}
             >
-              <Tab.Screen 
-                name="Dashboard" 
-                component={LiveDataFeedScreen} 
+              <Tab.Screen
+                name="Dashboard"
+                component={LiveDataFeedScreen}
               />
-              <Tab.Screen 
-                name="Camera" 
-                component={LiveVideoFeedScreen} 
+              <Tab.Screen
+                name="Recordings"
+                component={RecordingsScreen}
               />
               <Tab.Screen 
                 name="Reports" 
@@ -125,14 +114,16 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <ThemeProvider>
-          <View style={Platform.OS === 'web' ? styles.webWrapper : styles.container}>
-            <View style={[
-              Platform.OS === 'web' ? styles.mobileFrame : styles.container, 
-              webShadow as any
-            ]}>
-              <AppNavigator />
+          <ReplayProvider>
+            <View style={Platform.OS === 'web' ? styles.webWrapper : styles.container}>
+              <View style={[
+                Platform.OS === 'web' ? styles.mobileFrame : styles.container,
+                webShadow as any
+              ]}>
+                <AppNavigator />
+              </View>
             </View>
-          </View>
+          </ReplayProvider>
         </ThemeProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

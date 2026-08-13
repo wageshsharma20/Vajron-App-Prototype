@@ -4,16 +4,20 @@ import * as ImagePicker from 'expo-image-picker';
 import { Download } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
 import { InspectionAccordion } from '../components/InspectionAccordion';
-import { mockInspection, mockChangeDetection } from '../data/mockData';
+import { mockChangeDetection } from '../data/mockData';
 import { Text } from 'react-native-paper';
-import { InspectionCategory } from '../types';
-
-const inspectionData = mockInspection as InspectionCategory[];
+import { useLiveInspection } from '../replay/useLiveInspection';
+import { useReplay } from '../replay/ReplayProvider';
 
 export const ConclusiveDataScreen = () => {
   const { theme } = useTheme();
   const [searchQuery, setSearchQuery] = useState('');
   const [images, setImages] = useState<Record<string, string>>({});
+
+  // Every category tracks the drone recording: items update from the detector and
+  // category issue counts recompute as the survey plays on the Camera tab.
+  const { park, hasStarted, hasSurvey } = useReplay();
+  const inspectionData = useLiveInspection();
 
   const pickImage = async (key: string) => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -28,14 +32,14 @@ export const ConclusiveDataScreen = () => {
     }
   };
 
-  const totalIssues = useMemo(() => inspectionData.reduce((sum, cat) => sum + cat.issueCount, 0), []);
+  const totalIssues = useMemo(() => inspectionData.reduce((sum, cat) => sum + cat.issueCount, 0), [inspectionData]);
   const totalCategories = inspectionData.length;
 
   const filteredData = useMemo(() => {
     return inspectionData.filter((cat) => {
       return cat.category.toLowerCase().includes(searchQuery.toLowerCase());
     });
-  }, [searchQuery]);
+  }, [searchQuery, inspectionData]);
 
   return (
     <ScrollView style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content}>
@@ -44,7 +48,8 @@ export const ConclusiveDataScreen = () => {
         <View>
           <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
           <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
-            Review past drone flights and data
+            {park.name}
+            {hasSurvey ? (hasStarted ? ' · analysing recording' : ` · surveyed ${park.surveyDate}`) : ' · survey scheduled'}
           </Text>
         </View>
         <Pressable style={styles.downloadBtn}>

@@ -57,7 +57,7 @@ export const NotificationBanner: React.FC<NotificationBannerProps> = ({
 
   const getBackgroundColor = () => {
     if (type === 'error') return theme.accentRed;
-    if (type === 'warning') return theme.statusYellow;
+    if (type === 'warning') return theme.accentAmber;
     return theme.accentTeal;
   };
 

@@ -4,10 +4,12 @@ import { Wifi, BatteryMedium, MapPin, Sun, Moon } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
 import { mockParkInfo } from '../data/mockData';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useReplay } from '../replay/ReplayProvider';
 
 export const StatusStrip = () => {
   const { theme } = useTheme();
   const insets = useSafeAreaInsets();
+  const { park } = useReplay();
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export const StatusStrip = () => {
             numberOfLines={1} 
             ellipsizeMode="tail"
           >
-            {mockParkInfo.parkName}
+            {park.name}
           </Text>
         </View>
       </View>

@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Large survey recording — streamed from URL, not committed (see ReplayProvider REPLAY_VIDEO_URL)
+assets/video/*.mp4

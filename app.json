@@ -30,7 +30,8 @@
           "photosPermission": "The app needs access to your photos to upload verification images.",
           "cameraPermission": "The app needs access to your camera to take verification photos."
         }
-      ]
+      ],
+      "expo-video"
     ],
     "extra": {
       "eas": {

@@ -5,22 +5,15 @@ import { CircularScore } from '../components/CircularScore';
 import { ScoreCard } from '../components/ScoreCard';
 import { DroneInfoTable } from '../components/DroneInfoTable';
 import { AlertBanner } from '../components/AlertBanner';
-import { NotificationBanner } from '../components/NotificationBanner';
-import { mockParkInfo, mockScores, mockInspection } from '../data/mockData';
+import { mockParkInfo, mockInspection } from '../data/mockData';
+import { useLiveScores } from '../replay/useLiveScores';
+import { useReplay, formatTimecode } from '../replay/ReplayProvider';
 import { Text } from 'react-native-paper';
 import { InspectionCategory, ScoreData } from '../types';
 
 export const LiveDataFeedScreen = ({ navigation }: any) => {
   const { theme } = useTheme();
   const [refreshing, setRefreshing] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowAlert(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
@@ -50,8 +43,12 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
     return theme.textSecondary;
   }, [theme]);
 
-  const overallScore = (mockScores as ScoreData[])[0];
-  const gridScores = (mockScores as ScoreData[]).slice(1);
+  // Driven by the replay clock: the eight cards with a real per-frame series in the
+  // detection report track playback, the rest keep their reported values.
+  const { park, hasStarted, hasSurvey, time } = useReplay();
+  const liveScores = useLiveScores();
+  const overallScore = liveScores[0];
+  const gridScores = liveScores.slice(1);
 
   const { totalIssues, alertSection } = useMemo(() => {
     const inspectionData = mockInspection as InspectionCategory[];
@@ -65,15 +62,6 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      {showAlert && (
-        <NotificationBanner 
-          title="🚨 NEW ENCROACHMENT DETECTED" 
-          message="Unauthorized temporary structure identified near South Gate boundary wall." 
-          type="error"
-          durationMs={6000}
-          onDismiss={() => setShowAlert(false)}
-        />
-      )}
       {alertSection && (
         <AlertBanner 
           message={`${alertSection.issueCount} issues found — ${alertSection.category}`}
@@ -89,10 +77,24 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
         <View style={styles.overallSection}>
           <CircularScore score={overallScore.score} label="Overall Score" size={140} />
           <View style={styles.overallMeta}>
-            <Text style={[styles.parkName, { color: theme.textPrimary }]}>{mockParkInfo.parkName}</Text>
+            <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
-              {mockParkInfo.surveyDate} • {mockParkInfo.surveyTime}
+              {!hasSurvey
+                ? 'Survey scheduled'
+                : hasStarted
+                  ? `Analysing recording · ${formatTimecode(time)}`
+                  : `Surveyed ${park.surveyDate}`}
             </Text>
+            {hasSurvey && (
+              <Text
+                style={[
+                  styles.surveyDate,
+                  { color: hasStarted ? theme.accentRed : theme.textSecondary, marginTop: 2 },
+                ]}
+              >
+                {hasStarted ? 'LIVE' : 'SURVEY COMPLETE'}
+              </Text>
+            )}
           </View>
         </View>
 

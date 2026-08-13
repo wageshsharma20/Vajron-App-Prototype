@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text, Alert, Pressable, Animated, Platform } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Text, Pressable, Platform } from 'react-native';
+import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
-import { VideoOverlay } from '../components/VideoOverlay';
-import { Play, Pause, Camera, Eye, EyeOff, VideoOff, Settings2, X } from 'lucide-react-native';
+import { useReplay } from '../replay/ReplayProvider';
+import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft } from 'lucide-react-native';
 
 let MapView: any;
 let Marker: any;
@@ -21,28 +22,36 @@ const ControlButton = ({ icon, onPress, isFab = false }: { icon: React.ReactNode
   </Pressable>
 );
 
-const mockBoxes: any[] = [
-  { x: 15, y: 20, width: 25, height: 35, label: 'LITTER', confidence: 92, type: 'live', category: 'issue' },
-  { x: 25, y: 35, width: 10, height: 12, label: 'DAMAGED BENCH', confidence: 85, type: 'live', category: 'issue' },
-  { x: 65, y: 25, width: 20, height: 35, label: '', confidence: 0, type: 'ghost', category: 'neutral' },
-];
+type Props = {
+  /** Returns to the park list in the Recordings tab. */
+  onBack?: () => void;
+};
 
-export const LiveVideoFeedScreen = () => {
+export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   const { theme } = useTheme();
-  const [isPlaying, setIsPlaying] = useState(true);
+  // Playback is the app-wide replay clock, so playing here also advances the
+  // Dashboard scores and Reports tallies.
+  const { player, isPlaying, toggle, restart, park } = useReplay();
   const [showOverlays, setShowOverlays] = useState(true);
   const [isMapMain, setIsMapMain] = useState(false);
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [showSettings, setShowSettings] = useState(false);
 
-  // Content renderers for easy swapping
+  // The clip already carries the detector's burned-in annotation layer, so the
+  // video is shown as-is (contain = whole frame, nothing cropped) inside the
+  // rotated landscape canvas. The VideoView is given explicit pixel dimensions:
+  // on web its underlying <video> ignores flex/absoluteFill sizing and would
+  // otherwise render at its intrinsic 1920x1080 and overflow the rotated frame.
   const renderCameraFeed = () => (
-    <View style={StyleSheet.absoluteFill}>
-      <View style={styles.blankVideo}>
-        <VideoOff size={32} color={'#333'} strokeWidth={1} />
-        <Text style={styles.blankText}>AWAITING STREAM</Text>
-      </View>
-      {showOverlays && <VideoOverlay boxes={mockBoxes} />}
+    <View style={[StyleSheet.absoluteFill, styles.feedBackdrop]}>
+      <VideoView
+        player={player}
+        style={{ width: layout.height, height: layout.width }}
+        contentFit="contain"
+        nativeControls={false}
+        playsInline
+        fullscreenOptions={{ enable: false }}
+      />
     </View>
   );
 
@@ -65,9 +74,17 @@ export const LiveVideoFeedScreen = () => {
         });
       }}
     >
+      {/* Back to the park list — sits upright, outside the rotated canvas */}
+      {onBack && (
+        <Pressable onPress={onBack} style={styles.backChip} hitSlop={10}>
+          <ArrowLeft size={16} color="#FFF" />
+          <Text style={styles.backChipText} numberOfLines={1}>{park.name}</Text>
+        </Pressable>
+      )}
+
       {layout.width > 0 && (
         <View style={[styles.rotatedContainer, {
-          width: layout.height + 2, 
+          width: layout.height + 2,
           height: layout.width + 2,
         }]}>
           {/* Main Area */}
@@ -109,22 +126,16 @@ export const LiveVideoFeedScreen = () => {
 
           {/* Controls — Minimal right edge */}
           <View style={styles.controlBar}>
-            <ControlButton 
-              icon={isPlaying ? <Pause size={18} color="#FFF" strokeWidth={1} /> : <Play size={18} color="#FFF" strokeWidth={1} />} 
-              label={isPlaying ? 'PAUSE' : 'LIVE'} 
-              onPress={() => setIsPlaying(!isPlaying)} 
+            <ControlButton
+              icon={isPlaying ? <Pause size={18} color="#FFF" strokeWidth={1} /> : <Play size={18} color="#FFF" strokeWidth={1} />}
+              label={isPlaying ? 'PAUSE' : 'PLAY'}
+              onPress={toggle}
             />
-            
-            <ControlButton 
-              icon={<Camera size={18} color="#000" strokeWidth={1.5} />} 
-              label="PHOTO" 
-              onPress={() => {
-                Alert.alert('Capture Mode', 'Select capture mode', [
-                  { text: 'Take Photo', onPress: () => console.log('Photo') },
-                  { text: 'Start Recording', onPress: () => console.log('Video') },
-                  { text: 'Cancel', style: 'cancel' }
-                ]);
-              }}
+
+            <ControlButton
+              icon={<RotateCcw size={18} color="#000" strokeWidth={1.5} />}
+              label="RESTART"
+              onPress={restart}
               isFab
             />
 
@@ -188,17 +199,30 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#080808', // Slightly off black
   },
-  blankVideo: {
-    ...(StyleSheet.absoluteFill as any),
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 16,
+  feedBackdrop: {
+    backgroundColor: '#000',
   },
-  blankText: {
-    fontFamily: typography.fonts.light,
-    fontSize: 14,
-    letterSpacing: 4,
-    color: '#555',
+  backChip: {
+    position: 'absolute',
+    top: 10,
+    left: 10,
+    zIndex: 200,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    maxWidth: '70%',
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    borderRadius: 4,
+    backgroundColor: 'rgba(0,0,0,0.72)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.16)',
+  },
+  backChipText: {
+    fontFamily: typography.fonts.medium,
+    fontSize: 11,
+    letterSpacing: 0.5,
+    color: '#FFF',
   },
   minimapContainer: {
     position: 'absolute',
@@ -298,7 +322,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   settingsOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'flex-end',
     zIndex: 100,
