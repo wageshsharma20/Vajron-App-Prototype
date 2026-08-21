@@ -52,7 +52,10 @@ const trendOf = (now: number, before: number): ScoreData['trend'] => {
 };
 
 export const useLiveScores = (): LiveScore[] => {
-  const { time, hasStarted, hasSurvey } = useReplay();
+  // datasetId is a dependency, not decoration: switching parks resets the clock,
+  // so without it a switch between two at-rest surveys would keep serving the
+  // previous park's cached figures.
+  const { time, hasStarted, hasSurvey, datasetId } = useReplay();
 
   return useMemo(() => {
     return (mockScores as ScoreData[]).map((card) => {
@@ -89,7 +92,7 @@ export const useLiveScores = (): LiveScore[] => {
         isLive: true,
       };
     });
-  }, [time, hasStarted, hasSurvey]);
+  }, [time, hasStarted, hasSurvey, datasetId]);
 };
 
 /** The eight cards backed by real per-frame data, in dashboard order. */

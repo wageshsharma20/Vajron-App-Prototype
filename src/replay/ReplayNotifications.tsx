@@ -12,7 +12,7 @@ import { useReplay } from './ReplayProvider';
 import { replayEvents, type ReplayEvent } from './replayData';
 
 export const ReplayNotifications = () => {
-  const { time, isPlaying, hasStarted, hasSurvey } = useReplay();
+  const { time, isPlaying, hasStarted, hasSurvey, datasetId } = useReplay();
   const [active, setActive] = useState<ReplayEvent | null>(null);
   const firedRef = useRef<Set<number>>(new Set());
   const lastTime = useRef(0);
@@ -26,6 +26,13 @@ export const ReplayNotifications = () => {
     lastTime.current = time;
   }, [time]);
 
+  // A new recording brings a new event list; drop what the previous one fired so
+  // its already-seen times cannot suppress this one's alerts.
+  useEffect(() => {
+    firedRef.current.clear();
+    setActive(null);
+  }, [datasetId]);
+
   useEffect(() => {
     if (!hasSurvey || !hasStarted || !isPlaying) return;
     for (const ev of replayEvents) {
@@ -35,7 +42,7 @@ export const ReplayNotifications = () => {
         break;
       }
     }
-  }, [time, isPlaying, hasStarted, hasSurvey]);
+  }, [time, isPlaying, hasStarted, hasSurvey, datasetId]);
 
   if (!active) return null;
 

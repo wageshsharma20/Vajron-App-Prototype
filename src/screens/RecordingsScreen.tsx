@@ -2,9 +2,10 @@
  * Recordings tab — pick a park, then play its survey recording.
  *
  * Selecting a park switches the whole app to that park's survey: the Dashboard
- * scores and Reports findings all read from the same selection. Only parks with a
- * processed survey can be opened; the rest are listed as scheduled so the
- * programme's coverage is visible without asserting findings that do not exist.
+ * scores and Reports findings all read from the same selection. Sanjay Lake's
+ * survey is two clips played back to back (the four-clip park survey, then the
+ * works-zone clip) so it appears as one continuous recording. Only parks with a
+ * processed survey can be opened; the rest are listed as scheduled.
  */
 import React, { useState } from 'react';
 import { View, StyleSheet, ScrollView, Pressable } from 'react-native';

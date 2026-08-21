@@ -1,17 +1,9 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text, Pressable, Platform } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, TouchableOpacity, Text, Pressable, Image } from 'react-native';
 import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
-import { useReplay, REPLAY_VIDEO_URL } from '../replay/ReplayProvider';
+import { useReplay } from '../replay/ReplayProvider';
 import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft } from 'lucide-react-native';
-
-let MapView: any;
-let Marker: any;
-if (Platform.OS !== 'web') {
-  const Maps = require('react-native-maps');
-  MapView = Maps.default;
-  Marker = Maps.Marker;
-}
 
 // Local helper component for DRY controls - Zen Style
 const ControlButton = ({ icon, onPress, isFab = false }: { icon: React.ReactNode, label?: string, onPress: () => void, isFab?: boolean }) => (
@@ -27,45 +19,6 @@ type Props = {
   onBack?: () => void;
 };
 
-/**
- * On web, expo-video's VideoView cannot load GitHub Releases URLs due to
- * redirect chains and Content-Disposition: attachment headers. This component
- * renders a native HTML5 <video> element synced to the replay provider.
- */
-const WebVideoFallback = ({ width, height }: { width: number; height: number }) => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const { isPlaying, time } = useReplay();
-
-  useEffect(() => {
-    const el = videoRef.current;
-    if (!el) return;
-    if (isPlaying) {
-      el.play().catch(() => {});
-    } else {
-      el.pause();
-    }
-  }, [isPlaying]);
-
-  // Sync seek — only jump if the replay clock drifted >1s from the video
-  useEffect(() => {
-    const el = videoRef.current;
-    if (!el || !isFinite(time)) return;
-    if (Math.abs(el.currentTime - time) > 1) {
-      el.currentTime = time;
-    }
-  }, [time]);
-
-  return (
-    <video
-      ref={videoRef}
-      src={REPLAY_VIDEO_URL}
-      muted
-      playsInline
-      style={{ width, height, objectFit: 'contain', backgroundColor: '#000', pointerEvents: 'none' }}
-    />
-  );
-};
-
 export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   const { theme } = useTheme();
   // Playback is the app-wide replay clock, so playing here also advances the
@@ -78,31 +31,33 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
 
   // The clip already carries the detector's burned-in annotation layer, so the
   // video is shown as-is (contain = whole frame, nothing cropped) inside the
-  // rotated landscape canvas. On web, expo-video cannot load GitHub Releases
-  // URLs, so we fall back to a native HTML5 <video> element.
+  // rotated landscape canvas. The explicit width/height are the rotated canvas
+  // dimensions swapped — on web the underlying <video> ignores flex sizing.
   const renderCameraFeed = () => (
     <View style={[StyleSheet.absoluteFill, styles.feedBackdrop]}>
-      {Platform.OS === 'web' ? (
-        <WebVideoFallback width={layout.height} height={layout.width} />
-      ) : (
-        <VideoView
-          player={player}
-          style={{ width: layout.height, height: layout.width }}
-          contentFit="contain"
-          nativeControls={false}
-          playsInline
-          fullscreenOptions={{ enable: false }}
-        />
-      )}
+      <VideoView
+        player={player}
+        style={{ width: layout.height, height: layout.width }}
+        contentFit="contain"
+        nativeControls={false}
+        playsInline
+        fullscreenOptions={{ enable: false }}
+      />
     </View>
   );
 
+  // Static satellite-style map of Sanjay Lake (28.6187°N, 77.3085°E), zoom 16.
+  // Uses the free OpenStreetMap static map service — no API key required.
   const renderMapView = () => (
-    <View style={[StyleSheet.absoluteFill, { backgroundColor: '#050505', justifyContent: 'center', alignItems: 'center' }]}>
-      <Text style={{ color: '#444', fontFamily: typography.fonts.light, fontSize: 16, letterSpacing: 4 }}>MINIMAP</Text>
-      <Text style={{ color: '#666', fontFamily: typography.fonts.regular, fontSize: 10, marginTop: 8, textAlign: 'center', paddingHorizontal: 10 }}>
-        Maps SDK disabled in prototype to prevent API Key crash.
-      </Text>
+    <View style={[StyleSheet.absoluteFill, { backgroundColor: '#1a2a1a', overflow: 'hidden' }]}>
+      <Image
+        source={{ uri: 'https://staticmap.openstreetmap.de/staticmap.php?center=28.6187,77.3085&zoom=16&size=200x140' }}
+        style={{ width: '100%', height: '100%' }}
+        resizeMode="cover"
+      />
+      <View style={styles.mapLabel}>
+        <Text style={styles.mapLabelText}>SANJAY LAKE</Text>
+      </View>
     </View>
   );
 
@@ -147,23 +102,6 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
               </TouchableOpacity>
             )}
 
-            {/* Drone HUD — Zen Minimalist */}
-            {showOverlays && (
-              <View style={styles.droneHUD}>
-                <View style={styles.hudRow}>
-                  <Text style={styles.hudLabel}>HEIGHT</Text>
-                  <Text style={styles.hudValue}>85.2M</Text>
-                </View>
-                <View style={styles.hudRow}>
-                  <Text style={styles.hudLabel}>SPEED</Text>
-                  <Text style={styles.hudValue}>28.4KM/H</Text>
-                </View>
-                <View style={styles.hudRow}>
-                  <Text style={styles.hudLabel}>BATTERY</Text>
-                  <Text style={styles.hudValue}>74%</Text>
-                </View>
-              </View>
-            )}
           </View>
 
           {/* Controls — Minimal right edge */}
@@ -269,7 +207,7 @@ const styles = StyleSheet.create({
   minimapContainer: {
     position: 'absolute',
     bottom: 32,
-    left: 32,
+    right: 100, // Clear of the 64px control bar, where the drone HUD used to sit
     width: 100,
     height: 70,
     borderWidth: 1, // Zen 1px
@@ -291,31 +229,19 @@ const styles = StyleSheet.create({
     color: '#FFF',
     letterSpacing: 2,
   },
-  droneHUD: {
+  mapLabel: {
     position: 'absolute',
-    bottom: 32,
-    right: 100, // Shifted to avoid control bar
-    gap: 8,
+    bottom: 0,
+    right: 0,
+    paddingHorizontal: 6,
+    paddingVertical: 3,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+    borderTopLeftRadius: 3,
   },
-  hudRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: 90,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: 'rgba(255,255,255,0.1)',
-    paddingBottom: 4,
-  },
-  hudLabel: {
-    fontFamily: typography.fonts.regular,
-    fontSize: 8,
-    letterSpacing: 1,
-    color: '#888',
-  },
-  hudValue: {
+  mapLabelText: {
     fontFamily: typography.fonts.medium,
-    fontSize: 10,
-    letterSpacing: 1,
+    fontSize: 7,
+    letterSpacing: 1.5,
     color: '#FFF',
   },
   controlBar: {

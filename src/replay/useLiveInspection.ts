@@ -189,7 +189,8 @@ const worstStatus = (items: { status: string }[]): string => {
 };
 
 export const useLiveInspection = (): InspectionCategory[] => {
-  const { time, hasStarted, hasSurvey, duration } = useReplay();
+  // datasetId is a dependency, not decoration — see the note in useLiveScores.
+  const { time, hasStarted, hasSurvey, duration, datasetId } = useReplay();
 
   // Before playback the whole clip is summarised (as a completed survey); once
   // playing, findings accumulate up to the current position. A park with no
@@ -240,5 +241,5 @@ export const useLiveInspection = (): InspectionCategory[] => {
       const issueCount = items.filter((i) => i.status === 'issue').length;
       return { ...cat, items, issueCount, status: worstStatus(items) };
     });
-  }, [at, hasStarted, hasSurvey]);
+  }, [at, hasStarted, hasSurvey, datasetId]);
 };
