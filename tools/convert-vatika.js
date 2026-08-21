@@ -28,25 +28,39 @@ const CLIPS = [
     clip: 'Clip 1',
     out: 'vasantVatikaClip1Replay.json',
     events: [
-      // Clip 1 is only ~10s (Fountain & formal garden) — keep events near the start
-      { time: 3.0, type: 'info', title: 'Fountain area surveying', message: 'Scanning the formal garden zone — checking fountain and ornamental beds.' },
+      // 0.00s Shrub/Hedge Medium cond 50.1 · 3.27s Bare Ground Medium cond 54.1
+      // 5.01s Ground Litter Medium cond 45.1 · 10.01s Walking Track Medium cond 51.1
+      { time: 3.0, type: 'warning', title: 'Shrubs showing wear', message: 'Hedge condition dipping near the fountain — gaps and thinning visible.' },
+      { time: 6.5, type: 'warning', title: 'Litter around the fountain', message: 'Loose debris scattered near the ornamental beds — needs a clean-up.' },
     ],
   },
   {
     clip: 'Clip 2',
     out: 'vasantVatikaClip2Replay.json',
     events: [
-      { time: 5.0, type: 'info', title: 'Central lawn in view', message: 'Surveying the central lawn and avenue area — checking grass health and pathways.' },
-      { time: 20.0, type: 'warning', title: 'Lawn patch thinning', message: 'Grass cover reducing along the central avenue — overseeding may help.' },
+      // 0.00s Ground Litter High cond 36.1 · 4.67s Shrub/Hedge Medium cond 48
+      // 25.01s Shrub/Hedge High cond 40.7 · 26.53s Vehicle in Premises
+      // 33.01s Bare Ground High cond 42.4 · 37.68s Litter High cond 42.8
+      { time: 3.0, type: 'warning', title: 'Litter building up', message: 'Ground litter detected along the avenue — condition at 36%, needs attention.' },
+      { time: 14.0, type: 'warning', title: 'Hedges degrading', message: 'Multiple shrub lines showing poor condition — trimming and gap-filling recommended.' },
+      { time: 28.0, type: 'info', title: 'Vehicle in park', message: 'A vehicle picked up within the boundary — confirm it is authorised.' },
+      { time: 35.0, type: 'warning', title: 'Bare patches and dry vegetation', message: 'Compacted ground and dry vegetation cluster detected — irrigation review needed.' },
     ],
   },
   {
     clip: 'Clip 3',
     out: 'vasantVatikaClip3Replay.json',
     events: [
-      { time: 5.0, type: 'info', title: 'Open gym area', message: 'Surveying the open gym and hedge bed zone — checking equipment and planting.' },
-      { time: 25.0, type: 'warning', title: 'Hedge gaps spotted', message: 'Gaps appearing in the hedge line — trimming and replanting would tidy this up.' },
-      { time: 45.0, type: 'info', title: 'Equipment condition noted', message: 'Open gym equipment condition being assessed — minor wear visible.' },
+      // 0.00s Bare Ground CRITICAL cond 10.7 · 8.94s Waterlogging Medium cond 49.7
+      // 12.75s Bare Ground CRITICAL cond 22.3 · 24.96s Bare Ground CRITICAL cond 14.3
+      // 25.50s Lawn High cond 42.7 · 37.71s Bare Ground CRITICAL cond 6.0
+      // 42.45s Bare Ground CRITICAL cond 6.0 · 60.54s Walking Track High cond 43.6
+      { time: 3.0, type: 'error', title: 'Severe ground erosion', message: 'Critical bare ground patches — condition as low as 10%. Urgent re-turfing needed.' },
+      { time: 10.0, type: 'warning', title: 'Waterlogging detected', message: 'Standing water near the gym area — investigate drainage and grading.' },
+      { time: 16.0, type: 'warning', title: 'Heavy litter throughout', message: 'Ground debris accumulating across this zone — major clean-up required.' },
+      { time: 27.0, type: 'error', title: 'Lawn in critical condition', message: 'Grass condition dropping to 42% — compacted soil, bare patches expanding.' },
+      { time: 40.0, type: 'error', title: 'Ground condition critical', message: 'Bare ground at 6% condition — worst finding in this survey. Immediate action required.' },
+      { time: 55.0, type: 'warning', title: 'Path surface degrading', message: 'Walking track wearing thin at the far end — resurfacing recommended.' },
     ],
   },
 ];
