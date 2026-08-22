@@ -87,9 +87,9 @@ export type DetectionGroup = {
 export type Anomaly = {
   Priority: string;
   'Track ID': string;
-  'DTU code': string;
+  'Code': string;
   Anomaly: string;
-  'DTU sub-parameter': string;
+  'Sub-parameter': string;
   Severity: string;
   'Condition %': string;
   'First seen (s)': string;
@@ -101,7 +101,7 @@ export type Anomaly = {
 export type Recommendation = {
   '#': string;
   Priority: string;
-  'DTU category': string;
+  'Category': string;
   Finding: string;
   'Recommended action': string;
   Owner: string;
