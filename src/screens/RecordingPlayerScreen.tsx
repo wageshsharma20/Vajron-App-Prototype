@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
   controlBarBottom: {
     right: 0,
     left: 0,
-    top: undefined,
+    top: 'auto',
     bottom: 0,
     width: '100%',
     height: 80,
