@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Text, Pressable, Image } from 'reac
 import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
 import { useReplay } from '../replay/ReplayProvider';
-import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft } from 'lucide-react-native';
+import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft, Maximize, Minimize } from 'lucide-react-native';
 
 // Local helper component for DRY controls - Zen Style
 const ControlButton = ({ icon, onPress, isFab = false }: { icon: React.ReactNode, label?: string, onPress: () => void, isFab?: boolean }) => (
@@ -28,6 +28,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   const [isMapMain, setIsMapMain] = useState(false);
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [showSettings, setShowSettings] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
 
   // The clip already carries the detector's burned-in annotation layer, so the
   // video is shown as-is (contain = whole frame, nothing cropped) inside the
@@ -37,7 +38,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
     <View style={[StyleSheet.absoluteFill, styles.feedBackdrop]}>
       <VideoView
         player={player}
-        style={{ width: layout.height, height: layout.width }}
+        style={isRotated ? { width: layout.height, height: layout.width } : { width: layout.width, height: layout.height }}
         contentFit="contain"
         nativeControls={false}
         playsInline
@@ -80,10 +81,16 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
       )}
 
       {layout.width > 0 && (
-        <View style={[styles.rotatedContainer, {
-          width: layout.height + 2,
-          height: layout.width + 2,
-        }]}>
+        <View style={[
+          isRotated ? styles.rotatedContainer : styles.normalContainer,
+          isRotated ? {
+            width: layout.height + 2,
+            height: layout.width + 2,
+          } : {
+            width: layout.width,
+            height: layout.height,
+          }
+        ]}>
           {/* Main Area */}
           <View style={styles.videoArea}>
             {isMapMain ? renderMapView() : renderCameraFeed()}
@@ -105,7 +112,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
           </View>
 
           {/* Controls — Minimal right edge */}
-          <View style={styles.controlBar}>
+          <View style={[styles.controlBar, !isRotated && styles.controlBarBottom]}>
             <ControlButton
               icon={isPlaying ? <Pause size={18} color="#FFF" strokeWidth={1} /> : <Play size={18} color="#FFF" strokeWidth={1} />}
               label={isPlaying ? 'PAUSE' : 'PLAY'}
@@ -123,6 +130,12 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
               icon={showOverlays ? <Eye size={18} color="#FFF" strokeWidth={1} /> : <EyeOff size={18} color="#FFF" strokeWidth={1} />} 
               label="SHOW DATA" 
               onPress={() => setShowOverlays(!showOverlays)} 
+            />
+
+            <ControlButton 
+              icon={isRotated ? <Minimize size={18} color="#FFF" strokeWidth={1} /> : <Maximize size={18} color="#FFF" strokeWidth={1} />} 
+              label="ROTATE" 
+              onPress={() => setIsRotated(!isRotated)} 
             />
 
             <ControlButton 
@@ -170,6 +183,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  normalContainer: {
+    backgroundColor: '#000',
   },
   rotatedContainer: {
     transform: [{ rotate: '90deg' }],
@@ -257,6 +273,18 @@ const styles = StyleSheet.create({
     gap: 24, // tighter gap
     borderLeftWidth: 1,
     borderLeftColor: 'rgba(255,255,255,0.1)',
+  },
+  controlBarBottom: {
+    right: 0,
+    left: 0,
+    top: undefined,
+    bottom: 0,
+    width: '100%',
+    height: 80,
+    flexDirection: 'row',
+    borderLeftWidth: 0,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.1)',
   },
   controlBtn: {
     alignItems: 'center',

@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { View, ScrollView, StyleSheet, TextInput, Pressable, Image, TouchableOpacity } from 'react-native';
+import { View, ScrollView, StyleSheet, TextInput, Pressable, Image, TouchableOpacity, Platform, Alert } from 'react-native';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
 import * as ImagePicker from 'expo-image-picker';
 import { Download } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
@@ -36,7 +38,7 @@ export const ConclusiveDataScreen = () => {
   const totalCategories = inspectionData.length;
 
   
-  const handleDownload = () => {
+  const handleDownload = async () => {
     const map: Record<string, string> = {
       'sanjay-lake': 'Sanjay_Lake_Park_AI_Detection_Report.xlsx',
       'lala-harydal': 'Lala_Hardeval_AI_Detection_Report.xlsx',
@@ -47,8 +49,26 @@ export const ConclusiveDataScreen = () => {
       'smriti-van-mayur-vihar': 'Smriti_Van_AI_Detection_Report.xlsx'
     };
     const filename = map[park.id];
-    if (filename && typeof window !== 'undefined') {
-      window.open(`/reports/${filename}`, '_blank');
+    if (!filename) return;
+
+    if (Platform.OS === 'web') {
+      if (typeof window !== 'undefined') {
+        window.open(`/reports/${filename}`, '_blank');
+      }
+    } else {
+      try {
+        const url = `https://github.com/wageshsharma20/Vajron-App-Prototype/releases/download/survey-media/${filename}`;
+        const fileUri = FileSystem.documentDirectory + filename;
+        const { uri } = await FileSystem.downloadAsync(url, fileUri);
+        
+        if (await Sharing.isAvailableAsync()) {
+          await Sharing.shareAsync(uri);
+        } else {
+          Alert.alert('Download Complete', 'File saved to ' + uri);
+        }
+      } catch (e) {
+        Alert.alert('Download Error', 'Failed to download report.');
+      }
     }
   };
 
@@ -62,17 +82,17 @@ export const ConclusiveDataScreen = () => {
     <ScrollView style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       {/* Header Bar */}
       <View style={styles.header}>
-        <View>
-          <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
-          <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
-            {park.name}
-            {hasSurvey ? (hasStarted ? ' · analysing recording' : ` · surveyed ${park.surveyDate}`) : ' · survey scheduled'}
-          </Text>
-        </View>
+        <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
         <Pressable style={styles.downloadBtn} onPress={handleDownload}>
           <Download size={24} color={theme.textPrimary} strokeWidth={1} />
         </Pressable>
       </View>
+      {/* Full width, outside the title row: the button only needs to line up with
+          the heading, and the longer park names need every pixel to stay on one line. */}
+      <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
+        {park.name}
+        {hasSurvey ? (hasStarted ? ' · analysing recording' : ` · surveyed ${park.surveyDate}`) : ' · survey scheduled'}
+      </Text>
 
       {/* Zen Search Bar (Bottom border only) */}
       <View style={[styles.searchContainer, { borderBottomColor: theme.border }]}>
@@ -195,8 +215,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    marginBottom: 24,
+    alignItems: 'center',
   },
   title: {
     fontFamily: typography.fonts.light,
@@ -207,12 +226,17 @@ const styles = StyleSheet.create({
   subtitle: {
     fontFamily: typography.fonts.medium,
     fontSize: 14,
-    letterSpacing: 1.5,
+    // Tightened from 1.5: at 1.5 the tracking alone added ~57 px to this string,
+    // which pushed "…22 May 2026" onto a second line once the row stopped
+    // overflowing. This keeps the park name and survey date on one line.
+    letterSpacing: 0.5,
     marginTop: 8,
+    marginBottom: 24,
   },
   downloadBtn: {
     padding: 8,
-    marginRight: 32,
+    // Aligns the icon with the 16 px content padding used across the screen.
+    marginRight: 0,
   },
   searchContainer: {
     marginBottom: 8,
