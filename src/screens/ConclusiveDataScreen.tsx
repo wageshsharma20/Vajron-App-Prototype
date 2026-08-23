@@ -212,7 +212,6 @@ const styles = StyleSheet.create({
   },
   downloadBtn: {
     padding: 8,
-    marginRight: -8,
   },
   searchContainer: {
     marginBottom: 8,
