@@ -51,10 +51,18 @@ const RELEASE_BASE =
 const LOCAL_BASE = 'http://localhost:3001';
 
 /** Resolve a recording's video file to a playable URL for the current platform. */
-export const videoUrlFor = (recording: Recording): string =>
-  Platform.OS === 'web'
-    ? `${LOCAL_BASE}/${recording.video}`
-    : `${RELEASE_BASE}/${recording.video}`;
+export const videoUrlFor = (recording: Recording): string => {
+  if (Platform.OS === 'web') {
+    if (__DEV__) {
+      return `${LOCAL_BASE}/${recording.video}`;
+    } else {
+      // In production (Vercel), proxy the GitHub release through our Edge Function
+      // to strip the Content-Disposition: attachment header.
+      return `/api/video?file=${recording.video}`;
+    }
+  }
+  return `${RELEASE_BASE}/${recording.video}`;
+};
 
 const DEFAULT_RECORDING =
   recordingsForPark(DEFAULT_PARK_ID).find((r) => r.id === DEFAULT_RECORDING_ID) ??
