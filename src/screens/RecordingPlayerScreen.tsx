@@ -222,8 +222,8 @@ const styles = StyleSheet.create({
   },
   minimapContainer: {
     position: 'absolute',
-    bottom: 32,
-    right: 100, // Clear of the 64px control bar, where the drone HUD used to sit
+    bottom: 80, // Clear of the 64px control bar
+    right: 16,
     width: 100,
     height: 70,
     borderWidth: 1, // Zen 1px
@@ -263,26 +263,15 @@ const styles = StyleSheet.create({
   controlBar: {
     position: 'absolute',
     right: 0,
-    top: 0,
-    bottom: 0,
-    width: 64, // much narrower
-    backgroundColor: 'rgba(0,0,0,0.8)',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 24, // tighter gap
-    borderLeftWidth: 1,
-    borderLeftColor: 'rgba(255,255,255,0.1)',
-  },
-  controlBarBottom: {
-    right: 0,
     left: 0,
-    top: 'auto',
     bottom: 0,
     width: '100%',
-    height: 80,
+    height: 64,
+    backgroundColor: 'rgba(0,0,0,0.8)',
     flexDirection: 'row',
-    borderLeftWidth: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 32,
     borderTopWidth: 1,
     borderTopColor: 'rgba(255,255,255,0.1)',
   },
