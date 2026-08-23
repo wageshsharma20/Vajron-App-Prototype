@@ -218,9 +218,14 @@ export const useLiveInspection = (): InspectionCategory[] => {
     const coverage = (key: CoverageKey) =>
       hasStarted ? smoothedValueAt(key, at, 0) : clipSummary.coverage[key].mean;
 
-    const cov = {} as Record<CoverageKey, number>;
-    (Object.keys(clipSummary.coverage) as CoverageKey[]).forEach((k) => {
-      cov[k] = coverage(k);
+        const cov = new Proxy({} as Record<CoverageKey, number>, {
+      get: (target, prop) => {
+        const k = prop as CoverageKey;
+        if (clipSummary.coverage && clipSummary.coverage[k]) {
+          return coverage(k) ?? 0;
+        }
+        return 0;
+      }
     });
 
     const ctx: Ctx = {
@@ -228,7 +233,10 @@ export const useLiveInspection = (): InspectionCategory[] => {
       cov,
       count: (cls) => counts[cls] ?? 0,
       cond: (cls) => meanConditionUpTo(cls, at),
-      score: (key) => (hasStarted ? smoothedValueAt(key, at) : clipSummary.scores[key].mean),
+      score: (key) => {
+        if (!clipSummary.scores || !clipSummary.scores[key]) return 0;
+        return hasStarted ? (smoothedValueAt(key, at) ?? 0) : (clipSummary.scores[key].mean ?? 0);
+      },
     };
 
     return (mockInspection as InspectionCategory[]).map((cat) => {
