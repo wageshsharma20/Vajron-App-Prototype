@@ -35,6 +35,23 @@ export const ConclusiveDataScreen = () => {
   const totalIssues = useMemo(() => inspectionData.reduce((sum, cat) => sum + cat.issueCount, 0), [inspectionData]);
   const totalCategories = inspectionData.length;
 
+  
+  const handleDownload = () => {
+    const map: Record<string, string> = {
+      'sanjay-lake': 'Sanjay_Lake_Park_AI_Detection_Report.xlsx',
+      'lala-harydal': 'Lala_Hardeval_AI_Detection_Report.xlsx',
+      'r-block-asaf-ali': 'Asaf_Ali_AI_Detection_Report.xlsx',
+      'vasant-udyan': 'Vasant_Udyan_AI_Detection_Report.xlsx',
+      'vasant-vatika': 'Vasant_Vatika_AI_Detection_Report.xlsx',
+      'rohini-dda': 'Rohini_AI_Detection_Report.xlsx',
+      'smriti-van-mayur-vihar': 'Smriti_Van_AI_Detection_Report.xlsx'
+    };
+    const filename = map[park.id];
+    if (filename && typeof window !== 'undefined') {
+      window.open(`/reports/${filename}`, '_blank');
+    }
+  };
+
   const filteredData = useMemo(() => {
     return inspectionData.filter((cat) => {
       return cat.category.toLowerCase().includes(searchQuery.toLowerCase());
@@ -52,8 +69,8 @@ export const ConclusiveDataScreen = () => {
             {hasSurvey ? (hasStarted ? ' · analysing recording' : ` · surveyed ${park.surveyDate}`) : ' · survey scheduled'}
           </Text>
         </View>
-        <Pressable style={styles.downloadBtn}>
-          <Download size={24} color={theme.textPrimary} strokeWidth={1} />
+        <Pressable style={[styles.downloadBtn, { backgroundColor: theme.surfaceMuted }]} onPress={handleDownload}>
+          <Download size={20} color={theme.textPrimary} strokeWidth={2.5} />
         </Pressable>
       </View>
 
@@ -194,7 +211,12 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   downloadBtn: {
-    padding: 8,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 4, // prevent edge clipping
   },
   searchContainer: {
     marginBottom: 8,
