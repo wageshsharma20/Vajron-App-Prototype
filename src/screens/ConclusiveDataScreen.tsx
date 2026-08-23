@@ -59,7 +59,7 @@ export const ConclusiveDataScreen = () => {
   }, [searchQuery, inspectionData]);
 
   return (
-    <ScrollView style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content}>
+    <ScrollView style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       {/* Header Bar */}
       <View style={styles.header}>
         <View>
@@ -212,6 +212,7 @@ const styles = StyleSheet.create({
   },
   downloadBtn: {
     padding: 8,
+    marginRight: 8,
   },
   searchContainer: {
     marginBottom: 8,

@@ -68,6 +68,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
         />
       )}
       <ScrollView
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={theme.textPrimary} />
