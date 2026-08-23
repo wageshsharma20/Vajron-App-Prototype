@@ -35,9 +35,9 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   // video is shown as-is (contain = whole frame, nothing cropped) inside the
   // rotated landscape canvas. The explicit width/height are the rotated canvas
   // dimensions swapped — on web the underlying <video> ignores flex sizing.
-  const renderCameraFeed = () => (
+  const renderCameraFeed = (isMinimap: boolean) => (
     <View style={[StyleSheet.absoluteFill, styles.feedBackdrop, { justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }]}>
-      <View style={isRotated ? { 
+      <View style={(isRotated && !isMinimap) ? { 
         width: layout.height, 
         height: layout.width, 
         transform: [{ rotate: '90deg' }] 
@@ -59,14 +59,15 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
 
   // Static satellite-style map of Sanjay Lake (28.6187°N, 77.3085°E), zoom 16.
   // Uses the free OpenStreetMap static map service — no API key required.
-  const renderMapView = () => (
-    <View style={[StyleSheet.absoluteFill, { backgroundColor: '#1a2a1a', overflow: 'hidden' }]}>
-      <Image
-        source={{ uri: 'https://staticmap.openstreetmap.de/staticmap.php?center=28.6187,77.3085&zoom=16&size=200x140' }}
-        style={{ width: '100%', height: '100%' }}
-        resizeMode="cover"
-      />
-      
+  const renderMapView = (isMinimap: boolean) => (
+    <View style={[StyleSheet.absoluteFill, { backgroundColor: '#1a2a1a', overflow: 'hidden', justifyContent: 'center', alignItems: 'center' }]}>
+      <View style={(isRotated && !isMinimap) ? { width: layout.height, height: layout.width, transform: [{ rotate: '90deg' }] } : { width: '100%', height: '100%' }}>
+        <Image
+          source={{ uri: 'https://staticmap.openstreetmap.de/staticmap.php?center=28.6187,77.3085&zoom=16&size=200x140' }}
+          style={{ width: '100%', height: '100%' }}
+          resizeMode="cover"
+        />
+      </View>
     </View>
   );
 
@@ -92,7 +93,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
         <View style={{ width: layout.width, height: layout.height, backgroundColor: '#000' }}>
           {/* Main Area */}
           <View style={styles.videoArea}>
-            {isMapMain ? renderMapView() : renderCameraFeed()}
+            {isMapMain ? renderMapView(false) : renderCameraFeed(false)}
 
             {/* Minimap (Interactive PIP) */}
             {showOverlays && (
@@ -105,7 +106,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
                 ]}
                 onPress={() => setIsMapMain(!isMapMain)}
               >
-                {isMapMain ? renderCameraFeed() : renderMapView()}
+                {isMapMain ? renderCameraFeed(true) : renderMapView(true)}
                 <View style={styles.minimapBadge}>
                   <Text style={styles.minimapLabel}>{isMapMain ? 'CAM' : 'MAP'}</Text>
                 </View>
@@ -115,7 +116,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
           </View>
 
           {/* Controls — Minimal right edge */}
-          <View style={[styles.controlBar, !isRotated && styles.controlBarBottom]}>
+          <View style={styles.controlBar}>
             <ControlButton
               icon={isPlaying ? <Pause size={18} color="#FFF" strokeWidth={1} /> : <Play size={18} color="#FFF" strokeWidth={1} />}
               label={isPlaying ? 'PAUSE' : 'PLAY'}
