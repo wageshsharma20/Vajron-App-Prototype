@@ -12,93 +12,11 @@
 
 export type ParkStatus = 'ready' | 'scheduled';
 
-export type Park = {
-  id: string;
-  name: string;
-  locality: string;
-  status: ParkStatus;
-  /** Populated only when status is 'ready'. */
-  surveyDate?: string;
-  clip?: string;
-  zone?: string;
-  durationSec?: number;
-};
-
-export const PARKS: Park[] = [
-  {
-    id: 'sanjay-lake',
-    name: 'Sanjay Lake',
-    locality: 'East Delhi',
-    status: 'ready',
-    surveyDate: '19 May 2026',
-    clip: '4-clip survey',
-    zone: 'Play area · lake edge · open-gym & lawns · footbridge',
-    durationSec: 180.45,
-  },
-  {
-    id: 'lala-harydal',
-    name: 'Lala Harydal Park',
-    locality: 'North Delhi',
-    status: 'ready',
-    surveyDate: '19 May 2026',
-    clip: '3-clip survey',
-    zone: 'Palm avenue & lawns · formal beds & pathways · central axis & parterre',
-    durationSec: 147.42,
-  },
-  {
-    id: 'smriti-van-mayur-vihar',
-    name: 'Smriti Van Mayur Vihar',
-    locality: 'Mayur Vihar',
-    status: 'ready',
-    surveyDate: '19 May 2026',
-    clip: '4-clip survey',
-    zone: 'Flooded planting bed · play area · waterlogged ground · lawns & tree belt',
-    durationSec: 136.57,
-  },
-  {
-    id: 'r-block-asaf-ali',
-    name: 'R Block Asaf Ali Park',
-    locality: 'Asaf Ali Road',
-    status: 'ready',
-    surveyDate: '18 May 2026',
-    clip: '2-clip survey',
-    zone: 'Garden & tree canopy · pavilion (close-range)',
-    durationSec: 105.19,
-  },
-  {
-    id: 'vasant-udyan',
-    name: 'Vasant Udyan',
-    locality: 'Vasant Kunj',
-    status: 'ready',
-    surveyDate: '18 May 2026',
-    clip: '2-clip survey',
-    zone: "Children's play area · pathways & tree belt",
-    durationSec: 71.53,
-  },
-  {
-    id: 'vasant-vatika',
-    name: 'Vasant Vatika',
-    locality: 'Vasant Kunj',
-    status: 'ready',
-    surveyDate: '20 May 2026',
-    clip: '3-clip survey',
-    zone: 'Fountain & formal garden · central lawn & avenue · open gym & hedge beds',
-    durationSec: 113.21,
-  },
-  {
-    id: 'rohini-dda',
-    name: 'Rohini DDA Park',
-    locality: 'Rohini',
-    status: 'ready',
-    surveyDate: '22 May 2026',
-    clip: '3-clip survey',
-    zone: 'Lawns, gazebo & hedge beds · lake & open water · algal channel & banks',
-    durationSec: 110.91,
-  },
+export type Park =
 ];
 
 /** The park whose survey is loaded when the app opens. */
-export const DEFAULT_PARK_ID = 'sanjay-lake';
+export const DEFAULT_PARK_ID = 'rohini-dda';
 
 export const parkById = (id: string): Park =>
   PARKS.find((p) => p.id === id) ?? PARKS[0];
