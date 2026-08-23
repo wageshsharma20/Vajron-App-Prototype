@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   },
   downloadBtn: {
     padding: 8,
-    marginRight: 8,
+    marginRight: 32,
   },
   searchContainer: {
     marginBottom: 8,
