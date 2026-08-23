@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, Text, Pressable, Image } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Text, Pressable, Image, Platform } from 'react-native';
 import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
 import { useReplay } from '../replay/ReplayProvider';
@@ -136,11 +136,13 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
               onPress={() => setShowOverlays(!showOverlays)} 
             />
 
-            <ControlButton 
-              icon={<MaterialIcons name="screen-rotation" size={20} color="#FFF" />} 
-              label="ROTATE" 
-              onPress={() => setIsRotated(!isRotated)} 
-            />
+            {Platform.OS === 'web' && (
+              <ControlButton 
+                icon={<MaterialIcons name="screen-rotation" size={20} color="#FFF" />} 
+                label="ROTATE" 
+                onPress={() => setIsRotated(!isRotated)} 
+              />
+            )}
 
             <ControlButton 
               icon={<Settings2 size={18} color="#FFF" strokeWidth={1} />} 
