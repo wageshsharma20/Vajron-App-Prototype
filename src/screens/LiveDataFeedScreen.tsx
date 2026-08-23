@@ -114,7 +114,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
 
         {/* Score Grid - Separated by whitespace */}
         <View style={styles.scoreGrid}>
-          {gridScores.map((score: any) => (
+          {gridScores.map((score: any, index: number) => (
             <ScoreCard
               key={score.id}
               label={score.label}
@@ -122,6 +122,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
               iconName={score.icon}
               trend={score.trend}
               changePercent={score.changePercent}
+              isLastOdd={index === gridScores.length - 1 && gridScores.length % 2 !== 0}
             />
           ))}
         </View>
