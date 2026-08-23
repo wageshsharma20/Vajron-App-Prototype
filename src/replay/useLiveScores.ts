@@ -96,4 +96,4 @@ export const useLiveScores = (): LiveScore[] => {
 };
 
 /** The eight cards backed by real per-frame data, in dashboard order. */
-export const useLiveScoresOnly = (): LiveScore[] => useLiveScores().filter((s) => s.isLive);
+export const useLiveScoresOnly = (): LiveScore[] => useLiveScores().filter((s) => !!LIVE_MAP[s.id]);

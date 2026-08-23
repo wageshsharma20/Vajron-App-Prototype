@@ -75,7 +75,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
       >
         {/* Overall Park Health - Zen Style */}
         <View style={styles.overallSection}>
-          <CircularScore score={overallScore.score} label="Overall Score" size={140} />
+          <CircularScore score={overallScore?.score ?? 0} label="Overall Score" size={140} />
           <View style={styles.overallMeta}>
             <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
