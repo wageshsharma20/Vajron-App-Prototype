@@ -59,7 +59,7 @@ export const ConclusiveDataScreen = () => {
       try {
         const url = `https://github.com/wageshsharma20/Vajron-App-Prototype/releases/download/survey-media/${filename}`;
         const destFile = new FileSystem.File(FileSystem.Paths.document, filename);
-        const downloadedFile = await FileSystem.File.downloadFileAsync(url, destFile);
+        const downloadedFile = await FileSystem.File.downloadFileAsync(url, destFile, { idempotent: true });
         const uri = downloadedFile.uri;
         
         if (await Sharing.isAvailableAsync()) {
