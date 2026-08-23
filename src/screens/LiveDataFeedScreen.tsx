@@ -6,7 +6,7 @@ import { ScoreCard } from '../components/ScoreCard';
 import { DroneInfoTable } from '../components/DroneInfoTable';
 import { AlertBanner } from '../components/AlertBanner';
 import { mockParkInfo, mockInspection } from '../data/mockData';
-import { useLiveScoresOnly } from '../replay/useLiveScoresOnly';
+import { useLiveScoresOnly } from '../replay/useLiveScores';
 import { useReplay, formatTimecode } from '../replay/ReplayProvider';
 import { Text } from 'react-native-paper';
 import { InspectionCategory, ScoreData } from '../types';
