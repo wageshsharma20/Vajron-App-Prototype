@@ -99,7 +99,11 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
             {showOverlays && (
               <TouchableOpacity 
                 activeOpacity={0.9}
-                style={[styles.minimapContainer, { borderColor: theme.border }]}
+                style={[
+                  styles.minimapContainer, 
+                  { borderColor: theme.border },
+                  isRotated && { transform: [{ rotate: '90deg' }] }
+                ]}
                 onPress={() => setIsMapMain(!isMapMain)}
               >
                 {isMapMain ? renderCameraFeed() : renderMapView()}
