@@ -6,7 +6,7 @@ import { ScoreCard } from '../components/ScoreCard';
 import { DroneInfoTable } from '../components/DroneInfoTable';
 import { AlertBanner } from '../components/AlertBanner';
 import { mockParkInfo, mockInspection } from '../data/mockData';
-import { useLiveScores } from '../replay/useLiveScores';
+import { useLiveScoresOnly } from '../replay/useLiveScoresOnly';
 import { useReplay, formatTimecode } from '../replay/ReplayProvider';
 import { Text } from 'react-native-paper';
 import { InspectionCategory, ScoreData } from '../types';
@@ -46,7 +46,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
   // Driven by the replay clock: the eight cards with a real per-frame series in the
   // detection report track playback, the rest keep their reported values.
   const { park, hasStarted, hasSurvey, time } = useReplay();
-  const liveScores = useLiveScores();
+  const liveScores = useLiveScoresOnly();
   const overallScore = liveScores[0];
   const gridScores = liveScores.slice(1);
 
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    rowGap: 4,
+    rowGap: 24,
     marginBottom: 24,
   },
   issuesSection: {
