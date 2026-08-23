@@ -3,7 +3,8 @@ import { View, StyleSheet, TouchableOpacity, Text, Pressable, Image } from 'reac
 import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
 import { useReplay } from '../replay/ReplayProvider';
-import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft, Maximize, Minimize } from 'lucide-react-native';
+import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft } from 'lucide-react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 // Local helper component for DRY controls - Zen Style
 const ControlButton = ({ icon, onPress, isFab = false }: { icon: React.ReactNode, label?: string, onPress: () => void, isFab?: boolean }) => (
@@ -135,7 +136,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
             />
 
             <ControlButton 
-              icon={isRotated ? <Minimize size={18} color="#FFF" strokeWidth={1} /> : <Maximize size={18} color="#FFF" strokeWidth={1} />} 
+              icon={<MaterialIcons name="screen-rotation" size={20} color="#FFF" />} 
               label="ROTATE" 
               onPress={() => setIsRotated(!isRotated)} 
             />
