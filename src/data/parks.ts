@@ -85,7 +85,16 @@ export const PARKS: Park[] = [
     zone: 'Fountain & formal garden · central lawn & avenue · open gym & hedge beds',
     durationSec: 113.21,
   },
-  { id: 'rohini-dda', name: 'Rohini DDA Park', locality: 'Rohini', status: 'scheduled' },
+  {
+    id: 'rohini-dda',
+    name: 'Rohini DDA Park',
+    locality: 'Rohini',
+    status: 'ready',
+    surveyDate: '22 May 2026',
+    clip: '3-clip survey',
+    zone: 'Lawns, gazebo & hedge beds · lake & open water · algal channel & banks',
+    durationSec: 110.91,
+  },
 ];
 
 /** The park whose survey is loaded when the app opens. */
@@ -121,7 +130,10 @@ export type Recording = {
     | 'vasant-2'
     | 'vatika-1'
     | 'vatika-2'
-    | 'vatika-3';
+    | 'vatika-3'
+    | 'rohini-1'
+    | 'rohini-2'
+    | 'rohini-3';
   video: string;
   durationSec: number;
 };
@@ -267,6 +279,32 @@ export const RECORDINGS: Record<string, Recording[]> = {
       datasetId: 'vatika-3',
       video: 'vasant-vatika-03.mp4',
       durationSec: 63.58,
+    },
+  ],
+  'rohini-dda': [
+    {
+      id: 'clip1',
+      label: 'Lawns, Gazebo & Hedge Beds',
+      sublabel: 'Lawns, gazebo and hedge beds · 37 s',
+      datasetId: 'rohini-1',
+      video: 'rohini-dda-01.mp4',
+      durationSec: 36.88,
+    },
+    {
+      id: 'clip2',
+      label: 'Lake & Open Water',
+      sublabel: 'Lake and open water zone · 26 s',
+      datasetId: 'rohini-2',
+      video: 'rohini-dda-02.mp4',
+      durationSec: 26.18,
+    },
+    {
+      id: 'clip3',
+      label: 'Algal Channel & Banks',
+      sublabel: 'Algal channel and banks · 48 s',
+      datasetId: 'rohini-3',
+      video: 'rohini-dda-03.mp4',
+      durationSec: 47.85,
     },
   ],
 };

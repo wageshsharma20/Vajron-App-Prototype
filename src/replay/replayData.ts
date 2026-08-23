@@ -33,6 +33,9 @@ import vasant2Raw from '../data/vasantUdyanClip2Replay.json';
 import vatika1Raw from '../data/vasantVatikaClip1Replay.json';
 import vatika2Raw from '../data/vasantVatikaClip2Replay.json';
 import vatika3Raw from '../data/vasantVatikaClip3Replay.json';
+import rohini1Raw from '../data/rohiniDdaClip1Replay.json';
+import rohini2Raw from '../data/rohiniDdaClip2Replay.json';
+import rohini3Raw from '../data/rohiniDdaClip3Replay.json';
 
 export type ScoreKey =
   | 'overall'
@@ -183,7 +186,10 @@ export type ReplayId =
   | 'vasant-2'
   | 'vatika-1'
   | 'vatika-2'
-  | 'vatika-3';
+  | 'vatika-3'
+  | 'rohini-1'
+  | 'rohini-2'
+  | 'rohini-3';
 
 const DATASETS: Record<ReplayId, Dataset> = {
   survey: buildDataset(surveyRaw),
@@ -202,6 +208,9 @@ const DATASETS: Record<ReplayId, Dataset> = {
   'vatika-1': buildDataset(vatika1Raw),
   'vatika-2': buildDataset(vatika2Raw),
   'vatika-3': buildDataset(vatika3Raw),
+  'rohini-1': buildDataset(rohini1Raw),
+  'rohini-2': buildDataset(rohini2Raw),
+  'rohini-3': buildDataset(rohini3Raw),
 };
 
 const DEFAULT_REPLAY_ID: ReplayId = 'survey';
