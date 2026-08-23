@@ -69,8 +69,8 @@ export const ConclusiveDataScreen = () => {
             {hasSurvey ? (hasStarted ? ' · analysing recording' : ` · surveyed ${park.surveyDate}`) : ' · survey scheduled'}
           </Text>
         </View>
-        <Pressable style={[styles.downloadBtn, { backgroundColor: theme.surfaceMuted }]} onPress={handleDownload}>
-          <Download size={20} color={theme.textPrimary} strokeWidth={2.5} />
+        <Pressable style={styles.downloadBtn} onPress={handleDownload}>
+          <Download size={24} color={theme.textPrimary} strokeWidth={1} />
         </Pressable>
       </View>
 
@@ -211,12 +211,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   downloadBtn: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 4, // prevent edge clipping
+    padding: 8,
+    marginRight: -8,
   },
   searchContainer: {
     marginBottom: 8,

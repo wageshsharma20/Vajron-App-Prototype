@@ -9,16 +9,15 @@ type ScoreCardProps = {
   iconName: string;
   trend: 'up' | 'down' | 'stable';
   changePercent: number;
-  isLastOdd?: boolean;
-};
+  };
 
-export const ScoreCard = ({ label, score, trend, changePercent, isLastOdd }: ScoreCardProps) => {
+export const ScoreCard = ({ label, score, trend, changePercent }: ScoreCardProps) => {
   const { theme } = useTheme();
 
   const trendColor = changePercent > 0 ? theme.statusGreen : changePercent < 0 ? theme.accentRed : theme.textSecondary;
 
   return (
-    <View style={[styles.container, { borderBottomColor: theme.border }, isLastOdd && { width: '100%' }]}>
+    <View style={[styles.container, { borderBottomColor: theme.border }]}>
       <Text style={[styles.score, { color: theme.textPrimary }]}>
         {score}%
       </Text>
@@ -38,7 +37,7 @@ export const ScoreCard = ({ label, score, trend, changePercent, isLastOdd }: Sco
 const styles = StyleSheet.create({
   container: {
     width: '46%', // Give it breathing room in a 2-col grid
-    paddingBottom: 16,
+    paddingBottom: 8,
     borderBottomWidth: StyleSheet.hairlineWidth, // Ultra-thin 1px divider
   },
   score: {

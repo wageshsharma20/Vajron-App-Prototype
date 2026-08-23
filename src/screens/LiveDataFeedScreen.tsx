@@ -6,7 +6,7 @@ import { ScoreCard } from '../components/ScoreCard';
 import { DroneInfoTable } from '../components/DroneInfoTable';
 import { AlertBanner } from '../components/AlertBanner';
 import { mockParkInfo, mockInspection } from '../data/mockData';
-import { useLiveScoresOnly } from '../replay/useLiveScores';
+import { useLiveScores } from '../replay/useLiveScores';
 import { useReplay, formatTimecode } from '../replay/ReplayProvider';
 import { Text } from 'react-native-paper';
 import { InspectionCategory, ScoreData } from '../types';
@@ -46,7 +46,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
   // Driven by the replay clock: the eight cards with a real per-frame series in the
   // detection report track playback, the rest keep their reported values.
   const { park, hasStarted, hasSurvey, time } = useReplay();
-  const liveScores = useLiveScoresOnly();
+  const liveScores = useLiveScores();
   const overallScore = liveScores[0];
   const gridScores = liveScores.slice(1);
 
@@ -75,7 +75,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
       >
         {/* Overall Park Health - Zen Style */}
         <View style={styles.overallSection}>
-          <CircularScore score={overallScore?.score ?? 0} label="Overall Score" size={140} />
+          <CircularScore score={overallScore.score} label="Overall Score" size={140} />
           <View style={styles.overallMeta}>
             <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
@@ -114,7 +114,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
 
         {/* Score Grid - Separated by whitespace */}
         <View style={styles.scoreGrid}>
-          {gridScores.map((score: any, index: number) => (
+          {gridScores.map((score: any) => (
             <ScoreCard
               key={score.id}
               label={score.label}
@@ -122,7 +122,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
               iconName={score.icon}
               trend={score.trend}
               changePercent={score.changePercent}
-              isLastOdd={index === gridScores.length - 1 && gridScores.length % 2 !== 0}
+              
             />
           ))}
         </View>
@@ -230,7 +230,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    rowGap: 24,
+    rowGap: 4,
     marginBottom: 24,
   },
   issuesSection: {
