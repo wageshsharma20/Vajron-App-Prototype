@@ -65,9 +65,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
         style={{ width: '100%', height: '100%' }}
         resizeMode="cover"
       />
-      <View style={styles.mapLabel}>
-        <Text style={styles.mapLabelText}>SANJAY LAKE</Text>
-      </View>
+      
     </View>
   );
 
