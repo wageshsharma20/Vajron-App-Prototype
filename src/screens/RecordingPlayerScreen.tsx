@@ -35,15 +35,24 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   // rotated landscape canvas. The explicit width/height are the rotated canvas
   // dimensions swapped — on web the underlying <video> ignores flex sizing.
   const renderCameraFeed = () => (
-    <View style={[StyleSheet.absoluteFill, styles.feedBackdrop]}>
-      <VideoView
-        player={player}
-        style={isRotated ? { width: layout.height, height: layout.width } : { width: layout.width, height: layout.height }}
-        contentFit="contain"
-        nativeControls={false}
-        playsInline
-        fullscreenOptions={{ enable: false }}
-      />
+    <View style={[StyleSheet.absoluteFill, styles.feedBackdrop, { justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }]}>
+      <View style={isRotated ? { 
+        width: layout.height, 
+        height: layout.width, 
+        transform: [{ rotate: '90deg' }] 
+      } : { 
+        width: '100%', 
+        height: '100%' 
+      }}>
+        <VideoView
+          player={player}
+          style={{ flex: 1 }}
+          contentFit="contain"
+          nativeControls={false}
+          playsInline
+          fullscreenOptions={{ enable: false }}
+        />
+      </View>
     </View>
   );
 
@@ -81,16 +90,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
       )}
 
       {layout.width > 0 && (
-        <View style={[
-          isRotated ? styles.rotatedContainer : styles.normalContainer,
-          isRotated ? {
-            width: layout.height + 2,
-            height: layout.width + 2,
-          } : {
-            width: layout.width,
-            height: layout.height,
-          }
-        ]}>
+        <View style={{ width: layout.width, height: layout.height, backgroundColor: '#000' }}>
           {/* Main Area */}
           <View style={styles.videoArea}>
             {isMapMain ? renderMapView() : renderCameraFeed()}
@@ -184,13 +184,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  normalContainer: {
-    backgroundColor: '#000',
-  },
-  rotatedContainer: {
-    transform: [{ rotate: '90deg' }],
-    backgroundColor: '#000',
-  },
+
+
   videoArea: {
     flex: 1,
     backgroundColor: '#080808', // Slightly off black
