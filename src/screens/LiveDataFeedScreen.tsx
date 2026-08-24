@@ -231,7 +231,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    rowGap: 4,
+    // Space below each row's divider, before the next row's figure.
+    rowGap: 12,
     marginBottom: 24,
   },
   issuesSection: {

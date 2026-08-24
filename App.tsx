@@ -85,7 +85,7 @@ const AppNavigator = () => {
                 component={ConclusiveDataScreen} 
               />
               <Tab.Screen 
-                name="DDA" 
+                name="Audit" 
                 component={DDAVerificationScreen} 
               />
             </Tab.Navigator>

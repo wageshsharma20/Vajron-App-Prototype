@@ -37,7 +37,8 @@ export const ScoreCard = ({ label, score, trend, changePercent }: ScoreCardProps
 const styles = StyleSheet.create({
   container: {
     width: '46%', // Give it breathing room in a 2-col grid
-    paddingBottom: 8,
+    paddingBottom: 10, // Gap between the label and the divider under it
+
     borderBottomWidth: StyleSheet.hairlineWidth, // Ultra-thin 1px divider
   },
   score: {
