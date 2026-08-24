@@ -1,0 +1,322 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 14770 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (VASANT VATIKA — SAFETY & SECURITY) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Vasant Vatika, Vasant Kunj \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 18 May 2026, 16:05-16:08 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Safety & Security) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (CATEGORY SCORE) Tj ET
+0.090 0.439 0.431 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Indicator) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 232.52 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 307.92 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 383.33 679.89 Td (Max) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 458.74 679.89 Td (Rating) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Safety) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 232.52 660.89 Td (93.7%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 307.92 660.89 Td (65.2%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 383.33 660.89 Td (96%) Tj ET
+0.831 0.929 0.847 rg 455.74 657.89 98.54 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 458.74 660.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.918 0.945 0.957 rg 40.00 619.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 624.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 593.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 598.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 598.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 598.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 598.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 598.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 579.89 Td (Vehicle in Premises) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 579.89 Td (41) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 579.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 579.89 Td (60) Tj ET
+0.969 0.906 0.769 rg 456.09 576.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 459.09 579.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+0.961 0.973 0.980 rg 40.00 557.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 562.89 Td (Low-Visibility Zone) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 562.89 Td (179) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 562.89 Td (68.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 562.89 Td (67) Tj ET
+0.969 0.906 0.769 rg 456.09 559.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 459.09 562.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 557.89 m 555.28 557.89 l S
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 545.89 Td (Construction Activity) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 545.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 545.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 545.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 545.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 534.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 529.89 m 555.28 529.89 l S
+0.961 0.973 0.980 rg 40.00 501.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 517.89 Td (Excavation / Disturbed Ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 517.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 517.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 517.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 517.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 506.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 501.89 m 555.28 501.89 l S
+0.918 0.945 0.957 rg 40.00 465.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 470.89 Td (ANOMALIES \(worst first\)) Tj ET
+0.122 0.231 0.302 rg 40.00 439.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 444.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 444.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 444.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 444.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 444.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 444.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 425.89 Td (156) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 425.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 414.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 425.89 Td (Vehicle in) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 414.89 Td (Premises) Tj ET
+0.831 0.929 0.847 rg 272.88 400.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 425.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 425.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 425.89 Td (Verify authorisation; otherwise) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 414.89 Td (enforce the no-vehicle rule inside) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 403.89 Td (the green boundary.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 398.89 m 555.28 398.89 l S
+0.961 0.973 0.980 rg 40.00 359.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 386.89 Td (157) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 386.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 375.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 386.89 Td (Vehicle in) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 375.89 Td (Premises) Tj ET
+0.831 0.929 0.847 rg 272.88 361.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 386.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 386.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 386.89 Td (Verify authorisation; otherwise) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 375.89 Td (enforce the no-vehicle rule inside) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 364.89 Td (the green boundary.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 359.89 m 555.28 359.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 347.89 Td (158) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 347.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 336.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 347.89 Td (Vehicle in) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 336.89 Td (Premises) Tj ET
+0.831 0.929 0.847 rg 272.88 322.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 347.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 347.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 347.89 Td (Verify authorisation; otherwise) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 336.89 Td (enforce the no-vehicle rule inside) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 325.89 Td (the green boundary.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 320.89 m 555.28 320.89 l S
+0.961 0.973 0.980 rg 40.00 281.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 308.89 Td (159) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 308.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 297.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 308.89 Td (Vehicle in) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 297.89 Td (Premises) Tj ET
+0.831 0.929 0.847 rg 272.88 283.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 308.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 308.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 308.89 Td (Verify authorisation; otherwise) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 297.89 Td (enforce the no-vehicle rule inside) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 286.89 Td (the green boundary.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 281.89 m 555.28 281.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 269.89 Td (160) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 269.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 258.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 269.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 258.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 255.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 269.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 269.89 Td (68.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 269.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 258.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 253.89 m 555.28 253.89 l S
+0.961 0.973 0.980 rg 40.00 225.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 241.89 Td (163) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 241.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 230.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 241.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 230.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 227.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 241.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 241.89 Td (68.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 241.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 230.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 225.89 m 555.28 225.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 213.89 Td (161) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 213.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 202.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 213.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 202.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 199.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 213.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 213.89 Td (68.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 213.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 202.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 197.89 m 555.28 197.89 l S
+0.961 0.973 0.980 rg 40.00 169.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 185.89 Td (162) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 185.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 174.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 185.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 174.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 171.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 185.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 185.89 Td (68.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 185.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 174.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 169.89 m 555.28 169.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 157.89 Td (164) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 157.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 146.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 157.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 146.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 143.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 157.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 157.89 Td (68.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 157.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 146.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 141.89 m 555.28 141.89 l S
+0.961 0.973 0.980 rg 40.00 113.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 129.89 Td (165) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 129.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 118.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 129.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 118.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 115.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 129.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 129.89 Td (68.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 129.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 118.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 113.89 m 555.28 113.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 101.89 Td (166) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 101.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 90.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 101.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 90.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 87.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 101.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 101.89 Td (68.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 101.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 90.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 85.89 m 555.28 85.89 l S
+0.961 0.973 0.980 rg 40.00 57.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 73.89 Td (167) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 73.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 62.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 73.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 62.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 59.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 73.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 73.89 Td (68.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 73.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 62.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 57.89 m 555.28 57.89 l S
+endstream
+endobj
+5 0 obj
+<< /Length 4769 >>
+stream
+0.122 0.231 0.302 rg 40.00 783.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 788.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 788.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 788.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 788.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 788.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 788.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 769.89 Td (168) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 769.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 758.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 769.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 758.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 755.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 769.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 769.89 Td (69) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 769.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 758.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 753.89 m 555.28 753.89 l S
+0.961 0.973 0.980 rg 40.00 725.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 741.89 Td (169) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 741.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 730.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 741.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 730.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 727.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 741.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 741.89 Td (69.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 741.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 730.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 725.89 m 555.28 725.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 713.89 Td (170) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 713.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 702.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 713.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 702.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 699.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 713.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 713.89 Td (69.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 713.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 702.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 697.89 m 555.28 697.89 l S
+0.918 0.945 0.957 rg 40.00 661.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 666.89 Td (RECOMMENDED ACTIONS) Tj ET
+0.122 0.231 0.302 rg 40.00 635.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 640.89 Td (#) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 74.92 640.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 136.75 640.89 Td (Finding) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 640.89 Td (Recommended action) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 466.53 640.89 Td (Owner) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 621.89 Td (4) Tj ET
+0.969 0.906 0.769 rg 71.92 585.89 59.83 46.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 74.92 621.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 621.89 Td (41 vehicle detections inside the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 610.89 Td (park boundary.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 621.89 Td (Confirm whether the movements) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 610.89 Td (are allowed maintenance access;) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 599.89 Td (otherwise enforce vehicle) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 588.89 Td (restrictions.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 621.89 Td (Security / Park) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 610.89 Td (Management) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 583.89 m 555.28 583.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 556.89 Td (Generated from Vasant_Vatika_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 544.89 Td (mean across 3 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 532.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 8 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 8 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 5 0 R >>
+endobj
+8 0 obj
+<< /Type /Pages /Kids [6 0 R 7 0 R] /Count 2 >>
+endobj
+9 0 obj
+<< /Type /Catalog /Pages 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000015136 00000 n 
+0000019957 00000 n 
+0000020119 00000 n 
+0000020281 00000 n 
+0000020344 00000 n 
+trailer
+<< /Size 10 /Root 9 0 R >>
+startxref
+20393
+%%EOF

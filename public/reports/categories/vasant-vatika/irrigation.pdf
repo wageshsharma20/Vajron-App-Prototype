@@ -1,0 +1,655 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 12377 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (VASANT VATIKA — IRRIGATION STATUS) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Vasant Vatika, Vasant Kunj \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 18 May 2026, 16:05-16:08 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Irrigation Status) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (CATEGORY SCORE) Tj ET
+0.090 0.439 0.431 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Indicator) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 232.52 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 307.92 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 383.33 679.89 Td (Max) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 458.74 679.89 Td (Rating) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Irrigation Efficiency) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 232.52 660.89 Td (62.1%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 307.92 660.89 Td (19.9%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 383.33 660.89 Td (99.8%) Tj ET
+0.969 0.906 0.769 rg 455.74 657.89 98.54 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 458.74 660.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.918 0.945 0.957 rg 40.00 619.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 624.89 Td (SCENE COVERAGE \(park-wide mean\)) Tj ET
+0.122 0.231 0.302 rg 40.00 593.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 598.89 Td (Metric) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 269.44 598.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 366.05 598.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 462.67 598.89 Td (Max) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 579.89 Td (Bare ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 579.89 Td (26.5%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 579.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 579.89 Td (50%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+0.961 0.973 0.980 rg 40.00 557.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 562.89 Td (Dry vegetation) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 562.89 Td (0.6%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 562.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 562.89 Td (2.6%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 557.89 m 555.28 557.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 545.89 Td (Waterlogging) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 545.89 Td (1%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 545.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 545.89 Td (3.2%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 540.89 m 555.28 540.89 l S
+0.918 0.945 0.957 rg 40.00 504.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 509.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 478.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 483.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 483.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 483.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 483.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 483.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 464.89 Td (Waterlogging) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 464.89 Td (38) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 464.89 Td (49.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 464.89 Td (49.5) Tj ET
+0.949 0.722 0.690 rg 456.09 461.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 464.89 Td (Poor) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 459.89 m 555.28 459.89 l S
+0.961 0.973 0.980 rg 40.00 442.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 447.89 Td (Bare Ground Patch) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 447.89 Td (418) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 447.89 Td (26.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 447.89 Td (6) Tj ET
+0.949 0.722 0.690 rg 456.09 444.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 447.89 Td (Critical) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 442.89 m 555.28 442.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 430.89 Td (Dry / Dead Vegetation) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 430.89 Td (160) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 430.89 Td (51.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 430.89 Td (50.7) Tj ET
+0.949 0.722 0.690 rg 456.09 427.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 430.89 Td (Poor) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 425.89 m 555.28 425.89 l S
+0.918 0.945 0.957 rg 40.00 389.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 394.89 Td (ANOMALIES \(worst first\)) Tj ET
+0.122 0.231 0.302 rg 40.00 363.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 368.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 368.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 368.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 368.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 368.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 368.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 349.89 Td (1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 349.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 338.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 349.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 324.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 349.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 349.89 Td (6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 349.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 338.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 327.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 322.89 m 555.28 322.89 l S
+0.961 0.973 0.980 rg 40.00 283.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 310.89 Td (2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 310.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 299.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 310.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 285.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 310.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 310.89 Td (6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 310.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 299.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 288.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 283.89 m 555.28 283.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 271.89 Td (3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 271.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 260.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 271.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 246.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 271.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 271.89 Td (6.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 271.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 260.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 249.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 244.89 m 555.28 244.89 l S
+0.961 0.973 0.980 rg 40.00 205.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 232.89 Td (4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 232.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 221.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 232.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 207.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 232.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 232.89 Td (10.7) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 232.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 221.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 210.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 205.89 m 555.28 205.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 193.89 Td (5) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 193.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 182.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 193.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 168.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 193.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 193.89 Td (14.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 193.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 182.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 171.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 166.89 m 555.28 166.89 l S
+0.961 0.973 0.980 rg 40.00 127.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 154.89 Td (6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 154.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 143.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 154.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 129.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 154.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 154.89 Td (18.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 154.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 143.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 132.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 127.89 m 555.28 127.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 115.89 Td (7) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 115.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 104.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 115.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 90.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 115.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 115.89 Td (22.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 115.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 104.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 93.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 88.89 m 555.28 88.89 l S
+0.961 0.973 0.980 rg 40.00 49.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 76.89 Td (8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 76.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 65.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 76.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 51.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 76.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 76.89 Td (22.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 76.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 65.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 54.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 49.89 m 555.28 49.89 l S
+endstream
+endobj
+5 0 obj
+<< /Length 19341 >>
+stream
+0.122 0.231 0.302 rg 40.00 783.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 788.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 788.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 788.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 788.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 788.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 788.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 769.89 Td (9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 769.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 758.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 769.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 744.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 769.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 769.89 Td (27.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 769.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 758.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 747.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 742.89 m 555.28 742.89 l S
+0.961 0.973 0.980 rg 40.00 703.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 730.89 Td (12) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 730.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 719.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 730.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 705.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 730.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 730.89 Td (34.5) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 730.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 719.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 708.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 703.89 m 555.28 703.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 691.89 Td (19) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 691.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 680.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 691.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 666.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 691.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 691.89 Td (37.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 691.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 680.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 669.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 664.89 m 555.28 664.89 l S
+0.961 0.973 0.980 rg 40.00 625.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 652.89 Td (37) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 652.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 641.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 652.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 627.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 652.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 652.89 Td (42.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 652.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 641.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 630.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 625.89 m 555.28 625.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 613.89 Td (65) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 613.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 602.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 613.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 588.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 613.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 613.89 Td (49.7) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 613.89 Td (Investigate drainage; standing water) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 602.89 Td (is a slip and mosquito-breeding) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 591.89 Td (risk.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 586.89 m 555.28 586.89 l S
+0.961 0.973 0.980 rg 40.00 547.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 574.89 Td (66) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 574.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 563.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 574.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 549.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 574.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 574.89 Td (49.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 574.89 Td (Investigate drainage; standing water) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 563.89 Td (is a slip and mosquito-breeding) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 552.89 Td (risk.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 547.89 m 555.28 547.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 535.89 Td (75) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 535.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 524.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 535.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 524.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 521.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 535.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 535.89 Td (50.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 535.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 524.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 519.89 m 555.28 519.89 l S
+0.961 0.973 0.980 rg 40.00 491.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 507.89 Td (76) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 507.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 496.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 507.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 496.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 493.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 507.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 507.89 Td (51) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 507.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 496.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 491.89 m 555.28 491.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 479.89 Td (77) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 479.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 468.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 479.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 468.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 465.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 479.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 479.89 Td (51) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 479.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 468.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 463.89 m 555.28 463.89 l S
+0.961 0.973 0.980 rg 40.00 435.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 451.89 Td (79) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 451.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 440.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 451.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 440.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 437.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 451.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 451.89 Td (51.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 451.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 440.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 435.89 m 555.28 435.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 423.89 Td (80) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 423.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 412.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 423.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 412.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 409.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 423.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 423.89 Td (51.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 423.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 412.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 407.89 m 555.28 407.89 l S
+0.961 0.973 0.980 rg 40.00 379.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 395.89 Td (81) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 395.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 384.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 395.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 384.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 381.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 395.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 395.89 Td (51.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 395.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 384.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 379.89 m 555.28 379.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 367.89 Td (82) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 367.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 356.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 367.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 356.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 353.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 367.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 367.89 Td (51.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 367.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 356.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 351.89 m 555.28 351.89 l S
+0.961 0.973 0.980 rg 40.00 323.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 339.89 Td (83) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 339.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 328.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 339.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 328.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 325.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 339.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 339.89 Td (51.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 339.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 328.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 323.89 m 555.28 323.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 311.89 Td (84) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 311.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 300.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 311.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 300.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 297.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 311.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 311.89 Td (51.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 311.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 300.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 295.89 m 555.28 295.89 l S
+0.961 0.973 0.980 rg 40.00 267.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 283.89 Td (85) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 283.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 272.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 283.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 272.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 269.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 283.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 283.89 Td (51.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 283.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 272.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 267.89 m 555.28 267.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 255.89 Td (92) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 255.89 Td (Fountain & formal) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 244.89 Td (garden) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 255.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 230.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 255.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 255.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 255.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 244.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 233.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 228.89 m 555.28 228.89 l S
+0.961 0.973 0.980 rg 40.00 200.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 216.89 Td (88) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 216.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 205.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 216.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 205.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 202.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 216.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 216.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 216.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 205.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 200.89 m 555.28 200.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 188.89 Td (86) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 188.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 177.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 188.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 177.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 174.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 188.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 188.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 188.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 177.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 172.89 m 555.28 172.89 l S
+0.961 0.973 0.980 rg 40.00 144.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 160.89 Td (87) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 160.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 149.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 160.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 149.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 146.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 160.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 160.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 160.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 149.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 144.89 m 555.28 144.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 132.89 Td (89) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 132.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 121.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 132.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 121.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 118.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 132.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 132.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 132.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 121.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 116.89 m 555.28 116.89 l S
+0.961 0.973 0.980 rg 40.00 77.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 104.89 Td (91) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 104.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 93.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 104.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 79.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 104.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 104.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 104.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 93.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 82.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 77.89 m 555.28 77.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 65.89 Td (93) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 65.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 54.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 65.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 54.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 51.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 65.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 65.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 65.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 54.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 49.89 m 555.28 49.89 l S
+endstream
+endobj
+6 0 obj
+<< /Length 11495 >>
+stream
+0.122 0.231 0.302 rg 40.00 783.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 788.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 788.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 788.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 788.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 788.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 788.89 Td (Suggested action) Tj ET
+0.961 0.973 0.980 rg 40.00 753.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 769.89 Td (94) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 769.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 758.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 769.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 758.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 755.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 769.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 769.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 769.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 758.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 753.89 m 555.28 753.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 741.89 Td (95) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 741.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 730.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 741.89 Td (Dry / Dead) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 730.89 Td (Vegetation) Tj ET
+0.969 0.906 0.769 rg 272.88 727.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 741.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 741.89 Td (51.5) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 741.89 Td (Clear dry and dead material; prune) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 730.89 Td (out deadwood and irrigate.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 725.89 m 555.28 725.89 l S
+0.961 0.973 0.980 rg 40.00 686.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 713.89 Td (111) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 713.89 Td (Fountain & formal) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 702.89 Td (garden) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 713.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 688.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 713.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 713.89 Td (54.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 713.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 702.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 691.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 686.89 m 555.28 686.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 674.89 Td (113) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 674.89 Td (Open gym & hedge) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 663.89 Td (beds) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 674.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 649.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 674.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 674.89 Td (54.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 674.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 663.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 652.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 647.89 m 555.28 647.89 l S
+0.961 0.973 0.980 rg 40.00 608.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 635.89 Td (116) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 635.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 624.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 635.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 610.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 635.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 635.89 Td (54.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 635.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 624.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 613.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 608.89 m 555.28 608.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 596.89 Td (124) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 596.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 585.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 596.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 571.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 596.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 596.89 Td (55.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 596.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 585.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 574.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 569.89 m 555.28 569.89 l S
+0.961 0.973 0.980 rg 40.00 530.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 557.89 Td (133) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 557.89 Td (Central lawn &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 546.89 Td (avenue) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 557.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 532.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 557.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 557.89 Td (55.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 557.89 Td (Decompact, top-dress and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 546.89 Td (re-establish ground cover; review) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 535.89 Td (watering coverage for this zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 530.89 m 555.28 530.89 l S
+0.918 0.945 0.957 rg 40.00 494.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 499.89 Td (RECOMMENDED ACTIONS) Tj ET
+0.122 0.231 0.302 rg 40.00 468.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 473.89 Td (#) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 74.92 473.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 136.75 473.89 Td (Finding) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 473.89 Td (Recommended action) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 466.53 473.89 Td (Owner) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 454.89 Td (1) Tj ET
+0.949 0.722 0.690 rg 71.92 385.89 59.83 79.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 74.92 454.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 454.89 Td (The open gym zone has 43% bare) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 443.89 Td (ground and 6.3% lawn with an) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 432.89 Td (watering score of 39.1, while) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 421.89 Td (the rest of the park sits above) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 410.89 Td (90. The failure is localised to) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 399.89 Td (the area around the equipment) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 388.89 Td (pad.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 454.89 Td (Extend the watering that works) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 443.89 Td (elsewhere in the park into the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 432.89 Td (gym zone, then decompact and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 421.89 Td (re-turf. Consider a defined hard) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 410.89 Td (or soft-surface apron around the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 399.89 Td (equipment where foot traffic) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 388.89 Td (concentrates.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 454.89 Td (Horticulture /) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 443.89 Td (Engineering) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 383.89 m 555.28 383.89 l S
+0.961 0.973 0.980 rg 40.00 322.89 515.28 61.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 371.89 Td (6) Tj ET
+0.831 0.929 0.847 rg 71.92 324.89 59.83 57.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 74.92 371.89 Td (Process) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 371.89 Td (The site record describes a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 360.89 Td (water body that is unclear with) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 349.89 Td (algae growth. These three clips) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 338.89 Td (show a clean, operating fountain) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 327.89 Td (and no algae signature.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 371.89 Td (Either the affected water body) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 360.89 Td (is elsewhere in the park and not) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 349.89 Td (covered by this footage, or the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 338.89 Td (condition has changed. Worth a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 327.89 Td (targeted flight to settle it.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 371.89 Td (Survey / Drone) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 360.89 Td (Cell) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 322.89 m 555.28 322.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 310.89 Td (7) Tj ET
+0.831 0.929 0.847 rg 71.92 252.89 59.83 68.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 74.92 310.89 Td (Process) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 310.89 Td (No class exists for: gazebo,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 299.89 Td (streetlight, dustbin, water) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 288.89 Td (pipes, boundary wall distinct) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 277.89 Td (from kerb, or dead trees as a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 266.89 Td (class separate from dry plant) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 255.89 Td (growth.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 310.89 Td (Confirm which matter most for) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 299.89 Td (the DDA report and they can be) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 288.89 Td (added.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 310.89 Td (Survey / Drone) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 299.89 Td (Cell) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 250.89 m 555.28 250.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 223.89 Td (Generated from Vasant_Vatika_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 211.89 Td (mean across 3 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 199.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 10 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 5 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 6 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [7 0 R 8 0 R 9 0 R] /Count 3 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000012743 00000 n 
+0000032137 00000 n 
+0000043685 00000 n 
+0000043848 00000 n 
+0000044011 00000 n 
+0000044174 00000 n 
+0000044244 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+44295
+%%EOF

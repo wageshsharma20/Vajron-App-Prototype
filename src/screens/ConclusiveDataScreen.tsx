@@ -10,6 +10,20 @@ import { mockChangeDetection } from '../data/mockData';
 import { Text } from 'react-native-paper';
 import { useLiveInspection } from '../replay/useLiveInspection';
 import { useReplay } from '../replay/ReplayProvider';
+import type { InspectionCategory } from '../types';
+
+// Maps the app's internal park id to the slug the report generator uses for
+// both the whole-park workbook (public/reports/<file>.xlsx, unchanged) and the
+// per-category exports (public/reports/categories/<slug>/<categoryId>.xlsx).
+const PARK_REPORT_MAP: Record<string, { file: string; slug: string }> = {
+  'sanjay-lake': { file: 'Sanjay_Lake_Park_AI_Detection_Report.xlsx', slug: 'sanjay-lake' },
+  'lala-harydal': { file: 'Lala_Hardeval_AI_Detection_Report.xlsx', slug: 'lala-harydal' },
+  'r-block-asaf-ali': { file: 'Asaf_Ali_AI_Detection_Report.xlsx', slug: 'r-block-asaf-ali' },
+  'vasant-udyan': { file: 'Vasant_Udyan_AI_Detection_Report.xlsx', slug: 'vasant-udyan' },
+  'vasant-vatika': { file: 'Vasant_Vatika_AI_Detection_Report.xlsx', slug: 'vasant-vatika' },
+  'rohini-dda': { file: 'Rohini_AI_Detection_Report.xlsx', slug: 'rohini-dda' },
+  'smriti-van-mayur-vihar': { file: 'Smriti_Van_AI_Detection_Report.xlsx', slug: 'smriti-van-mayur-vihar' },
+};
 
 export const ConclusiveDataScreen = () => {
   const { theme } = useTheme();
@@ -38,39 +52,53 @@ export const ConclusiveDataScreen = () => {
   const totalCategories = inspectionData.length;
 
   
-  const handleDownload = async () => {
-    const map: Record<string, string> = {
-      'sanjay-lake': 'Sanjay_Lake_Park_AI_Detection_Report.xlsx',
-      'lala-harydal': 'Lala_Hardeval_AI_Detection_Report.xlsx',
-      'r-block-asaf-ali': 'Asaf_Ali_AI_Detection_Report.xlsx',
-      'vasant-udyan': 'Vasant_Udyan_AI_Detection_Report.xlsx',
-      'vasant-vatika': 'Vasant_Vatika_AI_Detection_Report.xlsx',
-      'rohini-dda': 'Rohini_AI_Detection_Report.xlsx',
-      'smriti-van-mayur-vihar': 'Smriti_Van_AI_Detection_Report.xlsx'
-    };
-    const filename = map[park.id];
-    if (!filename) return;
-
+  /** Downloads or shares a report file: web opens it as a same-origin static
+   * asset; native pulls it from the GitHub release and hands it to the share
+   * sheet, since that's the only way to get a file off-device on iOS/Android. */
+  const downloadReportFile = async (webPath: string, nativeUrl: string, filename: string) => {
     if (Platform.OS === 'web') {
       if (typeof window !== 'undefined') {
-        window.open(`/reports/${filename}`, '_blank');
+        window.open(webPath, '_blank');
       }
-    } else {
-      try {
-        const url = `https://github.com/wageshsharma20/Vajron-App-Prototype/releases/download/survey-media/${filename}`;
-        const destFile = new FileSystem.File(FileSystem.Paths.document, filename);
-        const downloadedFile = await FileSystem.File.downloadFileAsync(url, destFile, { idempotent: true });
-        const uri = downloadedFile.uri;
-        
-        if (await Sharing.isAvailableAsync()) {
-          await Sharing.shareAsync(uri);
-        } else {
-          Alert.alert('Download Complete', 'File saved to ' + uri);
-        }
-      } catch (e) {
-        Alert.alert('Download Error', 'Failed to download report.');
-      }
+      return;
     }
+    try {
+      const destFile = new FileSystem.File(FileSystem.Paths.document, filename);
+      const downloadedFile = await FileSystem.File.downloadFileAsync(nativeUrl, destFile, { idempotent: true });
+      const uri = downloadedFile.uri;
+
+      if (await Sharing.isAvailableAsync()) {
+        await Sharing.shareAsync(uri);
+      } else {
+        Alert.alert('Download Complete', 'File saved to ' + uri);
+      }
+    } catch (e) {
+      Alert.alert('Download Error', 'Failed to download report.');
+    }
+  };
+
+  const handleDownload = async () => {
+    const entry = PARK_REPORT_MAP[park.id];
+    if (!entry) return;
+    await downloadReportFile(
+      `/reports/${entry.file}`,
+      `https://github.com/wageshsharma20/Vajron-App-Prototype/releases/download/survey-media/${entry.file}`,
+      entry.file,
+    );
+  };
+
+  /** Per-category export behind each Reports accordion's download icon — the
+   * same 9-category workbook the DTU-styled report generator produces from the
+   * park's source Excel (tools/generate-category-reports.js). */
+  const handleCategoryDownload = async (category: InspectionCategory) => {
+    const entry = PARK_REPORT_MAP[park.id];
+    if (!entry) return;
+    const filename = `${entry.slug}-${category.id}.xlsx`;
+    await downloadReportFile(
+      `/reports/categories/${entry.slug}/${category.id}.xlsx`,
+      `https://github.com/wageshsharma20/Vajron-App-Prototype/releases/download/survey-media/${filename}`,
+      filename,
+    );
   };
 
   const filteredData = useMemo(() => {
@@ -110,7 +138,7 @@ export const ConclusiveDataScreen = () => {
       {/* Inspection Accordions */}
       <View style={styles.accordionsContainer}>
         {filteredData.map((category, index) => (
-          <InspectionAccordion key={category.id} data={category} index={index} />
+          <InspectionAccordion key={category.id} data={category} index={index} onDownload={handleCategoryDownload} />
         ))}
       </View>
 

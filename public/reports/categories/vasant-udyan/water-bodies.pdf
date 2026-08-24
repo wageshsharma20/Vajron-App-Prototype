@@ -1,0 +1,100 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 4486 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (VASANT UDYAN — WATER BODIES) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Vasant Udyan, Vasant Kunj \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 18 May 2026, 15:03-15:07 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Water Bodies) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (SCENE COVERAGE \(park-wide mean\)) Tj ET
+0.122 0.231 0.302 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Metric) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 269.44 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 366.05 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 462.67 679.89 Td (Max) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Water surface) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 660.89 Td (0.9%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 660.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 660.89 Td (8.1%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.961 0.973 0.980 rg 40.00 638.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 643.89 Td (Algal share) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 643.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 643.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 643.89 Td (0%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 638.89 m 555.28 638.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 626.89 Td (Exposed bed) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 626.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 626.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 626.89 Td (0%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 621.89 m 555.28 621.89 l S
+0.918 0.945 0.957 rg 40.00 585.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 590.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 559.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 564.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 564.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 564.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 564.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 564.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 545.89 Td (Water Body) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 545.89 Td (64) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 545.89 Td (88.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 545.89 Td (86.2) Tj ET
+0.831 0.929 0.847 rg 456.09 542.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 459.09 545.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 540.89 m 555.28 540.89 l S
+0.961 0.973 0.980 rg 40.00 512.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 528.89 Td (Exposed Bed / Bank) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 528.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 528.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 528.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 528.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 517.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 512.89 m 555.28 512.89 l S
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 500.89 Td (Floating Waste) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 500.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 500.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 500.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 500.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 489.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 484.89 m 555.28 484.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 457.89 Td (Generated from Vasant_Udyan_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 445.89 Td (mean across 2 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 433.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000004851 00000 n 
+0000005013 00000 n 
+0000005070 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+5119
+%%EOF

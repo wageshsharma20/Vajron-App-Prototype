@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "DDA AI Park Monitor",
-    "slug": "AeroGuardAI",
+    "slug": "AppPrototype",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -31,7 +31,8 @@
           "cameraPermission": "The app needs access to your camera to take verification photos."
         }
       ],
-      "expo-video"
+      "expo-video",
+      "expo-sharing"
     ],
     "extra": {
       "eas": {

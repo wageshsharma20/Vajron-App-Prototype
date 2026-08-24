@@ -1,0 +1,153 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 8293 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (LALA HARYDAL PARK — SAFETY & SECURITY) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Lala Harydal Park, North Delhi \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 19 May 2026, 11:49-12:12 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Safety & Security) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (CATEGORY SCORE) Tj ET
+0.090 0.439 0.431 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Indicator) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 232.52 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 307.92 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 383.33 679.89 Td (Max) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 458.74 679.89 Td (Rating) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Safety) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 232.52 660.89 Td (95.7%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 307.92 660.89 Td (65.8%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 383.33 660.89 Td (96%) Tj ET
+0.831 0.929 0.847 rg 455.74 657.89 98.54 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 458.74 660.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.918 0.945 0.957 rg 40.00 619.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 624.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 593.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 598.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 598.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 598.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 598.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 598.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 579.89 Td (Vehicle in Premises) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 579.89 Td (9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 579.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 579.89 Td (60) Tj ET
+0.969 0.906 0.769 rg 456.09 576.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 459.09 579.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+0.961 0.973 0.980 rg 40.00 557.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 562.89 Td (Low-Visibility Zone) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 562.89 Td (12) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 562.89 Td (69) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 562.89 Td (68.9) Tj ET
+0.969 0.906 0.769 rg 456.09 559.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 459.09 562.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 557.89 m 555.28 557.89 l S
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 545.89 Td (Construction Activity) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 545.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 545.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 545.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 545.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 534.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 529.89 m 555.28 529.89 l S
+0.961 0.973 0.980 rg 40.00 501.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 517.89 Td (Excavation / Disturbed Ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 517.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 517.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 517.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 517.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 506.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 501.89 m 555.28 501.89 l S
+0.918 0.945 0.957 rg 40.00 465.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 470.89 Td (ANOMALIES \(worst first\)) Tj ET
+0.122 0.231 0.302 rg 40.00 439.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 444.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 444.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 444.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 444.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 444.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 444.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 425.89 Td (329) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 425.89 Td (Formal beds &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 414.89 Td (pathways) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 425.89 Td (Vehicle in) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 414.89 Td (Premises) Tj ET
+0.831 0.929 0.847 rg 272.88 400.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 425.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 425.89 Td (60) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 425.89 Td (Verify authorisation; otherwise) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 414.89 Td (enforce the no-vehicle rule inside) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 403.89 Td (the green boundary.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 398.89 m 555.28 398.89 l S
+0.961 0.973 0.980 rg 40.00 370.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 386.89 Td (331) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 386.89 Td (Central axis &) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 375.89 Td (parterre) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 386.89 Td (Low-Visibility) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 375.89 Td (Zone) Tj ET
+0.831 0.929 0.847 rg 272.88 372.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 386.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 386.89 Td (69) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 386.89 Td (Low-visibility zone - schedule a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 375.89 Td (ground or low-altitude patrol.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 370.89 m 555.28 370.89 l S
+0.918 0.945 0.957 rg 40.00 334.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 339.89 Td (RECOMMENDED ACTIONS) Tj ET
+0.122 0.231 0.302 rg 40.00 308.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 313.89 Td (#) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 74.92 313.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 136.75 313.89 Td (Finding) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 313.89 Td (Recommended action) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 466.53 313.89 Td (Owner) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 294.89 Td (5) Tj ET
+0.969 0.906 0.769 rg 71.92 258.89 59.83 46.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 74.92 294.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 294.89 Td (Vehicles were detected inside) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 283.89 Td (the park boundary.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 294.89 Td (Confirm whether the movements) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 283.89 Td (are allowed maintenance access;) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 272.89 Td (otherwise enforce vehicle) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 261.89 Td (restrictions.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 294.89 Td (Security / Park) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 283.89 Td (Management) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 256.89 m 555.28 256.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 229.89 Td (Generated from Lala_Hardeval_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 217.89 Td (mean across 3 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 205.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000008658 00000 n 
+0000008820 00000 n 
+0000008877 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+8926
+%%EOF

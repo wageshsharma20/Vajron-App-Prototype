@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 2159 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (VASANT VATIKA — LANDSCAPE QUALITY) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Vasant Vatika, Vasant Kunj \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 18 May 2026, 16:05-16:08 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Landscape Quality) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (SCENE COVERAGE \(park-wide mean\)) Tj ET
+0.122 0.231 0.302 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Metric) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 269.44 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 366.05 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 462.67 679.89 Td (Max) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Bare ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 660.89 Td (26.5%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 660.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 660.89 Td (50%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.961 0.973 0.980 rg 40.00 638.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 643.89 Td (Tree canopy) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 643.89 Td (18.2%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 643.89 Td (3.1%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 643.89 Td (40.3%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 638.89 m 555.28 638.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 611.89 Td (Generated from Vasant_Vatika_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 599.89 Td (mean across 3 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 587.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000002524 00000 n 
+0000002686 00000 n 
+0000002743 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+2792
+%%EOF

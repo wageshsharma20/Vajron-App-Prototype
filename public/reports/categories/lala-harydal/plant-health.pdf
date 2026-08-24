@@ -1,0 +1,115 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 5570 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (LALA HARYDAL PARK — PLANT HEALTH) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Lala Harydal Park, North Delhi \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 19 May 2026, 11:49-12:12 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Plant Health) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (CATEGORY SCORE) Tj ET
+0.090 0.439 0.431 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Indicator) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 232.52 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 307.92 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 383.33 679.89 Td (Max) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 458.74 679.89 Td (Rating) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Green Cover) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 232.52 660.89 Td (79.4%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 307.92 660.89 Td (37.5%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 383.33 660.89 Td (95.4%) Tj ET
+0.831 0.929 0.847 rg 455.74 657.89 98.54 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 458.74 660.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.918 0.945 0.957 rg 40.00 619.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 624.89 Td (SCENE COVERAGE \(park-wide mean\)) Tj ET
+0.122 0.231 0.302 rg 40.00 593.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 598.89 Td (Metric) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 269.44 598.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 366.05 598.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 462.67 598.89 Td (Max) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 579.89 Td (Green cover) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 579.89 Td (42%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 579.89 Td (4.6%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 579.89 Td (77.4%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+0.961 0.973 0.980 rg 40.00 557.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 562.89 Td (Bare ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 562.89 Td (20%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 562.89 Td (5.7%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 562.89 Td (36.6%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 557.89 m 555.28 557.89 l S
+0.918 0.945 0.957 rg 40.00 521.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 526.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 495.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 500.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 500.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 500.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 500.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 500.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 481.89 Td (Stressed Vegetation) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 481.89 Td (11) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 481.89 Td (63.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 481.89 Td (63.6) Tj ET
+0.969 0.906 0.769 rg 456.09 478.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 459.09 481.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 476.89 m 555.28 476.89 l S
+0.918 0.945 0.957 rg 40.00 440.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 445.89 Td (ANOMALIES \(worst first\)) Tj ET
+0.122 0.231 0.302 rg 40.00 414.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 419.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 419.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 419.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 419.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 419.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 419.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 400.89 Td (330) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 400.89 Td (Palm avenue & lawns) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 400.89 Td (Stressed) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 389.89 Td (Vegetation) Tj ET
+0.831 0.929 0.847 rg 272.88 375.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 275.88 400.89 Td (Low) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 400.89 Td (63.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 400.89 Td (Inspect on ground for water stress;) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 389.89 Td (check watering and mulch the root) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 378.89 Td (zone.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 373.89 m 555.28 373.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 346.89 Td (Generated from Lala_Hardeval_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 334.89 Td (mean across 3 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 322.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000005935 00000 n 
+0000006097 00000 n 
+0000006154 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+6203
+%%EOF

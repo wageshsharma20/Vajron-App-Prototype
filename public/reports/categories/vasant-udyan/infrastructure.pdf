@@ -1,0 +1,350 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 13097 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (VASANT UDYAN — INFRASTRUCTURE) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Vasant Udyan, Vasant Kunj \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 18 May 2026, 15:03-15:07 IST \(single-date baseline\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Infrastructure) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (CATEGORY SCORE) Tj ET
+0.090 0.439 0.431 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Indicator) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 232.52 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 307.92 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 383.33 679.89 Td (Max) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 458.74 679.89 Td (Rating) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Infrastructure) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 232.52 660.89 Td (73.5%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 307.92 660.89 Td (36.6%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 383.33 660.89 Td (86%) Tj ET
+0.969 0.906 0.769 rg 455.74 657.89 98.54 13.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 458.74 660.89 Td (Fair) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.918 0.945 0.957 rg 40.00 619.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 624.89 Td (SCENE COVERAGE \(park-wide mean\)) Tj ET
+0.122 0.231 0.302 rg 40.00 593.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 598.89 Td (Metric) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 269.44 598.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 366.05 598.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 462.67 598.89 Td (Max) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 579.89 Td (Paved area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 579.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 579.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 579.89 Td (0%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+0.918 0.945 0.957 rg 40.00 538.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 543.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 512.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 517.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 517.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 517.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 517.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 517.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 498.89 Td (Walking Track) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 498.89 Td (393) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 498.89 Td (59.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 498.89 Td (36.6) Tj ET
+0.949 0.722 0.690 rg 456.09 495.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 498.89 Td (Poor) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 493.89 m 555.28 493.89 l S
+0.961 0.973 0.980 rg 40.00 476.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 481.89 Td (Kerb / Edging) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 481.89 Td (365) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 481.89 Td (80.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 481.89 Td (73.4) Tj ET
+0.831 0.929 0.847 rg 456.09 478.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 459.09 481.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 476.89 m 555.28 476.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 464.89 Td (Bench) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 464.89 Td (160) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 464.89 Td (77.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 464.89 Td (70.1) Tj ET
+0.831 0.929 0.847 rg 456.09 461.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 459.09 464.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 459.89 m 555.28 459.89 l S
+0.961 0.973 0.980 rg 40.00 442.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 447.89 Td (Open Gym Equipment) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 447.89 Td (533) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 447.89 Td (85) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 447.89 Td (75.5) Tj ET
+0.831 0.929 0.847 rg 456.09 444.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 459.09 447.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 442.89 m 555.28 442.89 l S
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 430.89 Td (Pathway Obstruction) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 430.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 430.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 430.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 430.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 419.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 414.89 m 555.28 414.89 l S
+0.961 0.973 0.980 rg 40.00 397.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 402.89 Td (Paved Area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 402.89 Td (74) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 402.89 Td (79.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 402.89 Td (71.4) Tj ET
+0.831 0.929 0.847 rg 456.09 399.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 459.09 402.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 397.89 m 555.28 397.89 l S
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 385.89 Td (Excavation / Disturbed Ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 385.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 385.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 385.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 385.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 374.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 369.89 m 555.28 369.89 l S
+0.961 0.973 0.980 rg 40.00 341.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 357.89 Td (Material Stockpile) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 357.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 357.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 357.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 357.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 346.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 341.89 m 555.28 341.89 l S
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 44.00 329.89 Td (Construction Activity) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 329.89 Td (0) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 301.64 329.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 387.52 329.89 Td (—) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 329.89 Td (Not observed in) Tj ET
+BT /FReg 8.5 Tf 0.290 0.384 0.439 rg 459.09 318.89 Td (these clips) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 313.89 m 555.28 313.89 l S
+0.918 0.945 0.957 rg 40.00 277.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 282.89 Td (ANOMALIES \(worst first\)) Tj ET
+0.122 0.231 0.302 rg 40.00 251.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 256.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 256.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 256.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 256.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 256.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 256.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 237.89 Td (32) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 237.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 226.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 237.89 Td (Walking Track) Tj ET
+0.949 0.722 0.690 rg 272.88 223.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 237.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 237.89 Td (43.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 237.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 226.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 221.89 m 555.28 221.89 l S
+0.961 0.973 0.980 rg 40.00 193.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 209.89 Td (35) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 209.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 198.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 209.89 Td (Walking Track) Tj ET
+0.949 0.722 0.690 rg 272.88 195.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 209.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 209.89 Td (44) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 209.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 198.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 193.89 m 555.28 193.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 181.89 Td (46) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 181.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 170.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 181.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 167.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 181.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 181.89 Td (45.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 181.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 170.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 165.89 m 555.28 165.89 l S
+0.961 0.973 0.980 rg 40.00 137.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 153.89 Td (47) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 153.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 142.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 153.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 139.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 153.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 153.89 Td (45.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 153.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 142.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 137.89 m 555.28 137.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 125.89 Td (55) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 125.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 114.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 125.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 111.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 125.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 125.89 Td (47.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 125.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 114.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 109.89 m 555.28 109.89 l S
+0.961 0.973 0.980 rg 40.00 81.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 97.89 Td (83) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 97.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 86.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 97.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 83.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 97.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 97.89 Td (51.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 97.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 86.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 81.89 m 555.28 81.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 69.89 Td (101) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 69.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 58.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 69.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 55.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 69.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 69.89 Td (53.5) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 69.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 58.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 53.89 m 555.28 53.89 l S
+endstream
+endobj
+5 0 obj
+<< /Length 8617 >>
+stream
+0.122 0.231 0.302 rg 40.00 783.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 788.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 788.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 788.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 788.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 788.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 788.89 Td (Suggested action) Tj ET
+0.961 0.973 0.980 rg 40.00 753.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 769.89 Td (107) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 769.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 758.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 769.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 755.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 769.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 769.89 Td (56.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 769.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 758.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 753.89 m 555.28 753.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 741.89 Td (109) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 741.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 730.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 741.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 727.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 741.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 741.89 Td (56.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 741.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 730.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 725.89 m 555.28 725.89 l S
+0.961 0.973 0.980 rg 40.00 697.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 713.89 Td (111) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 713.89 Td (Pathways & tree) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 702.89 Td (belt) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 713.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 699.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 713.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 713.89 Td (57.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 713.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 702.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 697.89 m 555.28 697.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 685.89 Td (117) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 685.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 674.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 685.89 Td (Walking Track) Tj ET
+0.969 0.906 0.769 rg 272.88 671.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 685.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 685.89 Td (59.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 685.89 Td (Resurface / patch the track; restore) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 674.89 Td (edge definition and camber.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 669.89 m 555.28 669.89 l S
+0.918 0.945 0.957 rg 40.00 633.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 638.89 Td (RECOMMENDED ACTIONS) Tj ET
+0.122 0.231 0.302 rg 40.00 607.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 612.89 Td (#) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 74.92 612.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 136.75 612.89 Td (Finding) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 612.89 Td (Recommended action) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 466.53 612.89 Td (Owner) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 593.89 Td (2) Tj ET
+0.949 0.722 0.690 rg 71.92 524.89 59.83 79.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 74.92 593.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 593.89 Td (The site record notes a broken) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 582.89 Td (swing, broken tiles on gym) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 571.89 Td (equipment and getting worse) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 560.89 Td (signboard paint. The detector) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 549.89 Td (finds and scores the equipment) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 538.89 Td (but cannot itself assert) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 527.89 Td (structural damage.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 593.89 Td (Physically inspect every play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 582.89 Td (and gym unit; use the anomaly) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 571.89 Td (register to prioritise the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 560.89 Td (lowest paint-integrity scores.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 549.89 Td (Make any broken unit safe) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 538.89 Td (immediately - this is a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 527.89 Td (children's play area.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 593.89 Td (Engineering /) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 582.89 Td (Works) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 522.89 m 555.28 522.89 l S
+0.961 0.973 0.980 rg 40.00 472.89 515.28 50.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 510.89 Td (5) Tj ET
+0.969 0.906 0.769 rg 71.92 474.89 59.83 46.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 74.92 510.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 510.89 Td (Pathway facilities scores 65.4,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 499.89 Td (notably below the play area,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 488.89 Td (matching the site note of poor) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 477.89 Td (pavement condition.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 510.89 Td (Survey the path network; patch) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 499.89 Td (and resurface the worst segments) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 488.89 Td (and reset displaced edging.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 510.89 Td (Engineering /) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 499.89 Td (Works) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 472.89 m 555.28 472.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 460.89 Td (6) Tj ET
+0.831 0.929 0.847 rg 71.92 402.89 59.83 68.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 74.92 460.89 Td (Process) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 460.89 Td (No class exists for: broken) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 449.89 Td (equipment, signboards, gazebo /) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 438.89 Td (pergola, streetlights, dustbins,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 427.89 Td (boundary wall as distinct from) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 416.89 Td (kerb, or the waterway condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 405.89 Td (recorded on site.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 460.89 Td (Confirm which matter most for) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 449.89 Td (the DDA report. 'Broken' is) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 438.89 Td (genuinely hard from imagery; a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 427.89 Td (low-altitude pass over the play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 416.89 Td (equipment would serve better) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 405.89 Td (than a detector.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 460.89 Td (Survey / Drone) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 449.89 Td (Cell) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 400.89 m 555.28 400.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 373.89 Td (Generated from Vasant_Udyan_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the park-wide) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 361.89 Td (mean across 2 analysed clips, recomputed directly from the detection log rather than the workbook's own) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 349.89 Td (summary formulas.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 8 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 8 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 5 0 R >>
+endobj
+8 0 obj
+<< /Type /Pages /Kids [6 0 R 7 0 R] /Count 2 >>
+endobj
+9 0 obj
+<< /Type /Catalog /Pages 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000013463 00000 n 
+0000022132 00000 n 
+0000022294 00000 n 
+0000022456 00000 n 
+0000022519 00000 n 
+trailer
+<< /Size 10 /Root 9 0 R >>
+startxref
+22568
+%%EOF

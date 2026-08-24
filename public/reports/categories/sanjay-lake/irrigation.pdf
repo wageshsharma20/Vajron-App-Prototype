@@ -1,0 +1,659 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 12927 >>
+stream
+BT /FBold 17 Tf 0.122 0.231 0.302 rg 40.00 801.89 Td (SANJAY LAKE — IRRIGATION STATUS) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 779.89 Td (Category export · AI Drone Survey · DDA / DTU parameter framework) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 763.89 Td (Site: Sanjay Lake, East Delhi \(DDA\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 750.89 Td (Survey date: 19 May 2026 \(single-date baseline survey\)) Tj ET
+BT /FItalic 9.5 Tf 0.290 0.384 0.439 rg 40.00 737.89 Td (Category: Irrigation Status) Tj ET
+0.918 0.945 0.957 rg 40.00 700.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 705.89 Td (CATEGORY SCORE) Tj ET
+0.090 0.439 0.431 rg 40.00 674.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 679.89 Td (Indicator) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 232.52 679.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 307.92 679.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 383.33 679.89 Td (Max) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 458.74 679.89 Td (Rating) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 660.89 Td (Irrigation Efficiency) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 232.52 660.89 Td (79.6%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 307.92 660.89 Td (17.8%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 383.33 660.89 Td (100%) Tj ET
+0.831 0.929 0.847 rg 455.74 657.89 98.54 13.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 458.74 660.89 Td (Good) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 655.89 m 555.28 655.89 l S
+0.918 0.945 0.957 rg 40.00 619.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 624.89 Td (SCENE COVERAGE \(park-wide mean\)) Tj ET
+0.122 0.231 0.302 rg 40.00 593.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 598.89 Td (Metric) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 269.44 598.89 Td (Mean) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 366.05 598.89 Td (Min) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 462.67 598.89 Td (Max) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 579.89 Td (Bare ground) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 579.89 Td (11%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 579.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 579.89 Td (50.3%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+0.961 0.973 0.980 rg 40.00 557.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 562.89 Td (Dry vegetation) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 562.89 Td (0.2%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 562.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 562.89 Td (2%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 557.89 m 555.28 557.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 545.89 Td (Waterlogging) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 269.44 545.89 Td (4.5%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 366.05 545.89 Td (0%) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 462.67 545.89 Td (24.6%) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 540.89 m 555.28 540.89 l S
+0.918 0.945 0.957 rg 40.00 504.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 509.89 Td (DETECTOR FINDINGS) Tj ET
+0.122 0.231 0.302 rg 40.00 478.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 483.89 Td (Detector class) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 230.07 483.89 Td (Records) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 483.89 Td (Mean cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 387.52 483.89 Td (Worst %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 459.09 483.89 Td (Condition) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 464.89 Td (Waterlogging) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 464.89 Td (818) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 464.89 Td (47.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 464.89 Td (34.2) Tj ET
+0.949 0.722 0.690 rg 456.09 461.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 464.89 Td (Poor) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 459.89 m 555.28 459.89 l S
+0.961 0.973 0.980 rg 40.00 442.89 515.28 17.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 447.89 Td (Bare Ground Patch) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 447.89 Td (530) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 447.89 Td (40.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 447.89 Td (15.8) Tj ET
+0.949 0.722 0.690 rg 456.09 444.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 447.89 Td (Poor) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 442.89 m 555.28 442.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 430.89 Td (Dry / Dead Vegetation) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 230.07 430.89 Td (80) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 430.89 Td (51.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 387.52 430.89 Td (51.2) Tj ET
+0.949 0.722 0.690 rg 456.09 427.89 98.19 13.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 459.09 430.89 Td (Poor) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 425.89 m 555.28 425.89 l S
+0.918 0.945 0.957 rg 40.00 389.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 394.89 Td (ANOMALIES \(worst first\)) Tj ET
+0.122 0.231 0.302 rg 40.00 363.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 368.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 368.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 368.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 368.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 368.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 368.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 349.89 Td (1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 349.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 338.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 349.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 324.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 349.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 349.89 Td (22.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 349.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 338.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 327.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 322.89 m 555.28 322.89 l S
+0.961 0.973 0.980 rg 40.00 283.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 310.89 Td (4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 310.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 299.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 310.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 285.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 310.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 310.89 Td (24) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 310.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 299.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 288.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 283.89 m 555.28 283.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 271.89 Td (6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 271.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 260.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 271.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 246.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 271.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 271.89 Td (26.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 271.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 260.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 249.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 244.89 m 555.28 244.89 l S
+0.961 0.973 0.980 rg 40.00 205.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 232.89 Td (53) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 232.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 221.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 232.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 207.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 232.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 232.89 Td (38) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 232.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 221.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 210.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 205.89 m 555.28 205.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 193.89 Td (57) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 193.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 182.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 193.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 179.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 193.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 193.89 Td (38.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 193.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 182.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 177.89 m 555.28 177.89 l S
+0.961 0.973 0.980 rg 40.00 149.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 165.89 Td (80) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 165.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 154.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 165.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 151.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 165.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 165.89 Td (41.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 165.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 154.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 149.89 m 555.28 149.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 137.89 Td (81) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 137.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 126.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 137.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 112.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 137.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 137.89 Td (42.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 137.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 126.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 115.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 110.89 m 555.28 110.89 l S
+0.961 0.973 0.980 rg 40.00 82.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 98.89 Td (91) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 98.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 87.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 98.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 84.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 98.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 98.89 Td (42.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 98.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 87.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 82.89 m 555.28 82.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 70.89 Td (92) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 70.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 59.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 70.89 Td (Bare Ground Patch) Tj ET
+0.949 0.722 0.690 rg 272.88 45.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 70.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 70.89 Td (42.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 70.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 59.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 48.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 43.89 m 555.28 43.89 l S
+endstream
+endobj
+5 0 obj
+<< /Length 19467 >>
+stream
+0.122 0.231 0.302 rg 40.00 783.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 788.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 788.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 788.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 788.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 788.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 788.89 Td (Suggested action) Tj ET
+0.961 0.973 0.980 rg 40.00 753.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 769.89 Td (98) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 769.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 758.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 769.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 755.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 769.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 769.89 Td (44) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 769.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 758.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 753.89 m 555.28 753.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 741.89 Td (100) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 741.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 730.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 741.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 727.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 741.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 741.89 Td (44.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 741.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 730.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 725.89 m 555.28 725.89 l S
+0.961 0.973 0.980 rg 40.00 697.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 713.89 Td (101) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 713.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 702.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 713.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 699.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 713.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 713.89 Td (44.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 713.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 702.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 697.89 m 555.28 697.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 685.89 Td (102) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 685.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 674.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 685.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 671.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 685.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 685.89 Td (44.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 685.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 674.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 669.89 m 555.28 669.89 l S
+0.961 0.973 0.980 rg 40.00 641.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 657.89 Td (107) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 657.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 646.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 657.89 Td (Waterlogging) Tj ET
+0.949 0.722 0.690 rg 272.88 643.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 275.88 657.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 657.89 Td (45) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 657.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 646.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 641.89 m 555.28 641.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 629.89 Td (119) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 629.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 618.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 629.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 615.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 629.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 629.89 Td (46.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 629.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 618.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 613.89 m 555.28 613.89 l S
+0.961 0.973 0.980 rg 40.00 574.89 515.28 39.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 601.89 Td (127) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 601.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 590.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 601.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 576.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 601.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 601.89 Td (47.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 601.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 590.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 579.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 574.89 m 555.28 574.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 562.89 Td (134) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 562.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 551.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 562.89 Td (Bare Ground Patch) Tj ET
+0.969 0.906 0.769 rg 272.88 537.89 49.53 35.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 562.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 562.89 Td (47.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 562.89 Td (Re-turf / re-seed and top-dress the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 551.89 Td (exposed area; relieve compaction and) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 540.89 Td (re-establish ground cover.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 535.89 m 555.28 535.89 l S
+0.961 0.973 0.980 rg 40.00 507.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 523.89 Td (135) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 523.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 512.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 523.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 509.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 523.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 523.89 Td (47.7) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 523.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 512.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 507.89 m 555.28 507.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 495.89 Td (139) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 495.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 484.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 495.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 481.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 495.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 495.89 Td (48.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 495.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 484.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 479.89 m 555.28 479.89 l S
+0.961 0.973 0.980 rg 40.00 451.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 467.89 Td (150) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 467.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 456.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 467.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 453.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 467.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 467.89 Td (49) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 467.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 456.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 451.89 m 555.28 451.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 439.89 Td (167) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 439.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 428.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 439.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 425.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 439.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 439.89 Td (50.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 439.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 428.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 423.89 m 555.28 423.89 l S
+0.961 0.973 0.980 rg 40.00 395.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 411.89 Td (168) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 411.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 400.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 411.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 397.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 411.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 411.89 Td (50.3) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 411.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 400.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 395.89 m 555.28 395.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 383.89 Td (169) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 383.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 372.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 383.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 369.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 383.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 383.89 Td (50.4) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 383.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 372.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 367.89 m 555.28 367.89 l S
+0.961 0.973 0.980 rg 40.00 339.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 355.89 Td (171) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 355.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 344.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 355.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 341.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 355.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 355.89 Td (50.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 355.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 344.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 339.89 m 555.28 339.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 327.89 Td (172) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 327.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 316.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 327.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 313.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 327.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 327.89 Td (50.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 327.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 316.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 311.89 m 555.28 311.89 l S
+0.961 0.973 0.980 rg 40.00 283.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 299.89 Td (173) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 299.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 288.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 299.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 285.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 299.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 299.89 Td (50.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 299.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 288.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 283.89 m 555.28 283.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 271.89 Td (174) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 271.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 260.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 271.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 257.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 271.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 271.89 Td (50.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 271.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 260.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 255.89 m 555.28 255.89 l S
+0.961 0.973 0.980 rg 40.00 227.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 243.89 Td (176) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 243.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 232.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 243.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 229.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 243.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 243.89 Td (50.6) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 243.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 232.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 227.89 m 555.28 227.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 215.89 Td (177) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 215.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 204.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 215.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 201.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 215.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 215.89 Td (50.7) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 215.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 204.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 199.89 m 555.28 199.89 l S
+0.961 0.973 0.980 rg 40.00 171.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 187.89 Td (178) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 187.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 176.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 187.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 173.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 187.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 187.89 Td (50.7) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 187.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 176.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 171.89 m 555.28 171.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 159.89 Td (179) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 159.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 148.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 159.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 145.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 159.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 159.89 Td (50.8) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 159.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 148.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 143.89 m 555.28 143.89 l S
+0.961 0.973 0.980 rg 40.00 115.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 131.89 Td (182) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 131.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 120.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 131.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 117.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 131.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 131.89 Td (50.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 131.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 120.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 115.89 m 555.28 115.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 103.89 Td (184) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 103.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 92.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 103.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 89.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 103.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 103.89 Td (50.9) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 103.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 92.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 87.89 m 555.28 87.89 l S
+0.961 0.973 0.980 rg 40.00 59.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 75.89 Td (186) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 75.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 64.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 75.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 61.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 75.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 75.89 Td (51) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 75.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 64.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 59.89 m 555.28 59.89 l S
+endstream
+endobj
+6 0 obj
+<< /Length 11194 >>
+stream
+0.122 0.231 0.302 rg 40.00 783.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 788.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 80.07 788.89 Td (Zone) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 183.13 788.89 Td (Anomaly) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 275.88 788.89 Td (Severity) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 327.40 788.89 Td (Cond. %) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 378.93 788.89 Td (Suggested action) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 769.89 Td (187) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 769.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 758.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 769.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 755.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 769.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 769.89 Td (51) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 769.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 758.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 753.89 m 555.28 753.89 l S
+0.961 0.973 0.980 rg 40.00 725.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 741.89 Td (188) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 741.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 730.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 741.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 727.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 741.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 741.89 Td (51) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 741.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 730.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 725.89 m 555.28 725.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 713.89 Td (189) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 713.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 702.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 713.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 699.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 713.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 713.89 Td (51) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 713.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 702.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 697.89 m 555.28 697.89 l S
+0.961 0.973 0.980 rg 40.00 669.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 685.89 Td (190) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 685.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 674.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 685.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 671.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 685.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 685.89 Td (51.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 685.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 674.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 669.89 m 555.28 669.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 657.89 Td (191) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 657.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 646.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 657.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 643.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 657.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 657.89 Td (51.1) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 657.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 646.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 641.89 m 555.28 641.89 l S
+0.961 0.973 0.980 rg 40.00 613.89 515.28 28.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 629.89 Td (192) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 629.89 Td (Children's play) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 80.07 618.89 Td (area) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 183.13 629.89 Td (Waterlogging) Tj ET
+0.969 0.906 0.769 rg 272.88 615.89 49.53 24.00 re f
+BT /FBold 8.5 Tf 0.706 0.325 0.035 rg 275.88 629.89 Td (Medium) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 327.40 629.89 Td (51.2) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 629.89 Td (Investigate drainage or possible) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 378.93 618.89 Td (leak; regrade or provide a soak pit.) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 613.89 m 555.28 613.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 594.89 Td (Showing the worst 40 of 58 tracked instances in this category.) Tj ET
+0.918 0.945 0.957 rg 40.00 561.89 515.28 20.00 re f
+BT /FBold 11 Tf 0.122 0.231 0.302 rg 48.00 566.89 Td (RECOMMENDED ACTIONS) Tj ET
+0.122 0.231 0.302 rg 40.00 535.89 515.28 20.00 re f
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 44.00 540.89 Td (#) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 74.92 540.89 Td (Priority) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 136.75 540.89 Td (Finding) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 301.64 540.89 Td (Recommended action) Tj ET
+BT /FBold 8.5 Tf 1.000 1.000 1.000 rg 466.53 540.89 Td (Owner) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 521.89 Td (1) Tj ET
+0.949 0.722 0.690 rg 71.92 452.89 59.83 79.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 74.92 521.89 Td (Critical) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 521.89 Td (The lake is severely depleted) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 510.89 Td (and heavily eutrophic. Where) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 499.89 Td (open water is in view the algae) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 488.89 Td (share of the surface approaches) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 477.89 Td (100%, and a large rocky bed with) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 466.89 Td (cracked, eroded bank is exposed.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 521.89 Td (Commission a water-body) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 510.89 Td (restoration plan: de-silting,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 499.89 Td (inflow and nutrient-load) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 488.89 Td (control, aeration, and bank) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 477.89 Td (stabilisation with re-profiling.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 466.89 Td (Treat as the park's top capital) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 455.89 Td (priority.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 521.89 Td (Engineering /) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 510.89 Td (Horticulture) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 450.89 m 555.28 450.89 l S
+0.961 0.973 0.980 rg 40.00 400.89 515.28 50.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 438.89 Td (2) Tj ET
+0.949 0.722 0.690 rg 71.92 402.89 59.83 46.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 74.92 438.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 438.89 Td (Floating waste is detected on) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 427.89 Td (the water surface and plastic) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 416.89 Td (waste is scattered along the) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 405.89 Td (shoreline and exposed bed.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 438.89 Td (Deploy surface skimming or net) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 427.89 Td (booms at the inflow, and run a) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 416.89 Td (shoreline clearance drive; add) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 405.89 Td (bins at the bridge approach.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 438.89 Td (Sanitation) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 400.89 m 555.28 400.89 l S
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 388.89 Td (4) Tj ET
+0.949 0.722 0.690 rg 71.92 341.89 59.83 57.00 re f
+BT /FBold 8.5 Tf 0.627 0.169 0.133 rg 74.92 388.89 Td (High) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 388.89 Td (The play-zone surface is) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 377.89 Td (predominantly bare hard-packed) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 366.89 Td (earth with no ground cover.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 388.89 Td (Re-establish a wear-tolerant) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 377.89 Td (ground cover or install an) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 366.89 Td (impact-absorbing play surface;) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 355.89 Td (decompact and top-dress before) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 344.89 Td (the monsoon.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 388.89 Td (Horticulture) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 377.89 Td (Division) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 339.89 m 555.28 339.89 l S
+0.961 0.973 0.980 rg 40.00 267.89 515.28 72.00 re f
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 44.00 327.89 Td (12) Tj ET
+0.831 0.929 0.847 rg 71.92 269.89 59.83 68.00 re f
+BT /FBold 8.5 Tf 0.122 0.478 0.204 rg 74.92 327.89 Td (Process) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 327.89 Td (Several framework sub-parameters) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 316.89 Td (\(gates, signage, toilets,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 305.89 Td (parking, drinking water points,) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 294.89 Td (dustbin fill state\) were never) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 283.89 Td (in a field of view or are) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 136.75 272.89 Td (unresolvable at this altitude.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 327.89 Td (Add a low-altitude amenity pass) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 316.89 Td (at 15-25 m over built assets so) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 305.89 Td (signage, bins and fixtures can) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 301.64 294.89 Td (be read.) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 327.89 Td (Survey / Drone) Tj ET
+BT /FReg 8.5 Tf 0.050 0.050 0.050 rg 466.53 316.89 Td (Cell) Tj ET
+0.749 0.804 0.831 RG 0.4 w 40.00 267.89 m 555.28 267.89 l S
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 240.89 Td (Generated from Sanjay_Lake_Park_AI_Detection_Report.xlsx · DDA AI Park Monitor. Figures are the) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 228.89 Td (park-wide mean across 1 analysed clip, recomputed directly from the detection log rather than the) Tj ET
+BT /FItalic 8.5 Tf 0.290 0.384 0.439 rg 44.00 216.89 Td (workbook's own summary formulas.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 4 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 10 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 5 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /Resources << /Font << /FReg 1 0 R /FBold 2 0 R /FItalic 3 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 6 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [7 0 R 8 0 R 9 0 R] /Count 3 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000106 00000 n 
+0000000208 00000 n 
+0000000313 00000 n 
+0000013293 00000 n 
+0000032813 00000 n 
+0000044060 00000 n 
+0000044223 00000 n 
+0000044386 00000 n 
+0000044549 00000 n 
+0000044619 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+44670
+%%EOF

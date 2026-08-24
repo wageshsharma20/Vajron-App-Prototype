@@ -32,13 +32,15 @@ if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental
 export interface InspectionAccordionProps {
   data: InspectionCategory;
   index: number;
+  /** Downloads this category's styled export (xlsx). Omitted -> icon hidden. */
+  onDownload?: (category: InspectionCategory) => void;
 }
 
 const iconMap: Record<string, any> = {
   Trees, Leaf, Droplets, Sparkles, Wrench, ShieldCheck, Waves, Palette,
 };
 
-export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, index }) => {
+export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, index, onDownload }) => {
   const { theme } = useTheme();
   const [expanded, setExpanded] = useState(false);
   
@@ -109,9 +111,11 @@ export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, 
           <Text style={[styles.badgeText, { color: statusColor }]}>
             {badgeText}
           </Text>
-          <Pressable onPress={(e) => { e.stopPropagation(); /* Implement download logic */ }}>
-            <Download size={18} color={theme.textSecondary} strokeWidth={1.5} />
-          </Pressable>
+          {onDownload && (
+            <Pressable onPress={(e) => { e.stopPropagation(); onDownload(data); }} hitSlop={8}>
+              <Download size={18} color={theme.textSecondary} strokeWidth={1.5} />
+            </Pressable>
+          )}
           <Animated.View style={{ transform: [{ rotate: spin }] }}>
             <ChevronDown size={16} color={theme.textSecondary} strokeWidth={1} />
           </Animated.View>
