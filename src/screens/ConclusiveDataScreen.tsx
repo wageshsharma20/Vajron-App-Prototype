@@ -3,7 +3,7 @@ import { View, ScrollView, StyleSheet, TextInput, Pressable, Image, TouchableOpa
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import * as ImagePicker from 'expo-image-picker';
-import { Download } from 'lucide-react-native';
+import { Download, X } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
 import { InspectionAccordion } from '../components/InspectionAccordion';
 import { mockChangeDetection } from '../data/mockData';
@@ -34,6 +34,9 @@ export const ConclusiveDataScreen = () => {
   // category issue counts recompute as the survey plays on the Camera tab.
   const { park, hasStarted, hasSurvey } = useReplay();
   const inspectionData = useLiveInspection();
+  // The category whose download icon was tapped — drives the format sheet.
+  // Null means the sheet is closed.
+  const [formatFor, setFormatFor] = useState<InspectionCategory | null>(null);
 
   const pickImage = async (key: string) => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -87,18 +90,26 @@ export const ConclusiveDataScreen = () => {
     );
   };
 
-  /** Per-category export behind each Reports accordion's download icon — the
-   * same 9-category workbook the DTU-styled report generator produces from the
-   * park's source Excel (tools/generate-category-reports.js). */
-  const handleCategoryDownload = async (category: InspectionCategory) => {
+  /** Per-category export in the chosen format — the same 9-category report the
+   * DTU-styled generator produces from the park's source Excel, written as both
+   * a workbook and a PDF (tools/generate-category-reports.js). */
+  const downloadCategory = async (category: InspectionCategory, ext: 'xlsx' | 'pdf') => {
     const entry = PARK_REPORT_MAP[park.id];
     if (!entry) return;
-    const filename = `${entry.slug}-${category.id}.xlsx`;
+    // The release is a flat namespace, so native assets carry the park slug in
+    // the filename where the web path carries it as a directory.
+    const filename = `${entry.slug}-${category.id}.${ext}`;
     await downloadReportFile(
-      `/reports/categories/${entry.slug}/${category.id}.xlsx`,
+      `/reports/categories/${entry.slug}/${category.id}.${ext}`,
       `https://github.com/wageshsharma20/Vajron-App-Prototype/releases/download/survey-media/${filename}`,
       filename,
     );
+  };
+
+  const handleCategoryFormat = async (ext: 'xlsx' | 'pdf') => {
+    const category = formatFor;
+    setFormatFor(null);
+    if (category) await downloadCategory(category, ext);
   };
 
   const filteredData = useMemo(() => {
@@ -108,6 +119,7 @@ export const ConclusiveDataScreen = () => {
   }, [searchQuery, inspectionData]);
 
   return (
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
     <ScrollView style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       {/* Header Bar */}
       <View style={styles.header}>
@@ -138,7 +150,7 @@ export const ConclusiveDataScreen = () => {
       {/* Inspection Accordions */}
       <View style={styles.accordionsContainer}>
         {filteredData.map((category, index) => (
-          <InspectionAccordion key={category.id} data={category} index={index} onDownload={handleCategoryDownload} />
+          <InspectionAccordion key={category.id} data={category} index={index} onDownload={setFormatFor} />
         ))}
       </View>
 
@@ -229,12 +241,80 @@ export const ConclusiveDataScreen = () => {
         </View>
       </View>
     </ScrollView>
+
+    {/* Format picker — one download icon per row, both formats reachable. */}
+    {formatFor && (
+      <Pressable style={styles.sheetOverlay} onPress={() => setFormatFor(null)}>
+        <Pressable style={[styles.sheetContent, { backgroundColor: theme.surfaceLight }]} onPress={(e) => e.stopPropagation()}>
+          <View style={styles.sheetHeader}>
+            <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>DOWNLOAD</Text>
+            <Pressable onPress={() => setFormatFor(null)} hitSlop={8}>
+              <X size={22} color={theme.textPrimary} strokeWidth={1} />
+            </Pressable>
+          </View>
+          <Text style={[styles.sheetSubtitle, { color: theme.textSecondary }]}>{formatFor.category}</Text>
+          {([['xlsx', 'EXCEL', 'Spreadsheet (.xlsx)'], ['pdf', 'PDF', 'Document (.pdf)']] as const).map(([ext, label, hint]) => (
+            <Pressable
+              key={ext}
+              style={[styles.formatRow, { borderBottomColor: theme.border }]}
+              onPress={() => handleCategoryFormat(ext)}
+            >
+              <Text style={[styles.formatLabel, { color: theme.textPrimary }]}>{label}</Text>
+              <Text style={[styles.formatHint, { color: theme.textSecondary }]}>{hint}</Text>
+            </Pressable>
+          ))}
+        </Pressable>
+      </Pressable>
+    )}
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  sheetOverlay: {
+    ...StyleSheet.absoluteFill,
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    justifyContent: 'flex-end',
+    zIndex: 100,
+  },
+  sheetContent: {
+    padding: 24,
+    paddingBottom: 32,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+  },
+  sheetHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  sheetTitle: {
+    fontFamily: typography.fonts.light,
+    fontSize: 20,
+    letterSpacing: 2,
+  },
+  sheetSubtitle: {
+    fontFamily: typography.fonts.regular,
+    fontSize: 13,
+    marginTop: 2,
+    marginBottom: 12,
+  },
+  formatRow: {
+    paddingVertical: 16,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
+  formatLabel: {
+    fontFamily: typography.fonts.medium,
+    fontSize: 13,
+    letterSpacing: 1,
+  },
+  formatHint: {
+    fontFamily: typography.fonts.regular,
+    fontSize: 12,
+    marginTop: 2,
   },
   content: {
     padding: 16,
