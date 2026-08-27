@@ -46,22 +46,28 @@ export const ZenLoader = ({ text = "INITIALIZING..." }: { text?: string }) => {
   });
 
   
+  
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <Image 
-        source={require('../../assets/images/dda-logo.png')} 
-        style={styles.ddaLogo} 
-        resizeMode="contain" 
-      />
-      <Animated.View style={[styles.line, { backgroundColor: theme.textPrimary }, lineStyle]} />
-      <Text style={[styles.text, { color: theme.textSecondary }]}>{text}</Text>
-      <Image 
-        source={require('../../assets/images/dda-greens-logo.png')} 
-        style={styles.greensLogo} 
-        resizeMode="contain" 
-      />
+      <View style={styles.logoGroup}>
+        <Image 
+          source={require('../../assets/images/dda-logo.png')} 
+          style={styles.ddaLogo} 
+          resizeMode="contain" 
+        />
+        <Image 
+          source={require('../../assets/images/dda-greens-logo.png')} 
+          style={styles.greensLogo} 
+          resizeMode="contain" 
+        />
+      </View>
+      <View style={styles.loaderGroup}>
+        <Animated.View style={[styles.line, { backgroundColor: theme.textPrimary }, lineStyle]} />
+        <Text style={[styles.text, { color: theme.textSecondary }]}>{text}</Text>
+      </View>
     </View>
   );
+
 
 };
 
@@ -82,14 +88,20 @@ const styles = StyleSheet.create({
     fontSize: 10,
     letterSpacing: 4,
   },
+  logoGroup: {
+    alignItems: 'center',
+    marginBottom: 80,
+  },
+  loaderGroup: {
+    alignItems: 'center',
+  },
   ddaLogo: {
     width: 403,
     height: 115,
-    marginBottom: 60,
+    marginBottom: 20,
   },
   greensLogo: {
     width: 72,
     height: 72,
-    marginTop: 60,
   }
 });
