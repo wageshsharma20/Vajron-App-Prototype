@@ -83,13 +83,13 @@ const styles = StyleSheet.create({
     letterSpacing: 4,
   },
   ddaLogo: {
-    width: 280,
-    height: 80,
+    width: 336,
+    height: 96,
     marginBottom: 60,
   },
   greensLogo: {
-    width: 100,
-    height: 100,
+    width: 85,
+    height: 85,
     marginTop: 60,
   }
 });
