@@ -437,6 +437,30 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "Preventing water accumulation": "जल संचय को रोकना",
   "Clear Floating Waste (Lake)": "तैरते हुए कचरे को साफ करें (झील)",
   "6 plastic items detected": "6 प्लास्टिक वस्तुएं पाई गईं",
+
+  // Fixed "not observed in this clip" labels from the live-inspection resolvers
+  // (src/replay/useLiveInspection.ts) — each is its own distinct wording, so
+  // they're matched as exact dict entries rather than folded into one generic
+  // phrase.
+  "No GPS sidecar — telemetry pending": "कोई जीपीएस साइडकार नहीं — टेलीमेट्री लंबित",
+  "Not in this view": "इस दृश्य में नहीं",
+  "None in this survey": "इस सर्वेक्षण में नहीं",
+  "Not separable in oblique view": "तिरछे दृश्य में अलग नहीं किया जा सकता",
+  "None visible in clip": "क्लिप में कुछ भी दिखाई नहीं दिया",
+  "None in view yet": "अभी तक दृश्य में नहीं",
+  "Not assessable at this altitude": "इस ऊंचाई पर आंकलन संभव नहीं",
+  "Not assessable in this clip": "इस क्लिप में आंकलन संभव नहीं",
+  "None in view": "दृश्य में कुछ नहीं",
+  "None in this view": "इस दृश्य में कुछ नहीं",
+  "Not legible at this altitude": "इस ऊंचाई पर पढ़ने योग्य नहीं",
+  "Not separable from stems": "तनों से अलग नहीं किया जा सकता",
+  "Not in view yet": "अभी दृश्य में नहीं आया",
+  "None detected yet": "अभी तक कुछ नहीं मिला",
+  "None seen in survey": "सर्वेक्षण में कुछ नहीं दिखा",
+  "Regular avenue rows discernible": "नियमित एवेन्यू पंक्तियाँ स्पष्ट",
+  "None flagged": "कुछ भी चिह्नित नहीं",
+  "Moderate clarity": "मध्यम स्पष्टता",
+  "Turbid green / olive": "गंदला हरा / जैतूनी",
 };
     if (lang === 'en') return text;
     if (dict[text]) return translateNumber(dict[text]);
@@ -486,6 +510,40 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
     res = res.replace(/condition/g, "स्थिति");
     res = res.replace(/Kerb\/edging/g, "किनारा");
     res = res.replace(/displaced stones/g, "विस्थापित पत्थर");
+
+    // Live-inspection resolvers (src/replay/useLiveInspection.ts) compose a
+    // number/percentage with a fixed English suffix — translate the suffix in
+    // place so the dynamic figure survives untouched. Several of these run
+    // AFTER the generic " zones"/" patches" fragments above have already fired,
+    // so they intentionally target what's left over rather than the original
+    // phrase (e.g. "shrub/hedge zones" -> generic " zones" already ate "zones",
+    // leaving "shrub/hedge" as the leftover this block finishes off).
+    res = res.replace(/stems geo-tracked/g, "तने जियो-ट्रैक किए गए");
+    res = res.replace(/benches mapped/g, "बेंच मैप किए गए");
+    res = res.replace(/instances tracked/g, "इंस्टेंस ट्रैक किए गए");
+    res = res.replace(/track segments/g, "ट्रैक खंड");
+    res = res.replace(/stems tracked/g, "तने ट्रैक किए गए");
+    res = res.replace(/(\d+) in view\)/g, "$1 दृश्य में)");
+    res = res.replace(/of frame/g, "फ्रेम का");
+    res = res.replace(/standing dry vegetation/g, "खड़ी सूखी वनस्पति");
+    res = res.replace(/shrub\/hedge/g, "झाड़ी/हेज");
+    res = res.replace(/litter \/ debris/g, "कूड़ा / मलबा");
+    res = res.replace(/low-visibility/g, "निम्न-दृश्यता");
+    res = res.replace(/\bzone\b/g, "क्षेत्र");
+    res = res.replace(/benches —/g, "बेंच —");
+    res = res.replace(/— mapped$/g, "— मैप किया गया");
+    res = res.replace(/units — serviceable/g, "इकाइयाँ — उपयोग योग्य");
+    res = res.replace(/vehicles? inside boundary/g, "वाहन सीमा के अंदर");
+    res = res.replace(/waterlogged spot\b/g, "जलभराव वाला स्थान");
+    res = res.replace(/Depleted —/g, "घट गया —");
+    res = res.replace(/exposed bed/g, "उजागर तल");
+    res = res.replace(/algal share of water/g, "पानी में शैवाल की हिस्सेदारी");
+    res = res.replace(/floating-waste items/g, "तैरते कचरे की वस्तुएं");
+    res = res.replace(/eroded \/ cracked bank segments/g, "क्षतिग्रस्त/दरारयुक्त किनारा खंड");
+    res = res.replace(/Patchy —/g, "धब्बेदार —");
+    res = res.replace(/ bare,/g, " बंजर,");
+    res = res.replace(/canopy vigour/g, "छतरी का हरापन");
+    res = res.replace(/canopy/g, "छतरी");
 
     res = res.replace(/Scheduled sites have no processed survey yet\. Scores and findings appear once a flight has been flown and analysed\./g, "निर्धारित साइटों का अभी तक कोई सर्वेक्षण संसाधित नहीं हुआ है। उड़ान भरने और विश्लेषण के बाद स्कोर और निष्कर्ष दिखाई देते हैं।");
     

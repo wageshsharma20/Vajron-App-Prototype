@@ -315,7 +315,7 @@ export const ConclusiveDataScreen = ({ route }: any) => {
                 <Text style={[styles.changeMetric, { color: theme.textPrimary }]}>{translateAny(String(change.metric))}</Text>
                 <View style={styles.changeValuesRow}>
                   <Text style={[styles.changeValues, { color: theme.textSecondary }]}>
-                    {change.previousValue} → {change.currentValue}
+                    {translateAny(change.previousValue)} → {translateAny(change.currentValue)}
                   </Text>
                   <Text style={[styles.badgeText, { color: statusColor }]}>
                     {sign}{change.change}{change.unit === '%' ? '%' : ''}
