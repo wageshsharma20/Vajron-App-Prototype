@@ -158,7 +158,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
             ) : (
               <>
                 <Text style={{ fontFamily: typography.fonts.bold }}>{totalIssues}</Text>
-                {' PROBLEMS FOUND'}
+                {' CONSIDERATIONS FOUND'}
               </>
             )}
           </Text>
