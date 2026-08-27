@@ -254,8 +254,8 @@ const styles = StyleSheet.create({
                      // reads as the score sitting below its own letterhead row.
   },
   topLogo: {
-    width: 36,
-    height: 36,
+    width: 44,
+    height: 44,
   },
   overallSection: {
     alignItems: 'center',
