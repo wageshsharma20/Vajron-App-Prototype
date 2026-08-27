@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
   },
   overallSection: {
     alignItems: 'center',
-    marginBottom: 24, // Balanced whitespace
+    marginBottom: 12, // Reduced for tighter grouping
   },
   overallMeta: {
     alignItems: 'center',
