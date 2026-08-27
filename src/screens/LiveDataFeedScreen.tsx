@@ -127,7 +127,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
         <View style={styles.overallSection}>
           <CircularScore score={overallScore.score} label={translateAny("Overall Score")} size={140} />
           <View style={styles.overallMeta}>
-            <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
+            <Text style={[styles.parkName, { color: theme.textPrimary }]}>{translateAny(String(park.name))}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
               {!hasSurvey
                 ? translateAny("Survey scheduled")
@@ -159,7 +159,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
               'EVERYTHING IS FINE'
             ) : (
               <>
-                <Text style={{ fontFamily: typography.fonts.bold }}>{totalIssues}</Text>
+                <Text style={{ fontFamily: typography.fonts.bold }}>{translateAny(String(totalIssues))}</Text>
                 {' ' + t('considerationsFound')}
               </>
             )}
@@ -184,7 +184,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
         {/* Top Issues - 1px dividers, no cards */}
         {topIssues.length > 0 && (
           <View style={styles.issuesSection}>
-            <Text style={[styles.sectionTitle, { color: theme.textPrimary }]}>HIGH-PRIORITY DEFECTS</Text>
+            <Text style={[styles.sectionTitle, { color: theme.textPrimary }]}>{translateAny("HIGH-PRIORITY DEFECTS")}</Text>
             <View style={styles.issuesList}>
               {topIssues.map((issue: any, index: number) => (
                 <Pressable
@@ -196,10 +196,10 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                   ]}
                 >
                   <View style={styles.issueContent}>
-                    <Text style={[styles.issueName, { color: getStatusColor(issue.status) }]}>{issue.name}</Text>
-                    <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{issue.value}</Text>
+                    <Text style={[styles.issueName, { color: getStatusColor(issue.status) }]}>{translateAny(String(issue.name))}</Text>
+                    <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{translateAny(String(issue.value))}</Text>
                   </View>
-                  <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>{issue.category}</Text>
+                  <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>{translateAny(String(issue.category))}</Text>
                 </Pressable>
               ))}
             </View>
@@ -208,7 +208,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
 
         {/* AI Maintenance Recommendations */}
         <View style={styles.issuesSection}>
-          <Text style={[styles.sectionTitle, { color: theme.textPrimary }]}>AI MAINTENANCE RECOMMENDATIONS</Text>
+          <Text style={[styles.sectionTitle, { color: theme.textPrimary }]}>{translateAny("AI MAINTENANCE RECOMMENDATIONS")}</Text>
           <View style={styles.issuesList}>
             {RECOMMENDATIONS.map((rec) => (
               <Pressable
@@ -220,10 +220,10 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                 ]}
               >
                 <View style={styles.issueContent}>
-                  <Text style={[styles.issueName, { color: theme.textPrimary }]}>{rec.title}</Text>
-                  <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{rec.detail}</Text>
+                  <Text style={[styles.issueName, { color: theme.textPrimary }]}>{translateAny(String(rec.title))}</Text>
+                  <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{translateAny(String(rec.detail))}</Text>
                 </View>
-                <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>{rec.impact}</Text>
+                <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>{translateAny(String(rec.impact))}</Text>
               </Pressable>
             ))}
           </View>

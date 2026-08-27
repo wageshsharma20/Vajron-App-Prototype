@@ -12,12 +12,14 @@ import { View, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { Text } from 'react-native-paper';
 import { ChevronRight, Play, Clock, ArrowLeft } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { useReplay } from '../replay/ReplayProvider';
 import { PARKS } from '../data/parks';
 import { RecordingPlayerScreen } from './RecordingPlayerScreen';
 
 export const RecordingsScreen = () => {
   const { theme } = useTheme();
+  const { translateAny } = useI18n();
   const { park, selectPark } = useReplay();
   const [openParkId, setOpenParkId] = useState<string | null>(null);
 
@@ -36,10 +38,8 @@ export const RecordingsScreen = () => {
       contentContainerStyle={styles.content}
     >
       <View style={styles.header}>
-        <Text style={[styles.title, { color: theme.textPrimary }]}>Recordings</Text>
-        <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
-          Choose a park to view its drone survey
-        </Text>
+        <Text style={[styles.title, { color: theme.textPrimary }]}>{translateAny("Recordings")}</Text>
+        <Text style={[styles.subtitle, { color: theme.textSecondary }]}>{translateAny("Choose a park to view its drone survey")}</Text>
       </View>
 
       {PARKS.map((p) => {
@@ -60,13 +60,13 @@ export const RecordingsScreen = () => {
             ]}
           >
             <View style={styles.rowMain}>
-              <Text style={[styles.parkName, { color: theme.textPrimary }]}>{p.name}</Text>
+              <Text style={[styles.parkName, { color: theme.textPrimary }]}>{translateAny(p.name)}</Text>
               <Text style={[styles.parkMeta, { color: theme.textSecondary }]}>
                 {ready ? `${p.locality} · Surveyed ${p.surveyDate}` : `${p.locality} · Survey scheduled`}
               </Text>
               {ready && p.zone && (
                 <Text style={[styles.parkZone, { color: theme.textSecondary }]} numberOfLines={1}>
-                  {p.zone}
+                  {translateAny(p.zone)}
                 </Text>
               )}
             </View>
@@ -74,7 +74,7 @@ export const RecordingsScreen = () => {
             {ready ? (
               <View style={styles.rowEnd}>
                 {isCurrent && (
-                  <Text style={[styles.currentTag, { color: theme.accentAmber }]}>SELECTED</Text>
+                  <Text style={[styles.currentTag, { color: theme.accentAmber }]}>{translateAny("SELECTED")}</Text>
                 )}
                 <Play size={18} color={theme.textPrimary} />
                 <ChevronRight size={18} color={theme.textSecondary} />

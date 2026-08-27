@@ -8,7 +8,8 @@ import Animated, {
 } from 'react-native-reanimated';
 import { Text } from 'react-native-paper';
 import { Check, X, AlertCircle, Info } from 'lucide-react-native';
-import { typography } from '../theme';
+import { typography, useTheme } from '../theme';
+import { useI18n } from '../i18n';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface NotificationBannerProps {
@@ -26,6 +27,8 @@ export const NotificationBanner: React.FC<NotificationBannerProps> = ({
   durationMs = 5000,
   onDismiss
 }) => {
+  const { translateAny } = useI18n();
+  const { theme } = useTheme();
   const insets = useSafeAreaInsets();
   const translateY = useSharedValue(-150);
 
@@ -94,8 +97,8 @@ export const NotificationBanner: React.FC<NotificationBannerProps> = ({
         {getIcon()}
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.title}>{displayTitle}</Text>
-        <Text style={styles.message}>{message}</Text>
+        <Text style={styles.title}>{translateAny(String(displayTitle))}</Text>
+        <Text style={styles.message}>{translateAny(String(message))}</Text>
       </View>
     </Animated.View>
   );

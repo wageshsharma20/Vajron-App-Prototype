@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text, Pressable, Image, Platform } from 'react-native';
 import { VideoView } from 'expo-video';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { useReplay } from '../replay/ReplayProvider';
 import { Play, Pause, RotateCcw, Eye, EyeOff, Settings2, X, ArrowLeft } from 'lucide-react-native';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -22,6 +23,7 @@ type Props = {
 
 export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   const { theme } = useTheme();
+  const { translateAny, translateNumber } = useI18n();
   // Playback is the app-wide replay clock, so playing here also advances the
   // Dashboard scores and Reports tallies.
   const { player, isPlaying, toggle, restart, park } = useReplay();
@@ -85,7 +87,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
       {onBack && (
         <Pressable onPress={onBack} style={styles.backChip} hitSlop={10}>
           <ArrowLeft size={16} color="#FFF" />
-          <Text style={styles.backChipText} numberOfLines={1}>{park.name}</Text>
+          <Text style={styles.backChipText} numberOfLines={1}>{translateAny(String(park.name))}</Text>
         </Pressable>
       )}
 
@@ -156,22 +158,22 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
             <Pressable style={styles.settingsOverlay} onPress={() => setShowSettings(false)}>
               <Pressable style={[styles.sheetContent, { backgroundColor: theme.surfaceLight }]} onPress={(e) => e.stopPropagation()}>
                 <View style={styles.sheetHeader}>
-                  <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>ADVANCED SETTINGS</Text>
+                  <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>{translateAny("ADVANCED SETTINGS")}</Text>
                   <Pressable onPress={() => setShowSettings(false)}>
                     <X size={24} color={theme.textPrimary} strokeWidth={1} />
                   </Pressable>
                 </View>
                 <View style={[styles.settingsRow, { borderBottomColor: theme.border }]}>
-                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>THERMAL PALETTE</Text>
-                  <Text style={[styles.settingsValue, { color: theme.accentTeal }]}>IRONBOW</Text>
+                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>{translateAny("THERMAL PALETTE")}</Text>
+                  <Text style={[styles.settingsValue, { color: theme.accentTeal }]}>{translateAny("IRONBOW")}</Text>
                 </View>
                 <View style={[styles.settingsRow, { borderBottomColor: theme.border }]}>
-                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>EXPOSURE</Text>
-                  <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>AUTO</Text>
+                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>{translateAny("EXPOSURE")}</Text>
+                  <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>{translateAny("AUTO")}</Text>
                 </View>
                 <View style={[styles.settingsRow, { borderBottomColor: theme.border }]}>
-                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>DETECTION SENSITIVITY</Text>
-                  <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>HIGH</Text>
+                  <Text style={[styles.settingsLabel, { color: theme.textSecondary }]}>{translateAny("DETECTION SENSITIVITY")}</Text>
+                  <Text style={[styles.settingsValue, { color: theme.textPrimary }]}>{translateAny("HIGH")}</Text>
                 </View>
               </Pressable>
             </Pressable>

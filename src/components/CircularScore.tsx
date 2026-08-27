@@ -17,7 +17,7 @@ type CircularScoreProps = {
 
 export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: CircularScoreProps) => {
   const { theme } = useTheme();
-  const { translateNumber } = useI18n();
+  const { translateNumber, translateAny } = useI18n();
   
   const radius = (size - strokeWidth) / 2;
   const cx = size / 2;
@@ -73,7 +73,7 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
         </View>
       </View>
       {label && (
-        <Text style={[styles.label, { color: theme.textSecondary }]}>{label}</Text>
+        <Text style={[styles.label, { color: theme.textSecondary }]}>{translateAny(String(label))}</Text>
       )}
     </View>
   );

@@ -23,6 +23,7 @@ import {
 } from 'lucide-react-native';
 import { Text } from 'react-native-paper';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { InspectionCategory } from '../types';
 
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -56,6 +57,7 @@ const iconMap: Record<string, any> = {
 
 export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, index, onDownload, autoExpand, focusNonce, onLayoutOffset }) => {
   const { theme } = useTheme();
+  const { translateAny, translateNumber } = useI18n();
   const [expanded, setExpanded] = useState(false);
   
   // Minimal enter animation
@@ -161,11 +163,11 @@ export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, 
                   {/* Indicator dot */}
                   {isItemIssue && <View style={[styles.issueDot, { backgroundColor: itemColor }]} />}
                   <Text style={[styles.itemName, { color: theme.textPrimary }]}>
-                    {item.name}
+                    {translateAny(item.name)}
                   </Text>
                 </View>
                 <Text style={[styles.itemValue, { color: isItemIssue ? itemColor : theme.textSecondary }]} numberOfLines={2}>
-                  {item.value}
+                  {translateAny(item.value)}
                 </Text>
               </View>
             );

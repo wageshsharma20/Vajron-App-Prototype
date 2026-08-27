@@ -14,7 +14,7 @@ import { useTheme, typography } from '../theme';
 import { useI18n } from '../i18n';
 
 export const ZenLoader = ({ text }: { text?: string }) => {
-  const { t } = useI18n();
+  const { t, translateAny } = useI18n();
   const displayText = text || t('initializing');
   const { theme } = useTheme();
   
@@ -59,7 +59,7 @@ export const ZenLoader = ({ text }: { text?: string }) => {
         resizeMode="contain" 
       />
       <Animated.View style={[styles.line, { backgroundColor: theme.textPrimary }, lineStyle]} />
-      <Text style={[styles.text, { color: theme.textSecondary }]}>{displayText}</Text>
+      <Text style={[styles.text, { color: theme.textSecondary }]}>{translateAny(String(displayText))}</Text>
       <Image 
         source={require('../../assets/images/dda-greens-logo.png')} 
         style={styles.greensLogo} 

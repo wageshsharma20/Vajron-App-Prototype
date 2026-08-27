@@ -5,6 +5,7 @@ import * as Sharing from 'expo-sharing';
 import * as ImagePicker from 'expo-image-picker';
 import { Download, X } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { InspectionAccordion } from '../components/InspectionAccordion';
 import { mockChangeDetection } from '../data/mockData';
 import { Text } from 'react-native-paper';
@@ -49,6 +50,7 @@ const PARK_REPORT_MAP: Record<string, { file: string; slug: string }> = {
 
 export const ConclusiveDataScreen = ({ route }: any) => {
   const { theme } = useTheme();
+  const { translateAny, translateNumber } = useI18n();
   const [searchQuery, setSearchQuery] = useState('');
   const [images, setImages] = useState<Record<string, string>>({});
 
@@ -248,7 +250,7 @@ export const ConclusiveDataScreen = ({ route }: any) => {
     >
       {/* Header Bar */}
       <View style={styles.header}>
-        <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
+        <Text style={[styles.title, { color: theme.textPrimary }]}>{translateAny("Past Data")}</Text>
         <Pressable style={styles.downloadBtn} onPress={handleDownload}>
           <Download size={24} color={theme.textPrimary} strokeWidth={1} />
         </Pressable>
@@ -256,20 +258,20 @@ export const ConclusiveDataScreen = ({ route }: any) => {
       {/* Full width, outside the title row: the button only needs to line up with
           the heading, and the longer park names need every pixel to stay on one line. */}
       <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
-        {park.name}
+        {translateAny(park.name)}
         {!hasSurvey
           ? ' · survey scheduled'
           : hasStarted
             ? isPlaying
               ? ' · analysing recording'
               : ' · recording paused'
-            : ` · surveyed ${park.surveyDate}`}
+            : ` · ${translateAny('surveyed')} ${translateAny(park.surveyDate)}`}
       </Text>
 
       {/* Zen Search Bar (Bottom border only) */}
       <View style={[styles.searchContainer, { borderBottomColor: theme.border }]}>
         <TextInput
-          placeholder="Search..."
+          placeholder={translateAny("Search...")}
           placeholderTextColor={theme.textSecondary}
           onChangeText={setSearchQuery}
           value={searchQuery}
@@ -298,7 +300,7 @@ export const ConclusiveDataScreen = ({ route }: any) => {
 
       {/* Monthly Changes Section */}
       <View style={styles.section}>
-        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>CHANGES THIS MONTH</Text>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>{translateAny("CHANGES THIS MONTH")}</Text>
         
         <View style={[styles.changesGrid, { borderTopColor: theme.border }]}>
           {mockChangeDetection.map((change) => {
@@ -310,7 +312,7 @@ export const ConclusiveDataScreen = ({ route }: any) => {
             const target = CHANGE_TO_CATEGORY[change.id];
             const inner = (
               <>
-                <Text style={[styles.changeMetric, { color: theme.textPrimary }]}>{change.metric}</Text>
+                <Text style={[styles.changeMetric, { color: theme.textPrimary }]}>{translateAny(String(change.metric))}</Text>
                 <View style={styles.changeValuesRow}>
                   <Text style={[styles.changeValues, { color: theme.textSecondary }]}>
                     {change.previousValue} → {change.currentValue}
@@ -347,58 +349,58 @@ export const ConclusiveDataScreen = ({ route }: any) => {
 
       {/* Before & After Comparison Section */}
       <View style={styles.section}>
-        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>VISUAL EVIDENCE (BEFORE & AFTER)</Text>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>{translateAny("VISUAL EVIDENCE (BEFORE & AFTER)")}</Text>
         
         {/* Item 1 */}
         <View style={styles.comparisonCard}>
-          <Text style={[styles.comparisonSubtitle, { color: theme.textPrimary }]}>North Gate Pathway Crack Repair</Text>
+          <Text style={[styles.comparisonSubtitle, { color: theme.textPrimary }]}>{translateAny("North Gate Pathway Crack Repair")}</Text>
           <View style={styles.imagesRow}>
             <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
               <TouchableOpacity onPress={() => pickImage('repair_before')} style={styles.imagePlaceholder}>
                 {images['repair_before'] ? (
                   <Image source={{ uri: images['repair_before'] }} style={styles.pickedImage} />
                 ) : (
-                  <Text style={[styles.placeholderText, { color: theme.textSecondary }]}>BEFORE</Text>
+                  <Text style={[styles.placeholderText, { color: theme.textSecondary }]}>{translateAny("BEFORE")}</Text>
                 )}
               </TouchableOpacity>
-              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>July 15, 2025</Text>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>{translateAny("July 15, 2025")}</Text>
             </View>
             <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
               <TouchableOpacity onPress={() => pickImage('repair_after')} style={[styles.imagePlaceholder, { borderColor: theme.statusGreen, borderWidth: 1 }]}>
                 {images['repair_after'] ? (
                   <Image source={{ uri: images['repair_after'] }} style={styles.pickedImage} />
                 ) : (
-                  <Text style={[styles.placeholderText, { color: theme.statusGreen }]}>AFTER</Text>
+                  <Text style={[styles.placeholderText, { color: theme.statusGreen }]}>{translateAny("AFTER")}</Text>
                 )}
               </TouchableOpacity>
-              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>Aug 04, 2025</Text>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>{translateAny("Aug 04, 2025")}</Text>
             </View>
           </View>
         </View>
 
         {/* Item 2 */}
         <View style={styles.comparisonCard}>
-          <Text style={[styles.comparisonSubtitle, { color: theme.textPrimary }]}>Lake Bank Vegetation Clearance</Text>
+          <Text style={[styles.comparisonSubtitle, { color: theme.textPrimary }]}>{translateAny("Lake Bank Vegetation Clearance")}</Text>
           <View style={styles.imagesRow}>
             <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
               <TouchableOpacity onPress={() => pickImage('lake_before')} style={styles.imagePlaceholder}>
                 {images['lake_before'] ? (
                   <Image source={{ uri: images['lake_before'] }} style={styles.pickedImage} />
                 ) : (
-                  <Text style={[styles.placeholderText, { color: theme.textSecondary }]}>BEFORE</Text>
+                  <Text style={[styles.placeholderText, { color: theme.textSecondary }]}>{translateAny("BEFORE")}</Text>
                 )}
               </TouchableOpacity>
-              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>July 15, 2025</Text>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>{translateAny("July 15, 2025")}</Text>
             </View>
             <View style={[styles.imageWrapper, { backgroundColor: theme.surfaceLight }]}>
               <TouchableOpacity onPress={() => pickImage('lake_after')} style={[styles.imagePlaceholder, { borderColor: theme.statusGreen, borderWidth: 1 }]}>
                 {images['lake_after'] ? (
                   <Image source={{ uri: images['lake_after'] }} style={styles.pickedImage} />
                 ) : (
-                  <Text style={[styles.placeholderText, { color: theme.statusGreen }]}>AFTER</Text>
+                  <Text style={[styles.placeholderText, { color: theme.statusGreen }]}>{translateAny("AFTER")}</Text>
                 )}
               </TouchableOpacity>
-              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>Aug 04, 2025</Text>
+              <Text style={[styles.imageLabel, { color: theme.textSecondary }]}>{translateAny("Aug 04, 2025")}</Text>
             </View>
           </View>
         </View>
@@ -410,20 +412,20 @@ export const ConclusiveDataScreen = ({ route }: any) => {
       <Pressable style={styles.sheetOverlay} onPress={() => setFormatFor(null)}>
         <Pressable style={[styles.sheetContent, { backgroundColor: theme.surfaceLight }]} onPress={(e) => e.stopPropagation()}>
           <View style={styles.sheetHeader}>
-            <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>DOWNLOAD</Text>
+            <Text style={[styles.sheetTitle, { color: theme.textPrimary }]}>{translateAny("DOWNLOAD")}</Text>
             <Pressable onPress={() => setFormatFor(null)} hitSlop={8}>
               <X size={22} color={theme.textPrimary} strokeWidth={1} />
             </Pressable>
           </View>
-          <Text style={[styles.sheetSubtitle, { color: theme.textSecondary }]}>{formatFor.category}</Text>
+          <Text style={[styles.sheetSubtitle, { color: theme.textSecondary }]}>{translateAny(String(formatFor.category))}</Text>
           {([['xlsx', 'EXCEL', 'Spreadsheet (.xlsx)'], ['pdf', 'PDF', 'Document (.pdf)']] as const).map(([ext, label, hint]) => (
             <Pressable
               key={ext}
               style={[styles.formatRow, { borderBottomColor: theme.border }]}
               onPress={() => handleCategoryFormat(ext)}
             >
-              <Text style={[styles.formatLabel, { color: theme.textPrimary }]}>{label}</Text>
-              <Text style={[styles.formatHint, { color: theme.textSecondary }]}>{hint}</Text>
+              <Text style={[styles.formatLabel, { color: theme.textPrimary }]}>{translateAny(String(label))}</Text>
+              <Text style={[styles.formatHint, { color: theme.textSecondary }]}>{translateAny(String(hint))}</Text>
             </Pressable>
           ))}
         </Pressable>

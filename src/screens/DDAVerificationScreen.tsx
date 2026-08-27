@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { Text } from 'react-native-paper';
 import { MapPin, ShieldCheck, HardHat, TrendingUp, AlertCircle, Building2 } from 'lucide-react-native';
 
@@ -60,6 +61,7 @@ const WORK_TO_CATEGORY: Record<number, string> = {
 
 export const DDAVerificationScreen = ({ navigation }: any) => {
   const { theme } = useTheme();
+  const { translateAny, translateNumber } = useI18n();
   const [images, setImages] = useState<Record<string, string>>({});
 
   const pickImage = async (key: string) => {
@@ -78,50 +80,48 @@ export const DDAVerificationScreen = ({ navigation }: any) => {
   return (
     <ScrollView style={[styles.container, { backgroundColor: theme.background }]}>
       <View style={styles.header}>
-        <Text style={[styles.screenTitle, { color: theme.textPrimary }]}>DDA VERIFICATION</Text>
-        <Text style={[styles.screenSubtitle, { color: theme.textSecondary }]}>
-          Automated Compliance & Audit
-        </Text>
+        <Text style={[styles.screenTitle, { color: theme.textPrimary }]}>{translateAny("DDA VERIFICATION")}</Text>
+        <Text style={[styles.screenSubtitle, { color: theme.textSecondary }]}>{translateAny("Automated Compliance & Audit")}</Text>
       </View>
 
       {/* Division Hierarchy Scorecard */}
       <View style={styles.section}>
-        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>HIERARCHY SCORECARD</Text>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>{translateAny("HIERARCHY SCORECARD")}</Text>
         <View style={styles.hierarchyGrid}>
           <View style={[styles.hierarchyCard, { borderRightColor: theme.border, borderRightWidth: 1 }]}>
-            <Text style={[styles.hierarchyValue, { color: theme.textPrimary }]}>{mockDDAData.scores.division}</Text>
-            <Text style={[styles.hierarchyLabel, { color: theme.textSecondary }]}>Division</Text>
-            <Text style={[styles.hierarchyName, { color: theme.textSecondary }]}>{mockDDAData.hierarchy.division}</Text>
+            <Text style={[styles.hierarchyValue, { color: theme.textPrimary }]}>{translateAny(String(mockDDAData.scores.division))}</Text>
+            <Text style={[styles.hierarchyLabel, { color: theme.textSecondary }]}>{translateAny("Division")}</Text>
+            <Text style={[styles.hierarchyName, { color: theme.textSecondary }]}>{translateAny(String(mockDDAData.hierarchy.division))}</Text>
           </View>
           <View style={[styles.hierarchyCard, { borderRightColor: theme.border, borderRightWidth: 1 }]}>
-            <Text style={[styles.hierarchyValue, { color: theme.textPrimary }]}>{mockDDAData.scores.subDivision}</Text>
-            <Text style={[styles.hierarchyLabel, { color: theme.textSecondary }]}>Sub-Div</Text>
-            <Text style={[styles.hierarchyName, { color: theme.textSecondary }]}>{mockDDAData.hierarchy.subDivision}</Text>
+            <Text style={[styles.hierarchyValue, { color: theme.textPrimary }]}>{translateAny(String(mockDDAData.scores.subDivision))}</Text>
+            <Text style={[styles.hierarchyLabel, { color: theme.textSecondary }]}>{translateAny("Sub-Div")}</Text>
+            <Text style={[styles.hierarchyName, { color: theme.textSecondary }]}>{translateAny(String(mockDDAData.hierarchy.subDivision))}</Text>
           </View>
           <View style={styles.hierarchyCard}>
-            <Text style={[styles.hierarchyValue, { color: theme.textPrimary }]}>{mockDDAData.scores.park}</Text>
-            <Text style={[styles.hierarchyLabel, { color: theme.textSecondary }]}>Park</Text>
-            <Text style={[styles.hierarchyName, { color: theme.textSecondary }]}>{mockDDAData.hierarchy.park}</Text>
+            <Text style={[styles.hierarchyValue, { color: theme.textPrimary }]}>{translateAny(String(mockDDAData.scores.park))}</Text>
+            <Text style={[styles.hierarchyLabel, { color: theme.textSecondary }]}>{translateAny("Park")}</Text>
+            <Text style={[styles.hierarchyName, { color: theme.textSecondary }]}>{translateAny(String(mockDDAData.hierarchy.park))}</Text>
           </View>
         </View>
       </View>
 
       {/* Contractor Performance */}
       <View style={styles.section}>
-        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>CONTRACTOR VERIFICATION</Text>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>{translateAny("CONTRACTOR VERIFICATION")}</Text>
         <View style={[styles.contractorCard, { borderColor: theme.border }]}>
           <View style={styles.contractorHeader}>
             <HardHat size={20} color={theme.textPrimary} strokeWidth={1.5} />
-            <Text style={[styles.contractorName, { color: theme.textPrimary }]}>{mockDDAData.contractor.name}</Text>
+            <Text style={[styles.contractorName, { color: theme.textPrimary }]}>{translateAny(String(mockDDAData.contractor.name))}</Text>
           </View>
           <View style={styles.contractorMetrics}>
             <View style={styles.metric}>
-              <Text style={[styles.metricValue, { color: theme.textPrimary }]}>{mockDDAData.contractor.verificationScore}%</Text>
-              <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>AI Verified SLA</Text>
+              <Text style={[styles.metricValue, { color: theme.textPrimary }]}>{translateNumber(mockDDAData.contractor.verificationScore)}%</Text>
+              <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>{translateAny("AI Verified SLA")}</Text>
             </View>
             <View style={styles.metric}>
-              <Text style={[styles.metricValue, { color: theme.statusGreen }]}>COMPLIANT</Text>
-              <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>Status</Text>
+              <Text style={[styles.metricValue, { color: theme.statusGreen }]}>{translateAny("COMPLIANT")}</Text>
+              <Text style={[styles.metricLabel, { color: theme.textSecondary }]}>{translateAny("Status")}</Text>
             </View>
           </View>
         </View>
@@ -129,7 +129,7 @@ export const DDAVerificationScreen = ({ navigation }: any) => {
 
       {/* Sanctioned Works Verification */}
       <View style={styles.section}>
-        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>SANCTIONED WORKS vs DRONE IMAGERY</Text>
+        <Text style={[styles.sectionTitle, { color: theme.textSecondary }]}>{translateAny("SANCTIONED WORKS vs DRONE IMAGERY")}</Text>
         
         {mockDDAData.sanctionedWorks.map((work) => (
           <View key={work.id} style={[styles.workRow, { borderBottomColor: theme.border }]}>
@@ -140,7 +140,7 @@ export const DDAVerificationScreen = ({ navigation }: any) => {
               }}
               style={({ pressed }) => [styles.workHeader, { opacity: pressed ? 0.55 : 1 }]}
             >
-              <Text style={[styles.workName, { color: theme.textPrimary }]}>{work.task}</Text>
+              <Text style={[styles.workName, { color: theme.textPrimary }]}>{translateAny(String(work.task))}</Text>
               <View style={[
                 styles.statusBadge, 
                 { backgroundColor: work.status === 'completed' ? theme.surfaceLight : theme.accentRed + '20' }
@@ -157,11 +157,11 @@ export const DDAVerificationScreen = ({ navigation }: any) => {
             <View style={styles.verificationTags}>
               <View style={styles.tag}>
                 <MapPin size={12} color={work.geoTagged ? theme.statusGreen : theme.accentRed} />
-                <Text style={[styles.tagText, { color: theme.textSecondary }]}>Geo-Tagged</Text>
+                <Text style={[styles.tagText, { color: theme.textSecondary }]}>{translateAny("Geo-Tagged")}</Text>
               </View>
               <View style={styles.tag}>
                 <ShieldCheck size={12} color={work.aiVerified ? theme.statusGreen : theme.accentRed} />
-                <Text style={[styles.tagText, { color: theme.textSecondary }]}>AI Confirmed</Text>
+                <Text style={[styles.tagText, { color: theme.textSecondary }]}>{translateAny("AI Confirmed")}</Text>
               </View>
             </View>
 
@@ -171,14 +171,14 @@ export const DDAVerificationScreen = ({ navigation }: any) => {
                 {images[`${work.id}_before`] ? (
                   <Image source={{ uri: images[`${work.id}_before`] }} style={styles.pickedMiniImage} />
                 ) : (
-                  <Text style={[styles.miniPlaceholderText, { color: theme.textSecondary }]}>PLAN</Text>
+                  <Text style={[styles.miniPlaceholderText, { color: theme.textSecondary }]}>{translateAny("PLAN")}</Text>
                 )}
               </TouchableOpacity>
               <TouchableOpacity onPress={() => pickImage(`${work.id}_after`)} style={[styles.miniImagePlaceholder, { backgroundColor: theme.surfaceLight }]}>
                 {images[`${work.id}_after`] ? (
                   <Image source={{ uri: images[`${work.id}_after`] }} style={styles.pickedMiniImage} />
                 ) : (
-                  <Text style={[styles.miniPlaceholderText, { color: theme.statusGreen }]}>DRONE</Text>
+                  <Text style={[styles.miniPlaceholderText, { color: theme.statusGreen }]}>{translateAny("DRONE")}</Text>
                 )}
               </TouchableOpacity>
             </View>
