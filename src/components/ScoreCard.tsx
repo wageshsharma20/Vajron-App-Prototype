@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Pressable } from 'react-native';
 import { useTheme, typography } from '../theme';
 import { Text } from 'react-native-paper';
 
@@ -9,19 +9,22 @@ type ScoreCardProps = {
   iconName: string;
   trend: 'up' | 'down' | 'stable';
   changePercent: number;
+  /** Opens this metric's section in Reports. Omitted -> the card is inert, which
+   * is correct for the few metrics that have no Reports section behind them. */
+  onPress?: () => void;
   };
 
-export const ScoreCard = ({ label, score, trend, changePercent }: ScoreCardProps) => {
+export const ScoreCard = ({ label, score, trend, changePercent, onPress }: ScoreCardProps) => {
   const { theme } = useTheme();
 
   const trendColor = changePercent > 0 ? theme.statusGreen : changePercent < 0 ? theme.accentRed : theme.textSecondary;
 
-  return (
-    <View style={[styles.container, { borderBottomColor: theme.border }]}>
+  const body = (
+    <>
       <Text style={[styles.score, { color: theme.textPrimary }]}>
         {score}%
       </Text>
-      
+
       <View style={styles.metaContainer}>
         <Text style={[styles.label, { color: theme.textSecondary }]} numberOfLines={2}>
           {label}
@@ -30,7 +33,25 @@ export const ScoreCard = ({ label, score, trend, changePercent }: ScoreCardProps
           {changePercent > 0 ? '+' : ''}{changePercent}%
         </Text>
       </View>
-    </View>
+    </>
+  );
+
+  // A plain View when there is nowhere to go, so the card never offers a press
+  // it cannot honour.
+  if (!onPress) {
+    return <View style={[styles.container, { borderBottomColor: theme.border }]}>{body}</View>;
+  }
+
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [
+        styles.container,
+        { borderBottomColor: theme.border, opacity: pressed ? 0.55 : 1 },
+      ]}
+    >
+      {body}
+    </Pressable>
   );
 };
 

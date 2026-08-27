@@ -34,13 +34,27 @@ export interface InspectionAccordionProps {
   index: number;
   /** Downloads this category's styled export (xlsx). Omitted -> icon hidden. */
   onDownload?: (category: InspectionCategory) => void;
+  /** Deep-link control. `undefined` means no link is active and the row keeps
+   * whatever the user set. A boolean means a link IS active: the targeted row
+   * opens and every other row closes, so the reader sees exactly the section
+   * they asked for and the list's height stops depending on earlier taps. */
+  autoExpand?: boolean;
+  /** Changes on every deep-link tap, so tapping the same section twice re-applies
+   * instead of being skipped as an unchanged prop. */
+  focusNonce?: number;
+  /** Reports this row's measured height so the screen can work out where the
+   * row sits. Height is used rather than the reported y because on web onLayout
+   * is backed by a ResizeObserver: it fires when a row changes SIZE, but not
+   * when a row merely MOVES because a sibling collapsed — which would leave
+   * every unchanged row holding a stale position. */
+  onLayoutOffset?: (id: string, height: number) => void;
 }
 
 const iconMap: Record<string, any> = {
   Trees, Leaf, Droplets, Sparkles, Wrench, ShieldCheck, Waves, Palette,
 };
 
-export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, index, onDownload }) => {
+export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, index, onDownload, autoExpand, focusNonce, onLayoutOffset }) => {
   const { theme } = useTheme();
   const [expanded, setExpanded] = useState(false);
   
@@ -56,6 +70,17 @@ export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, 
       useNativeDriver: true,
     }).start();
   }, [index, fadeAnim]);
+
+  useEffect(() => {
+    if (autoExpand === undefined) return;
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    setExpanded(autoExpand);
+    Animated.timing(rotateAnim, {
+      toValue: autoExpand ? 1 : 0,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
+  }, [autoExpand, focusNonce, rotateAnim]);
 
   const toggleExpand = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
@@ -99,7 +124,10 @@ export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, 
   });
 
   return (
-    <Animated.View style={[styles.container, { opacity: fadeAnim, borderBottomColor: theme.border }]}>
+    <Animated.View
+      onLayout={(e) => onLayoutOffset?.(data.id, e.nativeEvent.layout.height)}
+      style={[styles.container, { opacity: fadeAnim, borderBottomColor: theme.border }]}
+    >
       <Pressable onPress={toggleExpand} style={styles.header}>
         <View style={styles.headerLeft}>
           <IconComponent size={16} color={theme.textPrimary} strokeWidth={1.5} />

@@ -1,15 +1,56 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, RefreshControl } from 'react-native';
+import { View, StyleSheet, ScrollView, RefreshControl, Pressable } from 'react-native';
 import { useTheme, typography } from '../theme';
 import { CircularScore } from '../components/CircularScore';
 import { ScoreCard } from '../components/ScoreCard';
 import { DroneInfoTable } from '../components/DroneInfoTable';
-import { AlertBanner } from '../components/AlertBanner';
 import { mockParkInfo, mockInspection } from '../data/mockData';
 import { useLiveScores } from '../replay/useLiveScores';
 import { useReplay, formatTimecode } from '../replay/ReplayProvider';
 import { Text } from 'react-native-paper';
 import { InspectionCategory, ScoreData } from '../types';
+
+/** Dashboard metric -> the Reports section that explains it. Every grid card
+ * opens Reports; the ones listed here also expand their own section, so a tap
+ * lands on the detail behind the number rather than a closed list. The few
+ * metrics with no dedicated section (Citizen Readiness, Maintenance Priority)
+ * are deliberately absent and simply open Reports. */
+const SCORE_TO_CATEGORY: Record<string, string> = {
+  'tree-survival': 'plantation-green-cover',
+  'green-cover': 'plantation-green-cover',
+  'lawn-health': 'plantation-green-cover',
+  'plantation-health': 'plant-health',
+  cleanliness: 'cleanliness',
+  irrigation: 'irrigation',
+  infrastructure: 'infrastructure',
+  safety: 'safety-security',
+  'encroachment-risk': 'safety-security',
+  'layout-compliance': 'landscape-quality',
+};
+
+const RECOMMENDATIONS = [
+  {
+    id: 'prune-zone-c',
+    title: 'Schedule Pruning (Zone C)',
+    detail: '12 trees affecting light penetration',
+    impact: 'High Impact',
+    categoryId: 'plantation-green-cover',
+  },
+  {
+    id: 'pathway-crack',
+    title: 'Repair Pathway Crack (North Gate)',
+    detail: 'Preventing water accumulation',
+    impact: 'Medium Impact',
+    categoryId: 'infrastructure',
+  },
+  {
+    id: 'floating-waste',
+    title: 'Clear Floating Waste (Lake)',
+    detail: '6 plastic items detected',
+    impact: 'Immediate',
+    categoryId: 'water-bodies',
+  },
+];
 
 export const LiveDataFeedScreen = ({ navigation }: any) => {
   const { theme } = useTheme();
@@ -27,7 +68,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
       .flatMap((section) =>
         section.items
           .filter((item) => item.status !== 'good')
-          .map((item) => ({ ...item, category: section.category }))
+          .map((item) => ({ ...item, category: section.category, categoryId: section.id }))
       )
       .sort((a, b) => {
         const severityMap: Record<string, number> = { critical: 3, issue: 2, attention: 1 };
@@ -50,23 +91,23 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
   const overallScore = liveScores[0];
   const gridScores = liveScores.slice(1);
 
-  const { totalIssues, alertSection } = useMemo(() => {
-    const inspectionData = mockInspection as InspectionCategory[];
-    const critical = inspectionData.filter((s) => s.status === 'critical');
-    const high = inspectionData.filter((s) => s.issueCount >= 3);
-    return {
-      totalIssues: inspectionData.reduce((sum, s) => sum + s.issueCount, 0),
-      alertSection: critical.length > 0 ? critical[0] : (high.length > 0 ? high[0] : null)
-    };
-  }, []);
+  const totalIssues = useMemo(
+    () => (mockInspection as InspectionCategory[]).reduce((sum, s) => sum + s.issueCount, 0),
+    [],
+  );
+
+  /** Opens Reports, expanding one section when the tapped thing maps to one.
+   * The nonce makes a repeat tap on the same section re-open and re-scroll it
+   * rather than being swallowed as an identical navigation. */
+  const openReports = useCallback(
+    (categoryId?: string) => {
+      navigation.navigate('Reports', categoryId ? { focusCategoryId: categoryId, focusNonce: Date.now() } : {});
+    },
+    [navigation],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      {alertSection && (
-        <AlertBanner 
-          message={`${alertSection.issueCount} issues found — ${alertSection.category}`}
-        />
-      )}
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
@@ -123,7 +164,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
               iconName={score.icon}
               trend={score.trend}
               changePercent={score.changePercent}
-              
+              onPress={() => openReports(SCORE_TO_CATEGORY[score.id])}
             />
           ))}
         </View>
@@ -134,11 +175,12 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
             <Text style={[styles.sectionTitle, { color: theme.textPrimary }]}>HIGH-PRIORITY DEFECTS</Text>
             <View style={styles.issuesList}>
               {topIssues.map((issue: any, index: number) => (
-                <View 
-                  key={issue.id} 
-                  style={[
-                    styles.issueRow, 
-                    { borderBottomColor: theme.border }
+                <Pressable
+                  key={issue.id}
+                  onPress={() => openReports(issue.categoryId)}
+                  style={({ pressed }) => [
+                    styles.issueRow,
+                    { borderBottomColor: theme.border, opacity: pressed ? 0.55 : 1 },
                   ]}
                 >
                   <View style={styles.issueContent}>
@@ -146,7 +188,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                     <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{issue.value}</Text>
                   </View>
                   <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>{issue.category}</Text>
-                </View>
+                </Pressable>
               ))}
             </View>
           </View>
@@ -156,27 +198,22 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
         <View style={styles.issuesSection}>
           <Text style={[styles.sectionTitle, { color: theme.textPrimary }]}>AI MAINTENANCE RECOMMENDATIONS</Text>
           <View style={styles.issuesList}>
-            <View style={[styles.issueRow, { borderBottomColor: theme.border }]}>
-              <View style={styles.issueContent}>
-                <Text style={[styles.issueName, { color: theme.textPrimary }]}>Schedule Pruning (Zone C)</Text>
-                <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>12 trees affecting light penetration</Text>
-              </View>
-              <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>High Impact</Text>
-            </View>
-            <View style={[styles.issueRow, { borderBottomColor: theme.border }]}>
-              <View style={styles.issueContent}>
-                <Text style={[styles.issueName, { color: theme.textPrimary }]}>Repair Pathway Crack (North Gate)</Text>
-                <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>Preventing water accumulation</Text>
-              </View>
-              <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>Medium Impact</Text>
-            </View>
-            <View style={[styles.issueRow, { borderBottomColor: theme.border }]}>
-              <View style={styles.issueContent}>
-                <Text style={[styles.issueName, { color: theme.textPrimary }]}>Clear Floating Waste (Lake)</Text>
-                <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>6 plastic items detected</Text>
-              </View>
-              <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>Immediate</Text>
-            </View>
+            {RECOMMENDATIONS.map((rec) => (
+              <Pressable
+                key={rec.id}
+                onPress={() => openReports(rec.categoryId)}
+                style={({ pressed }) => [
+                  styles.issueRow,
+                  { borderBottomColor: theme.border, opacity: pressed ? 0.55 : 1 },
+                ]}
+              >
+                <View style={styles.issueContent}>
+                  <Text style={[styles.issueName, { color: theme.textPrimary }]}>{rec.title}</Text>
+                  <Text style={[styles.issueValue, { color: theme.textSecondary }]} numberOfLines={1}>{rec.detail}</Text>
+                </View>
+                <Text style={[styles.issueCategory, { color: theme.textSecondary }]}>{rec.impact}</Text>
+              </Pressable>
+            ))}
           </View>
         </View>
 

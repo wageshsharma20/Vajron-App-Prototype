@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import { View, ScrollView, StyleSheet, TextInput, Pressable, Image, TouchableOpacity, Platform, Alert } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
@@ -25,7 +25,7 @@ const PARK_REPORT_MAP: Record<string, { file: string; slug: string }> = {
   'smriti-van-mayur-vihar': { file: 'Smriti_Van_AI_Detection_Report.xlsx', slug: 'smriti-van-mayur-vihar' },
 };
 
-export const ConclusiveDataScreen = () => {
+export const ConclusiveDataScreen = ({ route }: any) => {
   const { theme } = useTheme();
   const [searchQuery, setSearchQuery] = useState('');
   const [images, setImages] = useState<Record<string, string>>({});
@@ -37,6 +37,83 @@ export const ConclusiveDataScreen = () => {
   // The category whose download icon was tapped — drives the format sheet.
   // Null means the sheet is closed.
   const [formatFor, setFormatFor] = useState<InspectionCategory | null>(null);
+
+  // Deep link from the Dashboard: open that section and bring it into view.
+  // focusNonce changes on every tap, so tapping the same metric twice re-scrolls
+  // instead of being dropped as an unchanged param.
+  const focusCategoryId: string | undefined = route?.params?.focusCategoryId;
+  const focusNonce: number | undefined = route?.params?.focusNonce;
+  const scrollRef = useRef<ScrollView>(null);
+  // Each row's measured height, plus the list's own offset inside the ScrollView.
+  // A row's position is derived by summing the heights above it rather than
+  // trusting a reported y — see the note on onLayoutOffset in InspectionAccordion.
+  const rowHeights = useRef<Record<string, number>>({});
+  const listOffset = useRef(0);
+  // Row order as currently rendered (the search box can filter rows out).
+  const orderRef = useRef<string[]>([]);
+
+  // Set while a deep link is waiting to be scrolled to. Scrolling is driven by
+  // the target row's own onLayout rather than a timer: the row moves as other
+  // sections collapse, and its layout callback is the only moment its final
+  // position is actually known.
+  const pendingFocus = useRef<string | null>(null);
+
+  /** Scrolls the named category to the top of the list, from current heights. */
+  const scrollToCategory = useCallback(
+    (id: string) => {
+      const node = scrollRef.current as any;
+      if (!node?.scrollTo) return;
+      const idx = orderRef.current.indexOf(id);
+      if (idx < 0) return;
+      const above = orderRef.current
+        .slice(0, idx)
+        .reduce((sum, rowId) => sum + (rowHeights.current[rowId] ?? 0), 0);
+      const top = Math.max(0, listOffset.current + above - 8);
+
+      if (Platform.OS === 'web') {
+        // On web the ScrollView is a DOM node, and its scrollTo() is a no-op in
+        // some engines (verified here: every argument form left scrollTop at 0)
+        // while assigning scrollTop always works. Jumping rather than animating
+        // also suits a list that has just reflowed.
+        const el = (node.getScrollableNode?.() ?? node) as HTMLElement;
+        if (el && typeof el.scrollTop === 'number') el.scrollTop = top;
+        return;
+      }
+      node.scrollTo({ y: top, animated: true });
+    },
+    [],
+  );
+
+  const rememberOffset = useCallback(
+    (id: string, height: number) => {
+      rowHeights.current[id] = height;
+      // A height change means the list reflowed, so anything queued to be
+      // brought into view needs its position recomputed from the new heights.
+      if (pendingFocus.current) scrollToCategory(pendingFocus.current);
+    },
+    [scrollToCategory],
+  );
+
+  useEffect(() => {
+    if (!focusCategoryId) return;
+    pendingFocus.current = focusCategoryId;
+
+    // Rows shift while the previously-open section collapses, so one scroll is
+    // not enough: re-apply it as the list settles. Each pass uses the freshest
+    // reported offset, and onLayout corrects it in between, so the position
+    // converges instead of depending on a single lucky moment.
+    // The collapse animation runs for 300ms and React may batch the resulting
+    // height reports after that, so corrections have to outlast it — an earlier
+    // 600ms window closed while a stale expanded height was still in the sum and
+    // left the list overshot by exactly that row's height.
+    const passes = [0, 150, 350, 600, 900].map((delay) =>
+      setTimeout(() => scrollToCategory(focusCategoryId), delay),
+    );
+    // Stop steering afterwards, so ordinary scrolling is never fought.
+    const release = setTimeout(() => { pendingFocus.current = null; }, 1100);
+
+    return () => { passes.forEach(clearTimeout); clearTimeout(release); };
+  }, [focusCategoryId, focusNonce, scrollToCategory]);
 
   const pickImage = async (key: string) => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -118,9 +195,11 @@ export const ConclusiveDataScreen = () => {
     });
   }, [searchQuery, inspectionData]);
 
+  orderRef.current = filteredData.map((cat) => cat.id);
+
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-    <ScrollView style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+    <ScrollView ref={scrollRef} style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
       {/* Header Bar */}
       <View style={styles.header}>
         <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
@@ -148,9 +227,20 @@ export const ConclusiveDataScreen = () => {
       </View>
 
       {/* Inspection Accordions */}
-      <View style={styles.accordionsContainer}>
+      <View
+        style={styles.accordionsContainer}
+        onLayout={(e) => { listOffset.current = e.nativeEvent.layout.y; }}
+      >
         {filteredData.map((category, index) => (
-          <InspectionAccordion key={category.id} data={category} index={index} onDownload={setFormatFor} />
+          <InspectionAccordion
+            key={category.id}
+            data={category}
+            index={index}
+            onDownload={setFormatFor}
+            autoExpand={focusCategoryId ? category.id === focusCategoryId : undefined}
+            focusNonce={focusNonce}
+            onLayoutOffset={rememberOffset}
+          />
         ))}
       </View>
 
