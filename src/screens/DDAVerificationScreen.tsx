@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, TouchableOpacity, Pressable } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { useTheme, typography } from '../theme';
 import { Text } from 'react-native-paper';
@@ -50,7 +50,15 @@ const mockDDAData = {
   ]
 };
 
-export const DDAVerificationScreen = () => {
+/** Which Reports section covers each sanctioned work, so the audit row leads to
+ * the evidence behind its verdict. */
+const WORK_TO_CATEGORY: Record<number, string> = {
+  1: 'infrastructure',
+  2: 'plantation-green-cover',
+  3: 'water-bodies',
+};
+
+export const DDAVerificationScreen = ({ navigation }: any) => {
   const { theme } = useTheme();
   const [images, setImages] = useState<Record<string, string>>({});
 
@@ -125,7 +133,13 @@ export const DDAVerificationScreen = () => {
         
         {mockDDAData.sanctionedWorks.map((work) => (
           <View key={work.id} style={[styles.workRow, { borderBottomColor: theme.border }]}>
-            <View style={styles.workHeader}>
+            <Pressable
+              onPress={() => {
+                const target = WORK_TO_CATEGORY[work.id];
+                if (target) navigation.navigate('Reports', { focusCategoryId: target, focusNonce: Date.now() });
+              }}
+              style={({ pressed }) => [styles.workHeader, { opacity: pressed ? 0.55 : 1 }]}
+            >
               <Text style={[styles.workName, { color: theme.textPrimary }]}>{work.task}</Text>
               <View style={[
                 styles.statusBadge, 
@@ -138,7 +152,7 @@ export const DDAVerificationScreen = () => {
                   {work.status === 'unexecuted' ? 'UNEXECUTED' : 'VERIFIED'}
                 </Text>
               </View>
-            </View>
+            </Pressable>
             
             <View style={styles.verificationTags}>
               <View style={styles.tag}>

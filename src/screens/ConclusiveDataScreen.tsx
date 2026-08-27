@@ -12,6 +12,28 @@ import { useLiveInspection } from '../replay/useLiveInspection';
 import { useReplay } from '../replay/ReplayProvider';
 import type { InspectionCategory } from '../types';
 
+/** Which section explains each Changes-this-month row. Rows with no dedicated
+ * section are absent and stay inert rather than opening something unrelated. */
+const CHANGE_TO_CATEGORY: Record<string, string> = {
+  'green-cover': 'plantation-green-cover',
+  'new-plantation-survival': 'plantation-green-cover',
+  'tree-canopy-growth': 'plantation-green-cover',
+  'lawn-health': 'plantation-green-cover',
+  'damaged-infrastructure': 'infrastructure',
+  'pathway-length': 'infrastructure',
+  'work-completion': 'infrastructure',
+  encroachment: 'safety-security',
+  'cleanliness-score': 'cleanliness',
+  'irrigation-inventory': 'irrigation',
+  'asset-inventory': 'asset-inventory',
+  'gps-location': 'asset-inventory',
+  'tree-geotagging': 'asset-inventory',
+  'bench-count': 'asset-inventory',
+  'dustbin-count': 'asset-inventory',
+  'light-pole-count': 'asset-inventory',
+  'play-equipment': 'asset-inventory',
+};
+
 // Maps the app's internal park id to the slug the report generator uses for
 // both the whole-park workbook (public/reports/<file>.xlsx, unchanged) and the
 // per-category exports (public/reports/categories/<slug>/<categoryId>.xlsx).
@@ -38,11 +60,23 @@ export const ConclusiveDataScreen = ({ route }: any) => {
   // Null means the sheet is closed.
   const [formatFor, setFormatFor] = useState<InspectionCategory | null>(null);
 
-  // Deep link from the Dashboard: open that section and bring it into view.
-  // focusNonce changes on every tap, so tapping the same metric twice re-scrolls
-  // instead of being dropped as an unchanged param.
-  const focusCategoryId: string | undefined = route?.params?.focusCategoryId;
-  const focusNonce: number | undefined = route?.params?.focusNonce;
+  // Two ways a section gets focused: a deep link from the Dashboard (route
+  // params) and a tap on a Changes-this-month row further down this same screen
+  // (local state). Both stamp a nonce, so the most recent one simply wins and a
+  // repeat tap still re-opens and re-scrolls rather than being seen as no change.
+  const [localFocus, setLocalFocus] = useState<{ id: string; nonce: number } | null>(null);
+  const routeFocus = route?.params?.focusCategoryId
+    ? { id: route.params.focusCategoryId as string, nonce: (route.params.focusNonce as number) ?? 0 }
+    : null;
+  const activeFocus =
+    localFocus && routeFocus ? (localFocus.nonce > routeFocus.nonce ? localFocus : routeFocus) : localFocus ?? routeFocus;
+  const focusCategoryId: string | undefined = activeFocus?.id;
+  const focusNonce: number | undefined = activeFocus?.nonce;
+
+  /** Opens a section from elsewhere on this screen. */
+  const focusCategory = useCallback((id: string) => {
+    setLocalFocus({ id, nonce: Date.now() });
+  }, []);
   const scrollRef = useRef<ScrollView>(null);
   // Each row's measured height, plus the list's own offset inside the ScrollView.
   // A row's position is derived by summing the heights above it rather than
@@ -199,7 +233,19 @@ export const ConclusiveDataScreen = ({ route }: any) => {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-    <ScrollView ref={scrollRef} style={[styles.container, { backgroundColor: theme.background }]} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+    <ScrollView
+      ref={scrollRef}
+      style={[styles.container, { backgroundColor: theme.background }]}
+      contentContainerStyle={styles.content}
+      showsVerticalScrollIndicator={false}
+      // Fires once the list has finished reflowing after a section opened or
+      // closed — the first moment every row height is final. Timers alone were
+      // landing on stale heights and overshooting by exactly the height of the
+      // section that was still collapsing.
+      onContentSizeChange={() => {
+        if (pendingFocus.current) scrollToCategory(pendingFocus.current);
+      }}
+    >
       {/* Header Bar */}
       <View style={styles.header}>
         <Text style={[styles.title, { color: theme.textPrimary }]}>Past Data</Text>
@@ -255,8 +301,9 @@ export const ConclusiveDataScreen = ({ route }: any) => {
             const statusColor = isImproved ? theme.statusGreen : isDeclined ? theme.accentRed : theme.textSecondary;
             const sign = change.change > 0 ? '+' : '';
 
-            return (
-              <View key={change.id} style={[styles.changeRow, { borderBottomColor: theme.border }]}>
+            const target = CHANGE_TO_CATEGORY[change.id];
+            const inner = (
+              <>
                 <Text style={[styles.changeMetric, { color: theme.textPrimary }]}>{change.metric}</Text>
                 <View style={styles.changeValuesRow}>
                   <Text style={[styles.changeValues, { color: theme.textSecondary }]}>
@@ -266,7 +313,27 @@ export const ConclusiveDataScreen = ({ route }: any) => {
                     {sign}{change.change}{change.unit === '%' ? '%' : ''}
                   </Text>
                 </View>
-              </View>
+              </>
+            );
+
+            if (!target) {
+              return (
+                <View key={change.id} style={[styles.changeRow, { borderBottomColor: theme.border }]}>
+                  {inner}
+                </View>
+              );
+            }
+            return (
+              <Pressable
+                key={change.id}
+                onPress={() => focusCategory(target)}
+                style={({ pressed }) => [
+                  styles.changeRow,
+                  { borderBottomColor: theme.border, opacity: pressed ? 0.55 : 1 },
+                ]}
+              >
+                {inner}
+              </Pressable>
             );
           })}
         </View>
