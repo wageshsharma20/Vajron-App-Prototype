@@ -25,7 +25,7 @@ export const RecordingPlayerScreen: React.FC<Props> = ({ onBack }) => {
   // Playback is the app-wide replay clock, so playing here also advances the
   // Dashboard scores and Reports tallies.
   const { player, isPlaying, toggle, restart, park } = useReplay();
-  const [showOverlays, setShowOverlays] = useState(true);
+  const [showOverlays, setShowOverlays] = useState(false);
   const [isMapMain, setIsMapMain] = useState(false);
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [showSettings, setShowSettings] = useState(false);
