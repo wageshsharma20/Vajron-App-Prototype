@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
   logoGroup: {
     alignItems: 'center',
     marginBottom: 80,
+    transform: [{ translateY: -100 }],
   },
   loaderGroup: {
     alignItems: 'center',
