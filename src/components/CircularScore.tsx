@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedProps, withTiming, Easing, withDelay } from 'react-native-reanimated';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 
 // Create animated SVG path
 const AnimatedPath = Animated.createAnimatedComponent(Path);
@@ -16,6 +17,7 @@ type CircularScoreProps = {
 
 export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: CircularScoreProps) => {
   const { theme } = useTheme();
+  const { translateNumber } = useI18n();
   
   const radius = (size - strokeWidth) / 2;
   const cx = size / 2;
@@ -67,7 +69,7 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
           />
         </Svg>
         <View style={styles.scoreOverlay}>
-          <Text style={[styles.scoreText, { color: theme.textPrimary, fontSize: size * 0.28 }]}>{score}%</Text>
+          <Text style={[styles.scoreText, { color: theme.textPrimary, fontSize: size * 0.28 }]}>{translateNumber(score)}%</Text>
         </View>
       </View>
       {label && (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Pressable } from 'react-native';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { Text } from 'react-native-paper';
 
 type ScoreCardProps = {
@@ -16,13 +17,14 @@ type ScoreCardProps = {
 
 export const ScoreCard = ({ label, score, trend, changePercent, onPress }: ScoreCardProps) => {
   const { theme } = useTheme();
+  const { translateNumber } = useI18n();
 
   const trendColor = changePercent > 0 ? theme.statusGreen : changePercent < 0 ? theme.accentRed : theme.textSecondary;
 
   const body = (
     <>
       <Text style={[styles.score, { color: theme.textPrimary }]}>
-        {score}%
+        {translateNumber(score)}%
       </Text>
 
       <View style={styles.metaContainer}>
@@ -30,7 +32,7 @@ export const ScoreCard = ({ label, score, trend, changePercent, onPress }: Score
           {label}
         </Text>
         <Text style={[styles.trend, { color: trendColor }]}>
-          {changePercent > 0 ? '+' : ''}{changePercent}%
+          {changePercent > 0 ? '+' : ''}{translateNumber(changePercent)}%
         </Text>
       </View>
     </>

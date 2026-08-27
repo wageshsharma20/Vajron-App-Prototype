@@ -7,7 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useReplay } from '../replay/ReplayProvider';
 
 export const StatusStrip = () => {
-  const { lang, setLang } = useI18n();
+  const { lang, setLang, translateAny, translateNumber } = useI18n();
   const { theme } = useTheme();
   const insets = useSafeAreaInsets();
   const { park } = useReplay();
@@ -38,7 +38,7 @@ export const StatusStrip = () => {
             numberOfLines={1} 
             ellipsizeMode="tail"
           >
-            {park.name}
+            {translateAny(park.name)}
           </Text>
         </View>
       </View>
@@ -49,7 +49,7 @@ export const StatusStrip = () => {
             {lang === 'en' ? 'अ' : 'A'}
           </Text>
         </TouchableOpacity>
-        <Text style={[styles.time, { color: theme.textPrimary }]}>{formatTime(time)}</Text>
+        <Text style={[styles.time, { color: theme.textPrimary }]}>{translateNumber(formatTime(time))}</Text>
       </View>
 
     </View>

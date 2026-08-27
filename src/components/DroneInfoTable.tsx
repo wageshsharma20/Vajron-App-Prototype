@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { mockParkInfo } from '../data/mockData';
 import { Text } from 'react-native-paper';
 
@@ -12,6 +13,7 @@ type Row = {
 
 export const DroneInfoTable = () => {
   const { theme } = useTheme();
+  const { translateAny, translateNumber } = useI18n();
 
   const rows: Row[] = [
     { id: '1', property: 'Height', value: mockParkInfo.altitude },

@@ -12,6 +12,7 @@ import { useReplay } from './ReplayProvider';
 import { replayEvents, type ReplayEvent } from './replayData';
 
 export const ReplayNotifications = () => {
+  const { translateAny } = useI18n();
   const { time, isPlaying, hasStarted, hasSurvey, datasetId } = useReplay();
   const [active, setActive] = useState<ReplayEvent | null>(null);
   const firedRef = useRef<Set<number>>(new Set());

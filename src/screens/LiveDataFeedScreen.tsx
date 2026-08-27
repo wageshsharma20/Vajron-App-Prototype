@@ -54,7 +54,7 @@ const RECOMMENDATIONS = [
 ];
 
 export const LiveDataFeedScreen = ({ navigation }: any) => {
-  const { t, translateMetric } = useI18n();
+  const { t, translateMetric, translateNumber, translateAny } = useI18n();
   const { theme } = useTheme();
   const [refreshing, setRefreshing] = useState(false);
 
@@ -125,15 +125,15 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
 
         {/* Overall Park Health - Zen Style */}
         <View style={styles.overallSection}>
-          <CircularScore score={overallScore.score} label="Overall Score" size={140} />
+          <CircularScore score={overallScore.score} label={translateAny("Overall Score")} size={140} />
           <View style={styles.overallMeta}>
             <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
               {!hasSurvey
-                ? 'Survey scheduled'
+                ? translateAny("Survey scheduled")
                 : hasStarted
-                  ? `${isPlaying ? 'Analysing recording' : 'Recording paused'} · ${formatTimecode(time)}`
-                  : `Surveyed ${park.surveyDate}`}
+                  ? `${translateAny(isPlaying ? "Analysing recording" : "Recording paused")} · ${translateNumber(formatTimecode(time))}`
+                  : `${translateAny("Surveyed")} ${translateAny(park.surveyDate)}`}
             </Text>
             {hasSurvey && (
               <Text
