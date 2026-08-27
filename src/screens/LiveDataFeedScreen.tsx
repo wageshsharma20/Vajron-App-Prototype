@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, RefreshControl, Pressable } from 'react-native';
+import { View, StyleSheet, ScrollView, RefreshControl, Pressable, Image } from 'react-native';
 import { useTheme, typography } from '../theme';
 import { CircularScore } from '../components/CircularScore';
 import { ScoreCard } from '../components/ScoreCard';
@@ -117,8 +117,10 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
       >
         {/* Overall Park Health - Zen Style */}
         <View style={styles.overallSection}>
-          <CircularScore score={overallScore.score} label="Overall Score" size={140} />
-          <View style={styles.overallMeta}>
+          <Image source={require('../../assets/dda-logo.png')} style={styles.overallLogo} resizeMode="contain" />
+          <View style={styles.overallCenter}>
+            <CircularScore score={overallScore.score} label="Overall Score" size={140} />
+            <View style={styles.overallMeta}>
             <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
               {!hasSurvey
@@ -141,7 +143,9 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                 {isPlaying ? 'LIVE' : hasStarted ? 'PAUSED' : 'SURVEY COMPLETE'}
               </Text>
             )}
+            </View>
           </View>
+          <Image source={require('../../assets/dda-greens-logo.jpg')} style={styles.overallLogo} resizeMode="contain" />
         </View>
 
         {/* System Status - Minimal Text Only */}
@@ -240,8 +244,19 @@ const styles = StyleSheet.create({
     paddingBottom: 64,
   },
   overallSection: {
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 10, // Nudges the score below the two logos, not flush against them
     marginBottom: 12, // Reduced for tighter grouping
+  },
+  overallCenter: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  overallLogo: {
+    width: 40,
+    height: 40,
   },
   overallMeta: {
     alignItems: 'center',
