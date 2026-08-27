@@ -20,8 +20,22 @@ export const ZenLoader = ({ text = "INITIALIZING..." }: { text?: string }) => {
   const opacity = useSharedValue(1);
 
   useEffect(() => {
-    scaleX.value = 1;
-    opacity.value = 1;
+    scaleX.value = withRepeat(
+      withSequence(
+        withTiming(1, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
+        withTiming(0.01, { duration: 1500, easing: Easing.inOut(Easing.ease) })
+      ),
+      -1,
+      true
+    );
+    opacity.value = withRepeat(
+      withSequence(
+        withTiming(0.2, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
+        withTiming(1, { duration: 1500, easing: Easing.inOut(Easing.ease) })
+      ),
+      -1,
+      true
+    );
   }, []);
 
   const lineStyle = useAnimatedStyle(() => {
