@@ -89,13 +89,15 @@ const styles = StyleSheet.create({
   
   
   ddaLogo: {
-    width: 403,
-    height: 115,
+    width: 363,
+    height: 104,
     marginBottom: 60,
+    transform: [{ translateX: 2 }, { translateY: -10 }],
   },
   greensLogo: {
-    width: 72,
-    height: 72,
+    width: 65,
+    height: 65,
     marginTop: 60,
+    transform: [{ translateY: 10 }],
   }
 });
