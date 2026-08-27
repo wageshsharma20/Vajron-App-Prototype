@@ -45,7 +45,7 @@ export const StatusStrip = () => {
       
       <View style={styles.right}>
         <TouchableOpacity onPress={() => setLang(lang === 'en' ? 'hi' : 'en')} style={{ marginRight: 8 }}>
-          <Text style={[styles.time, { color: theme.textPrimary, fontFamily: typography.fonts.bold }]}>
+          <Text style={[styles.time, { color: theme.accentBlue, fontFamily: typography.fonts.bold, fontSize: 16, backgroundColor: theme.accentBlue + "15", paddingHorizontal: 6, paddingVertical: 1, borderRadius: 4, overflow: "hidden" }]}>
             {lang === 'en' ? 'अ' : 'A'}
           </Text>
         </TouchableOpacity>
