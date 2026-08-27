@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Wifi, BatteryMedium, MapPin, Sun, Moon } from 'lucide-react-native';
+import { Wifi, MapPin, Sun, Moon } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
-import { mockParkInfo } from '../data/mockData';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useReplay } from '../replay/ReplayProvider';
 
@@ -29,10 +28,6 @@ export const StatusStrip = () => {
 
         <View style={styles.item}>
           <Wifi size={13} color={theme.statusGreen} />
-        </View>
-        <View style={styles.item}>
-          <BatteryMedium size={13} color={theme.statusGreen} />
-          <Text style={[styles.text, { color: theme.textSecondary }]}>{mockParkInfo.battery}%</Text>
         </View>
         <View style={[styles.item, { flexShrink: 1 }]}>
           <MapPin size={13} color={theme.textSecondary} />
