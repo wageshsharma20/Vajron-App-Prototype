@@ -89,9 +89,10 @@ const styles = StyleSheet.create({
     letterSpacing: 4,
   },
   logoGroup: {
+    position: 'absolute',
+    top: 100,
     alignItems: 'center',
-    marginBottom: 80,
-    transform: [{ translateY: -100 }],
+    width: '100%',
   },
   loaderGroup: {
     alignItems: 'center',
