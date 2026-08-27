@@ -1,3 +1,4 @@
+import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -20,7 +21,9 @@ import Animated, { FadeOut, FadeIn } from 'react-native-reanimated';
 
 const Tab = createBottomTabNavigator();
 
-const { LightTheme } = adaptNavigationTheme({
+
+
+  const { LightTheme } = adaptNavigationTheme({
   reactNavigationLight: NavigationDefaultTheme,
   reactNavigationDark: NavigationDarkTheme,
 }) as any;
@@ -96,6 +99,16 @@ const AppNavigator = () => {
 };
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_600SemiBold,
+    Inter_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
   
   const webShadow = Platform.OS === 'web' ? { boxShadow: "none" } : {};
 
