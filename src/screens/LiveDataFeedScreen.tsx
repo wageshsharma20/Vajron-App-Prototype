@@ -131,7 +131,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
               <Text
                 style={[
                   styles.surveyDate,
-                  { color: hasStarted ? theme.accentRed : theme.textSecondary, marginTop: 2 },
+                  { color: hasStarted ? theme.accentRed : theme.textSecondary, marginTop: 8 },
                 ]}
               >
                 {hasStarted ? 'LIVE' : 'SURVEY COMPLETE'}
@@ -237,12 +237,12 @@ const styles = StyleSheet.create({
   },
   overallSection: {
     alignItems: 'center',
-    marginBottom: 16, // Reduced whitespace
+    marginBottom: 32, // Increased whitespace
   },
   overallMeta: {
     alignItems: 'center',
-    marginTop: 8,
-    gap: 8,
+    marginTop: 16,
+    gap: 16,
   },
   parkName: {
     fontFamily: typography.fonts.light,
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   },
   statusBar: {
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 32,
   },
   statusText: {
     fontFamily: typography.fonts.medium,
