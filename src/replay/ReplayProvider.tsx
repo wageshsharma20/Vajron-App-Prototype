@@ -132,6 +132,11 @@ export const ReplayProvider = ({ children }: { children: React.ReactNode }) => {
   const [parkId, setParkId] = useState(DEFAULT_PARK_ID);
   const [recordingId, setRecordingId] = useState(DEFAULT_RECORDING_ID);
   const lastPublished = useRef(0);
+  // When the clock last actually moved. playingChange only reports pauses the
+  // app itself asked for, so a stall the browser causes — an autoplay block, a
+  // source that never loaded, a suppressed background tab — would otherwise
+  // leave isPlaying stuck true and the UI claiming LIVE over a frozen clock.
+  const lastTickAt = useRef(0);
 
   const park = parkById(parkId);
   const hasSurvey = park.status === 'ready';
@@ -233,11 +238,26 @@ export const ReplayProvider = ({ children }: { children: React.ReactNode }) => {
       // The player can emit faster than the configured interval while seeking.
       if (Math.abs(next - lastPublished.current) < TIME_UPDATE_INTERVAL_SEC / 2) return;
       lastPublished.current = next;
+      lastTickAt.current = Date.now();
       setTime(next);
     });
     const playSub = player.addListener('playingChange', (payload: { isPlaying: boolean }) => {
-      setIsPlaying(Boolean(payload?.isPlaying));
+      const playing = Boolean(payload?.isPlaying);
+      // Give the clock a grace period to start ticking before the watchdog below
+      // is allowed to judge it.
+      if (playing) lastTickAt.current = Date.now();
+      setIsPlaying(playing);
     });
+
+    // Watchdog: if the clock stops advancing, playback has stopped whatever the
+    // player reports. Ticks arrive every TIME_UPDATE_INTERVAL_SEC while running,
+    // so a gap several times that long is unambiguous.
+    const STALL_MS = Math.max(1000, TIME_UPDATE_INTERVAL_SEC * 1000 * 5);
+    const watchdog = setInterval(() => {
+      setIsPlaying((wasPlaying) =>
+        wasPlaying && Date.now() - lastTickAt.current > STALL_MS ? false : wasPlaying,
+      );
+    }, 500);
     // Backstop: the moment the swapped-in source is playable, nudge it again.
     // Harmless if it is already running — the retry cancels itself once playing.
     const statusSub = player.addListener('statusChange', (payload: { status: string }) => {
@@ -257,6 +277,7 @@ export const ReplayProvider = ({ children }: { children: React.ReactNode }) => {
       if (next) loadRecording(pid, next, true);
     });
     return () => {
+      clearInterval(watchdog);
       timeSub.remove();
       playSub.remove();
       statusSub.remove();

@@ -86,7 +86,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
 
   // Driven by the replay clock: the eight cards with a real per-frame series in the
   // detection report track playback, the rest keep their reported values.
-  const { park, hasStarted, hasSurvey, time } = useReplay();
+  const { park, hasStarted, hasSurvey, isPlaying, time } = useReplay();
   const liveScores = useLiveScores();
   const overallScore = liveScores[0];
   const gridScores = liveScores.slice(1);
@@ -124,17 +124,21 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
               {!hasSurvey
                 ? 'Survey scheduled'
                 : hasStarted
-                  ? `Analysing recording · ${formatTimecode(time)}`
+                  ? `${isPlaying ? 'Analysing recording' : 'Recording paused'} · ${formatTimecode(time)}`
                   : `Surveyed ${park.surveyDate}`}
             </Text>
             {hasSurvey && (
               <Text
                 style={[
                   styles.surveyDate,
-                  { color: hasStarted ? theme.accentRed : theme.textSecondary, marginTop: 8 },
+                  // LIVE tracks whether the recording is genuinely running, not
+                  // merely whether it was ever started. hasStarted is sticky, so
+                  // keying the badge on it left the header claiming LIVE while the
+                  // clock sat frozen — including when the video never loaded at all.
+                  { color: isPlaying ? theme.accentRed : theme.textSecondary, marginTop: 8 },
                 ]}
               >
-                {hasStarted ? 'LIVE' : 'SURVEY COMPLETE'}
+                {isPlaying ? 'LIVE' : hasStarted ? 'PAUSED' : 'SURVEY COMPLETE'}
               </Text>
             )}
           </View>

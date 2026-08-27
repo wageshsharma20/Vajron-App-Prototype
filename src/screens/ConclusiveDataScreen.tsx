@@ -54,7 +54,7 @@ export const ConclusiveDataScreen = ({ route }: any) => {
 
   // Every category tracks the drone recording: items update from the detector and
   // category issue counts recompute as the survey plays on the Camera tab.
-  const { park, hasStarted, hasSurvey } = useReplay();
+  const { park, hasStarted, hasSurvey, isPlaying } = useReplay();
   const inspectionData = useLiveInspection();
   // The category whose download icon was tapped — drives the format sheet.
   // Null means the sheet is closed.
@@ -257,7 +257,13 @@ export const ConclusiveDataScreen = ({ route }: any) => {
           the heading, and the longer park names need every pixel to stay on one line. */}
       <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
         {park.name}
-        {hasSurvey ? (hasStarted ? ' · analysing recording' : ` · surveyed ${park.surveyDate}`) : ' · survey scheduled'}
+        {!hasSurvey
+          ? ' · survey scheduled'
+          : hasStarted
+            ? isPlaying
+              ? ' · analysing recording'
+              : ' · recording paused'
+            : ` · surveyed ${park.surveyDate}`}
       </Text>
 
       {/* Zen Search Bar (Bottom border only) */}
