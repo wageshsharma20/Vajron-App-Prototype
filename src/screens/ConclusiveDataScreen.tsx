@@ -580,14 +580,14 @@ const styles = StyleSheet.create({
   },
   imageWrapper: {
     flex: 1,
-    borderRadius: 0,
+    borderRadius: 8,
     overflow: 'hidden',
     padding: 8,
   },
   imagePlaceholder: {
     height: 100,
     backgroundColor: '#E5E7EB', // slightly darker grey for image box
-    borderRadius: 0,
+    borderRadius: 4,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 8,
@@ -605,6 +605,6 @@ const styles = StyleSheet.create({
   pickedImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 0,
+    borderRadius: 4,
   }
 });

@@ -38,7 +38,7 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
       bottom: 0,
       // Cursor is inverted to the background
       backgroundColor: theme.textPrimary, 
-      borderRadius: 0,
+      borderRadius: 16,
       zIndex: 0,
     };
   }, [theme.textPrimary]);
@@ -115,13 +115,13 @@ const styles = StyleSheet.create({
   borderWrapper: {
     width: '100%',
     padding: 2,
-    borderRadius: 0,
+    borderRadius: 18,
   },
   pillContainer: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 0,
+    borderRadius: 16,
     position: 'relative',
     overflow: 'hidden',
   },

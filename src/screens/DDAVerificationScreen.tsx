@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
   },
   contractorCard: {
     borderWidth: 1,
-    borderRadius: 0,
+    borderRadius: 8,
     padding: 12,
   },
   contractorHeader: {
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   statusBadge: {
     paddingHorizontal: 8,
     paddingVertical: 4,
-    borderRadius: 0,
+    borderRadius: 4,
   },
   statusText: {
     fontFamily: typography.fonts.bold,
@@ -323,7 +323,7 @@ const styles = StyleSheet.create({
   miniImagePlaceholder: {
     height: 60,
     width: 60,
-    borderRadius: 0,
+    borderRadius: 4,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: StyleSheet.hairlineWidth,
@@ -337,6 +337,6 @@ const styles = StyleSheet.create({
   pickedMiniImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 0,
+    borderRadius: 4,
   }
 });

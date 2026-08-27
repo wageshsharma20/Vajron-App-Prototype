@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     maxWidth: '70%',
     paddingHorizontal: 10,
     paddingVertical: 7,
-    borderRadius: 0,
+    borderRadius: 4,
     backgroundColor: '#000',
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.16)',
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     width: 40,
     height: 40,
-    borderRadius: 0,
+    borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: 8,
     height: 8,
-    borderRadius: 0,
+    borderRadius: 4,
     backgroundColor: '#DC2626', // red by default for critical
     borderWidth: 1,
     borderColor: '#000',

@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   iconCircle: {
     width: 44,
     height: 44,
-    borderRadius: 0,
+    borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,

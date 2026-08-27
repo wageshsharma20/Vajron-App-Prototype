@@ -42,7 +42,7 @@ const AppNavigator = () => {
   }, []);
 
   const paperTheme = {
-    ...MD3LightTheme, roundness: 0,
+    ...MD3LightTheme,
     colors: {
       ...MD3LightTheme.colors,
       primary: theme.accentTeal,

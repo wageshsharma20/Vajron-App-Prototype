@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   boundingBox: {
     position: 'absolute',
     borderWidth: 2,
-    borderRadius: 0,
+    borderRadius: 4,
   },
   labelContainer: {
     position: 'absolute',
@@ -88,13 +88,13 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 0,
+    borderRadius: 4,
     gap: 5,
   },
   labelDot: {
     width: 6,
     height: 6,
-    borderRadius: 0,
+    borderRadius: 3,
   },
   labelText: {
     color: '#FFFFFF',
