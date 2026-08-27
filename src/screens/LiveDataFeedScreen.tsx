@@ -115,12 +115,16 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={theme.textPrimary} />
         }
       >
+        {/* Letterhead — sits right under the top status bar's divider line */}
+        <View style={styles.logoRow}>
+          <Image source={require('../../assets/dda-logo.png')} style={styles.topLogo} resizeMode="contain" />
+          <Image source={require('../../assets/dda-greens-logo.jpg')} style={styles.topLogo} resizeMode="contain" />
+        </View>
+
         {/* Overall Park Health - Zen Style */}
         <View style={styles.overallSection}>
-          <Image source={require('../../assets/dda-logo.png')} style={styles.overallLogo} resizeMode="contain" />
-          <View style={styles.overallCenter}>
-            <CircularScore score={overallScore.score} label="Overall Score" size={140} />
-            <View style={styles.overallMeta}>
+          <CircularScore score={overallScore.score} label="Overall Score" size={140} />
+          <View style={styles.overallMeta}>
             <Text style={[styles.parkName, { color: theme.textPrimary }]}>{park.name}</Text>
             <Text style={[styles.surveyDate, { color: theme.textSecondary }]}>
               {!hasSurvey
@@ -143,9 +147,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                 {isPlaying ? 'LIVE' : hasStarted ? 'PAUSED' : 'SURVEY COMPLETE'}
               </Text>
             )}
-            </View>
           </View>
-          <Image source={require('../../assets/dda-greens-logo.jpg')} style={styles.overallLogo} resizeMode="contain" />
         </View>
 
         {/* System Status - Minimal Text Only */}
@@ -243,20 +245,21 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 64,
   },
-  overallSection: {
+  logoRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 10, // Nudges the score below the two logos, not flush against them
-    marginBottom: 12, // Reduced for tighter grouping
+    paddingHorizontal: 4,
+    marginBottom: 8, // Small gap before the score starts — the "shift down" now
+                     // reads as the score sitting below its own letterhead row.
   },
-  overallCenter: {
-    flex: 1,
+  topLogo: {
+    width: 36,
+    height: 36,
+  },
+  overallSection: {
     alignItems: 'center',
-  },
-  overallLogo: {
-    width: 40,
-    height: 40,
+    marginBottom: 12, // Reduced for tighter grouping
   },
   overallMeta: {
     alignItems: 'center',
