@@ -4,7 +4,6 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
 import { ThemeProvider, useTheme } from './src/theme';
 import { ReplayProvider } from './src/replay/ReplayProvider';
 import { ReplayNotifications } from './src/replay/ReplayNotifications';
@@ -39,7 +38,7 @@ const AppNavigator = () => {
   }, []);
 
   const paperTheme = {
-    ...MD3LightTheme,
+    ...MD3LightTheme, roundness: 0,
     colors: {
       ...MD3LightTheme.colors,
       primary: theme.accentTeal,
@@ -97,18 +96,10 @@ const AppNavigator = () => {
 };
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
-  });
+  
+  const webShadow = Platform.OS === 'web' ? { boxShadow: "none" } : {};
 
-  const webShadow = Platform.OS === 'web' ? { boxShadow: '0 0 40px rgba(0,0,0,0.6)' } : {};
-
-  if (!fontsLoaded) {
-    return null;
-  }
+  
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

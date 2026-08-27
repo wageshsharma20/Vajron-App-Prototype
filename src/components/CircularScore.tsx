@@ -35,10 +35,7 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
   const animatedOffset = useSharedValue(arcLength);
 
   useEffect(() => {
-    animatedOffset.value = withDelay(300, withTiming(targetDashoffset, {
-      duration: 1200,
-      easing: Easing.bezier(0.25, 0.1, 0.25, 1),
-    }));
+    animatedOffset.value = withDelay(300, withTiming(targetDashoffset, { duration: 0 }));
   }, [targetDashoffset]);
 
   const animatedProps = useAnimatedProps(() => {

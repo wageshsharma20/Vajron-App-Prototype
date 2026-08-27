@@ -22,16 +22,16 @@ export const ZenLoader = ({ text = "INITIALIZING..." }: { text?: string }) => {
   useEffect(() => {
     scaleX.value = withRepeat(
       withSequence(
-        withTiming(1, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
-        withTiming(0.01, { duration: 1500, easing: Easing.inOut(Easing.ease) })
+        withTiming(1, { duration: 0 }),
+        withTiming(0.01, { duration: 0 })
       ),
       -1,
       true
     );
     opacity.value = withRepeat(
       withSequence(
-        withTiming(0.2, { duration: 1500, easing: Easing.inOut(Easing.ease) }),
-        withTiming(1, { duration: 1500, easing: Easing.inOut(Easing.ease) })
+        withTiming(0.2, { duration: 0 }),
+        withTiming(1, { duration: 0 })
       ),
       -1,
       true

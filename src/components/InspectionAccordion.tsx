@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   issueDot: {
     width: 4,
     height: 4,
-    borderRadius: 2,
+    borderRadius: 0,
     position: 'absolute',
     left: -12,
   },

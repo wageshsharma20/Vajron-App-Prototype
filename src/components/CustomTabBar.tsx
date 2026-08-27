@@ -19,9 +19,9 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
     if (dimensions.length === state.routes.length) {
       const activeDim = dimensions[state.index];
       if (activeDim) {
-        cursorLeft.value = withTiming(activeDim.x, { duration: 250 });
-        cursorWidth.value = withTiming(activeDim.width, { duration: 250 });
-        cursorOpacity.value = withTiming(1, { duration: 150 });
+        cursorLeft.value = withTiming(activeDim.x, { duration: 0 });
+        cursorWidth.value = withTiming(activeDim.width, { duration: 0 });
+        cursorOpacity.value = withTiming(1, { duration: 0 });
       }
     }
   }, [state.index, dimensions]);
@@ -36,7 +36,7 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
       bottom: 0,
       // Cursor is inverted to the background
       backgroundColor: theme.textPrimary, 
-      borderRadius: 16,
+      borderRadius: 0,
       zIndex: 0,
     };
   }, [theme.textPrimary]);
@@ -115,13 +115,13 @@ const styles = StyleSheet.create({
   borderWrapper: {
     width: '100%',
     padding: 2,
-    borderRadius: 18,
+    borderRadius: 0,
   },
   pillContainer: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 16,
+    borderRadius: 0,
     position: 'relative',
     overflow: 'hidden',
   },

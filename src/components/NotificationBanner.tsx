@@ -34,17 +34,11 @@ export const NotificationBanner: React.FC<NotificationBannerProps> = ({
 
   useEffect(() => {
     // Slide down smoothly without bounce
-    translateY.value = withTiming(insets.top + 16, { 
-      duration: 400,
-      easing: Easing.out(Easing.cubic)
-    });
+    translateY.value = withTiming(insets.top + 16, { duration: 0 });
     
     // Slide up after duration
     const timeout = setTimeout(() => {
-      translateY.value = withTiming(-150, { 
-        duration: 300,
-        easing: Easing.in(Easing.cubic)
-      });
+      translateY.value = withTiming(-150, { duration: 0 });
       if (onDismiss) setTimeout(onDismiss, 300);
     }, durationMs);
 
@@ -113,7 +107,7 @@ const styles = StyleSheet.create({
     top: 0,
     left: 8,
     right: 8,
-    borderRadius: 8,
+    borderRadius: 0,
     borderLeftWidth: 4,
     paddingVertical: 12,
     paddingHorizontal: 12,
@@ -124,7 +118,7 @@ const styles = StyleSheet.create({
   iconCircle: {
     width: 44,
     height: 44,
-    borderRadius: 22,
+    borderRadius: 0,
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,
