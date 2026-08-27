@@ -10,6 +10,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { NotificationBanner } from '../components/NotificationBanner';
 import { useReplay } from './ReplayProvider';
 import { replayEvents, type ReplayEvent } from './replayData';
+import { useI18n } from '../i18n';
 
 export const ReplayNotifications = () => {
   const { translateAny } = useI18n();
@@ -51,8 +52,8 @@ export const ReplayNotifications = () => {
     <NotificationBanner
       // Keyed so a second event remounts the banner and replays the slide-in.
       key={active.time}
-      title={active.title}
-      message={active.message}
+      title={translateAny(active.title)}
+      message={translateAny(active.message)}
       type={active.type}
       durationMs={6000}
       onDismiss={() => setActive(null)}
