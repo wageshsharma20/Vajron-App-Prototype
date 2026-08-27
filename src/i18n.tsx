@@ -102,6 +102,17 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   const translateAny = (text?: string) => {
     if (!text) return "";
     const dict: Record<string, string> = {
+  "LIVE": "लाइव",
+  "PAUSED": "रोका गया",
+  "DRONE INFO": "ड्रोन की जानकारी",
+  "Height": "ऊंचाई",
+  "Speed": "गति",
+  "Direction": "दिशा",
+  "Battery": "बैटरी",
+  "Flight Time": "उड़ान का समय",
+  "SE": "दक्षिण-पूर्व",
+  "km/h": "किमी/घंटा",
+  "m": "मीटर",
   "0": "0",
   "1": "1",
   "58": "58",
@@ -431,12 +442,16 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
     if (dict[text]) return translateNumber(dict[text]);
     
     const t = text.trim();
-    if (dict[t]) return text.replace(t, translateNumber(dict[t]));
-    if (dict[t.toUpperCase()]) return text.replace(t, translateNumber(dict[t.toUpperCase()]));
     
-    // Also try capitalizing the first letter of each word (Title Case)
-    const titleCase = t.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-    if (dict[titleCase]) return text.replace(t, translateNumber(dict[titleCase]));
+    // Case-insensitive exact match
+    let lowerT = t.toLowerCase();
+    for (let key in dict) {
+      if (key.toLowerCase() === lowerT) {
+        return text.replace(t, translateNumber(dict[key]));
+      }
+    }
+
+    
     
     // Also try purely lowercase
     if (dict[t.toLowerCase()]) return text.replace(t, translateNumber(dict[t.toLowerCase()]));
@@ -453,6 +468,25 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
     res = res.replace(/Not derivable from RGB/g, "आरजीबी से प्राप्त नहीं किया जा सकता");
     res = res.replace(/Needs multispectral/g, "मल्टीस्पेक्ट्रल की आवश्यकता");
     res = res.replace(/Single-date baseline/g, "एकल-तारीख आधार रेखा");
+    res = res.replace(/ standing water/g, " जलभराव");
+    res = res.replace(/ zones/g, " क्षेत्र");
+    res = res.replace(/ground debris/g, "मलबा");
+    res = res.replace(/litter \/ debris zones/g, "कूड़ा / मलबा क्षेत्र");
+    res = res.replace(/waterlogged spots/g, "जलभराव वाले स्थान");
+    res = res.replace(/Leaf litter/g, "पत्तियों का कचरा");
+    res = res.replace(/of open ground/g, "खुली ज़मीन का");
+    res = res.replace(/Uneven — large dry patches/g, "असमान — बड़े सूखे पैच");
+    res = res.replace(/No irrigation infra visible/g, "सिंचाई का कोई बुनियादी ढांचा नहीं दिखा");
+    res = res.replace(/ bare ground/g, " बंजर ज़मीन");
+    res = res.replace(/No bin in this view/g, "इस दृश्य में कोई कूड़ेदान नहीं");
+    res = res.replace(/canopy vigour/g, "छतरी का हरापन");
+    res = res.replace(/grass across/g, "घास");
+    res = res.replace(/ patches/g, " पैच में");
+    res = res.replace(/Track detected/g, "रास्ता मिला");
+    res = res.replace(/condition/g, "स्थिति");
+    res = res.replace(/Kerb\/edging/g, "किनारा");
+    res = res.replace(/displaced stones/g, "विस्थापित पत्थर");
+
     res = res.replace(/Scheduled sites have no processed survey yet\. Scores and findings appear once a flight has been flown and analysed\./g, "निर्धारित साइटों का अभी तक कोई सर्वेक्षण संसाधित नहीं हुआ है। उड़ान भरने और विश्लेषण के बाद स्कोर और निष्कर्ष दिखाई देते हैं।");
     
     return translateNumber(res);
@@ -463,8 +497,7 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
     if (num === undefined || num === null) return "";
     const str = String(num);
     if (lang === 'en') return str;
-    const hindiDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
-    return str.replace(/[0-9]/g, (d) => hindiDigits[parseInt(d, 10)]);
+    return str;
   };
 
   return (

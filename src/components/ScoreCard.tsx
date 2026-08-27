@@ -17,7 +17,7 @@ type ScoreCardProps = {
 
 export const ScoreCard = ({ label, score, trend, changePercent, onPress }: ScoreCardProps) => {
   const { theme } = useTheme();
-  const { translateNumber } = useI18n();
+  const { translateNumber, translateAny } = useI18n();
 
   const trendColor = changePercent > 0 ? theme.statusGreen : changePercent < 0 ? theme.accentRed : theme.textSecondary;
 
@@ -29,7 +29,7 @@ export const ScoreCard = ({ label, score, trend, changePercent, onPress }: Score
 
       <View style={styles.metaContainer}>
         <Text style={[styles.label, { color: theme.textSecondary }]} numberOfLines={2}>
-          {label}
+          {translateAny(label)}
         </Text>
         <Text style={[styles.trend, { color: trendColor }]}>
           {changePercent > 0 ? '+' : ''}{translateNumber(changePercent)}%

@@ -146,7 +146,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                   { color: isPlaying ? theme.accentRed : theme.textSecondary, marginTop: 4 },
                 ]}
               >
-                {isPlaying ? 'LIVE' : hasStarted ? 'PAUSED' : 'SURVEY COMPLETE'}
+                {translateAny(isPlaying ? 'LIVE' : hasStarted ? 'PAUSED' : 'SURVEY COMPLETE')}
               </Text>
             )}
           </View>

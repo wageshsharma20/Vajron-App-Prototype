@@ -25,7 +25,7 @@ export const DroneInfoTable = () => {
 
   return (
     <View style={styles.wrapper}>
-      <Text style={[styles.headerTitle, { color: theme.textPrimary }]}>DRONE INFO</Text>
+      <Text style={[styles.headerTitle, { color: theme.textPrimary }]}>{translateAny("DRONE INFO")}</Text>
       
       <View style={[styles.container, { borderTopColor: theme.border }]}>
         {rows.map((row) => (
@@ -37,10 +37,10 @@ export const DroneInfoTable = () => {
             ]}
           >
             <Text style={[styles.cellLabel, { color: theme.textSecondary }]}>
-              {row.property}
+              {translateAny(row.property)}
             </Text>
             <Text style={[styles.cellValue, { color: theme.textPrimary }]}>
-              {row.value}
+              {translateAny(row.value)}
             </Text>
           </View>
         ))}
