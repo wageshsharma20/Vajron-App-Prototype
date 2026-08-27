@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider, useTheme } from './src/theme';
+import { I18nProvider } from './src/i18n';
 import { ReplayProvider } from './src/replay/ReplayProvider';
 import { ReplayNotifications } from './src/replay/ReplayNotifications';
 import { StatusStrip } from './src/components/StatusStrip';
@@ -117,6 +118,7 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
+        <I18nProvider>
         <ThemeProvider>
           <ReplayProvider>
             <View style={Platform.OS === 'web' ? styles.webWrapper : styles.container}>
@@ -129,6 +131,7 @@ export default function App() {
             </View>
           </ReplayProvider>
         </ThemeProvider>
+        </I18nProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );

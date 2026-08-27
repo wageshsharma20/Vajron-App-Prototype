@@ -11,8 +11,11 @@ import Animated, {
 } from 'react-native-reanimated';
 import { Text } from 'react-native-paper';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 
-export const ZenLoader = ({ text = "INITIALIZING..." }: { text?: string }) => {
+export const ZenLoader = ({ text }: { text?: string }) => {
+  const { t } = useI18n();
+  const displayText = text || t('initializing');
   const { theme } = useTheme();
   
   // Minimalist expanding line loader
@@ -56,7 +59,7 @@ export const ZenLoader = ({ text = "INITIALIZING..." }: { text?: string }) => {
         resizeMode="contain" 
       />
       <Animated.View style={[styles.line, { backgroundColor: theme.textPrimary }, lineStyle]} />
-      <Text style={[styles.text, { color: theme.textSecondary }]}>{text}</Text>
+      <Text style={[styles.text, { color: theme.textSecondary }]}>{displayText}</Text>
       <Image 
         source={require('../../assets/images/dda-greens-logo.png')} 
         style={styles.greensLogo} 

@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { View, StyleSheet, ScrollView, RefreshControl, Pressable, Image } from 'react-native';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { CircularScore } from '../components/CircularScore';
 import { ScoreCard } from '../components/ScoreCard';
 import { DroneInfoTable } from '../components/DroneInfoTable';
@@ -53,6 +54,7 @@ const RECOMMENDATIONS = [
 ];
 
 export const LiveDataFeedScreen = ({ navigation }: any) => {
+  const { t, translateMetric } = useI18n();
   const { theme } = useTheme();
   const [refreshing, setRefreshing] = useState(false);
 
@@ -158,7 +160,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
             ) : (
               <>
                 <Text style={{ fontFamily: typography.fonts.bold }}>{totalIssues}</Text>
-                {' CONSIDERATIONS FOUND'}
+                {' ' + t('considerationsFound')}
               </>
             )}
           </Text>

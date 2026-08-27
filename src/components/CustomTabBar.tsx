@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, LayoutChangeEvent } from 'react-native';
 import Animated, { useAnimatedStyle, withSpring, useSharedValue, withTiming } from 'react-native-reanimated';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
+  const { t } = useI18n();
   const { theme } = useTheme();
   const insets = useSafeAreaInsets();
   
@@ -96,7 +98,7 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
                 styles.tabText, 
                 { color: textColor }
               ]}>
-                {label}
+                {t(label.toLowerCase() as any)}
               </Text>
             </TouchableOpacity>
           );

@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Wifi, MapPin, Sun, Moon } from 'lucide-react-native';
 import { useTheme, typography } from '../theme';
+import { useI18n } from '../i18n';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useReplay } from '../replay/ReplayProvider';
 
 export const StatusStrip = () => {
+  const { lang, setLang } = useI18n();
   const { theme } = useTheme();
   const insets = useSafeAreaInsets();
   const { park } = useReplay();
