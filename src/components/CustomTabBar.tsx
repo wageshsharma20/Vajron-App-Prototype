@@ -97,7 +97,7 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
               <Text style={[
                 styles.tabText, 
                 { color: textColor }
-              ]}>\n                {t(label.toLowerCase() as any)}\n              </Text>
+              ]}>{t(label.toLowerCase() as any)}</Text>
             </TouchableOpacity>
           );
         })}
