@@ -42,9 +42,16 @@ export const StatusStrip = () => {
           </Text>
         </View>
       </View>
+      
       <View style={styles.right}>
+        <TouchableOpacity onPress={() => setLang(lang === 'en' ? 'hi' : 'en')} style={{ marginRight: 8 }}>
+          <Text style={[styles.time, { color: theme.textPrimary, fontFamily: typography.fonts.bold }]}>
+            {lang === 'en' ? 'अ' : 'A'}
+          </Text>
+        </TouchableOpacity>
         <Text style={[styles.time, { color: theme.textPrimary }]}>{formatTime(time)}</Text>
       </View>
+
     </View>
   );
 }
