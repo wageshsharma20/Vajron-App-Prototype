@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -45,12 +45,24 @@ export const ZenLoader = ({ text = "INITIALIZING..." }: { text?: string }) => {
     };
   });
 
+  
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
+      <Image 
+        source={require('../../assets/images/dda-logo.png')} 
+        style={styles.ddaLogo} 
+        resizeMode="contain" 
+      />
       <Animated.View style={[styles.line, { backgroundColor: theme.textPrimary }, lineStyle]} />
       <Text style={[styles.text, { color: theme.textSecondary }]}>{text}</Text>
+      <Image 
+        source={require('../../assets/images/dda-greens-logo.png')} 
+        style={styles.greensLogo} 
+        resizeMode="contain" 
+      />
     </View>
   );
+
 };
 
 const styles = StyleSheet.create({
@@ -69,5 +81,15 @@ const styles = StyleSheet.create({
     fontFamily: typography.fonts.light,
     fontSize: 10,
     letterSpacing: 4,
+  },
+  ddaLogo: {
+    width: 280,
+    height: 80,
+    marginBottom: 60,
+  },
+  greensLogo: {
+    width: 100,
+    height: 100,
+    marginTop: 60,
   }
 });
