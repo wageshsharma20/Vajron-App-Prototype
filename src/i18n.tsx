@@ -106,6 +106,75 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "1": "1",
   "58": "58",
   "65": "65",
+  "Lawns, gazebo & hedge beds · lake & open water · algal channel & banks": "लॉन, गेज़ेबो और हेज बेड्स · झील और खुला पानी · शैवाल चैनल और किनारे",
+  "Play area · lake edge · open-gym & lawns · footbridge": "खेल क्षेत्र · झील का किनारा · ओपन-जिम और लॉन · फुटब्रिज",
+  "Palm avenue & lawns · formal beds & pathways · central axis & parterre": "पाम एवेन्यू और लॉन · औपचारिक क्यारियाँ और रास्ते · केंद्रीय अक्ष और पारटेर",
+  "Flooded planting bed · play area · waterlogged ground · lawns & tree belt": "बाढ़ग्रस्त रोपण क्यारी · खेल क्षेत्र · जलभराव वाला मैदान · लॉन और ट्री बेल्ट",
+  "Garden & tree canopy · pavilion (close-range)": "बगीचा और पेड़ की छतरी · मंडप (पास से)",
+  "Children's play area · pathways & tree belt": "बच्चों के खेलने का क्षेत्र · रास्ते और ट्री बेल्ट",
+  "Fountain & formal garden · central lawn & avenue · open gym & hedge beds": "फव्वारा और औपचारिक उद्यान · केंद्रीय लॉन और एवेन्यू · ओपन जिम और हेज बेड्स",
+  "Rohini": "रोहिणी",
+  "East Delhi": "पूर्वी दिल्ली",
+  "North Delhi": "उत्तरी दिल्ली",
+  "Mayur Vihar": "मयूर विहार",
+  "Asaf Ali Road": "आसफ अली रोड",
+  "Vasant Kunj": "वसंत कुंज",
+  "Surveyed": "सर्वेक्षण किया गया",
+  "18 May 2026": "18 मई 2026",
+  "19 May 2026": "19 मई 2026",
+  "20 May 2026": "20 मई 2026",
+  "22 May 2026": "22 मई 2026",
+  "Plant Health": "पौधों का स्वास्थ्य",
+  "Plants & Trees": "पौधे और पेड़",
+  "Irrigation Status": "सिंचाई की स्थिति",
+  "Cleanliness": "स्वच्छता",
+  "Asset Inventory": "संपत्ति सूची",
+  "Infrastructure": "बुनियादी ढांचा",
+  "Safety & Security": "सुरक्षा और बचाव",
+  "Water Bodies": "जल निकाय",
+  "1 ISSUE": "1 समस्या",
+  "2 ISSUES": "2 समस्याएं",
+  "3 ISSUES": "3 समस्याएं",
+  "4 ISSUES": "4 समस्याएं",
+  "5 ISSUES": "5 समस्याएं",
+  "ALL CLEAR": "सब स्पष्ट",
+  "HIGH IMPACT": "उच्च प्रभाव",
+  "MEDIUM IMPACT": "मध्यम प्रभाव",
+  "IMMEDIATE": "तत्काल",
+  "Green vigour 69%": "हरापन 69%",
+  "Needs multispectral — RGB only": "मल्टीस्पेक्ट्रल की आवश्यकता — केवल आरजीबी",
+  "Not derivable from RGB": "आरजीबी से प्राप्त नहीं किया जा सकता",
+  "11% bare / dry ground": "11% बंजर / सूखी ज़मीन",
+  "Needs multispectral": "मल्टीस्पेक्ट्रल की आवश्यकता",
+  "Single-date baseline": "एकल-तारीख आधार रेखा",
+  "Health Index (NDVI)": "स्वास्थ्य सूचकांक (NDVI)",
+  "Leaf Discoloration": "पत्तियों का रंग बदलना",
+  "Pest/Disease": "कीट/रोग",
+  "Water Stress": "पानी की कमी",
+  "Nutrient Levels": "पोषक तत्वों का स्तर",
+  "Growth Progress": "विकास की प्रगति",
+  "Weed Infestation": "खरपतवार का प्रकोप",
+  "Dry Zones": "सूखे क्षेत्र",
+  "Litter": "कूड़ा",
+  "Debris": "मलबा",
+  "Fungal spots on rose garden": "गुलाब के बगीचे पर फंगल स्पॉट",
+  "2 dry patches in east section": "पूर्वी भाग में 2 सूखे पैच",
+  "28 litter items detected": "28 कूड़े की वस्तुएं पाई गईं",
+  "Construction debris near north wall": "उत्तरी दीवार के पास निर्माण का मलबा",
+  "Moderate weed growth near pathways": "रास्तों के पास मध्यम खरपतवार वृद्धि",
+  "Green Cover": "हरित आवरण",
+  "New Plantation Survival": "नए वृक्षारोपण की उत्तरजीविता",
+  "Tree Canopy Growth": "पेड़ की छतरी का विकास",
+  "Damaged Infrastructure": "क्षतिग्रस्त बुनियादी ढांचा",
+  "North Delhi · Surveyed 19 May 2026": "उत्तरी दिल्ली · सर्वेक्षण 19 मई 2026",
+  "East Delhi · Surveyed 19 May 2026": "पूर्वी दिल्ली · सर्वेक्षण 19 मई 2026",
+  "Mayur Vihar · Surveyed 19 May 2026": "मयूर विहार · सर्वेक्षण 19 मई 2026",
+  "Asaf Ali Road · Surveyed 18 May 2026": "आसफ अली रोड · सर्वेक्षण 18 मई 2026",
+  "Vasant Kunj · Surveyed 18 May 2026": "वसंत कुंज · सर्वेक्षण 18 मई 2026",
+  "Vasant Kunj · Surveyed 20 May 2026": "वसंत कुंज · सर्वेक्षण 20 मई 2026",
+  "Palm avenue & lawns · formal beds & pathways · central axis": "पाम एवेन्यू और लॉन · औपचारिक क्यारियाँ और रास्ते · केंद्रीय अक्ष",
+  "Flooded planting bed · play area · waterlogged open ground · lawns & tree belt": "बाढ़ग्रस्त रोपण क्यारी · खेल क्षेत्र · जलभराव वाला खुला मैदान · लॉन और ट्री बेल्ट",
+  "Scheduled sites have no processed survey yet. Scores and findings appear once a flight has been flown and analysed.": "निर्धारित साइटों का अभी तक कोई सर्वेक्षण संसाधित नहीं हुआ है। उड़ान भरने और विश्लेषण के बाद स्कोर और निष्कर्ष दिखाई देते हैं।",
   "Recordings": "रिकॉर्डिंग",
   "Choose a park to view its drone survey": "ड्रोन सर्वेक्षण देखने के लिए एक पार्क चुनें",
   "SELECTED": "चयनित",
@@ -143,24 +212,9 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "VERIFIED": "सत्यापित",
   "Canopy Pruning (Zone C)": "छतरी की छंटाई (ज़ोन सी)",
   "UNEXECUTED": "अनिष्पादित",
-  "ALL CLEAR": "सब स्पष्ट",
-  "1 ISSUE": "1 समस्या",
-  "2 ISSUES": "2 समस्याएं",
-  "3 ISSUES": "3 समस्याएं",
-  "4 ISSUES": "4 समस्याएं",
-  "5 ISSUES": "5 समस्याएं",
   "Search...": "खोजें...",
   "surveyed": "सर्वेक्षण किया गया",
   "HIGH-PRIORITY DEFECTS": "उच्च-प्राथमिकता वाले दोष",
-  "Weed Infestation": "खरपतवार का प्रकोप",
-  "Pest/Disease": "कीट/रोग",
-  "Dry Zones": "सूखे क्षेत्र",
-  "Litter": "कूड़ा",
-  "Debris": "मलबा",
-  "Green Cover": "हरित आवरण",
-  "New Plantation Survival": "नए वृक्षारोपण की उत्तरजीविता",
-  "Tree Canopy Growth": "पेड़ की छतरी का विकास",
-  "Damaged Infrastructure": "क्षतिग्रस्त बुनियादी ढांचा",
   "Encroachment": "अतिक्रमण",
   "Cleanliness Score": "स्वच्छता स्कोर",
   "Work Completion": "कार्य पूर्णता",
@@ -182,14 +236,6 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "72%": "72%",
   "84%": "84%",
   "69%": "69%",
-  "Asset Inventory": "संपत्ति सूची",
-  "Plants & Trees": "पौधे और पेड़",
-  "Plant Health": "पौधों का स्वास्थ्य",
-  "Irrigation Status": "सिंचाई की स्थिति",
-  "Cleanliness": "स्वच्छता",
-  "Infrastructure": "बुनियादी ढांचा",
-  "Safety & Security": "सुरक्षा और बचाव",
-  "Water Bodies": "जल निकाय",
   "Landscape Quality": "परिदृश्य की गुणवत्ता",
   "good": "अच्छा",
   "attention": "ध्यान दें",
@@ -222,7 +268,6 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "68% coverage": "68% कवरेज",
   "Lawn Coverage": "लॉन का कवरेज",
   "72% healthy, bare patches in Zone C": "72% स्वस्थ, ज़ोन C में खाली पैच",
-  "Moderate weed growth near pathways": "रास्तों के पास मध्यम खरपतवार वृद्धि",
   "Shrub Coverage": "झाड़ियों का कवरेज",
   "Adequate": "पर्याप्त",
   "Pruning Quality": "छंटाई की गुणवत्ता",
@@ -233,28 +278,19 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "3 beds need replanting": "3 क्यारियों में फिर से पौधे लगाने की आवश्यकता है",
   "Dead Vegetation": "मृत वनस्पति",
   "Minimal": "न्यूनतम",
-  "Health Index (NDVI)": "स्वास्थ्य सूचकांक (NDVI)",
   "0.76 (Healthy range)": "0.76 (स्वस्थ सीमा)",
-  "Leaf Discoloration": "पत्तियों का रंग बदलना",
   "Yellowing on 8 trees near lake": "झील के पास 8 पेड़ों पर पीलापन",
-  "Fungal spots on rose garden": "गुलाब के बगीचे पर फंगल स्पॉट",
-  "Water Stress": "पानी की कमी",
   "No stress detected": "कोई तनाव नहीं पाया गया",
-  "Nutrient Levels": "पोषक तत्वों का स्तर",
   "Normal": "सामान्य",
-  "Growth Progress": "विकास की प्रगति",
   "+4% canopy density vs last month": "पिछले महीने की तुलना में +4% कैनोपी घनत्व",
-  "2 dry patches in east section": "पूर्वी भाग में 2 सूखे पैच",
   "Waterlogging": "जलभराव",
   "Minor pooling near gate 3": "गेट 3 के पास हल्का जलभराव",
   "Leak Detection": "रिसाव का पता लगाना",
   "No leaks found": "कोई रिसाव नहीं मिला",
   "Moisture Levels": "नमी का स्तर",
   "Even distribution": "समान वितरण",
-  "28 litter items detected": "28 कूड़े की वस्तुएं पाई गईं",
   "Bin Status": "डस्टबिन की स्थिति",
   "3 bins overflowing (near food court)": "3 डस्टबिन ओवरफ्लो हो रहे हैं (फूड कोर्ट के पास)",
-  "Construction debris near north wall": "उत्तरी दीवार के पास निर्माण का मलबा",
   "Green Waste": "हरा कचरा",
   "Leaf piles in 2 zones": "2 क्षेत्रों में पत्तियों के ढेर",
   "Water Stagnation": "जल जमाव",
@@ -336,28 +372,11 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "R Block Asaf Ali Park": "आर ब्लॉक आसफ अली पार्क",
   "Vasant Udyan": "वसंत उद्यान",
   "Vasant Vatika": "वसंत वाटिका",
-  "Rohini": "रोहिणी",
-  "East Delhi": "पूर्वी दिल्ली",
-  "North Delhi": "उत्तरी दिल्ली",
-  "Mayur Vihar": "मयूर विहार",
-  "Asaf Ali Road": "आसफ अली रोड",
-  "Vasant Kunj": "वसंत कुंज",
   "ready": "तैयार",
   "scheduled": "निर्धारित",
-  "22 May 2026": "22 मई 2026",
-  "19 May 2026": "19 मई 2026",
-  "18 May 2026": "18 मई 2026",
-  "20 May 2026": "20 मई 2026",
   "3-clip survey": "3-क्लिप सर्वेक्षण",
   "4-clip survey": "4-क्लिप सर्वेक्षण",
   "2-clip survey": "2-क्लिप सर्वेक्षण",
-  "Lawns, gazebo & hedge beds · lake & open water · algal channel & banks": "लॉन, गेज़ेबो और हेज बेड्स · झील और खुला पानी · शैवाल चैनल और किनारे",
-  "Play area · lake edge · open-gym & lawns · footbridge": "खेल क्षेत्र · झील का किनारा · ओपन-जिम और लॉन · फुटब्रिज",
-  "Palm avenue & lawns · formal beds & pathways · central axis & parterre": "पाम एवेन्यू और लॉन · औपचारिक क्यारियाँ और रास्ते · केंद्रीय अक्ष और पारटेर",
-  "Flooded planting bed · play area · waterlogged ground · lawns & tree belt": "बाढ़ग्रस्त रोपण क्यारी · खेल क्षेत्र · जलभराव वाला मैदान · लॉन और ट्री बेल्ट",
-  "Garden & tree canopy · pavilion (close-range)": "बगीचा और पेड़ की छतरी · मंडप (पास से)",
-  "Children's play area · pathways & tree belt": "बच्चों के खेलने का क्षेत्र · रास्ते और ट्री बेल्ट",
-  "Fountain & formal garden · central lawn & avenue · open gym & hedge beds": "फव्वारा और औपचारिक उद्यान · केंद्रीय लॉन और एवेन्यू · ओपन जिम और हेज बेड्स",
   "Full Park Survey": "पूर्ण पार्क सर्वेक्षण",
   "Works Zone Clip": "कार्य क्षेत्र क्लिप",
   "Active construction on the park pathway · 38 s": "पार्क के रास्ते पर सक्रिय निर्माण · 38 सेकंड",
@@ -398,27 +417,50 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "Survey scheduled": "सर्वेक्षण निर्धारित",
   "Analysing recording": "रिकॉर्डिंग का विश्लेषण हो रहा है",
   "Recording paused": "रिकॉर्डिंग रोक दी गई",
-  "Surveyed": "सर्वेक्षण किया गया",
   "Survey Complete": "सर्वेक्षण पूर्ण",
   "Considerations found": "विचारणीय बिंदु मिले",
   "AI MAINTENANCE RECOMMENDATIONS": "एआई रखरखाव अनुशंसाएँ",
   "Schedule Pruning (Zone C)": "छंटाई अनुसूची (ज़ोन सी)",
   "12 trees affecting light penetration": "12 पेड़ प्रकाश प्रवेश को प्रभावित कर रहे हैं",
-  "HIGH IMPACT": "उच्च प्रभाव",
   "Repair Pathway Crack (North Gate)": "रास्ते की दरार की मरम्मत (उत्तरी द्वार)",
   "Preventing water accumulation": "जल संचय को रोकना",
-  "MEDIUM IMPACT": "मध्यम प्रभाव",
   "Clear Floating Waste (Lake)": "तैरते हुए कचरे को साफ करें (झील)",
   "6 plastic items detected": "6 प्लास्टिक वस्तुएं पाई गईं",
-  "IMMEDIATE": "तत्काल",
 };
     if (lang === 'en') return text;
     if (dict[text]) return translateNumber(dict[text]);
-    if (dict[text.trim()]) return text.replace(text.trim(), translateNumber(dict[text.trim()]));
+    
+    const t = text.trim();
+    if (dict[t]) return text.replace(t, translateNumber(dict[t]));
+    if (dict[t.toUpperCase()]) return text.replace(t, translateNumber(dict[t.toUpperCase()]));
+    
+    // Also try capitalizing the first letter of each word (Title Case)
+    const titleCase = t.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    if (dict[titleCase]) return text.replace(t, translateNumber(dict[titleCase]));
+    
+    // Also try purely lowercase
+    if (dict[t.toLowerCase()]) return text.replace(t, translateNumber(dict[t.toLowerCase()]));
+
+    
+    let res = text;
+    res = res.replace(/Green vigour/g, "हरापन");
+    res = res.replace(/bare \/ dry ground/g, "बंजर / सूखी ज़मीन");
+    res = res.replace(/litter items detected/g, "कचरा वस्तुएं पाई गईं");
+    res = res.replace(/dry patches in east section/g, "पूर्वी हिस्से में सूखे पैच");
+    res = res.replace(/trees affecting light penetration/g, "पेड़ प्रकाश प्रवेश को प्रभावित कर रहे हैं");
+    res = res.replace(/plastic items detected/g, "प्लास्टिक वस्तुएं पाई गईं");
+    res = res.replace(/Needs multispectral — RGB only/g, "मल्टीस्पेक्ट्रल की आवश्यकता — केवल आरजीबी");
+    res = res.replace(/Not derivable from RGB/g, "आरजीबी से प्राप्त नहीं किया जा सकता");
+    res = res.replace(/Needs multispectral/g, "मल्टीस्पेक्ट्रल की आवश्यकता");
+    res = res.replace(/Single-date baseline/g, "एकल-तारीख आधार रेखा");
+    res = res.replace(/Scheduled sites have no processed survey yet\. Scores and findings appear once a flight has been flown and analysed\./g, "निर्धारित साइटों का अभी तक कोई सर्वेक्षण संसाधित नहीं हुआ है। उड़ान भरने और विश्लेषण के बाद स्कोर और निष्कर्ष दिखाई देते हैं।");
+    
+    return translateNumber(res);
     return translateNumber(text); // translate any stray numbers even if string is not in dict
   };
 
-  const translateNumber = (num: string | number) => {
+  const translateNumber = (num?: string | number) => {
+    if (num === undefined || num === null) return "";
     const str = String(num);
     if (lang === 'en') return str;
     const hindiDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];

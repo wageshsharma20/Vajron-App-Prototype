@@ -134,12 +134,12 @@ export const InspectionAccordion: React.FC<InspectionAccordionProps> = ({ data, 
         <View style={styles.headerLeft}>
           <IconComponent size={16} color={theme.textPrimary} strokeWidth={1.5} />
           <Text style={[styles.categoryName, { color: theme.textPrimary }]}>
-            {data.category}
+            {translateAny(data.category)}
           </Text>
         </View>
         <View style={styles.headerRight}>
           <Text style={[styles.badgeText, { color: statusColor }]}>
-            {badgeText}
+            {translateAny(badgeText)}
           </Text>
           {onDownload && (
             <Pressable onPress={(e) => { e.stopPropagation(); onDownload(data); }} hitSlop={8}>
