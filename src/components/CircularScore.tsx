@@ -35,7 +35,10 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
   const animatedOffset = useSharedValue(arcLength);
 
   useEffect(() => {
-    animatedOffset.value = withDelay(300, withTiming(targetDashoffset, { duration: 0 }));
+    animatedOffset.value = withDelay(300, withTiming(targetDashoffset, {
+      duration: 1200,
+      easing: Easing.bezier(0.25, 0.1, 0.25, 1),
+    }));
   }, [targetDashoffset]);
 
   const animatedProps = useAnimatedProps(() => {
@@ -86,7 +89,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   scoreText: {
-    fontFamily: typography.fonts.light, // Zen signature
+    fontFamily: typography.fonts.regular, // Zen signature
     letterSpacing: -2,
   },
   label: {

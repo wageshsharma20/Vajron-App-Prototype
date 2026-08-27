@@ -21,9 +21,9 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
     if (dimensions.length === state.routes.length) {
       const activeDim = dimensions[state.index];
       if (activeDim) {
-        cursorLeft.value = withTiming(activeDim.x, { duration: 0 });
-        cursorWidth.value = withTiming(activeDim.width, { duration: 0 });
-        cursorOpacity.value = withTiming(1, { duration: 0 });
+        cursorLeft.value = withTiming(activeDim.x, { duration: 250 });
+        cursorWidth.value = withTiming(activeDim.width, { duration: 250 });
+        cursorOpacity.value = withTiming(1, { duration: 150 });
       }
     }
   }, [state.index, dimensions]);
@@ -97,9 +97,7 @@ export function CustomTabBar({ state, descriptors, navigation }: BottomTabBarPro
               <Text style={[
                 styles.tabText, 
                 { color: textColor }
-              ]}>
-                {t(label.toLowerCase() as any)}
-              </Text>
+              ]}>\n                {t(label.toLowerCase() as any)}\n              </Text>
             </TouchableOpacity>
           );
         })}
