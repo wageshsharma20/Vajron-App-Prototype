@@ -90,12 +90,15 @@ const styles = StyleSheet.create({
   },
   logoGroup: {
     position: 'absolute',
-    top: 100,
+    top: 50,
     alignItems: 'center',
     width: '100%',
   },
   loaderGroup: {
+    position: 'absolute',
+    bottom: 160,
     alignItems: 'center',
+    width: '100%',
   },
   ddaLogo: {
     width: 403,
