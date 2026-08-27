@@ -250,12 +250,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 4,
-    marginBottom: 8, // Small gap before the score starts — the "shift down" now
-                     // reads as the score sitting below its own letterhead row.
+    marginBottom: 0, // Score sits right under the letterhead row.
   },
   topLogo: {
-    width: 44,
-    height: 44,
+    width: 50,
+    height: 50,
   },
   overallSection: {
     alignItems: 'center',
