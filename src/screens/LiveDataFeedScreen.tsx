@@ -135,7 +135,7 @@ export const LiveDataFeedScreen = ({ navigation }: any) => {
                   // merely whether it was ever started. hasStarted is sticky, so
                   // keying the badge on it left the header claiming LIVE while the
                   // clock sat frozen — including when the video never loaded at all.
-                  { color: isPlaying ? theme.accentRed : theme.textSecondary, marginTop: 8 },
+                  { color: isPlaying ? theme.accentRed : theme.textSecondary, marginTop: 4 },
                 ]}
               >
                 {isPlaying ? 'LIVE' : hasStarted ? 'PAUSED' : 'SURVEY COMPLETE'}
@@ -241,12 +241,12 @@ const styles = StyleSheet.create({
   },
   overallSection: {
     alignItems: 'center',
-    marginBottom: 32, // Increased whitespace
+    marginBottom: 24, // Balanced whitespace
   },
   overallMeta: {
     alignItems: 'center',
-    marginTop: 16,
-    gap: 16,
+    marginTop: 12,
+    gap: 12,
   },
   parkName: {
     fontFamily: typography.fonts.light,
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
   },
   statusBar: {
     alignItems: 'center',
-    marginBottom: 32,
+    marginBottom: 24,
   },
   statusText: {
     fontFamily: typography.fonts.medium,
