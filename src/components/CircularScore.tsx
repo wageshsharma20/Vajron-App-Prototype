@@ -32,7 +32,12 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
   // Zen: single accent color
   const color = theme.accentTeal;
   
-  const height = size / 2 + strokeWidth;
+  // The stroke uses butt caps, so at the two endpoints it stops exactly at cy
+  // instead of extending half a stroke below it — the arc's real height is
+  // size/2. The old `size / 2 + strokeWidth` left a strokeWidth-tall band of
+  // dead space under the arc, which pushed the number down out of the arc's
+  // opening and made the gauge read as lopsided.
+  const height = size / 2;
 
   const animatedOffset = useSharedValue(arcLength);
 
@@ -84,11 +89,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   scoreOverlay: {
+    // Fills the arc and sits the number on the baseline that joins the two arc
+    // ends, so it reads as nested inside the arc rather than hanging below it.
     position: 'absolute',
-    bottom: -10, // Bring it down a bit so it sits on the baseline
+    top: 0,
+    bottom: 0,
     left: 0,
     right: 0,
     alignItems: 'center',
+    justifyContent: 'flex-end',
   },
   scoreText: {
     fontFamily: typography.fonts.regular, // Zen signature
