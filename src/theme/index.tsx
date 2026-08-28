@@ -2,6 +2,13 @@ import React, { createContext, useContext, useState } from 'react';
 
 export const typography = {
   fonts: {
+    // `light` is referenced in a handful of styles but no light face is loaded,
+    // so it resolved to undefined. Where those styles sit under a Paper <Text>
+    // that was harmless — the family was inherited — but RecordingPlayerScreen
+    // uses a plain RN <Text> with nothing to inherit from, so its sheet title
+    // fell through to the system font. Pointing it at the regular face keeps
+    // what the app has always actually rendered and removes the dead lookup.
+    light: 'NotoSans_400Regular',
     regular: 'NotoSans_400Regular',
     medium: 'NotoSans_500Medium',
     semiBold: 'NotoSans_600SemiBold',
