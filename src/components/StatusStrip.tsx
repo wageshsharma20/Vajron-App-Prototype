@@ -25,7 +25,7 @@ export const StatusStrip = () => {
 
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.background, paddingTop: Math.max(insets.top, 10), borderBottomColor: theme.border + '60' }]}>
+    <View style={[styles.container, { backgroundColor: theme.surface, paddingTop: Math.max(insets.top, 10), borderBottomColor: theme.border + '60' }]}>
       <View style={[styles.left, { flexShrink: 1 }]}>
 
         <View style={styles.item}>
