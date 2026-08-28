@@ -470,6 +470,7 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "Forgot password?": "पासवर्ड भूल गए?",
   "Get Started": "शुरू करें",
   "Please enter both username and password.": "कृपया उपयोगकर्ता नाम और पासवर्ड दोनों दर्ज करें।",
+  "Incorrect username or password.": "उपयोगकर्ता नाम या पासवर्ड गलत है।",
 };
     if (lang === 'en') return text;
     if (dict[text]) return translateNumber(dict[text]);

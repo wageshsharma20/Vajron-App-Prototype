@@ -1,4 +1,4 @@
-import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold } from '@expo-google-fonts/inter';
+import { useFonts, NotoSans_400Regular, NotoSans_500Medium, NotoSans_600SemiBold, NotoSans_700Bold } from '@expo-google-fonts/noto-sans';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -58,7 +58,7 @@ const AppNavigator = () => {
         level1: theme.surfaceLight,
       }
     },
-    fonts: configureFonts({ config: { fontFamily: 'Inter_400Regular' } })
+    fonts: configureFonts({ config: { fontFamily: 'NotoSans_400Regular' } })
   } as any;
 
   if (!isReady) {
@@ -109,10 +109,10 @@ const AppNavigator = () => {
 
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
+    NotoSans_400Regular,
+    NotoSans_500Medium,
+    NotoSans_600SemiBold,
+    NotoSans_700Bold,
   });
 
   if (!fontsLoaded) {

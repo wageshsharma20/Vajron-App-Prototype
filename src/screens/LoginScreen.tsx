@@ -15,8 +15,16 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme, typography } from '../theme';
 import { useI18n } from '../i18n';
 
+/** The operator account this prototype accepts.
+ *
+ * This is a client-side check, so the values ship inside the bundle and anyone
+ * with the app can read them — it gates the demo flow, it is not a security
+ * control. Real deployments need to verify against a server. */
+const OPERATOR_USERNAME = 'ddaofficer';
+const OPERATOR_PASSWORD = 'dda12';
+
 type Props = {
-  /** Called once the operator has supplied both credentials. */
+  /** Called once the operator has supplied valid credentials. */
   onSignIn: () => void;
 };
 
@@ -33,6 +41,12 @@ export const LoginScreen: React.FC<Props> = ({ onSignIn }) => {
   const handleSignIn = () => {
     if (!username.trim() || !password) {
       setError(translateAny('Please enter both username and password.'));
+      return;
+    }
+    // Username is matched case-insensitively (operators type it by hand, often
+    // with an autocapitalising keyboard); the password is matched exactly.
+    if (username.trim().toLowerCase() !== OPERATOR_USERNAME || password !== OPERATOR_PASSWORD) {
+      setError(translateAny('Incorrect username or password.'));
       return;
     }
     setError('');

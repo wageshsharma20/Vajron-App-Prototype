@@ -2,10 +2,10 @@ import React, { createContext, useContext, useState } from 'react';
 
 export const typography = {
   fonts: {
-    regular: 'Inter_400Regular',
-    medium: 'Inter_500Medium',
-    semiBold: 'Inter_600SemiBold',
-    bold: 'Inter_700Bold',
+    regular: 'NotoSans_400Regular',
+    medium: 'NotoSans_500Medium',
+    semiBold: 'NotoSans_600SemiBold',
+    bold: 'NotoSans_700Bold',
   },
   tabularNums: ['tabular-nums'] as const,
   sizes: {
