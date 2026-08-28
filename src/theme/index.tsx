@@ -36,9 +36,14 @@ export type ColorTheme = {
 
 
 export const lightTheme: ColorTheme = {
+  // The page stays white; the raised surfaces carry a pale green wash instead of
+  // a neutral grey, so panels read as tinted against the page the way a civic
+  // portal tints its content areas. Kept far enough down in saturation that it
+  // reads as a wash rather than a colour, and light enough that both text tones
+  // keep their contrast on it.
   background: '#FFFFFF',
-  surface: '#F8F9FA',
-  surfaceLight: '#E9ECEF',
+  surface: '#ECF5EF',
+  surfaceLight: '#E2EFE5',
   textPrimary: '#000000',
   textSecondary: '#6C757D',
   border: '#DEE2E6',
