@@ -2,10 +2,7 @@ import { useFonts, NotoSans_400Regular, NotoSans_500Medium, NotoSans_600SemiBold
 import React, { useState, useEffect } from 'react';
 import { Text as RNText, TextInput as RNTextInput } from 'react-native';
 
-if (!(RNText as any).defaultProps) { (RNText as any).defaultProps = {}; }
-(RNText as any).defaultProps.style = { fontFamily: 'NotoSans_400Regular' };
-if (!(RNTextInput as any).defaultProps) { (RNTextInput as any).defaultProps = {}; }
-(RNTextInput as any).defaultProps.style = { fontFamily: 'NotoSans_400Regular' };
+
 import { StyleSheet, View, Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
