@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     // ends, so it reads as nested inside the arc rather than hanging below it.
     position: 'absolute',
     top: 0,
-    bottom: -5, // Nudged past the baseline so the number sits optically centred
+    bottom: -15, // Nudged past the baseline so the number sits optically centred
     left: 0,
     right: 0,
     alignItems: 'center',
