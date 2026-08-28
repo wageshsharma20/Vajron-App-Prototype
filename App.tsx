@@ -114,6 +114,14 @@ const AppNavigator = () => {
 };
 
 export default function App() {
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      const style = document.createElement('style');
+      style.textContent = `html, body, #root, div, span, text { font-family: 'NotoSans_400Regular', 'Noto Sans', sans-serif; }`;
+      document.head.appendChild(style);
+    }
+  }, []);
+
   const [fontsLoaded, fontError] = useFonts({
     NotoSans_400Regular,
     NotoSans_500Medium,
@@ -128,16 +136,9 @@ export default function App() {
   if (!fontsLoaded && !fontError) {
     return null;
   }
-  
   const webShadow = Platform.OS === 'web' ? { boxShadow: "none" } : {};
+  
 
-  useEffect(() => {
-    if (Platform.OS === 'web') {
-      const style = document.createElement('style');
-      style.textContent = `html, body, #root, div, span, text { font-family: 'NotoSans_400Regular', 'Noto Sans', sans-serif; }`;
-      document.head.appendChild(style);
-    }
-  }, []);
 
   
 
