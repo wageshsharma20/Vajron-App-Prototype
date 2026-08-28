@@ -461,6 +461,15 @@ export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   "None flagged": "कुछ भी चिह्नित नहीं",
   "Moderate clarity": "मध्यम स्पष्टता",
   "Turbid green / olive": "गंदला हरा / जैतूनी",
+
+  // Sign-in screen
+  "Sign in": "साइन इन करें",
+  "Secure identity verification.": "सुरक्षित पहचान सत्यापन।",
+  "Username": "उपयोगकर्ता नाम",
+  "Password": "पासवर्ड",
+  "Forgot password?": "पासवर्ड भूल गए?",
+  "Get Started": "शुरू करें",
+  "Please enter both username and password.": "कृपया उपयोगकर्ता नाम और पासवर्ड दोनों दर्ज करें।",
 };
     if (lang === 'en') return text;
     if (dict[text]) return translateNumber(dict[text]);

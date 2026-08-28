@@ -16,6 +16,7 @@ import { ConclusiveDataScreen } from './src/screens/ConclusiveDataScreen';
 import { DDAVerificationScreen } from './src/screens/DDAVerificationScreen';
 import { CustomTabBar } from './src/components/CustomTabBar';
 import { ZenLoader } from './src/components/ZenLoader';
+import { LoginScreen } from './src/screens/LoginScreen';
 import { PaperProvider, MD3LightTheme, adaptNavigationTheme, configureFonts } from 'react-native-paper';
 import { DefaultTheme as NavigationDefaultTheme, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
 import Animated, { FadeOut, FadeIn } from 'react-native-reanimated';
@@ -32,6 +33,9 @@ const Tab = createBottomTabNavigator();
 const AppNavigator = () => {
   const { theme } = useTheme();
   const [isReady, setIsReady] = useState(false);
+  // Gate between the loader and the app: the operator signs in before any
+  // survey data is on screen.
+  const [signedIn, setSignedIn] = useState(false);
 
   useEffect(() => {
     // Simulate complex initialization to show off the micro-interaction loader
@@ -59,6 +63,10 @@ const AppNavigator = () => {
 
   if (!isReady) {
     return <ZenLoader />;
+  }
+
+  if (!signedIn) {
+    return <LoginScreen onSignIn={() => setSignedIn(true)} />;
   }
 
   return (
