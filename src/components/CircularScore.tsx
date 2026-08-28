@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useId, useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
+import Svg, { Path, Defs, LinearGradient, Stop } from 'react-native-svg';
 import Animated, { useSharedValue, useAnimatedProps, withTiming, Easing, withDelay } from 'react-native-reanimated';
 import { useTheme, typography } from '../theme';
 import { useI18n } from '../i18n';
@@ -49,8 +49,28 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
   const progressLength = (score / 100) * arcLength;
   const targetDashoffset = arcLength - progressLength;
 
-  // Darkens as the score climbs, so the arc carries the reading on its own.
-  const color = colorForScore(theme.scoreRamp, score);
+  // The arc is painted with a gradient rather than one flat tone, so it deepens
+  // as it sweeps: pale where it starts, darkest where a full score would end.
+  // Because the gradient is anchored to the whole arc and progress only reveals
+  // part of it, a low score stops while the colour is still light and a high one
+  // carries through to the deep end — the "more progress, darker green" reading
+  // falls out of the geometry instead of being applied as a separate step.
+  //
+  // A LinearGradient runs along x, but the arc's angle does not: a point at arc
+  // progress t sits at x = cx - r*cos(pi*t), which bunches up near both ends. The
+  // stops are therefore placed at that same cosine, so colour tracks the angle
+  // swept rather than the horizontal distance covered.
+  const gradientId = `score-ramp-${useId()}`;
+  const stops = useMemo(() => {
+    const STEPS = 12;
+    return Array.from({ length: STEPS + 1 }, (_, i) => {
+      const t = i / STEPS;
+      return {
+        offset: (1 - Math.cos(Math.PI * t)) / 2,
+        color: colorForScore(theme.scoreRamp, t * 100),
+      };
+    });
+  }, [theme.scoreRamp]);
   
   // The stroke uses butt caps, so at the two endpoints it stops exactly at cy
   // instead of extending half a stroke below it — the arc's real height is
@@ -78,6 +98,20 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
     <View style={styles.container}>
       <View style={{ width: size, height: height, alignItems: 'center' }}>
         <Svg width={size} height={height}>
+          <Defs>
+            <LinearGradient
+              id={gradientId}
+              x1={cx - radius}
+              y1={0}
+              x2={cx + radius}
+              y2={0}
+              gradientUnits="userSpaceOnUse"
+            >
+              {stops.map((s) => (
+                <Stop key={s.offset} offset={s.offset} stopColor={s.color} />
+              ))}
+            </LinearGradient>
+          </Defs>
           <Path
             d={arcPath}
             stroke={theme.border}
@@ -86,7 +120,7 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
           />
           <AnimatedPath
             d={arcPath}
-            stroke={color}
+            stroke={`url(#${gradientId})`}
             strokeWidth={strokeWidth}
             fill="transparent"
             strokeDasharray={`${arcLength}`}
