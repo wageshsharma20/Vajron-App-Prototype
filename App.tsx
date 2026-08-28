@@ -108,14 +108,18 @@ const AppNavigator = () => {
 };
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     NotoSans_400Regular,
     NotoSans_500Medium,
     NotoSans_600SemiBold,
     NotoSans_700Bold,
   });
 
-  if (!fontsLoaded) {
+  // Hold the blank frame only while the fonts are still in flight. If they fail
+  // outright, carry on and let the platform substitute — previously only the
+  // loaded flag was read, so a font that never resolved left the app on an empty
+  // screen for good, with nothing on it to say why.
+  if (!fontsLoaded && !fontError) {
     return null;
   }
   

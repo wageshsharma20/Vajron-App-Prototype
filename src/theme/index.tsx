@@ -31,6 +31,11 @@ export type ColorTheme = {
   accentAmber: string;
   accentRed: string;
   statusGreen: string;
+  /** Score ramp, low to high. A weak score reads as a pale green and a strong
+   * one as deep forest. Anchored at three stops rather than blended between two
+   * because a straight two-stop blend drifts through a brighter, yellower green
+   * in the middle. */
+  scoreRamp: string[];
 };
 
 
@@ -52,6 +57,7 @@ export const lightTheme: ColorTheme = {
   accentAmber: '#D97706', // amber-600 for better contrast on white
   accentRed: '#DC2626',
   statusGreen: '#059669',
+  scoreRamp: ['#A3C9AE', '#5B9C6E', '#1E5233'],
 };
 
 type ThemeContextType = {

@@ -8,6 +8,26 @@ import { useI18n } from '../i18n';
 // Create animated SVG path
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 
+/** Picks the arc colour for a score by walking the theme's green ramp: pale at
+ * the bottom of the range, deep forest at the top. Interpolating in plain RGB is
+ * enough here because the ramp's own stops carry the shape of the curve. */
+const colorForScore = (ramp: string[], score: number) => {
+  if (!ramp.length) return '#000000';
+  if (ramp.length === 1) return ramp[0];
+
+  const toRgb = (hex: string) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
+  const clamped = Math.max(0, Math.min(100, Number.isFinite(score) ? score : 0));
+
+  const seg = (clamped / 100) * (ramp.length - 1);
+  const i = Math.min(Math.floor(seg), ramp.length - 2);
+  const f = seg - i;
+
+  const a = toRgb(ramp[i]);
+  const b = toRgb(ramp[i + 1]);
+  const mix = a.map((v, k) => Math.round(v + (b[k] - v) * f));
+  return '#' + mix.map((v) => v.toString(16).padStart(2, '0')).join('');
+};
+
 type CircularScoreProps = {
   score: number;
   size?: number;
@@ -29,8 +49,8 @@ export const CircularScore = ({ score, size = 200, strokeWidth = 12, label }: Ci
   const progressLength = (score / 100) * arcLength;
   const targetDashoffset = arcLength - progressLength;
 
-  // Zen: single accent color
-  const color = theme.accentTeal;
+  // Darkens as the score climbs, so the arc carries the reading on its own.
+  const color = colorForScore(theme.scoreRamp, score);
   
   // The stroke uses butt caps, so at the two endpoints it stops exactly at cy
   // instead of extending half a stroke below it — the arc's real height is
