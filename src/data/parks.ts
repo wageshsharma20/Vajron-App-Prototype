@@ -42,9 +42,9 @@ export const PARKS: Park[] = [
     locality: 'East Delhi',
     status: 'ready',
     surveyDate: '19 May 2026',
-    clip: '4-clip survey',
-    zone: 'Play area · lake edge · open-gym & lawns · footbridge',
-    durationSec: 180.45,
+    clip: '5-clip survey',
+    zone: 'Play area · lake edge · open-gym & lawns · footbridge · works zone',
+    durationSec: 218.49,
   },
   {
     id: 'lala-harydal',
@@ -117,7 +117,6 @@ export type Recording = {
   sublabel: string;
   datasetId:
     | 'survey'
-    | 'construction'
     | 'smriti-van-1'
     | 'smriti-van-2'
     | 'smriti-van-3'
@@ -140,22 +139,19 @@ export type Recording = {
 };
 
 export const RECORDINGS: Record<string, Recording[]> = {
+  // One recording, not two. The works-zone clip used to be a second entry that
+  // the player chained to when the survey ended — which meant a source swap, a
+  // reload and a visible break mid-survey. The five clips are now a single MP4
+  // on a single clock, so the works zone simply arrives at 3:00 like any other
+  // part of the flight.
   'sanjay-lake': [
     {
       id: 'survey',
       label: 'Full Park Survey',
-      sublabel: 'Play area · lake edge · open-gym & lawns · footbridge',
+      sublabel: 'Play area · lake edge · open-gym & lawns · footbridge · works zone',
       datasetId: 'survey',
-      video: 'sanjay-lake-detection.mp4',
-      durationSec: 180.45,
-    },
-    {
-      id: 'construction',
-      label: 'Works Zone Clip',
-      sublabel: 'Active construction on the park pathway · 38 s',
-      datasetId: 'construction',
-      video: 'sanjay-lake-construction.mp4',
-      durationSec: 37.95,
+      video: 'sanjay-lake-full.mp4',
+      durationSec: 218.49,
     },
   ],
   // Four separate clip recordings, chained in order so they play as one

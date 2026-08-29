@@ -24,6 +24,13 @@ patch('sanjayLakeReplay.json', [
   { time: 167, type: 'warning', title: 'Construction debris on footbridge', message: 'Construction debris detected on the footbridge — clear the site and verify safety barriers.' },
 ]);
 
+// The works-zone clip is the fifth clip of the same Sanjay Lake survey and plays
+// straight on from clip 4 in one continuous video. Times here are clip-local;
+// tools/merge-sanjay-lake.js offsets them onto the joined clock.
+patch('sanjayLakeConstructionReplay.json', [
+  { time: 5, type: 'warning', title: 'Construction debris on the pathway', message: 'Rubble and broken brick piled directly on the walking track — clear the route and barricade the works area.' },
+]);
+
 // ──────────────────────────────────────────── Lala Hardeval
 // Clip 1: keep 5s bare patches, 18s litter. Add 60s bare patches. Remove 28s water, 50s hedges, 68s path.
 patch('lalaHardevalClip1Replay.json', [

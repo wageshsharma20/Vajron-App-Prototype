@@ -2,8 +2,10 @@
  * Typed access layer over the AI detection replay datasets.
  *
  * One dataset per processed recording:
- *   - 'survey'       — Sanjay Lake four-clip park survey (sanjayLakeReplay.json)
- *   - 'construction' — Sanjay Lake works-zone clip       (sanjayLakeConstructionReplay.json)
+ *   - 'survey'       — Sanjay Lake five-clip park survey (sanjayLakeFullReplay.json:
+ *                      the four park clips and the works-zone clip joined onto
+ *                      one clock by tools/merge-sanjay-lake.js, matching the
+ *                      single joined MP4 the app now plays)
  *   - 'lala-1'..'lala-3'             — Lala Hardeval, one dataset per clip
  *   - 'asaf-1'..'asaf-2'             — R Block Asaf Ali, one dataset per clip
  *   - 'vasant-1'..'vasant-2'         — Vasant Udyan, one dataset per clip
@@ -17,8 +19,7 @@
  * dataset on its next render. This module is the only place that knows the tuple
  * layout.
  */
-import surveyRaw from '../data/sanjayLakeReplay.json';
-import constructionRaw from '../data/sanjayLakeConstructionReplay.json';
+import surveyRaw from '../data/sanjayLakeFullReplay.json';
 import smritiVan1Raw from '../data/smritiVanClip1Replay.json';
 import smritiVan2Raw from '../data/smritiVanClip2Replay.json';
 import smritiVan3Raw from '../data/smritiVanClip3Replay.json';
@@ -172,7 +173,6 @@ function buildDataset(raw: any) {
 
 export type ReplayId =
   | 'survey'
-  | 'construction'
   | 'smriti-van-1'
   | 'smriti-van-2'
   | 'smriti-van-3'
@@ -193,7 +193,6 @@ export type ReplayId =
 
 const DATASETS: Record<ReplayId, Dataset> = {
   survey: buildDataset(surveyRaw),
-  construction: buildDataset(constructionRaw),
   'smriti-van-1': buildDataset(smritiVan1Raw),
   'smriti-van-2': buildDataset(smritiVan2Raw),
   'smriti-van-3': buildDataset(smritiVan3Raw),

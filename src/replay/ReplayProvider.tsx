@@ -266,9 +266,14 @@ export const ReplayProvider = ({ children }: { children: React.ReactNode }) => {
       }
     });
     // When a recording finishes, roll straight into the park's next recording so
-    // the sequence (survey → works-zone clip) plays as one continuous video. The
-    // dataset follows the jump, so the Dashboard/Reports keep updating live. The
-    // last recording just ends.
+    // a park whose survey arrived as several clips still plays through without a
+    // click. The dataset follows the jump, so the Dashboard/Reports keep updating
+    // live; the last recording just ends.
+    //
+    // This is a fallback, not the preferred shape: a swap reloads the source and
+    // shows a visible break. Sanjay Lake's five clips are instead joined into one
+    // MP4 on one clock (tools/merge-sanjay-lake.js), which is why it never reaches
+    // this listener.
     const endSub = player.addListener('playToEnd', () => {
       const { parkId: pid, recordingId: rid } = navRef.current;
       const list = recordingsForPark(pid);

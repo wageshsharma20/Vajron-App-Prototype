@@ -32,7 +32,7 @@ const OUT_DIR = path.join(__dirname, '..', 'public', 'reports', 'categories');
 
 // ---------------------------------------------------------------- parks
 const PARKS = [
-  { id: 'sanjay-lake', name: 'Sanjay Lake', locality: 'East Delhi (DDA)', source: 'Sanjay_Lake_Park_AI_Detection_Report.xlsx', clips: ['sanjayLakeReplay.json'] },
+  { id: 'sanjay-lake', name: 'Sanjay Lake', locality: 'East Delhi (DDA)', source: 'Sanjay_Lake_Park_AI_Detection_Report.xlsx', clips: ['sanjayLakeFullReplay.json'] },
   { id: 'lala-harydal', name: 'Lala Harydal Park', locality: 'North Delhi (DDA)', source: 'Lala_Hardeval_AI_Detection_Report.xlsx', clips: ['lalaHardevalClip1Replay.json', 'lalaHardevalClip2Replay.json', 'lalaHardevalClip3Replay.json'] },
   { id: 'smriti-van-mayur-vihar', name: 'Smriti Van Mayur Vihar', locality: 'Mayur Vihar (DDA)', source: 'Smriti_Van_AI_Detection_Report.xlsx', clips: ['smritiVanClip1Replay.json', 'smritiVanClip2Replay.json', 'smritiVanClip3Replay.json', 'smritiVanClip4Replay.json'] },
   { id: 'r-block-asaf-ali', name: 'R Block, Asaf Ali Park', locality: 'Asaf Ali Road (DDA)', source: 'Asaf_Ali_AI_Detection_Report.xlsx', clips: ['asafAliClip1Replay.json', 'asafAliClip2Replay.json'] },
