@@ -59,8 +59,13 @@ export const RecordingsScreen = () => {
           >
             <View style={styles.rowMain}>
               <Text style={[styles.parkName, { color: theme.textPrimary }]}>{translateAny(p.name)}</Text>
+              {/* Translated as a whole line, not pieced together: i18n carries the
+                  composed "<locality> · Surveyed <date>" strings, and translating
+                  the parts separately would leave the connector in English. */}
               <Text style={[styles.parkMeta, { color: theme.textSecondary }]}>
-                {ready ? `${p.locality} · Surveyed ${p.surveyDate}` : `${p.locality} · Survey scheduled`}
+                {translateAny(
+                  ready ? `${p.locality} · Surveyed ${p.surveyDate}` : `${p.locality} · Survey scheduled`,
+                )}
               </Text>
               {ready && p.zone && (
                 <Text style={[styles.parkZone, { color: theme.textSecondary }]} numberOfLines={1}>
@@ -87,8 +92,9 @@ export const RecordingsScreen = () => {
       })}
 
       <Text style={[styles.footnote, { color: theme.textSecondary }]}>
-        Scheduled sites have no processed survey yet. Scores and findings appear once a flight has
-        been flown and analysed.
+        {translateAny(
+          'Scheduled sites have no processed survey yet. Scores and findings appear once a flight has been flown and analysed.',
+        )}
       </Text>
     </ScrollView>
   );

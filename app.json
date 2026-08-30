@@ -2,6 +2,7 @@
   "expo": {
     "name": "DDA AI Park Monitor",
     "slug": "AppPrototype",
+    "owner": "wageshsharmas-team",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -33,11 +34,6 @@
       ],
       "expo-video",
       "expo-sharing"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "cb6363a1-0787-4dfe-8c90-fabebc5c3f55"
-      }
-    }
+    ]
   }
 }
