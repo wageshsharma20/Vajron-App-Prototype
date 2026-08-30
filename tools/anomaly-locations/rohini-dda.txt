@@ -1,0 +1,41 @@
+ROHINI DDA PARK — Swarn Jayanti / Japanese Park, Sector 10
+AI drone survey, 22 May 2026 · 3-clip survey · 9 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [INFO] 0:05 — Hedges need a trim
+   hedge beds looking uneven along the edges (Clip 1)
+   https://www.google.com/maps?q=28.722542,77.117856
+
+2. [WARNING] 0:15 — Bare patches on the lawn
+   needs replanting (Clip 1)
+   https://www.google.com/maps?q=28.721921,77.119036
+
+3. [WARNING] 0:04 — Lake water looking murky
+   greenish tinge suggests algae buildup (Clip 2)
+   https://www.google.com/maps?q=28.720039,77.117384
+
+4. [INFO] 0:15 — Shoreline needs cleanup
+   debris along the lake edge (Clip 2)
+   https://www.google.com/maps?q=28.719475,77.118178
+
+5. [ERROR] 0:23 — Floating waste in the lake
+   needs immediate skimming (Clip 2)
+   https://www.google.com/maps?q=28.719212,77.117813
+
+6. [WARNING] 0:05 — Algae spreading in the channel
+   water circulation needed (Clip 3)
+   https://www.google.com/maps?q=28.718384,77.119187
+
+7. [WARNING] 0:18 — Bank erosion visible
+   could use reinforcement (Clip 3)
+   https://www.google.com/maps?q=28.717857,77.119830
+
+8. [INFO] 0:30 — Litter near the banks
+   (Clip 3)
+   https://www.google.com/maps?q=28.717556,77.118800
+
+9. [WARNING] 0:42 — Dry patches along the bank
+   watering and replanting needed (Clip 3)
+   https://www.google.com/maps?q=28.717367,77.119573

@@ -1,0 +1,33 @@
+VASANT UDYAN — Vasant Kunj
+AI drone survey, 18 May 2026 · 2-clip survey · 7 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [WARNING] 0:04 — Play area flooring damaged
+   cracked tiles, repair needed for safety (Clip 1)
+   https://www.google.com/maps?q=28.558689,77.164823
+
+2. [INFO] 0:10 — Litter about
+   (Clip 1)
+   https://www.google.com/maps?q=28.558501,77.165187
+
+3. [INFO] 0:24 — A few bare patches
+   under the equipment (Clip 1)
+   https://www.google.com/maps?q=28.558312,77.165402
+
+4. [INFO] 0:33 — Lawn could use attention
+   grass thinning around the edges (Clip 1)
+   https://www.google.com/maps?q=28.558218,77.164973
+
+5. [WARNING] 0:04 — Ground cover thinning
+   compacted ground along the path (Clip 2)
+   https://www.google.com/maps?q=28.557182,77.166367
+
+6. [WARNING] 0:11 — Path surface worn
+   worth patching (Clip 2)
+   https://www.google.com/maps?q=28.556899,77.166582
+
+7. [INFO] 0:18 — Hedges need a trim
+   gaps along the shrub line (Clip 2)
+   https://www.google.com/maps?q=28.556729,77.166153

@@ -16,7 +16,7 @@ import { StatusStrip } from './src/components/StatusStrip';
 import { LiveDataFeedScreen } from './src/screens/LiveDataFeedScreen';
 import { RecordingsScreen } from './src/screens/RecordingsScreen';
 import { ConclusiveDataScreen } from './src/screens/ConclusiveDataScreen';
-import { DDAVerificationScreen } from './src/screens/DDAVerificationScreen';
+import { IssueLocatorScreen } from './src/screens/IssueLocatorScreen';
 import { CustomTabBar } from './src/components/CustomTabBar';
 import { ZenLoader } from './src/components/ZenLoader';
 import { LoginScreen } from './src/screens/LoginScreen';
@@ -100,7 +100,7 @@ const AppNavigator = () => {
               />
               <Tab.Screen 
                 name="Audit" 
-                component={DDAVerificationScreen} 
+                component={IssueLocatorScreen} 
               />
             </Tab.Navigator>
           </NavigationContainer>

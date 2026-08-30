@@ -1,0 +1,53 @@
+SMRITI VAN — Mayur Vihar
+AI drone survey, 19 May 2026 · 4-clip survey · 12 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [WARNING] 0:03 — Standing water observed
+   water pooling in the planting bed (Clip 1)
+   https://www.google.com/maps?q=28.604802,77.337230
+
+2. [INFO] 0:12 — Litter about
+   (Clip 1)
+   https://www.google.com/maps?q=28.604595,77.337445
+
+3. [INFO] 0:17 — Fallen leaves piling up
+   sweep before it gets slippery (Clip 2)
+   https://www.google.com/maps?q=28.605480,77.338228
+
+4. [WARNING] 0:25 — Standing water observed
+   pooling in the play area (Clip 2)
+   https://www.google.com/maps?q=28.605254,77.338378
+
+5. [ERROR] 0:40 — Play equipment broken — critical
+   swing collapsed on the sand (Clip 2)
+   https://www.google.com/maps?q=28.605066,77.338550
+
+6. [WARNING] 0:07 — Standing water observed
+   across the open ground (Clip 3)
+   https://www.google.com/maps?q=28.605763,77.339773
+
+7. [WARNING] 0:10 — Algae risk from stagnant water
+   could breed algae and mosquitoes (Clip 3)
+   https://www.google.com/maps?q=28.605556,77.339988
+
+8. [WARNING] 0:14 — Ground cover thinning
+   bare and compacted in places (Clip 3)
+   https://www.google.com/maps?q=28.605349,77.339537
+
+9. [INFO] 0:28 — Litter about
+   (Clip 3)
+   https://www.google.com/maps?q=28.605160,77.339322
+
+10. [INFO] 0:04 — A few bare patches
+   compacted ground along the path (Clip 4)
+   https://www.google.com/maps?q=28.606517,77.341168
+
+11. [INFO] 0:21 — Lawn could use attention
+   aerating and overseeding (Clip 4)
+   https://www.google.com/maps?q=28.606234,77.341382
+
+12. [INFO] 0:31 — Hedges need a trim
+   gaps along the shrub line (Clip 4)
+   https://www.google.com/maps?q=28.606762,77.341597

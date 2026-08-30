@@ -49,7 +49,7 @@ export const PARKS: Park[] = [
   {
     id: 'lala-harydal',
     name: 'Lala Harydal Park',
-    locality: 'North Delhi',
+    locality: 'Jasola Vihar',
     status: 'ready',
     surveyDate: '19 May 2026',
     clip: '3-clip survey',
@@ -69,7 +69,7 @@ export const PARKS: Park[] = [
   {
     id: 'r-block-asaf-ali',
     name: 'R Block Asaf Ali Park',
-    locality: 'Asaf Ali Road',
+    locality: 'Greater Kailash',
     status: 'ready',
     surveyDate: '18 May 2026',
     clip: '2-clip survey',

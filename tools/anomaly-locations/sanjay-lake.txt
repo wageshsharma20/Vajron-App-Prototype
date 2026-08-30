@@ -1,0 +1,29 @@
+SANJAY LAKE PARK — East Delhi
+AI drone survey, 19 May 2026 · 5-clip survey on one 218 s clock · 6 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [WARNING] 0:45 — Waterlogging
+   standing water in the children's play area (Clip 1)
+   https://www.google.com/maps?q=28.615101,77.286190
+
+2. [WARNING] 0:55 — Dry patches on lawn
+   irrigation check needed (Clip 1)
+   https://www.google.com/maps?q=28.614794,77.287409
+
+3. [WARNING] 1:33 — Dry vegetation
+   2-3 trees with stressed canopy (Clip 2)
+   https://www.google.com/maps?q=28.615417,77.289478
+
+4. [WARNING] 2:27 — Bare patches spreading
+   re-turfing and decompaction (Clip 3)
+   https://www.google.com/maps?q=28.614579,77.291281
+
+5. [WARNING] 2:47 — Construction debris
+   on footbridge - clear site, verify barriers (Clip 4)
+   https://www.google.com/maps?q=28.615362,77.293296
+
+6. [WARNING] 3:05 — Construction debris
+   rubble on the walking track - clear and barricade (Clip 5)
+   https://www.google.com/maps?q=28.614896,77.294304

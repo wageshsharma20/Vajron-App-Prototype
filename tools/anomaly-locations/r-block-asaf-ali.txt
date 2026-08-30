@@ -1,0 +1,25 @@
+R BLOCK PARK — Greater Kailash
+AI drone survey, 18 May 2026 · 2-clip survey · 5 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [INFO] 0:06 — Hedges need a trim
+   shrub line uneven under the canopy (Clip 1)
+   https://www.google.com/maps?q=28.546999,77.242318
+
+2. [INFO] 0:35 — Lawn could use attention
+   grass thinning in places (Clip 1)
+   https://www.google.com/maps?q=28.546320,77.241277
+
+3. [WARNING] 0:04 — Pavilion structure deteriorating
+   cracks and peeling visible (Clip 2)
+   https://www.google.com/maps?q=28.545774,77.240988
+
+4. [INFO] 0:22 — Some dry vegetation
+   near the pavilion (Clip 2)
+   https://www.google.com/maps?q=28.545585,77.241245
+
+5. [WARNING] 0:34 — Building needs repair
+   repainting and structural repair (Clip 2)
+   https://www.google.com/maps?q=28.545925,77.241073

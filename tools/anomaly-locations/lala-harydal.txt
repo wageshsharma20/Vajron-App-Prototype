@@ -1,0 +1,33 @@
+LALA HARDAYAL PARK — Jasola Vihar
+AI drone survey, 19 May 2026 · 3-clip survey · 7 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [WARNING] 0:05 — Bare patches showing
+   thinning under the palm avenue (Clip 1)
+   https://www.google.com/maps?q=28.540049,77.283572
+
+2. [INFO] 0:18 — Litter about
+   loose debris across the lawns (Clip 1)
+   https://www.google.com/maps?q=28.539841,77.284130
+
+3. [WARNING] 1:00 — More bare patches ahead
+   far end of the avenue (Clip 1)
+   https://www.google.com/maps?q=28.539936,77.284881
+
+4. [INFO] 0:05 — Lawn could use attention
+   turf patchy around the formal beds (Clip 2)
+   https://www.google.com/maps?q=28.540407,77.286651
+
+5. [INFO] 0:27 — Canopy looking thin
+   some watering would help (Clip 2)
+   https://www.google.com/maps?q=28.540661,77.287295
+
+6. [INFO] 0:11 — Lawn could use attention
+   grass thinning beside the axis (Clip 3)
+   https://www.google.com/maps?q=28.541085,77.288228
+
+7. [INFO] 0:17 — A few bare patches
+   along the central axis (Clip 3)
+   https://www.google.com/maps?q=28.541217,77.288485

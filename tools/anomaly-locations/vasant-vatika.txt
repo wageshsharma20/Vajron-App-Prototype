@@ -1,0 +1,37 @@
+VASANT VATIKA — Vasant Kunj
+AI drone survey, 20 May 2026 · 3-clip survey · 8 anomalies
+
+Anomaly locations (approximate — derived from marker position on the
+satellite screenshot, not surveyed GPS. See map image for context.)
+
+1. [WARNING] 0:03 — Shrubs showing wear
+   hedge condition dipping near the fountain (Clip 1)
+   https://www.google.com/maps?q=28.533840,77.146001
+
+2. [WARNING] 0:03 — Litter building up
+   condition at 36% (Clip 2)
+   https://www.google.com/maps?q=28.535310,77.146795
+
+3. [WARNING] 0:14 — Hedges degrading
+   multiple shrub lines in poor condition (Clip 2)
+   https://www.google.com/maps?q=28.536065,77.147224
+
+4. [WARNING] 0:35 — Bare patches and dry vegetation
+   irrigation review needed (Clip 2)
+   https://www.google.com/maps?q=28.534745,77.146495
+
+5. [INFO] 0:03 — Ground wearing thin
+   near the gym area (Clip 3)
+   https://www.google.com/maps?q=28.532671,77.145293
+
+6. [WARNING] 0:16 — Bare patches spreading
+   soil treatment and re-seeding (Clip 3)
+   https://www.google.com/maps?q=28.532294,77.144864
+
+7. [ERROR] 0:40 — Ground condition critical
+   bare ground - worst finding in this survey (Clip 3)
+   https://www.google.com/maps?q=28.532011,77.144606
+
+8. [WARNING] 0:55 — Path surface degrading
+   resurfacing recommended (Clip 3)
+   https://www.google.com/maps?q=28.531729,77.144349

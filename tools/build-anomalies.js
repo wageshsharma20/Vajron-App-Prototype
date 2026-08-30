@@ -1,0 +1,205 @@
+/**
+ * Builds the Anomaly Locator's dataset.
+ *
+ * Joins three sources that each own a different part of the record:
+ *   - src/data/*Replay.json .events  the notification wording, which is the
+ *                                    same text the app raises during playback
+ *   - tools/anomaly-locations/*.txt  the GPS fix for each one
+ *   - src/data/parks.ts RECORDINGS   which video file each clip plays, read
+ *                                    rather than duplicated so the two cannot
+ *                                    drift apart
+ *
+ * The join is positional: the Nth anomaly in a park's document is the Nth event
+ * across that park's clips in order. That only holds if both sides agree, so
+ * the counts and timestamps are checked and the build fails loudly if they do
+ * not — a silent misalignment here would pin the wrong coordinates to a finding.
+ *
+ * Emits src/data/anomalies.ts and tools/anomaly-frames.json (the manifest the
+ * frame extractor reads).
+ *
+ * Run: node tools/build-anomalies.js
+ */
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+const DOCS = path.join(__dirname, 'anomaly-locations');
+const DATA = path.join(ROOT, 'src', 'data');
+
+/** Park -> its clips' replay datasets, in playback order. */
+const CLIPS = {
+  'rohini-dda': ['rohiniDdaClip1Replay.json', 'rohiniDdaClip2Replay.json', 'rohiniDdaClip3Replay.json'],
+  'sanjay-lake': ['sanjayLakeFullReplay.json'],
+  'lala-harydal': ['lalaHardevalClip1Replay.json', 'lalaHardevalClip2Replay.json', 'lalaHardevalClip3Replay.json'],
+  'smriti-van-mayur-vihar': ['smritiVanClip1Replay.json', 'smritiVanClip2Replay.json', 'smritiVanClip3Replay.json', 'smritiVanClip4Replay.json'],
+  'r-block-asaf-ali': ['asafAliClip1Replay.json', 'asafAliClip2Replay.json'],
+  'vasant-udyan': ['vasantUdyanClip1Replay.json', 'vasantUdyanClip2Replay.json'],
+  'vasant-vatika': ['vasantVatikaClip1Replay.json', 'vasantVatikaClip2Replay.json', 'vasantVatikaClip3Replay.json'],
+};
+
+/** Read each park's video filenames straight out of parks.ts, in order. */
+function videosByPark() {
+  const src = fs.readFileSync(path.join(DATA, 'parks.ts'), 'utf8');
+  const block = src.slice(src.indexOf('export const RECORDINGS'), src.indexOf('export const recordingsForPark'));
+  const out = {};
+  const parkRe = /'([a-z0-9-]+)':\s*\[([\s\S]*?)\n\s{2}\],/g;
+  let m;
+  while ((m = parkRe.exec(block))) {
+    out[m[1]] = [...m[2].matchAll(/video:\s*'([^']+)'/g)].map((v) => v[1]);
+  }
+  return out;
+}
+
+function parseDoc(parkId) {
+  const lines = fs.readFileSync(path.join(DOCS, `${parkId}.txt`), 'utf8').split('\n');
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^\s*(\d+)\.\s*\[(\w+)\]\s*(\d+):(\d+)\s*—/);
+    if (!m) continue;
+    const link = (lines.slice(i, i + 4).find((l) => l.includes('google.com/maps')) || '').trim();
+    const g = link.match(/q=(-?[\d.]+),(-?[\d.]+)/);
+    if (!g) throw new Error(`${parkId} #${m[1]}: no map link found`);
+    out.push({ time: +m[3] * 60 + +m[4], lat: +g[1], lng: +g[2], mapUrl: link });
+  }
+  return out;
+}
+
+const videos = videosByPark();
+const anomalies = [];
+const frames = [];
+
+for (const [parkId, files] of Object.entries(CLIPS)) {
+  const vids = videos[parkId];
+  if (!vids) throw new Error(`${parkId}: not found in parks.ts RECORDINGS`);
+  if (vids.length !== files.length) {
+    throw new Error(`${parkId}: ${vids.length} videos in parks.ts but ${files.length} datasets here`);
+  }
+
+  // Flatten the park's events across its clips, tagging each with the video it
+  // came from and the time within that video.
+  const events = [];
+  files.forEach((file, clipIndex) => {
+    const ds = JSON.parse(fs.readFileSync(path.join(DATA, file), 'utf8'));
+    (ds.events || []).forEach((e) => {
+      events.push({ ...e, clip: clipIndex + 1, video: vids[clipIndex] });
+    });
+  });
+
+  const doc = parseDoc(parkId);
+  if (doc.length !== events.length) {
+    throw new Error(`${parkId}: document lists ${doc.length} anomalies, datasets raise ${events.length}`);
+  }
+
+  doc.forEach((d, i) => {
+    const e = events[i];
+    // Documents round to whole seconds; anything further apart than that means
+    // the two lists are not describing the same finding in the same order.
+    if (Math.abs(d.time - Math.floor(e.time)) > 1) {
+      throw new Error(`${parkId} #${i + 1}: document says ${d.time}s, dataset says ${e.time}s`);
+    }
+    const id = `${parkId}-${i + 1}`;
+    anomalies.push({
+      id,
+      parkId,
+      index: i + 1,
+      time: e.time,
+      clip: e.clip,
+      type: e.type,
+      title: e.title,
+      message: e.message,
+      lat: d.lat,
+      lng: d.lng,
+      mapUrl: d.mapUrl,
+    });
+    frames.push({ id, video: e.video, time: e.time });
+  });
+}
+
+const byPark = {};
+anomalies.forEach((a) => (byPark[a.parkId] = (byPark[a.parkId] || 0) + 1));
+
+const ts = `/**
+ * Every finding the AI raised across the seven surveyed parks, with the place
+ * it was raised.
+ *
+ * Generated by tools/build-anomalies.js — do not edit by hand. The wording is
+ * the same text the app raises as a notification during playback, so a finding
+ * reads identically whether it is met live or looked up here afterwards.
+ *
+ * \`frame\` is a still pulled from the survey recording at \`time\`, which is why
+ * the picture always shows the thing the words describe.
+ *
+ * Coordinates are approximate: they were read off marker positions on satellite
+ * imagery, not recorded by the aircraft, so they locate a finding to within a
+ * few metres rather than pinpointing it.
+ */
+import { ANOMALY_FRAMES } from './anomalyFrames';
+
+export type AnomalySeverity = 'info' | 'warning' | 'error';
+
+export type Anomaly = {
+  id: string;
+  parkId: string;
+  /** Position within its park's list, as printed in the survey document. */
+  index: number;
+  /** Seconds into the park's recording. */
+  time: number;
+  /** Which clip of the survey, 1-based. */
+  clip: number;
+  type: AnomalySeverity;
+  title: string;
+  message: string;
+  lat: number;
+  lng: number;
+  mapUrl: string;
+};
+
+export const ANOMALIES: Anomaly[] = ${JSON.stringify(anomalies, null, 2)};
+
+export const anomaliesForPark = (parkId: string): Anomaly[] =>
+  ANOMALIES.filter((a) => a.parkId === parkId);
+
+/** The still for a finding, or undefined if none was extracted. */
+export const frameFor = (id: string) => ANOMALY_FRAMES[id];
+
+/** mm:ss, for showing where in the recording a finding was raised. */
+export const formatAnomalyTime = (seconds: number): string => {
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return \`\${m}:\${String(s).padStart(2, '0')}\`;
+};
+`;
+
+fs.writeFileSync(path.join(DATA, 'anomalies.ts'), ts);
+fs.writeFileSync(path.join(__dirname, 'anomaly-frames.json'), JSON.stringify(frames, null, 2));
+
+// Metro resolves `require` at build time from a literal path, so the frame map
+// cannot be built by interpolating an id — every entry has to be written out.
+// Only frames that actually exist are listed, so a missing still degrades to a
+// findings entry without a picture rather than a red screen at import time.
+const present = frames.filter((f) =>
+  fs.existsSync(path.join(ROOT, 'assets', 'anomalies', `${f.id}.jpg`)),
+);
+const framesTs = `/**
+ * Static requires for every anomaly still.
+ *
+ * Generated by tools/build-anomalies.js — do not edit by hand. Extract the
+ * stills first (see the frame extractor) and re-run the build to pick them up.
+ */
+export const ANOMALY_FRAMES: Record<string, number> = {
+${present
+  .slice()
+  .sort((a, b) => a.id.localeCompare(b.id))
+  .map((f) => `  '${f.id}': require('../../assets/anomalies/${f.id}.jpg'),`)
+  .join('\n')}
+};
+`;
+fs.writeFileSync(path.join(DATA, 'anomalyFrames.ts'), framesTs);
+if (present.length !== frames.length) {
+  console.log(`  note: ${frames.length - present.length} stills not yet extracted`);
+}
+
+console.log(`src/data/anomalies.ts written — ${anomalies.length} anomalies`);
+Object.entries(byPark).forEach(([p, n]) => console.log(`  ${p.padEnd(24)} ${n}`));
+console.log(`src/data/anomalyFrames.ts written — ${present.length} stills wired`);
+console.log(`tools/anomaly-frames.json written — ${frames.length} frames in the manifest`);
