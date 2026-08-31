@@ -18,7 +18,10 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.vajron.prototype"
+      "package": "com.vajron.prototype",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,6 +37,11 @@
       ],
       "expo-video",
       "expo-sharing"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3a0fcc6b-4f6a-4eca-b4a7-1d0d2213d1a9"
+      }
+    }
   }
 }
